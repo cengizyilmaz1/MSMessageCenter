@@ -1,0 +1,57 @@
+node_modules/
+dist/
+.claude/
+.npm-cache/
+.vscode/
+*.tsbuildinfo
+.DS_Store
+.vercel
+.netlify
+_site/
+scripts/smoke/*-main/
+scripts/memory/project/src/pages/
+benchmark/projects/
+benchmark/results/
+*.log
+.turbo/
+.eslintcache
+.pnpm-store
+
+# do not commit .env files or any files that end with `.env`
+*.env
+
+packages/astro/src/**/*.prebuilt.ts
+packages/astro/src/**/*.prebuilt-dev.ts
+!packages/astro/vendor/vite/dist
+packages/integrations/**/.netlify/
+
+# exclude IntelliJ/WebStorm stuff
+.idea
+
+# ignore content collection generated files
+packages/**/test/**/fixtures/**/.astro/
+packages/**/test/**/fixtures/**/env.d.ts
+packages/**/e2e/**/fixtures/**/.astro/
+packages/**/e2e/**/fixtures/**/env.d.ts
+examples/**/.astro/
+examples/**/env.d.ts
+
+secrets-m365.json
+@build/config-m365.json
+
+.docusaurus/
+/site/.next
+/.next
+/out/
+/public/history/
+/public/message-paths.json
+
+# Regenerated on every build by scripts/build-public-feeds.mjs — do not track
+# (these ~5 MB files were rewritten on every hourly data commit and dominated
+# git growth). The app only consumes them at runtime from the built output.
+/@data/messages-index.json
+/public/messages-index.json
+/public/search-index.json
+
+# Unused legacy export (not produced by the pipeline, not imported anywhere)
+/@data/messages.csv

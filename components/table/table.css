@@ -1,0 +1,18 @@
+tbody tr {
+  position: relative;
+}
+
+/* Full-row click target. Kept below the real in-cell links so clicking a
+   service tag or the title still follows that link instead of the row overlay. */
+.row-link {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Real links inside a row paint above the overlay and stay clickable. */
+tbody td a:not(.row-link) {
+  position: relative;
+  z-index: 1;
+}
+

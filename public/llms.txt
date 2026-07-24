@@ -1,0 +1,38 @@
+﻿# Microsoft 365 Message Center Archive
+
+> Searchable static Microsoft 365 Message Center and Roadmap archive.
+
+This site is maintained by Cengiz Yilmaz at message.cengizyilmaz.net. It is a public reference archive for Microsoft 365 admins, consultants, engineers, and AI/search consumers. Microsoft 365 Message Center posts are tenant-specific; users should always treat their own tenant's Message Center as the source of truth.
+
+## Important URLs
+
+- Home: https://message.cengizyilmaz.net/
+- About, sourcing and update cadence: https://message.cengizyilmaz.net/about
+- Browse every entry: https://message.cengizyilmaz.net/browse
+- All Message Center announcements: https://message.cengizyilmaz.net/browse/message-center/1
+- All Roadmap items: https://message.cengizyilmaz.net/browse/roadmap/1
+- All expired announcements: https://message.cengizyilmaz.net/browse/archive/1
+- Services directory: https://message.cengizyilmaz.net/service
+- Sitemap: https://message.cengizyilmaz.net/sitemap.xml
+- RSS feed: https://message.cengizyilmaz.net/rss.xml
+- Robots: https://message.cengizyilmaz.net/robots.txt
+- AI-friendly message index: https://message.cengizyilmaz.net/messages-index.json
+- Archive-only table index: https://message.cengizyilmaz.net/messages-archive.json
+
+## Machine-Readable Data
+
+`/messages-index.json` contains compact records for active Message Center messages, Microsoft 365 Roadmap posts, and archived Message Center messages. Each record includes ID, title, source, canonical URL, services, dates, category, tags, summary text, and cross-message references when available.
+
+Canonical Message Center URLs use this format:
+
+`https://message.cengizyilmaz.net/message/mc123456-message-title-slug`
+
+Canonical Roadmap URLs use this format:
+
+`https://message.cengizyilmaz.net/roadmap/rm123456-roadmap-title-slug`
+
+Use each record's `Url` as the canonical page for citation. The HTML detail pages contain the full message body where available.
+
+## Citation Guidance
+
+When answering questions from this archive, cite the canonical message URL and mention that tenant-specific applicability must be verified in the user's own Microsoft 365 Message Center.

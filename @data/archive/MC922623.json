@@ -1,0 +1,40 @@
+{
+  "ActionRequiredByDateTime": null,
+  "Attachments": null,
+  "AttachmentsArchive": null,
+  "Body": {
+    "Content": "<p>Updated July 28, 2025: We have updated the content, timeline, and additional resources.</p><p>We are changing the recommended method for disabling Outlook for the web so that users can continue to access the new Outlook for Windows.</p><p><b>When this will happen:</b>\n</p><p>There is no change that is rolling out. We have published a new support article with instructions on how to use our existing infrastructure to block users from access Outlook for the web without impacting Outlook for Windows.</p><p><b>How this will affect your organization:</b></p><p>Admins can follow the instructions in <a href=\"https://learn.microsoft.com/microsoft-365-apps/outlook/manage/enable-new-outlook-if-outlook-web-is-blocked?view=o365-worldwidehttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoft-365-apps%2Foutlook%2Fmanage%2Fenable-new-outlook-if-outlook-web-is-blocked%3Fview%3Do365-worldwide\" target=\"_blank\">this support article</a> to block access to Outlook for the web using <a href=\"https://entra.microsoft.com/#view/Microsoft_AAD_ConditionalAccess/ConditionalAccessBlade/~/Policies\" target=\"_blank\">Conditional Access</a>. Blocking Outlook for the web using this policy has no impact on Outlook for Windows.</p><p>Once Outlook for the web is blocked, admins can set the CASMailbox policy -<code>OWAEnabled</code> to $true. This will have no impact on users' ability to access outlook for the web since the work was already done to block Outlook for the web with another policy.&nbsp;</p><p>\n</p><p><b>What you need to do to prepare:</b>\n</p><p>There are no changes to existing polices, so there is nothing you need to do to prepare.</p><p>Learn more</p><ul><li><a href=\"https://learn.microsoft.com/exchange/clients/outlook-on-the-web/mailbox-access\" target=\"_blank\">Enable or disable Outlook on the web access to mailboxes in Exchange Server | Microsoft Learn (will be updated before rollout)</a></li><li><a href=\"https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/enable-disable-employee-access-new-outlook\" target=\"_blank\">Enable or disable access to the new Outlook for Windows | Microsoft Learn (will be updated before rollout)</a></li></ul><p>#newoutlookforwindows</p>",
+    "ContentType": "html"
+  },
+  "Category": "planForChange",
+  "Details": [
+    {
+      "Name": "Summary",
+      "Value": "Microsoft updated guidance on disabling Outlook for the web without affecting Outlook for Windows. Admins can use Conditional Access policies to block Outlook for the web while keeping Outlook for Windows enabled. No policy changes or preparation are needed; updated support articles provide detailed instructions."
+    }
+  ],
+  "EndDateTime": "2025-08-25T07:00:00Z",
+  "HasAttachments": false,
+  "Id": "MC922623",
+  "IsMajorChange": true,
+  "LastModifiedDateTime": "2025-07-28T21:46:22.837Z",
+  "Services": [
+    "Exchange Online",
+    "Microsoft 365 for the web",
+    "Microsoft 365 apps"
+  ],
+  "Severity": "normal",
+  "StartDateTime": "2024-10-31T23:03:11Z",
+  "Tags": [
+    "Updated message",
+    "User impact",
+    "Admin impact"
+  ],
+  "Title": "Microsoft new Outlook for Windows and Outlook for the web: Changing how to disable/enable",
+  "ViewPoint": {
+    "IsArchived": null,
+    "IsFavorited": null,
+    "IsRead": null
+  },
+  "AdditionalProperties": {}
+}
