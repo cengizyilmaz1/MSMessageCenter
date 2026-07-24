@@ -4,14 +4,14 @@ import { Archive, Info, Layers, Milestone, Rss } from "lucide-react"
 import MessagesTable from "@/components/table/messages-table"
 import { siteConfig } from "@/config/site"
 import { JsonLd } from "@/components/seo/json-ld"
-import { BrowseList } from "@/components/browse/browse-list"
-import { browseSections, getBrowseItems, getBrowsePath } from "@/lib/browse"
+import { MessageList } from "@/components/listing/message-list"
+import { getListingItems } from "@/lib/listing"
 import { getLatestMessageDate, getMessageCounts } from "@/lib/messages"
 import { getItemListJsonLd, getSiteJsonLd } from "@/lib/seo"
 
 export default function IndexPage() {
   const counts = getMessageCounts()
-  const latest = getBrowseItems("message-center").slice(0, 20)
+  const latest = getListingItems("message-center").slice(0, 20)
 
   return (
     <main className="page-shell">
@@ -44,11 +44,11 @@ export default function IndexPage() {
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <Link
-            href="/browse"
+            href="/service"
             className="inline-flex h-9 items-center gap-2 rounded-md border bg-background px-3 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent"
           >
             <Layers size={15} />
-            Browse all
+            Browse by service
           </Link>
           <Link
             href="/roadmap"
@@ -89,23 +89,32 @@ export default function IndexPage() {
         The table above is client-rendered and paginated in the browser, so its
         links do not exist in the served HTML beyond the first slice. This
         section gives crawlers a real, no-JavaScript path into the newest
-        content and on into the full paginated indexes.
+        content, and the service directory carries them on to every record.
       */}
       <section className="mt-10">
         <h2 className="text-lg font-semibold">Latest Message Center announcements</h2>
         <div className="mt-4">
-          <BrowseList items={latest} />
+          <MessageList items={latest} />
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          {browseSections.map((section) => (
-            <Link
-              key={section.slug}
-              href={getBrowsePath(section.slug, 1)}
-              className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
-            >
-              {section.title}
-            </Link>
-          ))}
+          <Link
+            href="/service"
+            className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
+          >
+            All Microsoft 365 services
+          </Link>
+          <Link
+            href="/roadmap"
+            className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
+          >
+            Microsoft 365 Roadmap
+          </Link>
+          <Link
+            href="/archive"
+            className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
+          >
+            Expired announcements
+          </Link>
         </div>
       </section>
     </main>

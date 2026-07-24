@@ -4,12 +4,12 @@ import Link from "next/link"
 import { Milestone } from "lucide-react"
 
 import MessagesTable from "@/components/table/messages-table"
-import { BrowseList } from "@/components/browse/browse-list"
+import { MessageList } from "@/components/listing/message-list"
 import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { siteConfig } from "@/config/site"
 import { MessageSource } from "@/types/message"
-import { getBrowseItems, getBrowsePath } from "@/lib/browse"
+import { getListingItems } from "@/lib/listing"
 import { getMessagesBySource } from "@/lib/messages"
 import {
   getBreadcrumbJsonLd,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RoadmapPage() {
   const messages = getMessagesBySource(MessageSource.Roadmap)
-  const latest = getBrowseItems("roadmap").slice(0, 20)
+  const latest = getListingItems("roadmap").slice(0, 20)
 
   return (
     <main className="page-shell">
@@ -83,13 +83,13 @@ export default function RoadmapPage() {
       <section className="mt-10">
         <h2 className="text-lg font-semibold">Latest Roadmap items</h2>
         <div className="mt-4">
-          <BrowseList items={latest} />
+          <MessageList items={latest} />
         </div>
         <Link
-          href={getBrowsePath("roadmap", 1)}
+          href="/service"
           className="mt-4 inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
         >
-          Browse all Roadmap items
+          Browse Roadmap items by service
         </Link>
       </section>
     </main>

@@ -105,11 +105,6 @@ export function SiteFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/browse" className="text-muted-foreground transition-colors hover:text-foreground">
-                    Browse all
-                  </Link>
-                </li>
-                <li>
                   <Link href="/service" className="text-muted-foreground transition-colors hover:text-foreground">
                     Services
                   </Link>

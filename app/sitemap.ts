@@ -1,7 +1,6 @@
 import { MetadataRoute } from "next"
 
 import { siteConfig } from "@/config/site"
-import { getBrowsePath, getBrowseStaticParams } from "@/lib/browse"
 import {
   getAllMessageStaticParams,
   getAllRoadmapStaticParams,
@@ -51,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  const staticPages = ["/browse", "/roadmap", "/archive", "/service", "/about"].map(
+  const staticPages = ["/service", "/roadmap", "/archive", "/about"].map(
     (path) => ({
       url: `${siteConfig.url}${path}`,
       lastModified: siteLastModified,
@@ -60,26 +59,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   )
 
-  // The paginated browse indexes are the crawl path to every detail page, so
-  // they need to be in the sitemap too.
-  const browsePages = getBrowseStaticParams().map(({ section, page }) => ({
-    url: `${siteConfig.url}${getBrowsePath(section, Number(page))}`,
-    lastModified: siteLastModified,
-    changeFrequency: "daily" as const,
-    priority: 0.7,
-  }))
-
+  // Service pages carry the full set of records for their service, so they are
+  // the crawl path to every detail page and rank above the other hubs.
   const services = getAllServices().map((service) => ({
     url: `${siteConfig.url}/service/${slugifyService(service)}`,
     lastModified: siteLastModified,
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
+    changeFrequency: "daily" as const,
+    priority: 0.8,
   }))
 
   return [
     home,
     ...staticPages,
-    ...browsePages,
     ...services,
     ...messages,
     ...roadmapItems,

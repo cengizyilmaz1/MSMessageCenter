@@ -1,13 +1,13 @@
 import Link from "next/link"
 
-import { BrowseItem } from "@/lib/browse"
+import { ListingItem } from "@/lib/listing"
 import { Badge } from "@/components/ui/badge"
 
 /**
- * Server-rendered listing. Every row is a real anchor so crawlers can walk the
- * whole archive without executing JavaScript.
+ * Detailed listing used for the "latest" sections. Every row is a real anchor,
+ * so crawlers reach the newest content without executing JavaScript.
  */
-export function BrowseList({ items }: { items: BrowseItem[] }) {
+export function MessageList({ items }: { items: ListingItem[] }) {
   return (
     <ul className="divide-y divide-border rounded-lg border">
       {items.map((item) => (

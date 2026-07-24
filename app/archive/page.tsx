@@ -4,11 +4,11 @@ import Link from "next/link"
 import { Archive } from "lucide-react"
 
 import MessagesTable from "@/components/table/messages-table"
-import { BrowseList } from "@/components/browse/browse-list"
+import { MessageList } from "@/components/listing/message-list"
 import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { siteConfig } from "@/config/site"
-import { getBrowseItems, getBrowsePath } from "@/lib/browse"
+import { getListingItems } from "@/lib/listing"
 import { getArchiveMessages } from "@/lib/messages"
 import {
   getBreadcrumbJsonLd,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function ArchivePage() {
   const archiveMessages = getArchiveMessages()
-  const latest = getBrowseItems("archive").slice(0, 20)
+  const latest = getListingItems("archive").slice(0, 20)
 
   return (
     <main className="page-shell">
@@ -84,13 +84,13 @@ export default function ArchivePage() {
       <section className="mt-10">
         <h2 className="text-lg font-semibold">Recently expired announcements</h2>
         <div className="mt-4">
-          <BrowseList items={latest} />
+          <MessageList items={latest} />
         </div>
         <Link
-          href={getBrowsePath("archive", 1)}
+          href="/service"
           className="mt-4 inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
         >
-          Browse all expired announcements
+          Browse expired announcements by service
         </Link>
       </section>
     </main>
