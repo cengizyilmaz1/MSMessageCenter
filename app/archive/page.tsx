@@ -4,7 +4,6 @@ import Link from "next/link"
 import { Archive } from "lucide-react"
 
 import MessagesTable from "@/components/table/messages-table"
-import { MessageList } from "@/components/listing/message-list"
 import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { siteConfig } from "@/config/site"
@@ -77,22 +76,18 @@ export default function ArchivePage() {
       <MessagesTable
         messages={[]}
         archiveMessages={archiveMessages}
-        includeArchiveFetch={false}
+        scope="archive"
         initialSourceFilter="messageCenter"
       />
 
-      <section className="mt-10">
-        <h2 className="text-lg font-semibold">Recently expired announcements</h2>
-        <div className="mt-4">
-          <MessageList items={latest} />
-        </div>
+      <div className="mt-8">
         <Link
           href="/service"
-          className="mt-4 inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
+          className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
         >
           Browse expired announcements by service
         </Link>
-      </section>
+      </div>
     </main>
   )
 }

@@ -25,7 +25,6 @@ import {
   X,
 } from "lucide-react"
 
-import type { MessageArchive } from "@/types/message"
 import { getCanonicalMessagePath } from "@/lib/slugs.mjs"
 import { Input } from "@/components/ui/input"
 import {
@@ -40,37 +39,70 @@ import type { MessageView } from "@/components/table/columns"
 
 type SourceFilter = "all" | "messageCenter" | "roadmap"
 
+/** Which slice of the dataset a page wants once the full feed arrives. */
+type TableScope = "all" | "roadmap" | "archive"
+
 const PAGE_SIZE_OPTIONS = [25, 50, 100, 200] as const
 
-function toArchiveMessageView(item: MessageArchive): MessageView {
+/**
+ * Positional row shape written by scripts/build-public-feeds.mjs. See that file
+ * for the column order; it is terse because this payload is downloaded by every
+ * visitor who interacts with the table.
+ */
+type TableIndexRow = [
+  string,
+  string,
+  0 | 1,
+  number[],
+  string,
+  string,
+  string,
+  string,
+  0 | 1,
+  0 | 1,
+]
+
+interface TableIndexPayload {
+  services: string[]
+  rows: TableIndexRow[]
+}
+
+function formatDay(value: string) {
+  if (!value) return undefined
+  const date = new Date(`${value}T00:00:00Z`)
+  if (Number.isNaN(date.getTime())) return undefined
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  })
+}
+
+function decodeRow(row: TableIndexRow, services: string[]): MessageView {
+  const [id, title, source, serviceIds, category, published, lastUpdated, actionBy, major, archived] =
+    row
+
   return {
-    id: item.Id,
-    title: item.Title,
-    href: getCanonicalMessagePath(item),
-    service: item.Services,
-    category: item.Category,
-    published: item.StartDateTime
-      ? new Date(item.StartDateTime).toLocaleDateString("en-US", {
-          month: "short",
-          day: "numeric",
-          year: "numeric",
-          timeZone: "UTC",
-        })
-      : undefined,
-    lastUpdated: item.LastModifiedDateTime
-      ? new Date(item.LastModifiedDateTime).toLocaleDateString("en-US", {
-          month: "short",
-          day: "numeric",
-          year: "numeric",
-          timeZone: "UTC",
-        })
-      : undefined,
-    actionRequiredBy: undefined,
-    isMajor: item.IsMajorChange ?? false,
-    isArchived: true,
-    source: "messageCenter",
-    sourceLabel: "Message Center",
+    id,
+    title,
+    href: getCanonicalMessagePath({ Id: id, Title: title }),
+    service: serviceIds.map((index) => services[index]).filter(Boolean),
+    category: category || undefined,
+    published: formatDay(published),
+    lastUpdated: formatDay(lastUpdated),
+    actionRequiredBy: formatDay(actionBy),
+    isMajor: major === 1,
+    isArchived: archived === 1,
+    source: source === 1 ? "roadmap" : "messageCenter",
+    sourceLabel: source === 1 ? "Roadmap" : "Message Center",
   }
+}
+
+function matchesScope(row: TableIndexRow, scope: TableScope) {
+  if (scope === "roadmap") return row[2] === 1
+  if (scope === "archive") return row[9] === 1
+  return true
 }
 
 function getPageNumbers(currentPage: number, totalPages: number): (number | "...")[] {
@@ -93,6 +125,7 @@ interface PaginationControlsProps {
   totalPages: number
   pageSize: number
   totalItems: number
+  isLoading?: boolean
   onPageChange: (page: number) => void
   onPageSizeChange: (size: number) => void
 }
@@ -102,6 +135,7 @@ function PaginationControls({
   totalPages,
   pageSize,
   totalItems,
+  isLoading = false,
   onPageChange,
   onPageSizeChange,
 }: PaginationControlsProps) {
@@ -116,7 +150,7 @@ function PaginationControls({
         <span>
           {totalItems === 0
             ? "No results"
-            : `${from}-${to} of ${totalItems.toLocaleString()}`}
+            : `${from}-${to} of ${totalItems.toLocaleString()}${isLoading ? "+" : ""}`}
         </span>
         <div className="flex items-center gap-1.5">
           <span>Per page:</span>
@@ -207,8 +241,14 @@ function PaginationControls({
 
 interface DataTableProps {
   columns: ColumnDef<MessageView>[]
+  /**
+   * First page of rows, rendered on the server so the table is populated and
+   * crawlable before any JavaScript runs.
+   */
   data: MessageView[]
-  archiveUrl?: string
+  /** Compact feed with the remaining rows, fetched after hydration. */
+  dataUrl?: string
+  scope?: TableScope
   services: string[]
   initialSourceFilter?: SourceFilter
 }
@@ -216,7 +256,8 @@ interface DataTableProps {
 export function DataTable({
   columns,
   data,
-  archiveUrl,
+  dataUrl,
+  scope = "all",
   services,
   initialSourceFilter = "all",
 }: DataTableProps) {
@@ -228,6 +269,7 @@ export function DataTable({
   }
 
   const [allData, setAllData] = React.useState<MessageView[]>(data)
+  const [isLoadingAll, setIsLoadingAll] = React.useState(Boolean(dataUrl))
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [sourceFilter, setSourceFilter] = React.useState<SourceFilter>(initialSourceFilter)
   const [selectedServices, setSelectedServices] = React.useState<string[]>([])
@@ -242,21 +284,28 @@ export function DataTable({
   React.useEffect(() => { setSourceFilter(initialSourceFilter) }, [initialSourceFilter])
 
   React.useEffect(() => {
-    if (!archiveUrl) return
+    if (!dataUrl) return
     let isMounted = true
-    fetch(archiveUrl)
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((items: MessageArchive[]) => {
+    fetch(dataUrl)
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((payload: TableIndexPayload) => {
         if (!isMounted) return
-        const archiveRows = items.map(toArchiveMessageView)
-        setAllData((current) => {
-          const existingIds = new Set(current.map((item) => item.id))
-          return [...current, ...archiveRows.filter((item) => !existingIds.has(item.id))]
-        })
+        setAllData(
+          payload.rows
+            .filter((row) => matchesScope(row, scope))
+            .map((row) => decodeRow(row, payload.services))
+        )
       })
+      // The server-rendered first page stays on screen if the feed cannot be
+      // reached, so the table degrades to a short list rather than an error.
       .catch(() => {})
-    return () => { isMounted = false }
-  }, [archiveUrl])
+      .finally(() => {
+        if (isMounted) setIsLoadingAll(false)
+      })
+    return () => {
+      isMounted = false
+    }
+  }, [dataUrl, scope])
 
   React.useEffect(() => {
     function handlePointerDown(event: MouseEvent) {
@@ -544,6 +593,7 @@ export function DataTable({
         totalPages={totalPages}
         pageSize={pageSize}
         totalItems={allRows.length}
+        isLoading={isLoadingAll}
         onPageChange={(p) => {
           setCurrentPage(p)
           window.scrollTo({ top: 0, behavior: "smooth" })

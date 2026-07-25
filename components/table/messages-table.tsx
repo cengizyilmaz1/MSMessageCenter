@@ -11,11 +11,13 @@ import { getCanonicalMessagePath } from "@/lib/slugs.mjs"
 import tableServices from "@/@data/table-services.json"
 
 type SourceFilter = "all" | "messageCenter" | "roadmap"
+type TableScope = "all" | "roadmap" | "archive"
 
 interface MessagesTableProps {
   messages?: Message[]
   archiveMessages?: MessageArchive[]
-  includeArchiveFetch?: boolean
+  /** Which slice of the shared feed the client should keep after hydration. */
+  scope?: TableScope
   services?: string[]
   initialSourceFilter?: SourceFilter
 }
@@ -58,25 +60,31 @@ export function toArchiveMessageView(item: MessageArchive): MessageView {
   }
 }
 
+/**
+ * Number of rows rendered into the HTML. The browser replaces them with the
+ * full dataset from table-index.json once it hydrates, so this only needs to be
+ * enough for a useful first paint and a real set of links for crawlers.
+ */
+export const SERVER_ROWS = 25
+
 export default function MessagesTable({
   messages = getAllMessages(),
   archiveMessages,
-  includeArchiveFetch = true,
+  scope = "all",
   services = tableServices,
   initialSourceFilter = "all",
 }: MessagesTableProps) {
   const data = [
     ...messages.map(toMessageView),
     ...(archiveMessages ?? []).map(toArchiveMessageView),
-  ]
-  const archiveUrl =
-    includeArchiveFetch && !archiveMessages ? "/messages-archive.json" : undefined
+  ].slice(0, SERVER_ROWS)
 
   return (
     <DataTable
       columns={columns}
       data={data}
-      archiveUrl={archiveUrl}
+      dataUrl="/table-index.json"
+      scope={scope}
       services={services}
       initialSourceFilter={initialSourceFilter}
     />

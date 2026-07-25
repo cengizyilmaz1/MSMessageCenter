@@ -17,7 +17,16 @@ const messages: Message[] = [...dataMessages, ...dataRoadmap].sort((a, b) => {
 
     return dateB - dateA;
 });
-const archiveIndex: MessageArchive[] = dataArchive as MessageArchive[];
+// Kept newest-first so callers that render a slice (the archive table, service
+// pages) show recent records rather than whatever order the archive file
+// happens to be written in.
+const archiveIndex: MessageArchive[] = (dataArchive as MessageArchive[])
+    .slice()
+    .sort((a, b) => {
+        const dateA = new Date(a.LastModifiedDateTime || a.StartDateTime || 0).getTime();
+        const dateB = new Date(b.LastModifiedDateTime || b.StartDateTime || 0).getTime();
+        return dateB - dateA;
+    });
 
 export function getAllMessageStaticParams(): { id: string }[] {
     const messageIds = messages

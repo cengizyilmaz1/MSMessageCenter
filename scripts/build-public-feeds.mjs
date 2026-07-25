@@ -190,6 +190,61 @@ function writePublicHistory() {
   console.log(`[feeds] wrote ${count} history files to public/history`)
 }
 
+/**
+ * Compact feed backing the interactive table.
+ *
+ * The table used to receive the whole dataset as a server prop, which meant
+ * every record was serialised into the HTML of the home, roadmap, archive and
+ * service pages — the archive page alone shipped ~1.9 MB before a single row
+ * was visible. The browser now fetches this file after hydration instead.
+ *
+ * The shape is deliberately terse: a shared service dictionary plus positional
+ * rows, since object keys and repeated service names dominated the size.
+ * Detail URLs are omitted because the client derives them from Id and Title
+ * with the same slug helpers the build uses.
+ *
+ * Row layout:
+ *   0 Id, 1 Title, 2 source (0 message centre, 1 roadmap), 3 service indexes,
+ *   4 category, 5 published, 6 last modified, 7 action required by,
+ *   8 major change flag, 9 archived flag
+ */
+function writeTableIndex(activeItems, archiveOnlyItems) {
+  const archivedIds = new Set(archiveOnlyItems.map((item) => item.Id))
+  const sorted = sortByLatest([...activeItems, ...archiveOnlyItems])
+
+  const serviceNames = []
+  const serviceIndex = new Map()
+  const indexFor = (name) => {
+    if (!serviceIndex.has(name)) {
+      serviceIndex.set(name, serviceNames.length)
+      serviceNames.push(name)
+    }
+    return serviceIndex.get(name)
+  }
+
+  // The table only renders a formatted day, so the time component is dropped.
+  const day = (value) => (value ? String(value).slice(0, 10) : "")
+
+  const rows = sorted.map((item) => [
+    item.Id,
+    item.Title ?? "",
+    getMessageSource(item) === "roadmap" ? 1 : 0,
+    (item.Services ?? []).filter(Boolean).map(indexFor),
+    item.Category ?? "",
+    day(item.StartDateTime),
+    day(item.LastModifiedDateTime),
+    day(item.ActionRequiredByDateTime),
+    item.IsMajorChange ? 1 : 0,
+    archivedIds.has(item.Id) ? 1 : 0,
+  ])
+
+  const payload = JSON.stringify({ services: serviceNames, rows })
+  fs.writeFileSync(path.join(PUBLIC_DIR, "table-index.json"), payload)
+  console.log(
+    `[feeds] wrote ${rows.length} rows to table-index.json (${Math.round(payload.length / 1024)} KB)`
+  )
+}
+
 function main() {
   const messages = readRequiredJson(path.join(DATA_DIR, "messages.json"))
   const roadmap = readRequiredJson(path.join(DATA_DIR, "roadmap.json"))
@@ -220,6 +275,8 @@ function main() {
     JSON.stringify(searchRecords)
   )
   console.log(`[feeds] wrote ${searchRecords.length} records to search-index.json`)
+
+  writeTableIndex([...messages, ...roadmap], archiveOnly)
 
   const pathMap = Object.fromEntries(
     indexRecords.map((record) => [

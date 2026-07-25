@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
-import MessagesTable from "@/components/table/messages-table"
+
 import { MessageIndex } from "@/components/listing/message-index"
 import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
@@ -128,12 +128,6 @@ export default async function ServicePage({ params }: Props) {
           </p>
         </div>
       </section>
-
-      <MessagesTable
-        messages={messages}
-        archiveMessages={archiveMessages}
-        includeArchiveFetch={false}
-      />
 
       {listing.length ? (
         <section className="mt-10">

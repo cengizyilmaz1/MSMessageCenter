@@ -57,6 +57,14 @@ const faqs = [
 
 const releaseNotes = [
   {
+    date: "2026-07-25",
+    items: [
+      "The announcement table now loads its dataset after the page renders instead of having every record embedded in the HTML. The home, Roadmap, and Archive pages dropped from 1.2-2.0 MB to under 200 KB each, while still shipping real links for crawlers.",
+      "Service pages no longer repeat their records in both a table and a list; the complete year-grouped index remains.",
+      "Removed the duplicate 'latest announcements' blocks that restated the first page of the table.",
+    ],
+  },
+  {
     date: "2026-07-24",
     items: [
       "Service pages now list every announcement and Roadmap item recorded for that service, grouped by year, so all 5,730 detail pages are reachable through real links rather than the sitemap alone. This replaces the separate /browse section, which has been removed.",

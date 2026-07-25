@@ -1,17 +1,20 @@
 import Link from "next/link"
 import { Archive, Info, Layers, Milestone, Rss } from "lucide-react"
 
-import MessagesTable from "@/components/table/messages-table"
+import MessagesTable, { SERVER_ROWS } from "@/components/table/messages-table"
 import { siteConfig } from "@/config/site"
 import { JsonLd } from "@/components/seo/json-ld"
-import { MessageList } from "@/components/listing/message-list"
-import { getListingItems } from "@/lib/listing"
-import { getLatestMessageDate, getMessageCounts } from "@/lib/messages"
+import { toListingItems } from "@/lib/listing"
+import { getAllMessages, getLatestMessageDate, getMessageCounts } from "@/lib/messages"
 import { getItemListJsonLd, getSiteJsonLd } from "@/lib/seo"
 
 export default function IndexPage() {
   const counts = getMessageCounts()
-  const latest = getListingItems("message-center").slice(0, 20)
+  // Mirrors the rows the table renders server-side, so the ItemList describes
+  // what is actually in the HTML rather than a separate selection.
+  const visible = toListingItems(getAllMessages().slice(0, SERVER_ROWS), {
+    summaries: false,
+  })
 
   return (
     <main className="page-shell">
@@ -23,7 +26,7 @@ export default function IndexPage() {
       />
       <JsonLd
         data={getItemListJsonLd(
-          latest.map((item) => ({
+          visible.map((item) => ({
             name: `${item.id} - ${item.title}`,
             path: item.href,
           }))
@@ -82,20 +85,10 @@ export default function IndexPage() {
       </section>
 
       <section>
+        <h2 className="sr-only">
+          All Microsoft 365 Message Center and Roadmap announcements
+        </h2>
         <MessagesTable />
-      </section>
-
-      {/*
-        The table above is client-rendered and paginated in the browser, so its
-        links do not exist in the served HTML beyond the first slice. This
-        section gives crawlers a real, no-JavaScript path into the newest
-        content, and the service directory carries them on to every record.
-      */}
-      <section className="mt-10">
-        <h2 className="text-lg font-semibold">Latest Message Center announcements</h2>
-        <div className="mt-4">
-          <MessageList items={latest} />
-        </div>
       </section>
     </main>
   )

@@ -4,7 +4,6 @@ import Link from "next/link"
 import { Milestone } from "lucide-react"
 
 import MessagesTable from "@/components/table/messages-table"
-import { MessageList } from "@/components/listing/message-list"
 import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { siteConfig } from "@/config/site"
@@ -76,22 +75,18 @@ export default function RoadmapPage() {
 
       <MessagesTable
         messages={messages}
-        includeArchiveFetch={false}
+        scope="roadmap"
         initialSourceFilter="roadmap"
       />
 
-      <section className="mt-10">
-        <h2 className="text-lg font-semibold">Latest Roadmap items</h2>
-        <div className="mt-4">
-          <MessageList items={latest} />
-        </div>
+      <div className="mt-8">
         <Link
           href="/service"
-          className="mt-4 inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
+          className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
         >
           Browse Roadmap items by service
         </Link>
-      </section>
+      </div>
     </main>
   )
 }
