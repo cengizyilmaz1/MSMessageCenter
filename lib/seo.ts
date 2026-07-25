@@ -217,7 +217,7 @@ export function getSiteJsonLd({
         "@id": ORGANIZATION_ID,
         name: siteConfig.owner,
         url: siteConfig.parentUrl,
-        logo: absoluteUrl("/og-default.png"),
+        logo: absoluteUrl("/icon-512.png"),
         sameAs: [
           siteConfig.links.twitter,
           siteConfig.links.linkedin,

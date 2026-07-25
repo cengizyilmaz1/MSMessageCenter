@@ -9,7 +9,6 @@ import { ExpiredBanner } from "@/components/message/message-metadata"
 import MessageContent from "@/components/message/message-content"
 import MessageHistory from "@/components/message/message-history"
 import RelatedMessages from "@/components/message/related-messages"
-import SimilarMessages from "@/components/message/similar-messages"
 
 export default function MessageDetail(props: { id: string }) {
   const msg = getMessageData(props.id)
@@ -49,8 +48,6 @@ export default function MessageDetail(props: { id: string }) {
       </section>
 
       <RelatedMessages id={props.id} />
-
-      <SimilarMessages id={props.id} />
 
       <section id="version-history" className="w-full scroll-mt-20">
         <MessageHistory id={props.id} />

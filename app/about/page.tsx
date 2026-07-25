@@ -61,7 +61,6 @@ const releaseNotes = [
     items: [
       "Service pages now list every announcement and Roadmap item recorded for that service, grouped by year, so all 5,730 detail pages are reachable through real links rather than the sitemap alone. This replaces the separate /browse section, which has been removed.",
       "Added a services directory at /service listing every Microsoft 365 workload in the archive.",
-      "Detail pages now link to similar announcements that share a service, category, or tag.",
       "Added this About page with sourcing, update cadence, and citation guidance.",
       "Rebuilt structured data: messages now use TechArticle, and the site publishes Dataset, CollectionPage, ItemList, and FAQ schema.",
       "robots.txt now names the major AI answer-engine crawlers explicitly so the archive can be cited.",

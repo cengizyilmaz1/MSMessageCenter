@@ -96,26 +96,6 @@ export default function IndexPage() {
         <div className="mt-4">
           <MessageList items={latest} />
         </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <Link
-            href="/service"
-            className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
-          >
-            All Microsoft 365 services
-          </Link>
-          <Link
-            href="/roadmap"
-            className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
-          >
-            Microsoft 365 Roadmap
-          </Link>
-          <Link
-            href="/archive"
-            className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium transition-colors hover:bg-accent"
-          >
-            Expired announcements
-          </Link>
-        </div>
       </section>
     </main>
   )
