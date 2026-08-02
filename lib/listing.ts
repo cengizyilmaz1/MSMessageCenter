@@ -3,10 +3,11 @@ import {
   getArchiveMessages,
   getFormattedDate,
   getMessageDescription,
+  getMessagesByService,
   getMessagesBySource,
   getMessageSourceLabel,
 } from "@/lib/messages"
-import { getCanonicalMessagePath } from "@/lib/slugs.mjs"
+import { getCanonicalMessagePath, slugifyService } from "@/lib/slugs.mjs"
 
 /**
  * Server-rendered listing primitives.
@@ -109,6 +110,33 @@ export function groupByYear(items: ListingItem[]): ListingYearGroup[] {
       if (b.year === "Undated") return -1
       return Number(b.year) - Number(a.year)
     })
+}
+
+const serviceListingCache = new Map<string, ListingItem[]>()
+
+/**
+ * Every record recorded against a service — active, roadmap and archived —
+ * newest first.
+ *
+ * The build renders one page per service plus one per pagination page, and each
+ * of those needs the same full listing to slice from, so it is built once per
+ * service and reused.
+ */
+export function getServiceListing(service: string): ListingItem[] {
+  const serviceSlug = slugifyService(service)
+  const cached = serviceListingCache.get(serviceSlug)
+  if (cached) return cached
+
+  const archiveMessages = getArchiveMessages().filter((item) =>
+    item.Services?.some((s) => slugifyService(s) === serviceSlug)
+  )
+  const items = toListingItems(
+    dedupeById([...getMessagesByService(service), ...archiveMessages]),
+    { summaries: false }
+  )
+
+  serviceListingCache.set(serviceSlug, items)
+  return items
 }
 
 const sectionCache = new Map<ListingSection, ListingItem[]>()

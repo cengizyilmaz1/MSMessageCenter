@@ -2,15 +2,13 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-import {
-  getAllServices,
-  getArchiveMessages,
-  getMessagesByService,
-} from "@/lib/messages"
+import { getServiceListing } from "@/lib/listing"
+import { getAllServices } from "@/lib/messages"
+import { getPageCount } from "@/lib/pagination.mjs"
 import { getBreadcrumbJsonLd, getCollectionPageJsonLd } from "@/lib/seo"
 import { slugifyService } from "@/lib/slugs.mjs"
-import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
+import { JsonLd } from "@/components/seo/json-ld"
 
 const title = "Microsoft 365 services"
 const description =
@@ -29,18 +27,17 @@ export const metadata: Metadata = {
 }
 
 export default function ServiceIndexPage() {
-  const services = getAllServices()
-  const archive = getArchiveMessages()
-
-  const entries = services
+  // Counted through the same listing the service pages render, so the number
+  // shown here is exactly what the linked page contains.
+  const entries = getAllServices()
     .map((service) => {
-      const slug = slugifyService(service)
-      const active = getMessagesByService(service).length
-      const archived = archive.filter((item) =>
-        item.Services?.some((s) => slugifyService(s) === slug)
-      ).length
-
-      return { service, slug, total: active + archived }
+      const total = getServiceListing(service).length
+      return {
+        service,
+        slug: slugifyService(service),
+        total,
+        pageCount: getPageCount(total),
+      }
     })
     .filter((entry) => entry.total > 0)
 
@@ -78,6 +75,11 @@ export default function ServiceIndexPage() {
                 </span>
                 <span className="shrink-0 text-xs tabular-nums text-muted-foreground">
                   {entry.total.toLocaleString("en-US")}
+                  {entry.pageCount > 1 ? (
+                    <span className="ml-1.5 text-[0.65rem] uppercase tracking-wide">
+                      {entry.pageCount} pages
+                    </span>
+                  ) : null}
                 </span>
               </Link>
             </li>

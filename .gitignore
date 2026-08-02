@@ -46,12 +46,18 @@ secrets-m365.json
 /public/history/
 /public/message-paths.json
 
+# Build-stage artefacts consumed by the runtime image, not by the app
+# (scripts/build-redirects.mjs -> nginx legacy-URL 301 map)
+/.generated/
+
 # Regenerated on every build by scripts/build-public-feeds.mjs — do not track
 # (these ~5 MB files were rewritten on every hourly data commit and dominated
 # git growth). The app only consumes them at runtime from the built output.
 /@data/messages-index.json
 /public/messages-index.json
 /public/search-index.json
+/public/sitemap.xml
+/public/sitemaps/
 
 # Unused legacy export (not produced by the pipeline, not imported anywhere)
 /@data/messages.csv

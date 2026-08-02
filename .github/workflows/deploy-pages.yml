@@ -76,6 +76,10 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build static site
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
+      # Publishing an export whose URLs do not resolve is what de-indexed the
+      # archive once already; fail the deploy instead.
+      - name: Verify static export
+        run: node ./scripts/verify-build.mjs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:

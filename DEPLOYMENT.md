@@ -11,6 +11,13 @@ it is hosted. Two supported targets:
 
 You pick one with a single switch (below); the build and `out/` are identical.
 
+> ⚠️ **The two targets are not SEO-equivalent.** Legacy URLs from the archive's
+> earlier address schemes are served as 301 redirects by nginx (see
+> [Legacy URL redirects](#legacy-url-redirects)). GitHub Pages cannot issue
+> redirects for a static site, so in Pages mode every previously indexed URL
+> 404s again — which is what removed this site from the search index in the
+> first place. Treat Pages mode as a short-term fallback only.
+
 ---
 
 ## The switch: `USE_GITHUB_PAGES`
@@ -66,6 +73,41 @@ run them. Coolify is the reference setup below.
 
 ---
 
+## Legacy URL redirects
+
+The detail-page address has changed twice over the archive's life:
+
+| Scheme | Example | Status |
+|---|---|---|
+| Title-only slug, trailing slash | `/message/update-to-ews-access-for-kiosk-licenses/` | redirected |
+| Bare record id | `/message/mc1191578` | redirected |
+| Id-prefixed slug (current) | `/message/mc1191578-update-to-ews-access-for-kiosk-licenses` | canonical |
+
+Because the slug embeds the title, an upstream title edit also moves a record's
+canonical URL, orphaning the address that was previously indexed. A static export
+has nothing to catch any of this, so those URLs simply returned 404 — search
+engines drop 404s and discard the ranking signals attached to them.
+
+`scripts/build-redirects.mjs` runs in `prebuild` and replays every id, every
+current title and every title in `@data/history` into
+`.generated/legacy-redirects.map`. The Dockerfile copies it to
+`/etc/nginx/legacy-redirects.map`; [`nginx.conf`](nginx.conf) `include`s it into a
+`map` and 301s each key to the record's current canonical path in a single hop.
+Segments that are live canonical URLs are excluded by the generator, so the map
+can never redirect a page onto itself.
+
+The runtime stage runs `nginx -t`, so a malformed config or a missing map fails
+the **build** rather than the deploy.
+
+To validate locally without a full deploy:
+
+```bash
+npm run build:redirects
+docker build -t mc-archive .        # `nginx -t` runs inside the build
+```
+
+---
+
 ## Data pipeline (same for both targets)
 
 `update-message-data.yml` (GitHub Actions) refreshes Microsoft Graph + Roadmap
@@ -80,12 +122,39 @@ data flow changes between targets.
 ```
 /                          → home + table renders
 /archive · /roadmap        → tables
-/message/mc<id>            → a real message detail page
-/roadmap/rm<id>            → a real roadmap detail page
+/message/mc<id>-<slug>     → a real message detail page
+/roadmap/rm<id>-<slug>     → a real roadmap detail page
 /message/mc<id>/compare?from=<a>&to=<b>  → version comparison (client-rendered)
-/robots.txt · /sitemap.xml · /rss.xml    → 200
+/robots.txt · /rss.xml     → 200
+/sitemap.xml               → 200, a <sitemapindex> listing four segments
+/sitemaps/messages.xml · /sitemaps/roadmap.xml
+/sitemaps/pages.xml · /sitemaps/services.xml  → 200
 /search-index.json · /history/MC<id>.json → 200 (search + compare data)
+/service/microsoft-teams   → hub, page 1, links to pages 2..N
+/service/microsoft-teams/9 → last page, 200, self-canonical
+/service/microsoft-teams/1 → 301 to /service/microsoft-teams
 /this-does-not-exist       → custom 404
+```
+
+Redirects — each must be a **single** 301 to the canonical URL, not a chain:
+
+```bash
+BASE=https://message.cengizyilmaz.net
+for u in "/message/mc1191578" \
+         "/message/update-to-ews-access-for-kiosk-frontline-worker-licenses/" \
+         "/message/mc1191578-update-to-ews-access-for-kiosk-frontline-worker-licenses/" \
+         "/about.html" "/index.html"; do
+  printf '%s -> ' "$u"
+  curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' "$BASE$u"
+done
+```
+
+And confirm the canonical URL itself still returns **200**, not a redirect —
+a loop here would take the whole archive offline for crawlers:
+
+```bash
+curl -s -o /dev/null -w '%{http_code}\n' \
+  "$BASE/message/mc1191578-update-to-ews-access-for-kiosk-frontline-worker-licenses"
 ```
 
 Also confirm the Ctrl/Cmd-K search and a compare page load — they rely on

@@ -18,10 +18,17 @@ This project uses Next.js static export and is served by Coolify (Docker + nginx
 - Searchable archive for Microsoft 365 Message Center announcements.
 - Separate Microsoft 365 Roadmap archive and detail routes.
 - Deterministic canonical URLs for Message Center and Roadmap records.
-- Service archive pages.
+- Service archive pages, paginated above 150 records
+  (`/service/{slug}` + `/service/{slug}/{page}`). These are the crawl path to
+  every detail page, so the union of a service's pages always contains its full
+  record set as real anchors — see [`lib/pagination.mjs`](lib/pagination.mjs).
 - Message version history and comparison pages (the compare route reads the version pair from `?from=` and `?to=` query parameters client-side).
-- RSS feed, sitemap, robots.txt, llms.txt, and AI-friendly JSON index.
-- Static export compatible with GitHub Pages.
+- RSS feed, segmented sitemap index, robots.txt, llms.txt, and AI-friendly JSON index.
+- Permanent redirects from every URL scheme the archive has ever published, so
+  existing citations and search-engine listings keep resolving. See
+  [Legacy URL redirects](DEPLOYMENT.md#legacy-url-redirects).
+- Static export compatible with GitHub Pages (without the redirects — see
+  [DEPLOYMENT.md](DEPLOYMENT.md)).
 
 ## Architecture Overview
 
@@ -39,9 +46,10 @@ flowchart LR
   end
 
   subgraph Coolify["Coolify — Docker build (npm run build)"]
-    FeedBuilder["prebuild: build-public-feeds + build-references<br/>→ messages-index.json · search-index.json<br/>· message-paths.json · public/history · rss.xml"]
-    NextBuild["next build → out/**<br/>HTML · sitemap.xml · robots.txt (metadata routes)"]
-    Nginx["nginx serves out/"]
+    FeedBuilder["prebuild: build-public-feeds + build-references<br/>→ messages-index.json · search-index.json<br/>· message-paths.json · public/history · rss.xml<br/>· sitemap.xml + sitemaps/*.xml"]
+    RedirectBuilder["prebuild: build-redirects<br/>→ .generated/legacy-redirects.map"]
+    NextBuild["next build → out/**<br/>HTML · robots.txt (metadata route)"]
+    Nginx["nginx serves out/<br/>+ 301s legacy URLs from the map"]
   end
 
   Consumer["Visitors · crawlers · AI (llms.txt)"]
@@ -50,10 +58,12 @@ flowchart LR
   RoadmapFeed --> UpdateScript
   UpdateScript --> DataStore
   DataStore --> FeedBuilder
+  DataStore --> RedirectBuilder
   DataStore --> NextBuild
   Code --> NextBuild
   FeedBuilder --> NextBuild
   NextBuild --> Nginx
+  RedirectBuilder --> Nginx
   GitHub -->|"push webhook"| Coolify
   Nginx --> Consumer
 ```
@@ -95,6 +105,24 @@ flowchart TD
 
 Message Center and Roadmap routes must not be mixed. Roadmap records are never generated under `/message/`, and Message Center records are never generated under `/roadmap/`.
 
+### Service pagination
+
+`/service/{slug}` is page 1; pages 2..N live at `/service/{slug}/{page}`. Records
+are spread **evenly** across pages rather than filling each to the 150 cap, so a
+155-record service becomes 78 + 77 instead of 150 + 5 — a five-record page is
+thin content, not a page. Each page is self-canonical and indexable, and links to
+every other page so none is more than one hop from the hub.
+
+Two rules keep this consistent, and both are worth knowing before changing
+`SERVICE_PAGE_SIZE`:
+
+- `scripts/build-public-feeds.mjs` derives sitemap pagination URLs from the same
+  record set `lib/listing.ts` `getServiceListing()` builds from
+  (`messages.json` + `roadmap.json` + `messages-archive.json`), not from the
+  per-record archive files. A different source there would put URLs in the
+  sitemap that the build never generates.
+- Page 1 is never emitted as `/1`; nginx 301s that URL to the hub.
+
 ## Deployment Flow
 
 ```mermaid
@@ -127,7 +155,7 @@ flowchart LR
 ├── config/                   # Site-level configuration
 ├── lib/                      # Data access, filtering, SEO, slug utilities
 ├── public/                   # Public machine-readable files and OG assets
-├── scripts/                  # Feed, reference, and history generators
+├── scripts/                  # Feed, reference, history, and redirect generators
 ├── styles/                   # Global CSS and design tokens
 └── types/                    # Shared TypeScript types
 ```
@@ -135,8 +163,12 @@ flowchart LR
 ## Technology Stack
 
 - Next.js 16 App Router with static export.
-- React 19 and TypeScript 6.
-- Tailwind CSS v4 with local design tokens.
+- React 19 and TypeScript 6. TypeScript 7 is held back because
+  `typescript-eslint` v8 — pulled in by `eslint-config-next` — declares
+  `typescript <6.1.0`; ESLint 10 is held back for the same reason, since
+  `eslint-plugin-react` still peers on ESLint 9.
+- Tailwind CSS v4 with local design tokens. Tailwind v4 prefixes via Lightning
+  CSS, so autoprefixer is deliberately absent from the PostCSS chain.
 - TanStack Table for large archive browsing.
 - GitHub Actions for scheduled data updates (commits to `@data` trigger a Coolify rebuild).
 - Microsoft Graph PowerShell SDK for Message Center ingestion.
@@ -149,7 +181,10 @@ The exported site includes these public machine-readable files:
 - `/search-index.json` - slim client-side search index (id, title, url, source, services only).
 - `/messages-archive.json` - archive-only table index.
 - `/rss.xml` - latest Message Center and Roadmap feed.
-- `/sitemap.xml` - canonical indexable URLs.
+- `/sitemap.xml` - sitemap index. Segments live under `/sitemaps/`:
+  `pages.xml`, `services.xml`, `messages.xml`, `roadmap.xml`. Submitting them
+  separately in Search Console gives a per-section indexed count instead of one
+  opaque total.
 - `/robots.txt` - crawler policy and sitemap reference.
 - `/llms.txt` - AI/search consumer guidance.
 - `/CNAME` - legacy GitHub Pages custom-domain marker (retained for the manual `deploy-pages` backup; Coolify/nginx does not use it).
@@ -174,9 +209,29 @@ Run static validation:
 npm run lint
 npm run typecheck
 npm run build
+npm run verify:build   # checks the export in out/
 ```
 
-`npm run build` refreshes public feed files first, then runs `next build` (Next.js 16 builds with Turbopack by default). Because `next.config.mjs` uses `output: "export"`, production files are written to `out/`.
+`verify:build` ([scripts/verify-build.mjs](scripts/verify-build.mjs)) is the gate
+that lint, typecheck and `next build` cannot be: it compares the URLs the site
+*advertises* against the files it actually produced. It asserts that every
+sitemap URL has a page, every page is self-canonical, every detail page is
+linked from a service page rather than sitemap-only, version and compare pages
+are `noindex` and absent from the sitemaps, pagination is contiguous and fully
+cross-linked, and every legacy redirect reaches a real page in a single hop
+without shadowing a live URL. It runs in the Docker build and in the GitHub
+Pages workflow, so a broken export fails the deploy rather than reaching
+production.
+
+`npm run build` refreshes public feed files and the legacy-URL redirect map first, then runs `next build` (Next.js 16 builds with Turbopack by default). Because `next.config.mjs` uses `output: "export"`, production files are written to `out/`.
+
+The `prebuild` hook runs three generators:
+
+| Script | Output |
+|---|---|
+| `scripts/build-public-feeds.mjs` | `public/history/*`, `message-paths.json`, `messages-index.json`, `search-index.json`, `table-index.json`, `rss.xml`, `sitemap.xml` + `sitemaps/*.xml` |
+| `scripts/build-references.mjs` | augments `messages-index.json` with cross-message references |
+| `scripts/build-redirects.mjs` | `.generated/legacy-redirects.map` (nginx 301 map for legacy URLs) |
 
 ## Data Updates
 

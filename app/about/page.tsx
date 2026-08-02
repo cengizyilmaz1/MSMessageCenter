@@ -8,8 +8,8 @@ import {
   getCollectionPageJsonLd,
   getFaqJsonLd,
 } from "@/lib/seo"
-import { JsonLd } from "@/components/seo/json-ld"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
+import { JsonLd } from "@/components/seo/json-ld"
 
 const title = "About this archive"
 const description =
@@ -39,7 +39,8 @@ const faqs = [
       "An automated job ingests new and changed announcements daily. Every change is committed to version history, so each message keeps a complete, timestamped revision trail.",
   },
   {
-    question: "Why does this exist when the Message Center is already in the admin center?",
+    question:
+      "Why does this exist when the Message Center is already in the admin center?",
     answer:
       "The Microsoft 365 admin center only shows messages targeted at your tenant, hides them once they expire, and does not show what changed between revisions. This archive is public, permanent, full-text searchable, and diffable.",
   },
@@ -56,6 +57,16 @@ const faqs = [
 ]
 
 const releaseNotes = [
+  {
+    date: "2026-08-02",
+    items: [
+      "Every URL this archive has ever published now permanently redirects to the record's current page. The detail-page address changed twice — from a title-only path to today's id-prefixed one — and because the address contains the title, an upstream title edit moved a page as well. Those older addresses had been returning 'not found', so bookmarks, citations and search-engine listings pointing at them were broken; all 11,347 of them now resolve again.",
+      "Each page answers on exactly one address. Trailing-slash and .html variants of the same page now redirect to the canonical URL instead of serving a second copy of it.",
+      "The sitemap is now an index with separate files for static pages, service hubs, Message Center records and Roadmap records, so coverage can be tracked per section in Search Console rather than as one 5,800-URL total.",
+      "Large service pages are paginated. The Microsoft Teams page was a single 1.6 MB list of 1,223 announcements; it is now nine pages of roughly 136, each linking to all the others so nothing became harder to reach. The 51 services small enough to fit on one page are unchanged.",
+      "Updated the platform to the current Next.js, React, Tailwind and nginx releases, and cleared all known dependency vulnerabilities.",
+    ],
+  },
   {
     date: "2026-07-25",
     items: [
@@ -112,7 +123,9 @@ export default function AboutPage() {
             <div className="text-2xl font-semibold tabular-nums">
               {stat.value.toLocaleString("en-US")}
             </div>
-            <div className="mt-1 text-xs text-muted-foreground">{stat.label}</div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              {stat.label}
+            </div>
           </div>
         ))}
       </section>
@@ -135,8 +148,8 @@ export default function AboutPage() {
           </p>
           <p>
             The Microsoft 365 admin center only surfaces messages that target
-            your tenant, and it removes them once they expire. That makes it hard
-            to answer questions like &ldquo;when was this change first
+            your tenant, and it removes them once they expire. That makes it
+            hard to answer questions like &ldquo;when was this change first
             announced?&rdquo; or &ldquo;what did the rollout date say before it
             slipped?&rdquo;. This archive keeps every announcement permanently,
             records a new version each time Microsoft edits one, and lets you
@@ -163,13 +176,16 @@ export default function AboutPage() {
             whenever the content changes, producing a full revision history.
           </li>
           <li>
-            The site is rendered as fully static HTML — every message page exists
-            as a real file, with no client-side data fetching required to read
-            it.
+            The site is rendered as fully static HTML — every message page
+            exists as a real file, with no client-side data fetching required to
+            read it.
           </li>
           <li>
             Machine-readable outputs are published on every build:{" "}
-            <a href="/messages-index.json" className="underline underline-offset-4">
+            <a
+              href="/messages-index.json"
+              className="underline underline-offset-4"
+            >
               /messages-index.json
             </a>
             ,{" "}

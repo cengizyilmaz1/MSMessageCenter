@@ -1,11 +1,12 @@
-import { siteConfig } from "@/config/site"
 import { Message } from "@/types/message"
+import { siteConfig } from "@/config/site"
 import {
   getMessageDescription,
   getMessageSourceLabel,
   getMessageSummary,
   stripHtml,
 } from "@/lib/messages"
+import { getServicePagePath } from "@/lib/pagination.mjs"
 import { getCanonicalMessagePath } from "@/lib/slugs.mjs"
 
 const ORGANIZATION_ID = `${siteConfig.parentUrl}/#organization`
@@ -36,11 +37,14 @@ function toThing(name: string) {
  */
 export function getMessageJsonLd(message: Message) {
   const url = absoluteUrl(getCanonicalMessagePath(message))
-  const keywords = [...(message.Services ?? []), ...(message.Tags ?? [])].filter(
-    Boolean
-  )
+  const keywords = [
+    ...(message.Services ?? []),
+    ...(message.Tags ?? []),
+  ].filter(Boolean)
   const body = stripHtml(
-    getMessageSummary(message) || message.Body?.Markdown || message.Body?.Content
+    getMessageSummary(message) ||
+      message.Body?.Markdown ||
+      message.Body?.Content
   )
 
   return {
@@ -61,7 +65,9 @@ export function getMessageJsonLd(message: Message) {
     identifier: message.Id,
     ...(keywords.length ? { keywords: keywords.join(", ") } : {}),
     ...(body ? { articleBody: body } : {}),
-    ...(message.Services?.length ? { about: message.Services.map(toThing) } : {}),
+    ...(message.Services?.length
+      ? { about: message.Services.map(toThing) }
+      : {}),
     author: {
       "@type": "Person",
       name: siteConfig.owner,
@@ -122,6 +128,42 @@ export function getCollectionPageJsonLd({
   }
 }
 
+/**
+ * Title, description and canonical for a service hub and its pagination pages.
+ *
+ * Paginated pages are self-canonical and indexable on purpose. Pointing them at
+ * page 1 instead — the usual reflex — tells search engines they are duplicates,
+ * so the deep pages get dropped and their outgoing links stop being followed,
+ * which would orphan every record past the first page. Titles carry the page
+ * number so the set does not read as duplicate titles either.
+ */
+export function getServicePageSeo({
+  service,
+  serviceSlug,
+  page,
+  pageCount,
+  total,
+}: {
+  service: string
+  serviceSlug: string
+  page: number
+  pageCount: number
+  total: number
+}) {
+  const paginated = pageCount > 1
+  const base = `Microsoft 365 Message Center and Roadmap updates for ${service}.`
+
+  return {
+    title: paginated
+      ? `${service} updates - page ${page} of ${pageCount}`
+      : `${service} updates`,
+    description: paginated
+      ? `${base} Page ${page} of ${pageCount}, covering ${total.toLocaleString("en-US")} announcements in total.`
+      : base,
+    canonical: getServicePagePath(serviceSlug, page),
+  }
+}
+
 export function getFaqJsonLd(faqs: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
@@ -134,9 +176,7 @@ export function getFaqJsonLd(faqs: { question: string; answer: string }[]) {
   }
 }
 
-export function getBreadcrumbJsonLd(
-  items: { label: string; href?: string }[]
-) {
+export function getBreadcrumbJsonLd(items: { label: string; href?: string }[]) {
   const entries = [{ label: "Home", href: "/" }, ...items]
   return {
     "@context": "https://schema.org",
