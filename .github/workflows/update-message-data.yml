@@ -2,20 +2,20 @@
 
 name: update-message-data
 
-# Data freshness is time-driven, not code-driven, so this runs on a schedule
+# Data freshness is time-driven, not code-driven, so this runs every 3 hours
 # (and manual dispatch) only. It deliberately does NOT run on push/pull_request:
 # a code push has no new Graph data, and running on PRs would hand the Graph
 # client secret to PR branches while granting contents:write.
 on:
   schedule:
-    - cron:  '0 * * * *'
+    - cron: '0 */3 * * *'
   workflow_dispatch:
 
 # Only contents:write is needed (to commit refreshed @data). No OIDC is used.
 permissions:
   contents: write
 
-# Serialize runs so an hourly tick can't race a manual/dispatch run on git push.
+# Serialize runs so a scheduled tick can't race a manual/dispatch run on git push.
 concurrency:
   group: update-message-data
   cancel-in-progress: false
@@ -26,10 +26,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: "24"
+
       - name: Get Message Center and Roadmap data
         run: ./@build/Update-MessageCenter.ps1
         shell: pwsh
@@ -37,15 +39,16 @@ jobs:
           M365_TENANT_ID: ${{ secrets.TENANT_ID }}
           M365_CLIENT_ID: ${{ secrets.CLIENT_ID }}
           GRAPH_SECRET: ${{ secrets.GRAPH_SECRET }}
-        
+
       - name: Update repo
         run: |
-          if [[ `git status --porcelain` ]]; then
-            echo "Updating repo"
-            git config --global user.name 'Cengiz Yilmaz'
-            git config --global user.email '62932614+cengizyilmaz1@users.noreply.github.com'
-            git add -A && git commit -m "Update Microsoft 365 message archive data"
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "Data changed - updating repo"
+            git config user.name 'Cengiz Yilmaz'
+            git config user.email '62932614+cengizyilmaz1@users.noreply.github.com'
+            git add -A
+            git commit -m "Update Microsoft 365 message archive data"
             git push
           else
-            echo "No changes"
+            echo "No changes - skipping commit and deployment"
           fi
