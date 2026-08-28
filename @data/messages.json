@@ -1,5 +1,249 @@
 [
   {
+    "ActionRequiredByDateTime": "2026-09-01T07:00:00Z",
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated August 28, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why</b></b></p><p>As first announced on July 1st, automated investigation and response (AIR) for Defender for Endpoint will no longer run as a separate investigation experience or be available for manual triggering in Microsoft Defender.</p><p> </p><p>There is no change to AIR functionality in Microsoft Defender for Office 365.</p><p>The protection capabilities of AIR are already embedded within Microsoft Defender’s always-on antivirus protection stack today. Detection and response run automatically as part of default protection, without requiring a separate investigation workflow.</p><p>This change is part of our ongoing “shift left” effort to lift the onus of protection from customers by automating detection and response processes, helping ensure consistent outcomes across endpoints without reliance on a separate, manually initiated investigation experience.</p><p>With this update, the standalone AIR investigation experience is removed. For on-demand investigations, teams can run full antivirus scans as needed.</p><p><b><b>Rollout Schedule</b></b></p><ul><li><b>Transition (Worldwide, GCC, GCC High, DoD): </b>Beginning and completing in <b>early September 2026</b></li></ul><p><b><b>Impact on Your Organization</b></b></p><p><i>Who is affected</i></p><ul><li>Admins and security teams using Microsoft Defender for Endpoint and Microsoft Defender XDR</li></ul><p><i>Platforms/Services</i></p><ul><li>Microsoft Defender for Endpoint across supported platforms</li></ul><p><i>What will happen</i></p><ul><li>Manual triggering of automated investigation and response (AIR) will no longer be available.</li><li>AIR will no longer run as a separate investigation experience.</li><li>Detection and response will occur automatically as part of always-on antivirus protection.</li><li>Full antivirus scans replace manual AIR investigations for on-demand analysis.</li><li>Any playbooks, scripts, or integrations that initiate AIR will <b>stop working after September 1, 2026</b>, and must be updated before that date.</li><li>Protection remains enabled by default.</li></ul><p><b><b>Action Required / Recommendations</b></b></p><p>If you are <b>not using AIR</b> manually or through automation,&nbsp;<b>n</b><b>o action is required</b> to maintain protection.</p><p><b>Action is required for organizations using AIR</b> in playbooks, scripts, or integrations, as these<b> </b>will no longer function after September 1, 2026.</p><ul><li><b>Review and update</b> any playbooks, scripts, or integrations that initiate AIR <b>before September 1, 2026</b>.</li><li>Replace AIR-based workflows with full antivirus scan workflows for on-demand investigations.</li><li>Update internal documentation that references AIR investigations.</li><li>Inform security and helpdesk teams of this change.</li></ul><p><b>Learn more:&nbsp;</b></p><ul><li><a href=\"https://learn.microsoft.com/defender-endpoint/mdav-scan-best-practices\" target=\"_blank\">Microsoft Defender Antivirus full scan considerations and best practices | Microsoft Defender for Endpoint | Microsoft Defender | Microsoft Learn</a><b><br></b></li><li><a href=\"https://learn.microsoft.com/defender-endpoint/automated-investigations\" target=\"_blank\">Overview of automated investigations | Microsoft Defender for Endpoint | Microsoft Defender | Microsoft Learn</a><b><br></b></li></ul><p><b><b>Compliance considerations</b></b></p><table class=\"table table-bordered\"><tbody><tr><td>Question</td><td>Answer</td></tr><tr><td>Does the change alter how admins can monitor, report on, or demonstrate compliance activities?</td><td>Yes. AIR will no longer appear as a distinct investigation type, which may affect monitoring and reporting workflows.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Defender for Endpoint will remove manual triggering and the standalone experience of automated investigation and response (AIR) by early September 2026. AIR functions are integrated into always-on antivirus protection. Organizations using AIR in playbooks or scripts must update them before September 1, 2026."
+      }
+    ],
+    "EndDateTime": "2026-10-01T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1411577",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-08-28T20:55:24.613Z",
+    "Services": [
+      "Microsoft Defender XDR"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-07-01T18:32:59Z",
+    "Tags": [
+      "Updated message",
+      "User impact",
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Microsoft Defender: Automated investigation and response (AIR) integrated into antivirus with manual triggering removed",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and why:</b></b></p>\n\n<p>We’re introducing <b>Create interactive slides</b> in PowerPoint for Windows and Mac. This capability helps users create interactive, full-slide visuals that explain complex concepts, timelines, comparisons, systems, and data.</p>\n\n<p>By making sophisticated visual communication easier to create directly in PowerPoint, this experience can help users communicate ideas more clearly and create engaging presentations with less manual effort.</p>\n\n<p><b><b>Rollout schedule:</b></b></p>\n\n<ul>\n<li><b>Frontier (Worldwide):</b> <ul><li>Desktop: Available now.</li><li>Mac: Rolling out now and expected to complete by early September 2026.</li></ul></li>\n</ul>\n\n<p><b><b>Impact on your organization:</b></b></p>\n\n<p><b>Who is affected:</b> </p><ul><li>PowerPoint for Windows and Mac users who have access to this capability.</li></ul>\n\n<p><b>Platforms:</b> </p><ul><li>PowerPoint for Windows and Mac.</li></ul>\n\n<p>After the feature becomes available, eligible users will be able to use Create interactive slides to produce full-slide visual experiences for scenarios such as:</p>\n\n<ul>\n<li>Explaining complex concepts.</li>\n<li>Presenting timelines.</li>\n<li>Comparing options or information.</li>\n<li>Illustrating systems and relationships.</li>\n<li>Communicating data visually.</li>\n</ul>\n\n<p>Organizations participating in the Microsoft Copilot Frontier program can evaluate the preview experience before general availability. Frontier capabilities are pre-release experiences and may change before reaching general availability.</p>\n\n<p><b><b>Action required / recommendations:</b></b></p>\n\n<p>No action is required before rollout.</p>\n\n<p>We recommend that administrators:</p>\n\n<ul>\n<li>Review this information with presentation support, adoption, training, and help desk teams.</li>\n<li>Consider identifying Frontier participants who can evaluate the capability and provide feedback before general availability.</li>\n<li>Update internal PowerPoint guidance or training materials if your organization maintains standardized presentation-creation processes.</li>\n<li>Review the Microsoft Copilot Frontier program documentation: <a href=\"https://www.microsoft.com/en-us/microsoft-365-copilot/frontier-it-admins\" target=\"_blank\">Get started with the Microsoft Copilot Frontier Program</a>.</li></ul>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "PowerPoint's new \"Create interactive slides\" feature (Windows and Mac) enables users to easily create full-slide visuals for complex concepts, timelines, comparisons, systems, and data. Available now on Windows and rolling out on Mac by September 2026, it requires no pre-rollout action but recommends admin review and training updates."
+      }
+    ],
+    "EndDateTime": "2027-03-22T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1461152",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-08-28T19:23:33.287Z",
+    "Services": [
+      "Microsoft 365 apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-08-24T22:17:07Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact"
+    ],
+    "Title": "Create interactive slides in PowerPoint with Copilot skill (Windows and Mac)",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": "2026-11-02T07:00:00Z",
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated August 28, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>To streamline and modernize reporting experiences across Microsoft 365, we are<b> retiring </b>the<b> Outlook for Windows Usage Report</b> in the <b><i>Exchange admin center (EAC)</i></b>. Admins can continue accessing Outlook usage information in the <i>Microsoft 365 admin center (MAC)</i>, which offers a more complete and up‑to‑date reporting experience across Microsoft 365 apps.</p><p><b><b>When this will happen</b></b></p><ul><li>Retirement will begin in <b>early November 2026</b> (previously&nbsp;mid-August).</li><li>Retirement will complete in <b>late November 2026</b> (previously&nbsp;mid-September).</li></ul><p><b><b>How this affects your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Admins who use the Exchange admin center (EAC) to view Outlook for Windows usage data.</li></ul><p><i>What will happen</i></p><ul><li>The Outlook for Windows Usage Report will be<b> removed from the EAC</b>.</li><li>No replacement Outlook usage reporting will remain in the <i>EAC</i> after this retirement.</li><li>Admins can continue accessing Outlook for Windows usage insights through the Microsoft 365 admin center (MAC):&nbsp;<i style=\"font-weight: bold;\">Reports &gt; Usage &gt; M365 Apps &gt; Usage &gt; Outlook for Windows</i></li><li>MAC provides consolidated usage reporting with charts and tables to help admins understand usage patterns across Outlook and other Microsoft 365 apps.</li><li>No impact to Outlook for Windows functionality for users.</li><li>This <b>report retirement will occur automatically</b>; <b>no opt‑out </b>or admin toggle will be available.</li></ul><p><b><b>What you can do to prepare</b></b></p><ul><li>No admin action is required.</li><li>If your organization references the EAC usage report in documentation or internal processes, update those materials before the retirement is complete.</li></ul><p><b>Learn more</b>:&nbsp;<a href=\"https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft365-apps-usage-ww?view=o365-worldwide\" target=\"_blank\">Microsoft 365 Reports in the admin center - Microsoft 365 Apps usage | Microsoft 365 | Microsoft Learn</a></p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p><p></p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "The Outlook for Windows Usage Report in the Exchange admin center will retire from early to late November 2026. Admins must use the Microsoft 365 admin center for Outlook usage insights. No impact on Outlook functionality; no admin action required, but update any related documentation."
+      }
+    ],
+    "EndDateTime": "2027-01-04T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1230889",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-08-28T17:09:12.833Z",
+    "Services": [
+      "Microsoft 365 apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-02-11T23:14:50Z",
+    "Tags": [
+      "Updated message",
+      "User impact",
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Outlook for Windows report retirement in the Exchange admin center",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated August 28, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft is enhancing the signature editing experience in <i>Outlook for iOS and Android</i> by allowing users to insert images into email signatures directly from OneDrive, in addition to selecting images from their device photo library. This improvement makes it easier for users to access and use signature images stored in OneDrive while maintaining existing organizational data-sharing policies.</p><p><b><b>Rollout schedule</b></b></p><p style=\"margin-left: 25px;\"><b>General Availability (Worldwide, GCC, GCC High, and DoD):</b> Beginning in <b>late September 2026</b> (previously&nbsp;late August)&nbsp;and expected to complete by <b>late October 2026</b> (previously&nbsp;late September)</p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users of Outlook for iOS and Android who create or edit email signatures</li></ul><p><i>Platforms and services</i></p><ul><li>Outlook for iOS</li><li>Outlook for Android</li></ul><p><i>What will happen</i></p><ul><li>Users will see a new option when inserting an image into an email signature:&nbsp;<p><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/07/21393-1-onedrive-sig.png\" style=\"width: 400px;\"></p></li><li>Selecting <b><i>Insert image</i></b> in the <i>signature editor</i> will present:<ul><li><b>Choose from files</b>&nbsp;to browse and select image files that are stored in OneDrive.</li><li><b>Choose from photo library</b> to select an image from the device, which remains the existing behavior.</li></ul></li><li>This change is only visible in Outlook for iOS and Android when editing email signatures. Users can select images stored in OneDrive, but there are no changes to the OneDrive application experience.</li><li>Available OneDrive accounts are determined by your organization's existing cross-account data-sharing policies.</li><li>The file picker displays only image files.</li><li>Users can switch between grid and list views while browsing images.</li><li>Selected images are downloaded and embedded into the signature, consistent with the current behavior for locally stored images.</li><li>Existing signatures are not modified.</li><li>The feature is <b>enabled by default </b>and <b>does not require administrator configuration</b>.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required. The update is enabled automatically.</p><p>We recommend that you:</p><ul><li>Inform helpdesk and support staff about the updated signature image selection experience.</li><li>Update internal training materials or screenshots if they reference the signature editor workflow.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Starting late September to late October 2026, Outlook for iOS and Android will let users insert signature images from OneDrive as well as device photo libraries. This feature is enabled by default, requires no admin setup, and respects existing organizational data-sharing policies. No action is needed."
+      }
+    ],
+    "EndDateTime": "2026-11-30T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1437668",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-08-28T16:36:07.787Z",
+    "Services": [
+      "Exchange Online"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-07-23T22:37:34Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Outlook for iOS and Android: Insert signature images from OneDrive",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated August 28, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p>\n\n<p>We're improving the OneDrive integration with the Apple Files app on iOS to provide a more reliable file experience, including clearer upload status and progress indicators.</p>\n\n<p>As part of this update, OneDrive Shared and SharePoint Libraries locations that users can access only with read-only permissions will no longer appear in the Apple Files app. Users will continue to have access to this content through the OneDrive mobile app.</p>\n\n<p>Users who want to access shared content and libraries in the Apple Files app can use <b>Add to OneDrive</b>. Content added to OneDrive will continue to appear in the Apple Files app and can be edited when users have the appropriate permissions.</p>\n\n<p><b><b>Rollout Schedule:</b></b></p>\n\n<ul>\n<li><b>General Availability (Worldwide):</b> Rollout will begin in mid-August 2026 and is expected to complete by early November 2026 (previously mid-September).</li>\n</ul>\n\n<p><b><b>Impact on Your Organization:</b></b></p>\n\n<p><b>Who is affected</b></p>\n\n<ul>\n<li>Users who access OneDrive shared content or SharePoint libraries through the Apple Files app on iOS devices.</li>\n</ul>\n\n<p><b>Platforms and Services</b></p>\n\n<ul>\n<li>OneDrive for iOS</li>\n<li>Apple Files app on iOS</li>\n<li>SharePoint Online libraries</li>\n</ul>\n\n<p><b>What will happen</b></p>\n\n<ul>\n<li>Read-only shared locations and library locations will no longer appear in the Apple Files app.</li>\n<li>Users will continue to be able to access this content in the OneDrive mobile app.</li>\n<li>Users can use <b>Add to OneDrive</b> to continue accessing shared content and libraries from the Apple Files app.</li>\n<li>Content added to OneDrive will remain available through the Apple Files app.</li>\n<li>Users with the required permissions will continue to be able to edit content added to OneDrive.</li>\n</ul>\n\n<p><b><b>Action Required / Recommendations:</b></b></p>\n\n<p>No admin action is required.</p>\n\n<p>We recommend informing users who access shared content or SharePoint libraries through the Apple Files app on iOS that:</p>\n\n<ul>\n<li>Read-only shared and library locations will no longer appear in the Apple Files app after this rollout.</li>\n<li>They can continue accessing this content through the OneDrive mobile app.</li>\n<li>They can use <b>Add to OneDrive</b> if they want content to appear in the Apple Files app.</li>\n</ul>\n\n<p><b><b>Compliance Considerations:</b></b></p>\n\n<p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "OneDrive integration with Apple Files on iOS is improved for reliability and clearer upload status. Read-only shared and SharePoint library locations will no longer appear in Apple Files but remain accessible via the OneDrive app. Users can use \"Add to OneDrive\" to access and edit content in Apple Files. Rollout: mid-August to early November 2026. No admin action required."
+      }
+    ],
+    "EndDateTime": "2026-12-14T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1458481",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-08-28T16:31:58.577Z",
+    "Services": [
+      "Microsoft OneDrive"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-08-21T00:43:37Z",
+    "Tags": [
+      "Updated message",
+      "Feature update",
+      "User impact"
+    ],
+    "Title": "Improved OneDrive experience in Apple Files app",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and why:</b></b></p>\n\n<p>We are updating profile cards in Microsoft Teams to display existing <b>Awards and Certifications</b> profile properties from the Microsoft 365 profile schema. This feature previously rolled out to Outlook and the Microsoft 365 Copilot app in April 2026 and will now be available in Teams profile cards.</p>\n\n<p><b><b>Rollout schedule:</b></b></p>\n\n<ul>\n  <li><b>Targeted Release (Worldwide):</b> Rollout begins in early October 2026 and is expected to complete by early October 2026.</li>\n  <li><b>General Availability (Worldwide):</b> Rollout begins in early-October 2026 and is expected to complete by mid-October 2026.</li>\n</ul>\n\n<p><b><b>Impact on your organization:</b></b></p>\n\n<p><b>Who is affected:</b> </p><ul><li>All users in organizations that populate the <b>Awards and Certifications</b> properties in Microsoft 365 profiles.</li></ul>\n\n<p><b>What will happen:</b></p>\n\n<ul>\n  <li>A new <b>Awards and Certifications</b> section will be added to profile cards in Teams in the <b>Overview</b> and <b>Contact</b> tabs, below the <b>Skills</b> section.</li>\n  <li>Each award or certification entry will display the title and issuer by default. Selecting a badge will reveal additional details, including the description and award date.</li>\n  <li>If your organization does not currently populate these profile properties, no changes will be visible and the new section will not appear on profile cards.</li>\n</ul>\n\n<p><b>Platforms and services:</b></p>\n\n<ul>\n  <li>Microsoft Teams</li>\n  <li>Microsoft Outlook</li>\n  <li>Microsoft 365 Copilot app</li>\n  <li>Microsoft 365 profile cards</li>\n</ul>\n\n<p><b><b>Action required / Recommendations:</b></b></p>\n\n<ul>\n  <li>Review your organization's Microsoft 365 profile data and determine whether the <b>Awards and Certifications</b> properties are populated for users. Values stored in these fields will become visible on profile cards in Teams, Outlook, and the Microsoft 365 Copilot app.</li>\n  <li>If your organization already uses the <b>Awards and Certifications</b> fields in the Microsoft 365 profile schema, no action is required.</li>\n  <li>Note that the profile card experience is read-only. Users cannot create, edit, or manage awards and certifications directly from the profile card.</li>\n  <li>Review the support documentation: <a href=\"https://support.microsoft.com/office/view-awards-and-certification-badges-on-your-profile-card-344f2340-8423-4c85-9d1c-35287f85b4dd\" target=\"_blank\" rel=\"noopener noreferrer\">View awards and certification badges on your profile card</a>.</li>\n</ul>\n\n<p><b><b>Compliance considerations:</b></b></p>\n\n<p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "568078"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams profile cards will display existing Awards and Certifications from Microsoft 365 profiles starting October 2026. This read-only feature shows titles, issuers, and details on badges if populated. No changes appear if these properties are empty. Review your organization's profile data accordingly."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Desktop, Mac"
+      }
+    ],
+    "EndDateTime": "2026-11-23T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1462467",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-08-28T16:22:09.89Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-08-26T22:33:01Z",
+    "Tags": [
+      "New feature",
+      "User impact"
+    ],
+    "Title": "Badges on profile cards in Teams",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
     "ActionRequiredByDateTime": null,
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -277,45 +521,6 @@
       "Admin impact"
     ],
     "Title": "Microsoft Teams: AI meeting archive file generation",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and why:</b></b></p>\n\n<p>We’re introducing <b>Create interactive slides</b> in PowerPoint for Windows and Mac. This capability helps users create interactive, full-slide visuals that explain complex concepts, timelines, comparisons, systems, and data.</p>\n\n<p>By making sophisticated visual communication easier to create directly in PowerPoint, this experience can help users communicate ideas more clearly and create engaging presentations with less manual effort.</p>\n\n<p><b><b>Rollout schedule:</b></b></p>\n\n<ul>\n<li><b>Frontier (Worldwide):</b> <ul><li>Desktop: Available now.</li><li>Mac: Rolling out now and expected to complete by early September 2026.</li></ul></li>\n</ul>\n\n<p><b><b>Impact on your organization:</b></b></p>\n\n<p><b>Who is affected:</b> </p><ul><li>PowerPoint for Windows users who have access to this capability.</li></ul>\n\n<p><b>Platforms:</b> </p><ul><li>PowerPoint for Windows and Mac.</li></ul>\n\n<p>After the feature becomes available, eligible users will be able to use Create interactive slides to produce full-slide visual experiences for scenarios such as:</p>\n\n<ul>\n<li>Explaining complex concepts.</li>\n<li>Presenting timelines.</li>\n<li>Comparing options or information.</li>\n<li>Illustrating systems and relationships.</li>\n<li>Communicating data visually.</li>\n</ul>\n\n<p>Organizations participating in the Microsoft Copilot Frontier program can evaluate the preview experience before general availability. Frontier capabilities are pre-release experiences and may change before reaching general availability.</p>\n\n<p><b><b>Action required / recommendations:</b></b></p>\n\n<p>No action is required before rollout.</p>\n\n<p>We recommend that administrators:</p>\n\n<ul>\n<li>Review this information with presentation support, adoption, training, and help desk teams.</li>\n<li>Consider identifying Frontier participants who can evaluate the capability and provide feedback before general availability.</li>\n<li>Update internal PowerPoint guidance or training materials if your organization maintains standardized presentation-creation processes.</li>\n<li>Review the Microsoft Copilot Frontier program documentation: <a href=\"https://www.microsoft.com/en-us/microsoft-365-copilot/frontier-it-admins\" target=\"_blank\">Get started with the Microsoft Copilot Frontier Program</a>.</li></ul>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "PowerPoint's new \"Create interactive slides\" feature (Windows and Mac) enables users to easily create full-slide visuals for complex concepts, timelines, comparisons, systems, and data. Available now on Windows and rolling out on Mac by September 2026, it requires no pre-rollout action but recommends admin review and training updates."
-      }
-    ],
-    "EndDateTime": "2027-03-22T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1461152",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-08-27T21:10:47.243Z",
-    "Services": [
-      "Microsoft 365 apps"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-08-24T22:17:07Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact"
-    ],
-    "Title": "Create interactive slides in PowerPoint with Copilot skill (Windows and Mac)",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -883,52 +1088,6 @@
       "Retirement"
     ],
     "Title": "Microsoft Teams and Google Calendar sync retirement",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and why:</b></b></p>\n\n<p>We are updating profile cards in Microsoft Teams to display existing <b>Awards and Certifications</b> profile properties from the Microsoft 365 profile schema. This feature previously rolled out to Outlook and the Microsoft 365 Copilot app in April 2026 and will now be available in Teams profile cards.</p>\n\n<p><b><b>Rollout schedule:</b></b></p>\n\n<ul>\n  <li><b>Targeted Release (Worldwide):</b> Rollout begins in mid-September 2026 and is expected to complete by end September 2026.</li>\n  <li><b>General Availability (Worldwide):</b> Rollout begins in early-October 2026 and is expected to complete by mid-October 2026.</li>\n</ul>\n\n<p><b><b>Impact on your organization:</b></b></p>\n\n<p><b>Who is affected:</b> </p><ul><li>All users in organizations that populate the <b>Awards and Certifications</b> properties in Microsoft 365 profiles.</li></ul>\n\n<p><b>What will happen:</b></p>\n\n<ul>\n  <li>A new <b>Awards and Certifications</b> section will be added to profile cards in Teams in the <b>Overview</b> and <b>Contact</b> tabs, below the <b>Skills</b> section.</li>\n  <li>Each award or certification entry will display the title and issuer by default. Selecting a badge will reveal additional details, including the description and award date.</li>\n  <li>If your organization does not currently populate these profile properties, no changes will be visible and the new section will not appear on profile cards.</li>\n</ul>\n\n<p><b>Platforms and services:</b></p>\n\n<ul>\n  <li>Microsoft Teams</li>\n  <li>Microsoft Outlook</li>\n  <li>Microsoft 365 Copilot app</li>\n  <li>Microsoft 365 profile cards</li>\n</ul>\n\n<p><b><b>Action required / Recommendations:</b></b></p>\n\n<ul>\n  <li>Review your organization's Microsoft 365 profile data and determine whether the <b>Awards and Certifications</b> properties are populated for users. Values stored in these fields will become visible on profile cards in Teams, Outlook, and the Microsoft 365 Copilot app.</li>\n  <li>If your organization already uses the <b>Awards and Certifications</b> fields in the Microsoft 365 profile schema, no action is required.</li>\n  <li>Note that the profile card experience is read-only. Users cannot create, edit, or manage awards and certifications directly from the profile card.</li>\n  <li>Review the support documentation: <a href=\"https://support.microsoft.com/office/view-awards-and-certification-badges-on-your-profile-card-344f2340-8423-4c85-9d1c-35287f85b4dd\" target=\"_blank\" rel=\"noopener noreferrer\">View awards and certification badges on your profile card</a>.</li>\n</ul>\n\n<p><b><b>Compliance considerations:</b></b></p>\n\n<p>No compliance considerations identified, review as appropriate for your organization.</p>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "568078"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Teams profile cards will display Awards and Certifications from Microsoft 365 profiles starting mid-September 2026. This read-only feature appears if these properties are populated, showing titles and issuers with details on selection. It also applies to Outlook and Microsoft 365 Copilot app. No action needed if already used."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Desktop, Mac"
-      }
-    ],
-    "EndDateTime": "2026-11-23T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1462467",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-08-26T22:33:51.177Z",
-    "Services": [
-      "Microsoft Teams"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-08-26T22:33:01Z",
-    "Tags": [
-      "New feature",
-      "User impact"
-    ],
-    "Title": "Badges on profile cards in Teams",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -1715,7 +1874,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403247Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403249Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403251Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124332Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124333Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124334Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2842,44 +3001,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p><b><b>What and Why:</b></b></p>\n\n<p>We're improving the OneDrive integration with the Apple Files app on iOS to provide a more reliable file experience, including clearer upload status and progress indicators.</p>\n\n<p>As part of this update, OneDrive Shared and SharePoint Libraries locations that users can access only with read-only permissions will no longer appear in the Apple Files app. Users will continue to have access to this content through the OneDrive mobile app.</p>\n\n<p>Users who want to access shared content and libraries in the Apple Files app can use <b>Add to OneDrive</b>. Content added to OneDrive will continue to appear in the Apple Files app and can be edited when users have the appropriate permissions.</p>\n\n<p><b><b>Rollout Schedule:</b></b></p>\n\n<ul>\n<li><b>General Availability (Worldwide):</b> Rollout will begin in mid-August 2026 and is expected to complete by mid-September 2026.</li>\n</ul>\n\n<p><b><b>Impact on Your Organization:</b></b></p>\n\n<p><b>Who is affected</b></p>\n\n<ul>\n<li>Users who access OneDrive shared content or SharePoint libraries through the Apple Files app on iOS devices.</li>\n</ul>\n\n<p><b>Platforms and Services</b></p>\n\n<ul>\n<li>OneDrive for iOS</li>\n<li>Apple Files app on iOS</li>\n<li>SharePoint Online libraries</li>\n</ul>\n\n<p><b>What will happen</b></p>\n\n<ul>\n<li>Read-only shared locations and library locations will no longer appear in the Apple Files app.</li>\n<li>Users will continue to be able to access this content in the OneDrive mobile app.</li>\n<li>Users can use <b>Add to OneDrive</b> to continue accessing shared content and libraries from the Apple Files app.</li>\n<li>Content added to OneDrive will remain available through the Apple Files app.</li>\n<li>Users with the required permissions will continue to be able to edit content added to OneDrive.</li>\n</ul>\n\n<p><b><b>Action Required / Recommendations:</b></b></p>\n\n<p>No admin action is required.</p>\n\n<p>We recommend informing users who access shared content or SharePoint libraries through the Apple Files app on iOS that:</p>\n\n<ul>\n<li>Read-only shared and library locations will no longer appear in the Apple Files app after this rollout.</li>\n<li>They can continue accessing this content through the OneDrive mobile app.</li>\n<li>They can use <b>Add to OneDrive</b> if they want content to appear in the Apple Files app.</li>\n</ul>\n\n<p><b><b>Compliance Considerations:</b></b></p>\n\n<p>No compliance considerations identified, review as appropriate for your organization.</p>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "OneDrive's integration with the Apple Files app on iOS will improve upload status visibility. Read-only shared OneDrive and SharePoint locations will no longer appear in Apple Files but remain accessible via the OneDrive app. Users can use \"Add to OneDrive\" to access and edit content in Apple Files. Rollout: mid-August to mid-September 2026. No admin action required."
-      }
-    ],
-    "EndDateTime": "2026-11-23T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1458481",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-08-21T00:43:45.197Z",
-    "Services": [
-      "Microsoft OneDrive"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-08-21T00:43:37Z",
-    "Tags": [
-      "Feature update",
-      "User impact"
-    ],
-    "Title": "Improved OneDrive experience in Apple Files app",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p><b>What and Why:</b></p><p></p><p>Administrators can now choose a severity threshold and receive alerts when a new Edge update includes security fixes that meet or exceed that threshold, including zero-day fixes. This helps organizations quickly identify updates that may require attention, while avoiding unnecessary notifications for routine releases.</p><p></p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1%26filters%3D&amp;searchterms=558435#Roadmap\" target=\"_blank\">558435</a></p><p><b>Rollout schedule:</b></p><p>General Availability (Worldwide): We will begin rolling out on early August 2026 and expect to complete by mid-August 2026.</p><p><b>Impact on your organization:</b></p><p></p><p>No action will be taken on behalf of the administrator.&nbsp;By default, the existing experience&nbsp;that notifies admins of all new Edge updates will remain. Admins can now choose to specify when they would like to receive new update notifications.</p><p><b>Action required / Recommendations:</b></p><p></p><p>This rollout will happen automatically by the specified date with no admin action&nbsp;required&nbsp;before the rollout.</p><p>For more information, see <a href=\"https://learn.microsoft.com/en-us/deployedge/microsoft-edge-management-service-monitoring-dashboard#security-update-alerts\" target=\"_blank\">Monitoring dashboard | Microsoft Learn&nbsp;</a></p>",
       "ContentType": "html"
     },
@@ -3245,7 +3366,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403745Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403747Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403749Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124668Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124669Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212467Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4015,7 +4136,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"IOS\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401378Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401381Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"IOS\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123029Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123031Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6084,7 +6205,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402788Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540279Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402791Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402793Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402795Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124025Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124026Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124026Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124028Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124029Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6832,7 +6953,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401237Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401239Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540124Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401242Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401244Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122943Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122945Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122946Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122947Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122948Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6884,7 +7005,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402401Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402402Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402404Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123749Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212375Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123751Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6982,7 +7103,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5399991Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5399994Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5399997Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122071Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122072Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122074Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8113,7 +8234,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402935Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402937Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124119Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212412Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8932,7 +9053,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402993Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402995Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402997Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124158Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124159Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212416Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9079,7 +9200,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401678Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540168Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401682Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123242Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123243Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123244Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9248,7 +9369,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400571Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400573Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400574Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122462Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122463Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122464Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9638,7 +9759,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402212Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402214Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402215Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123633Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123634Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123635Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9814,7 +9935,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403454Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403456Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124467Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124469Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10423,7 +10544,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1326502\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400473Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1326502\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400475Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1326502\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400477Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1326502\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122406Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1326502\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122407Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1326502\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122409Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10475,7 +10596,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5399511Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5399516Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5399518Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212175Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2121753Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2121754Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Platforms",
@@ -10522,7 +10643,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403604Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403606Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403607Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540361Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403612Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124569Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212457Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124571Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124572Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124573Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Platforms",
@@ -10612,7 +10733,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443511\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402038Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443511\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540204Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443511\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123501Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443511\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123502Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Platforms",
@@ -11061,7 +11182,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442609\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401857Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442609\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540186Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442609\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401861Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442609\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123377Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442609\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123378Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442609\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123379Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11769,7 +11890,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1396359\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403847Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1396359\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403849Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1396359\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403851Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1396359\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124738Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1396359\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124739Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1396359\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212474Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12314,45 +12435,6 @@
       "Admin impact"
     ],
     "Title": "Microsoft Entra: Passwordless password change in My Sign-Ins",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and why</b></b></p><p>Microsoft is enhancing the signature editing experience in <i>Outlook for iOS and Android</i> by allowing users to insert images into email signatures directly from OneDrive, in addition to selecting images from their device photo library. This improvement makes it easier for users to access and use signature images stored in OneDrive while maintaining existing organizational data-sharing policies.</p><p><b><b>Rollout schedule</b></b></p><p style=\"margin-left: 25px;\"><b>General Availability (Worldwide, GCC, GCC High, and DoD):</b> Beginning in <b>late August 2026</b> and expected to complete by <b>late September 2026</b></p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users of Outlook for iOS and Android who create or edit email signatures</li></ul><p><i>Platforms and services</i></p><ul><li>Outlook for iOS</li><li>Outlook for Android</li></ul><p><i>What will happen</i></p><ul><li>Users will see a new option when inserting an image into an email signature:&nbsp;<p><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/07/21393-1-onedrive-sig.png\" style=\"width: 400px;\"></p></li><li>Selecting <b><i>Insert image</i></b> in the <i>signature editor</i> will present:<ul><li><b>Choose from files</b>&nbsp;to browse and select image files that are stored in OneDrive.</li><li><b>Choose from photo library</b> to select an image from the device, which remains the existing behavior.</li></ul></li><li>This change is only visible in Outlook for iOS and Android when editing email signatures. Users can select images stored in OneDrive, but there are no changes to the OneDrive application experience.</li><li>Available OneDrive accounts are determined by your organization's existing cross-account data-sharing policies.</li><li>The file picker displays only image files.</li><li>Users can switch between grid and list views while browsing images.</li><li>Selected images are downloaded and embedded into the signature, consistent with the current behavior for locally stored images.</li><li>Existing signatures are not modified.</li><li>The feature is <b>enabled by default </b>and <b>does not require administrator configuration</b>.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required. The update is enabled automatically.</p><p>We recommend that you:</p><ul><li>Inform helpdesk and support staff about the updated signature image selection experience.</li><li>Update internal training materials or screenshots if they reference the signature editor workflow.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Outlook for iOS and Android will allow users to insert signature images directly from OneDrive starting late August 2026. This feature, enabled by default, enhances signature editing without changing existing signatures or OneDrive experience and requires no admin setup. No action is needed, but informing support staff is recommended."
-      }
-    ],
-    "EndDateTime": "2026-10-30T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1437668",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-07-23T22:37:48.103Z",
-    "Services": [
-      "Exchange Online"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-07-23T22:37:34Z",
-    "Tags": [
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Outlook for iOS and Android: Insert signature images from OneDrive",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -14048,7 +14130,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402302Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402304Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402306Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123697Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123698Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123699Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14476,7 +14558,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1324282\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400264Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1324282\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400266Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1324282\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400267Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1324282\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122247Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1324282\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122249Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1324282\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122249Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14575,7 +14657,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1227087\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401449Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1227087\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401451Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1227087\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212309Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1227087\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123092Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15617,7 +15699,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400651Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400653Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400655Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400657Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400658Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122536Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122537Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122538Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212254Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122541Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16022,7 +16104,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400982Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400984Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400985Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122769Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122771Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122772Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16073,7 +16155,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318125\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401076Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318125\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401079Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318125\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540108Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318125\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122838Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318125\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122839Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318125\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212284Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16124,7 +16206,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318249\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401762Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318249\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401764Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318249\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401765Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318249\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123313Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318249\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123314Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318249\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123315Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16175,7 +16257,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1316228\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401585Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1316228\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401587Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1316228\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401589Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1316228\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123189Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1316228\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212319Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1316228\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123191Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16226,7 +16308,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1279071\",\"Platform\":\"IOS\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401975Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1279071\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401977Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1279071\",\"Platform\":\"IOS\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123458Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1279071\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123459Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16684,45 +16766,6 @@
     "AdditionalProperties": {}
   },
   {
-    "ActionRequiredByDateTime": "2026-09-01T07:00:00Z",
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and Why</b></b></p><p>As of September 1, 2026, automated investigation and response (AIR) will no longer run as a separate investigation experience or be available for manual triggering in Microsoft Defender. </p><p>The protection capabilities of AIR are already embedded within Microsoft Defender’s always-on antivirus protection stack today. Detection and response run automatically as part of default protection, without requiring a separate investigation workflow.</p><p>This change is part of our ongoing “shift left” effort to lift the onus of protection from customers by automating detection and response processes, helping ensure consistent outcomes across endpoints without reliance on a separate, manually initiated investigation experience.</p><p>With this update, the standalone AIR investigation experience is removed. For on-demand investigations, teams can run full antivirus scans as needed.</p><p><b><b>Rollout Schedule</b></b></p><ul><li><b>Transition (Worldwide, GCC, GCC High, DoD): </b>Beginning and completing in <b>early September 2026</b></li></ul><p><b><b>Impact on Your Organization</b></b></p><p><i>Who is affected</i></p><ul><li>Admins and security teams using Microsoft Defender for Endpoint and Microsoft Defender XDR</li></ul><p><i>Platforms/Services</i></p><ul><li>Microsoft Defender for Endpoint across supported platforms</li></ul><p><i>What will happen</i></p><ul><li>Manual triggering of automated investigation and response (AIR) will no longer be available.</li><li>AIR will no longer run as a separate investigation experience.</li><li>Detection and response will occur automatically as part of always-on antivirus protection.</li><li>Full antivirus scans replace manual AIR investigations for on-demand analysis.</li><li>Any playbooks, scripts, or integrations that initiate AIR will <b>stop working after September 1, 2026</b>, and must be updated before that date.</li><li>Protection remains enabled by default.</li></ul><p><b><b>Action Required / Recommendations</b></b></p><p>If you are <b>not using AIR</b> manually or through automation,&nbsp;<b>n</b><b>o action is required</b> to maintain protection.</p><p><b>Action is required for organizations using AIR</b> in playbooks, scripts, or integrations, as these<b> </b>will no longer function after September 1, 2026.</p><ul><li><b>Review and update</b> any playbooks, scripts, or integrations that initiate AIR <b>before September 1, 2026</b>.</li><li>Replace AIR-based workflows with full antivirus scan workflows for on-demand investigations.</li><li>Update internal documentation that references AIR investigations.</li><li>Inform security and helpdesk teams of this change.</li></ul><p><b>Learn more:&nbsp;</b></p><ul><li><a href=\"https://learn.microsoft.com/defender-endpoint/mdav-scan-best-practices\" target=\"_blank\">Microsoft Defender Antivirus full scan considerations and best practices | Microsoft Defender for Endpoint | Microsoft Defender | Microsoft Learn</a><b><br></b></li><li><a href=\"https://learn.microsoft.com/defender-endpoint/automated-investigations\" target=\"_blank\">Overview of automated investigations | Microsoft Defender for Endpoint | Microsoft Defender | Microsoft Learn</a><b><br></b></li></ul><p><b><b>Compliance considerations</b></b></p><table class=\"table table-bordered\"><tbody><tr><td>Question</td><td>Answer</td></tr><tr><td>Does the change alter how admins can monitor, report on, or demonstrate compliance activities?</td><td>Yes. AIR will no longer appear as a distinct investigation type, which may affect monitoring and reporting workflows.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Starting September 1, 2026, Microsoft Defender will remove manual triggering and the standalone experience of automated investigation and response (AIR). AIR's protection is integrated into always-on antivirus, running automatically. Organizations using AIR in playbooks or scripts must update them before this date; full antivirus scans replace manual AIR investigations."
-      }
-    ],
-    "EndDateTime": "2026-10-01T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1411577",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-07-01T18:33:15.307Z",
-    "Services": [
-      "Microsoft Defender XDR"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-07-01T18:32:59Z",
-    "Tags": [
-      "User impact",
-      "Admin impact",
-      "Retirement"
-    ],
-    "Title": "Microsoft Defender: Automated investigation and response (AIR) integrated into antivirus with manual triggering removed",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
     "ActionRequiredByDateTime": null,
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -16738,7 +16781,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-08-28T16:12:27.54001Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400103Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122132Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122134Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -17122,7 +17165,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1319213\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402605Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1319213\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402608Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1319213\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402609Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1319213\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123904Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1319213\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123905Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1319213\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123906Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -17222,7 +17265,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403089Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403091Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403092Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124226Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124227Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124228Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -17274,7 +17317,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402707Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402709Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540271Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212396Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123961Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123962Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -17326,7 +17369,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1405501\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400162Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1405501\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400165Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1405501\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400167Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1405501\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122189Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1405501\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212219Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1405501\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122192Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -17916,7 +17959,7 @@
     "Details": [
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400348Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540035Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Web\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400352Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5400354Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122315Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122316Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Web\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122318Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122319Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18290,46 +18333,6 @@
       "Admin impact"
     ],
     "Title": "Microsoft Entra: New service plans for Conditional Access and ID Protection for agents",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": "2026-04-14T07:00:00Z",
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated June 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>To streamline and modernize reporting experiences across Microsoft 365, we are<b> retiring </b>the<b> Outlook for Windows Usage Report</b> in the <b><i>Exchange admin center (EAC)</i></b>. Admins can continue accessing Outlook usage information in the <i>Microsoft 365 admin center (MAC)</i>, which offers a more complete and up‑to‑date reporting experience across Microsoft 365 apps.</p><p><b><b>When this will happen</b></b></p><ul><li>Retirement will begin in <b>mid-August 2026</b> (previously&nbsp;mid-June).</li><li>Retirement will complete in <b>mid-September 2026</b> (previously&nbsp;mid-July).</li></ul><p><b><b>How this affects your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Admins who use the Exchange admin center (EAC) to view Outlook for Windows usage data.</li></ul><p><i>What will happen</i></p><ul><li>The Outlook for Windows Usage Report will be<b> removed from the EAC</b>.</li><li>No replacement Outlook usage reporting will remain in the <i>EAC</i> after this retirement.</li><li>Admins can continue accessing Outlook for Windows usage insights through the Microsoft 365 admin center (MAC):&nbsp;<i style=\"font-weight: bold;\">Reports &gt; Usage &gt; M365 Apps &gt; Usage &gt; Outlook for Windows</i></li><li>MAC provides consolidated usage reporting with charts and tables to help admins understand usage patterns across Outlook and other Microsoft 365 apps.</li><li>No impact to Outlook for Windows functionality for users.</li><li>This <b>report retirement will occur automatically</b>; <b>no opt‑out </b>or admin toggle will be available.</li></ul><p><b><b>What you can do to prepare</b></b></p><ul><li>No admin action is required.</li><li>If your organization references the EAC usage report in documentation or internal processes, update those materials before the retirement is complete.</li></ul><p><b>Learn more</b>:&nbsp;<a href=\"https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft365-apps-usage-ww?view=o365-worldwide\" target=\"_blank\">Microsoft 365 Reports in the admin center - Microsoft 365 Apps usage | Microsoft 365 | Microsoft Learn</a></p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p><p></p>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "The Outlook for Windows Usage Report in the Exchange admin center will be retired from mid-August to mid-September 2026. Admins should use the Microsoft 365 admin center for Outlook usage insights. No user impact or admin action is required; update any related documentation accordingly."
-      }
-    ],
-    "EndDateTime": "2026-10-26T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1230889",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-06-17T21:14:04.51Z",
-    "Services": [
-      "Microsoft 365 apps"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-02-11T23:14:50Z",
-    "Tags": [
-      "Updated message",
-      "User impact",
-      "Admin impact",
-      "Retirement"
-    ],
-    "Title": "Outlook for Windows report retirement in the Exchange admin center",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -20066,7 +20069,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401176Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401179Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122894Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2122895Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20299,7 +20302,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5401519Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540152Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212313Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123131Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20574,7 +20577,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402108Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.540211Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402112Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402114Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123537Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123538Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123539Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212354Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -21511,7 +21514,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402481Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402483Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402484Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5402486Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123819Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.212382Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123821Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2123823Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -22572,7 +22575,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1058258\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403524Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1058258\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403527Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1058258\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T16:12:27.5403528Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1058258\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124515Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1058258\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124517Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1058258\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-08-28T21:24:56.2124518Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
