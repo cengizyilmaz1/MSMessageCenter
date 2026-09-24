@@ -1,5 +1,324 @@
 [
   {
+    "ActionRequiredByDateTime": "2026-10-31T07:00:00Z",
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated September 23, 2026: We have updated this post as a reminder. Thank you for your patience.&nbsp;</p><p><b><b>What and Why</b></b></p><p>We are retiring support for Microsoft Defender for Endpoint (MDE) on Amazon Linux 2 (AL2) running on ARM64 architecture, effective October 31, 2026.</p><p><b><b>Schedule</b></b></p><ul><li>Retirement effective: <b>October 31, 2026</b></li><li>After this date, support and updates will no longer be available.</li></ul><p><b><b>Impact on Your Organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations using Microsoft Defender for Endpoint on Amazon Linux 2 (ARM64)</li><li>Organizations using AL2 on AMD64/x86_64 are not affected</li></ul><p><i>Platforms/Services</i></p><ul><li>Microsoft Defender for Endpoint</li><li>Amazon Linux 2 (ARM64)</li></ul><p><i>What will happen</i></p><ul><li>Defender versions released after this build will not install on <b>AL2 (ARM64) </b>due to platform incompatibility.</li><li>Version <b>101.25122.0004 is the last supported version</b> for this platform.</li><li>After <b>October 31, 2026</b>:<ul><li>No security updates</li><li>No bug fixes</li><li>No technical support</li></ul></li><li>Devices remaining on this platform may:<ul><li>Miss new features, detection improvements, and protection enhancements</li><li>Be exposed to increased security and stability risks over time</li></ul></li></ul><p><b><b>Action Required / Recommendations</b></b></p><p><b>Action required by October 31, 2026.</b></p><p>Admins should:</p><ul><li>Identify devices running<b> Amazon Linux 2 (ARM64)</b> with Defender for Endpoint.</li><li>Prevent upgrades beyond version <b>101.25122.0004</b> on those devices.</li><li>Plan migration to a <b>supported Linux distribution for MDE</b>.</li><li>Complete migration before October 31, 2026.</li></ul><p><b>No action is required</b> for devices running Amazon Linux 2 on <b>AMD64/x86_64 architectures</b>.</p><p>Learn more: <a href=\"https://learn.microsoft.com/defender-endpoint/mde-linux-prerequisites#supported-linux-distributions\" rel=\"noopener noreferrer\" target=\"_blank\">Prerequisites for Microsoft Defender for Endpoint on Linux | Microsoft Defender for Endpoint | Microsoft Defender | Microsoft Learn</a></p><p><b><b>Compliance Considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Support for Microsoft Defender for Endpoint on Amazon Linux 2 (ARM64) will retire on October 31, 2026. After this date, no updates or support will be provided. Organizations must identify affected devices, prevent upgrades beyond version 101.25122.0004, and migrate to a supported Linux distribution before the deadline."
+      }
+    ],
+    "EndDateTime": "2026-12-01T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1392568",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-09-23T23:45:58.06Z",
+    "Services": [
+      "Microsoft Defender XDR"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-06-15T22:11:46Z",
+    "Tags": [
+      "Updated message",
+      "User impact",
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Microsoft Defender for Endpoint: Support for Amazon Linux 2 (ARM64) retiring October 31, 2026",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated September 23, 2026: We have updated this post as a reminder. Thank you for your patience.&nbsp;</p><p><b><b>What and Why</b></b></p><p>We’ve made updates to Microsoft Defender for Endpoint on Linux network connectivity requirements.</p><p>&nbsp;As part of this update, Defender for Endpoint on Linux now uses new service URLs to deliver internal configuration updates and new capabilities.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Available now</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations using Microsoft Defender for Endpoint on Linux devices</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Defender for Endpoint</li><li>Linux endpoints</li></ul><p><i>What will happen</i></p><ul><li>Defender for Endpoint on Linux now uses the following service URLs to deliver internal configuration updates and new capabilities:<ul><li>Commercial: <a href=\"https://config.edge.skype.com/config/v1\" rel=\"noopener noreferrer\" target=\"_blank\">https://config.edge.skype.com/config/v1</a></li><li>DoD: <a href=\"https://config.ecs.dod.teams.microsoft.us/config/v1\" rel=\"noopener noreferrer\" target=\"_blank\">https://config.ecs.dod.teams.microsoft.us/config/v1</a></li><li>GCC High: <a href=\"https://config.ecs.gov.teams.microsoft.us/config/v1\" rel=\"noopener noreferrer\" target=\"_blank\">https://config.ecs.gov.teams.microsoft.us/config/v1</a></li><li>GCC Moderate: <a href=\"https://gccmod.ecs.office.com/config/v1\" rel=\"noopener noreferrer\" target=\"_blank\">https://gccmod.ecs.office.com/config/v1</a></li></ul></li><li><b>Important:</b><ul><li>You only need to allowlist the URL applicable to your tenant type.</li><li>URLs containing <b>skype</b>, <b>teams</b>, or<b> office</b> are shared Microsoft infrastructure endpoints (not tied to those products), with these terms retained as a legacy artifact for backward compatibility.</li></ul></li><li>These URLs are used to securely deliver internal configuration updates from Microsoft to Defender for Endpoint agents running on Linux devices to support the following scenarios:<ul><li><b>Mitigation of critical issues - </b>In rare cases, configuration updates can be rapidly deployed to adjust or disable specific features to contain impact while a permanent fix is developed.</li><li><b>Runtime configurations</b> - Microsoft continuously monitors endpoint health and performance and may push internal configuration updates to optimize resource usage and improve detection accuracy.</li><li><b>Feature rollout and innovation</b> - These URLs are used to roll out new features and enhancements in a phased manner. While capabilities are delivered through these endpoints, enabling or disabling specific features remains under customer control. For example, a feature such as Behaviour Monitoring may be made available via these URLs, but customers can choose whether to enable it.</li></ul></li><li>We understand the importance of transparency and control. While the contents of these configurations are internal to Microsoft and not externally exposed, they are validated and governed by strict security and compliance standards. These updates do not modify customer-defined policies or configurations.</li><li>If the required URL is not allowlisted, devices may:<ul><li>Miss critical configuration updates</li><li>Not receive the latest product features and enhancements</li></ul></li><li>There is no change to user experience.</li></ul><p><b><b>Action required or recommendations</b></b></p><ul><li>Review your network configuration and ensure that the appropriate URL for your tenant type is allowlisted for outbound connectivity from Linux endpoints.</li><li>No action is required if the appropriate URL is already allowlisted.</li></ul><p><b>Learn more:</b></p><ul><li><a href=\"https://learn.microsoft.com/defender-endpoint/streamlined-device-connectivity-urls-commercial?tabs=Windows\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft Defender for Endpoint streamlined connectivity URLs - commercial | Microsoft Defender for Endpoint | Microsoft Defender | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/defender-endpoint/streamlined-device-connectivity-urls-gov?tabs=Windows\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments | Microsoft Defender for Endpoint | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Defender for Endpoint on Linux now requires allowlisting new service URLs specific to tenant types for delivering internal configuration updates, feature rollouts, and critical issue mitigations. This update is available worldwide, with no change to user experience, and ensures devices receive the latest features and optimizations."
+      }
+    ],
+    "EndDateTime": "2026-10-30T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1388718",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-09-23T23:44:55.917Z",
+    "Services": [
+      "Microsoft Defender XDR"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-06-12T16:55:03Z",
+    "Tags": [
+      "Updated message",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Defender for Endpoint: Update to Linux connectivity requirements with new service URLs to allowlist",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and why</b></b></p><p>Microsoft is retiring the CIQ-based \"@\" entity insertion experience on the document canvas in Word for the web. This retirement aligns Word for the web with the experience available in other Microsoft 365 applications, including Word desktop, Excel, and PowerPoint, where this entry point is no longer available.</p><p>As part of this change, users will no longer be able to invoke the CIQ menu from the document canvas by typing \"@\". This retirement does not affect @mentions in comments.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Retirement (Worldwide, GCC, GCC High, and DoD):</b> Beginning in <b>late October 2026</b> and expected to complete by <b>late October 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users who currently use the CIQ \"@\" menu in Word for the web to search for and insert entities into documents</li></ul><p><i>Platforms and services</i></p><ul><li>Word for the web</li></ul><p><i>What will happen</i></p><ul><li>The CIQ-based \"@\" entry point on the document canvas will be removed from Word for the web.</li><li>Users will no longer be able to use the legacy CIQ menu to search for and insert entities from the document canvas.</li><li>No replacement experience is included as part of this retirement.</li><li>@mentions in comments are not affected and will continue to work as before.</li><li>This change aligns Word for the web with Word desktop, Excel, and PowerPoint, where this entry point is no longer available.</li><li>No admin controls are available to enable, disable, or postpone this change.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required.</p><p>We recommend that administrators:</p><ul><li>Inform affected users about the retirement of this feature.</li><li>Review and update internal documentation, training materials, and support content that reference the CIQ \"@\" insertion experience.</li><li>Remove any internal guidance or workflows that depend on the CIQ entity insertion menu.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft is retiring the CIQ-based \"@\" entity insertion on Word for the web's document canvas by late October 2026, aligning it with other Microsoft 365 apps. Users cannot invoke this menu anymore, but @mentions in comments remain unaffected. No admin action is required; users should be informed."
+      }
+    ],
+    "EndDateTime": "2026-11-30T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1478006",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-09-23T21:52:53.383Z",
+    "Services": [
+      "Microsoft 365 apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-23T21:52:18Z",
+    "Tags": [
+      "User impact",
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Microsoft Word for the web: Retirement of the \"@\" entity insertion experience on the document canvas",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and why</b></b></p><p>We've added a new<b> ApproverUpn</b> column to the <b>EmailPostDeliveryEvents</b> table in <i>Microsoft Defender XDR Advanced Hunting</i>. This enhancement allows security teams to identify who approved eligible remediation actions directly from <i>Advanced Hunting</i> results.</p><p>By making approver information available in hunting queries, analysts can investigate remediation activity more efficiently without needing to navigate to Action Center. This improvement supports faster security investigations and operational efficiency.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Available now</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Security administrators and security analysts who use Microsoft Defender XDR Advanced Hunting</li><li>Organizations that investigate email remediation activity using Advanced Hunting</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Defender XDR</li><li>Advanced Hunting</li><li><b>EmailPostDeliveryEvents</b> table</li></ul><p><i>What will happen</i></p><ul><li>A new <b>ApproverUpn</b> column is added to the <b>EmailPostDeliveryEvents</b> table.</li><li>The column displays the User Principal Name (UPN) of the user who approved a remediation action.</li><li>The enhancement applies to manual remediation actions and Automated Investigation and Response (AIR) remediation actions that require approval.</li><li>Advanced Hunting query results include approver information for eligible remediation actions.</li><li>Administrators and analysts can identify the approver for eligible remediation actions directly in Advanced Hunting results without navigating to Action Center.</li><li>The feature is enabled by default and is automatically available in your tenant.</li></ul><p><img src=\"\nhttps://support.microsoft.com/customercomms/media/messagecenter/2026/09/21868.png\" width=\"400\"></p><p>There are no changes to:</p><ul><li>Manual remediation approval workflows</li><li>Permissions required to approve remediation actions</li><li>Remediation processing behavior or action status</li><li>Information available in Action Center</li><li>Existing columns in the <b>EmailPostDeliveryEvents</b> table</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required.</p><p>After rollout, administrators can begin using the new <b>ApproverUpn</b> column in <i>Advanced Hunting queries and workflows</i>.</p><p>We recommend that you:</p><ul><li>Review existing Advanced Hunting queries to determine whether the new <b>ApproverUpn</b> field should be incorporated into investigation, reporting, or automation workflows.</li><li>Inform security operations teams about the availability of the new column.</li><li>Validate any investigation workflows, reports, or automation that could benefit from the new <b>ApproverUpn</b> field.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/defender-xdr/advanced-hunting-emailpostdeliveryevents-table\" target=\"_blank\">EmailPostDeliveryEvents table in the advanced hunting schema - Microsoft Defender XDR | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Defender for Office 365 added an ApproverUpn column to the EmailPostDeliveryEvents table in Advanced Hunting, showing who approved remediation actions. This enables faster investigations without using Action Center. The feature is available worldwide, enabled by default, and requires no action from administrators."
+      }
+    ],
+    "EndDateTime": "2026-10-21T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1478005",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-09-23T21:51:56.793Z",
+    "Services": [
+      "Microsoft Defender XDR"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-23T21:51:27Z",
+    "Tags": [
+      "Feature update",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Defender for Office 365: View approver details for remediation actions in Advanced Hunting",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b>What and why:</b></p><p>Microsoft Teams is adding a meeting policy that lets administrators control whether profane words are masked in live transcription and saved meeting transcripts. This gives organizations a policy-controlled option for workflows in which words that are currently masked need to remain visible in the transcript.</p><p>Filtering remains on by default. If an administrator turns filtering off for the policy assigned to a meeting organizer, words that would otherwise be masked can appear in both the live and saved transcript for that organizer's scheduled meetings. This change does not add an organizer-level control and does not change each participant's live-caption profanity preference.</p><p><b>Rollout schedule:</b></p><p>Targeted Release (Worldwide): We will begin rolling out on early October 2026 and expect to complete by mid-October 2026.</p><p>General Availability (Worldwide, GCC): We will begin rolling out on mid-October 2026 and expect to complete by late October 2026.</p><p><b>Impact on your organization:</b></p><p>Who is affected</p><ul><li>Teams administrators who manage meeting policies.</li><li>Meeting organizers whose assigned policy has transcript profanity filtering turned off.</li><li>Users who view live or saved transcripts for affected scheduled meetings.</li></ul><p>Who is not affected</p><ul><li>Users whose meeting organizer is assigned a policy that keeps filtering on.</li><li>Each participant's live-caption profanity preference; live captions continue to use the participant's existing setting.</li></ul><p>What will happen</p><ul><li>A new <b>Filter out profane words in live transcription</b> setting will be available in the applicable Teams meeting policy under <b>Meeting settings &gt; Recording and transcription</b>.<p><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21917-1.png \" width=\"400\"></p></li><li>The setting will be <b>on by default</b>, preserving the current transcript-masking behavior unless an administrator changes the assigned policy.</li><li>When the setting is on, profane words are masked in live transcription and in the saved transcript.</li><li>When the setting is off, words that would otherwise be masked can appear in live transcription and in the saved transcript.</li><li>The meeting organizer's assigned policy determines the behavior for the meeting. Organizers and co-organizers do not receive a per-meeting override.</li></ul><p><b>Action required / Recommendations:</b></p><p>No action is required to preserve current behavior.</p><ul><li>Before turning filtering off, confirm the business need and review whether the change aligns with your organization's compliance policies and transcript requirements.</li><li>Notify compliance, legal, and helpdesk teams that saved transcripts may contain profane words that were previously masked.</li><li>Update internal transcript guidance if your organization changes the default policy behavior.</li></ul>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "570467"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams will let admins control profanity filtering in meeting transcripts via a new meeting policy setting, on by default. Turning it off allows profane words to appear in live and saved transcripts. This affects meeting policies, not participant caption preferences, and rolls out October 2026."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Android, Desktop, iOS, Mac, Web"
+      }
+    ],
+    "EndDateTime": "2026-12-30T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1478003",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-09-23T21:49:47.45Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-23T21:48:02Z",
+    "Tags": [
+      "New feature",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams: Admins can control profanity filtering in meeting transcripts",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and why</b></b></p><p>To provide a more consistent and streamlined Microsoft 365 Copilot experience in Microsoft Teams, we are simplifying how users access Copilot in <i>Teams</i>.</p><p>Today, users can access Copilot either from the Teams chat list or from the Copilot app in the <i>Teams app bar</i>. Beginning in October 2026, we will remove the Copilot entry point from the Teams chat list and direct users to access Copilot through the Copilot app. The Copilot app provides access to the full set of Copilot capabilities, while the chat list entry point provides a more limited experience.</p><p>This change creates a single, consistent access point for Copilot in Teams, helping users discover and return to Copilot more easily while reducing interface clutter. To help users transition, a coachmark will direct users from the chat list entry point to the Copilot app before the chat list entry point is removed.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Copilot chat list entry point removal (Worldwide, GCC):</b> Beginning <b>mid-October 2026</b> and expected to complete by <b>late-October 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations whose users access Microsoft 365 Copilot in Microsoft Teams</li><li>Users of Microsoft Teams desktop and web applications who currently access Copilot from the Teams chat list.</li><li>Mobile users are not affected.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams desktop</li><li>Microsoft Teams web</li></ul><p><i>What will happen</i></p><ul><li>The Copilot entry point in the Teams chat list will be removed.&nbsp;</li><li>Prior to the mid-October removal, users who access Copilot from the chat list will see a coachmark directing them to the Copilot app.</li><li>The Copilot app in the Teams app bar will remain available and unchanged.</li><li>If the Copilot app has been unpinned from the Teams app bar, users will be directed to the app overflow menu where they can locate the Copilot app.</li><li>Existing Copilot conversations, notifications, supported deep links, and session continuity will continue to work.</li><li>No user conversations, prompts, chat history, or Copilot data will be removed.</li><li>Mobile experiences are unchanged.</li><li>This change is enabled by Microsoft and does not require tenant configuration.</li></ul><p>Before:</p><p>&nbsp;<img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21928-1.png\" width=\"400\"></p><p></p><p></p><p>After:</p><p>&nbsp;<img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21928-2.png\" width=\"400\"></p><p><b><b>Action required and recommendations</b></b></p><p>No action is required.</p><p>We recommend that administrators:</p><ul><li>Inform users that Copilot in <i>Teams</i> will be accessed through the Copilot app in the <i>Teams app bar</i> going forward.</li><li>Update internal training materials, screenshots, adoption content, and support documentation that reference the Copilot chat list entry point.</li><li>Notify help desk and support teams before rollout.</li><li>Review Teams app setup policies and consider pinning the Copilot app for users if it is not already pinned.</li><li>Monitor user feedback after rollout and direct users to the Copilot app if they are looking for the retired chat list entry point.</li></ul><p>Learn more</p><ul><li><a href=\"https://learn.microsoft.com/microsoft-365/copilot/pin-copilot-chat-navbar#pin-copilot-chat-in-microsoft-teams-through-the-teams-admin-center\" target=\"_blank\">Pin Microsoft Copilot Chat in the Microsoft 365 apps | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Starting October 2026, Microsoft Teams will remove the Copilot chat list entry point, directing users to access Copilot solely through the Copilot app in the Teams app bar for a streamlined experience. Mobile users are unaffected, and no data will be lost. No action is required."
+      }
+    ],
+    "EndDateTime": "2026-11-19T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1477999",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-09-23T21:47:40Z",
+    "Services": [
+      "Microsoft Teams",
+      "Microsoft 365 Copilot Chat"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-23T21:46:58Z",
+    "Tags": [
+      "User impact",
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Microsoft Teams: Removing Copilot from the chat list",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b>What and why:</b></p><p>The Viva Learning usage report and The Viva Insights personal insights active-user trend chart will be retired from the Microsoft 365 admin center. For Viva Learning, admins can continue to access usage metrics in the Viva Learning app directly.</p><p><b>Rollout schedule:</b></p><p>General Availability (Worldwide): We will begin rolling out on early October 2026 and expect to complete by mid-November 2026.</p><p><b>Impact on your organization:</b></p><p>Who is affected:</p><ul><li>&nbsp;Microsoft 365 tenant administrators</li><li>&nbsp;Organizations using Microsoft Viva Insights, or Viva Learning usage reports</li></ul><p>&nbsp;Platforms/Services:</p><ul><li>&nbsp;Microsoft 365 admin center</li><li>&nbsp;Viva Insights</li><li>&nbsp;Viva Learning</li></ul><p>&nbsp;What will happen:</p><ul><li>&nbsp;The Viva Insights personal insights active-user trend chart will be retired.</li><li>&nbsp;The Viva Learning usage report will be removed from the Microsoft 365 admin center</li><li>&nbsp;Viva Learning analytics will continue through the Viva Learning reporting experience.</li></ul><p><b>Action required / Recommendations:</b></p><ul><li>Update documentation referencing retired Viva reports.</li><li>Communicate the reporting location change to reporting administrators.</li><li>Use Viva Learning reporting within Viva Learning going forward.</li><li>Review: <a href=\"https://learn.microsoft.com/en-us/viva/learning/reports\" target=\"_blank\">Reporting in Viva Learning | Microsoft Learn</a></li></ul>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Viva Insights personal insights and Viva Learning usage reports will be retired from the Microsoft 365 admin center by mid-November 2026. Admins should access Viva Learning metrics directly in the app and update documentation and communications accordingly."
+      }
+    ],
+    "EndDateTime": "2027-01-25T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1477996",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-09-23T21:44:51.93Z",
+    "Services": [
+      "Microsoft 365 suite"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-23T21:44:30Z",
+    "Tags": [
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Retirement of Viva Insights (personal insights) and Viva Learning usage reports",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b>What and why:</b></p><p>Microsoft Defender is introducing native Case Management to help security teams investigate and resolve threats faster while reducing tool sprawl. Teams can manage investigations, assign analysts, monitor resolution SLAs, and capture investigation notes in a unified case experience.</p><p>Security teams often coordinate investigations across multiple tools, making it harder to maintain context, track ownership, and drive timely resolution. Case Management brings these activities into Microsoft Defender, helping teams streamline investigations and manage response work in one place.</p><p>Beginning with Incident Cases, the experience combines alerts, attack stories, affected assets, and evidence with the workflows teams use to assign work, collaborate, and track progress through resolution.</p><p><b>Rollout schedule:</b></p><ul><li>Public preview begins: September 23, 2026.</li><li>Public preview rollout completion: early October 2026.</li></ul><p><b>How this will affect your organization:</b></p><p>Who is affected</p><ul><li>Microsoft Defender customers with Microsoft 365 E5, E7, Defender Suite and all standalone SKUs (MDE P2, MDO P2, MDA, MDI, MDB) and Microsoft Sentinel&nbsp;</li><li>Security administrators, SOC analysts, incident responders, and SOC leads using Microsoft Defender for investigation and response.</li></ul><p>Services affected</p><ul><li>Microsoft Defender and existing Microsoft Sentinel incident workflows and integrations used with Incident Cases.</li></ul><p>Case Management enables your organization to:</p><ul><li>Manage investigations in one place: Bring together Microsoft Defender XDR signals and, when enabled, third-party data in a native Defender case workspace.</li><li>Establish clear ownership: Assign analysts and keep investigation notes with the case.</li><li>Track timely resolution: Monitor resolution SLAs and progress.</li><li>Preserve existing workflows: Existing incident-based workbooks, automation, playbooks, and integrations continue to function with Incident Cases.</li><li>Retain existing access controls: Incident permissions and access scoping carry over to Incident Cases.</li></ul><p>For example, a SOC team investigating ransomware can use the case experience to track active investigations, assign analysts, monitor resolution SLAs, and keep relevant investigation notes with each case.&nbsp;</p><p><b>Action required / Recommendations:</b></p><p>No manual migration or reconfiguration of existing incident workflows is required to begin using the Case experience. Each Incident Case maps one-to-one to an Incident during this phase.</p><p>To prepare:</p><ul><li>Review how your SOC assigns investigations, captures notes, and tracks resolution targets.</li><li>Familiarize analysts with the Cases experience and update internal operating guidance.</li><li>Evaluate existing workflows and integrations as part of your preview adoption.</li></ul><p>Additional Considerations</p><p>Initial scope: This launch begins with Incident Cases for incident response, with a one-to-one relationship between an Incident Case and an Incident.</p><p>Blog: <a href=\"https://aka.ms/caseindefender\" target=\"_blank\">Reimagining Case Management in Microsoft Defender | Microsoft Community Hub</a>&nbsp;</p><p>Demo video: <a href=\"https://aka.ms/casedemovideo\" target=\"_blank\">https://aka.ms/casedemovideo</a></p><p>Learning docs: <a href=\"https://aka.ms/caselearningdocs\" target=\"_blank\">Case management in the Microsoft Defender portal - Microsoft Defender XDR | Microsoft Learn</a></p>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Defender introduces native Case Management to unify threat investigations, assign analysts, track SLAs, and capture notes in one workspace. Launching in public preview September 2026, it integrates with existing workflows and permissions, enhancing security team coordination and response efficiency without requiring manual migration."
+      }
+    ],
+    "EndDateTime": "2026-11-30T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1477993",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-09-23T21:43:33.42Z",
+    "Services": [
+      "Microsoft Defender XDR"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-23T21:42:34Z",
+    "Tags": [
+      "New feature",
+      "Admin impact"
+    ],
+    "Title": "Case Management in Microsoft Defender",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
     "ActionRequiredByDateTime": null,
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -598,7 +917,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591909Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559191Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591912Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786988Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786989Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078699Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -650,7 +969,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591427Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591429Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559143Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786541Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786543Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786544Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -702,7 +1021,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592782Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592783Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592784Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787835Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787835Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787836Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -849,7 +1168,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593333Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593334Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593335Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788455Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788456Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788457Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -995,7 +1314,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592206Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592207Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592208Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592209Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592211Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787255Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787256Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787257Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787258Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787258Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1127,7 +1446,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593174Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593176Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593177Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788208Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788209Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078821Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1178,7 +1497,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592329Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559233Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787367Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787368Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1230,7 +1549,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591729Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559173Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591731Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786821Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786822Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786823Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2044,7 +2363,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592955Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592956Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592957Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787995Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787996Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787996Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3571,7 +3890,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593473Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593474Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593475Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788555Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788556Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788557Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5622,7 +5941,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593586Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593588Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078865Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788651Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5674,7 +5993,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593619Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559362Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593621Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593622Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593623Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078869Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078869Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788691Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788692Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788692Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6380,7 +6699,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593421Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593422Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078853Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788531Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7152,7 +7471,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592373Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592374Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592375Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787413Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787414Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787414Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7282,7 +7601,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593229Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559323Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593231Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593232Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593233Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593235Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788247Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788248Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788249Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078825Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078825Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788252Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7373,7 +7692,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592528Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592529Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559253Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787544Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787545Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787546Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8217,7 +8536,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592472Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592473Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592474Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787505Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787506Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787507Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8446,7 +8765,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592738Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592739Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559274Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787795Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787796Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787796Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8725,7 +9044,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592111Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592112Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592113Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787168Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787169Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787169Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12263,7 +12582,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.55937Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593701Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593702Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788758Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788759Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078876Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12743,7 +13062,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"IOS\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592288Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559229Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"IOS\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787331Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787332Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -13946,7 +14265,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593062Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593064Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593064Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593065Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593066Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788104Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788105Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788105Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788106Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788107Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14257,7 +14576,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592839Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559284Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559284Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787888Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787889Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787889Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14993,7 +15312,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593143Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593144Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788169Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078817Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16037,7 +16356,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443511\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592586Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443511\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592588Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443511\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078761Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443511\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078761Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Platforms",
@@ -18358,7 +18677,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591978Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591979Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591979Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559198Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591981Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787044Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787046Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787046Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787047Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787048Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18798,7 +19117,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591791Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591792Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078688Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786881Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19060,7 +19379,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593018Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5593019Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559302Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788051Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788052Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0788053Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19398,7 +19717,7 @@
     "Details": [
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591829Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-23T21:11:51.559183Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Web\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591831Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5591832Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786915Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786916Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"Web\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786917Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1325422\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0786918Z\",\"LatestRing\":\"DeferredRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19684,45 +20003,6 @@
       "Retirement"
     ],
     "Title": "SharePoint Alerts retirement",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": "2026-10-31T07:00:00Z",
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and Why</b></b></p><p>We are retiring support for Microsoft Defender for Endpoint (MDE) on Amazon Linux 2 (AL2) running on ARM64 architecture, effective October 31, 2026.</p><p><b><b>Schedule</b></b></p><ul><li>Retirement effective: <b>October 31, 2026</b></li><li>After this date, support and updates will no longer be available.</li></ul><p><b><b>Impact on Your Organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations using Microsoft Defender for Endpoint on Amazon Linux 2 (ARM64)</li><li>Organizations using AL2 on AMD64/x86_64 are not affected</li></ul><p><i>Platforms/Services</i></p><ul><li>Microsoft Defender for Endpoint</li><li>Amazon Linux 2 (ARM64)</li></ul><p><i>What will happen</i></p><ul><li>Defender versions released after this build will not install on <b>AL2 (ARM64) </b>due to platform incompatibility.</li><li>Version <b>101.25122.0004 is the last supported version</b> for this platform.</li><li>After <b>October 31, 2026</b>:<ul><li>No security updates</li><li>No bug fixes</li><li>No technical support</li></ul></li><li>Devices remaining on this platform may:<ul><li>Miss new features, detection improvements, and protection enhancements</li><li>Be exposed to increased security and stability risks over time</li></ul></li></ul><p><b><b>Action Required / Recommendations</b></b></p><p><b>Action required by October 31, 2026.</b></p><p>Admins should:</p><ul><li>Identify devices running<b> Amazon Linux 2 (ARM64)</b> with Defender for Endpoint.</li><li>Prevent upgrades beyond version <b>101.25122.0004</b> on those devices.</li><li>Plan migration to a <b>supported Linux distribution for MDE</b>.</li><li>Complete migration before October 31, 2026.</li></ul><p><b>No action is required</b> for devices running Amazon Linux 2 on&nbsp;<b>AMD64/x86_64 architectures</b>.</p><p>Learn more: <a href=\"https://learn.microsoft.com/defender-endpoint/mde-linux-prerequisites#supported-linux-distributions\" target=\"_blank\">Prerequisites for Microsoft Defender for Endpoint on Linux |&nbsp;Microsoft Defender for Endpoint | Microsoft Defender | Microsoft Learn</a></p><p><b><b>Compliance Considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Support for Microsoft Defender for Endpoint on Amazon Linux 2 (ARM64) will retire on October 31, 2026. After this date, no updates or support will be provided. Organizations must identify affected devices, prevent upgrades beyond version 101.25122.0004, and migrate to a supported Linux distribution before the deadline."
-      }
-    ],
-    "EndDateTime": "2026-12-01T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1392568",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-06-15T22:12:06.383Z",
-    "Services": [
-      "Microsoft Defender XDR"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-06-15T22:11:46Z",
-    "Tags": [
-      "User impact",
-      "Admin impact",
-      "Retirement"
-    ],
-    "Title": "Microsoft Defender for Endpoint: Support for Amazon Linux 2 (ARM64) retiring October 31, 2026",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -20050,7 +20330,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592173Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592174Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787223Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787224Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20149,7 +20429,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592665Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592666Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592667Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592668Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.078765Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787651Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787651Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787652Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20792,7 +21072,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592883Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592884Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592885Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-23T21:11:51.5592886Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787943Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787943Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787944Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-09-24T00:33:32.0787945Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
