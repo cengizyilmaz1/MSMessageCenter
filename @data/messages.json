@@ -4,6 +4,148 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
+      "Content": "<p>Updated October 1, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>We are introducing a new <b>priority cleanup workflow</b> in Microsoft Purview Data Lifecycle Management that allows administrators to <b>permanently delete (hard delete) specific OneDrive and SharePoint content types</b>, even when retention policies or holds are in place. This capability helps reduce data exposure risk from rapidly growing Copilot-related content while maintaining compliance through required eDiscovery admin review and approval.</p><p>This change is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558343\" rel=\"noopener noreferrer\" target=\"_blank\">558343</a>.</p><p><b><b>When this will happen:</b></b></p><p>Public Preview: We will begin rolling out <b>mid-August 2026</b> (previously mid-July) and expect to complete by <b>mid-September 2026</b> (previously late July).</p><p>General Availability (Worldwide) Rollout begins<b> mid-October 2026</b> and is expected to complete by <b>mid-November 2026</b> (previously mid-September).</p><p><b><b>How this affects your organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Microsoft 365 administrators managing <b>Microsoft Purview Data Lifecycle Management</b></li><li>Organizations using <b>OneDrive for Business</b> and <b>SharePoint Online </b>with retention policies or holds</li></ul><p><b>What will happen:</b></p><ul><li>Admins can create a<b> priority cleanup policy</b> targeting specific content types in OneDrive and SharePoint.</li><li>A new <b>Delete data permanently </b>option enables <b>hard deletion</b> of targeted items.</li><li><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/d4952292-7b09-45aa-8255-c94bb5be4158\" alt=\"user settings\"></li><li>Content deleted through this workflow is fully removed and is no longer discoverable in:<ul><li>SharePoint search</li><li>Copilot experiences</li><li>eDiscovery (after required approval)</li></ul></li><li>For content under hold, <b>eDiscovery admin review and approval</b> is required before deletion.</li><li>This capability is <b>not enabled by default</b> and requires explicit admin configuration.</li><li>There is <b>no change to user workflows</b> unless an admin configures and applies a priority cleanup policy.</li></ul><p><b><b>What you can do to prepare:</b></b></p><ul><li>Review your organization’s data risk and retention strategy, especially for Copilot-generated content such as Teams transcripts.</li><li>In Microsoft Purview, plan and configure a<b> priority cleanup policy</b> if permanent deletion is required for specific content types:<ul><li>Navigate to <b>Microsoft Purview portal</b> &gt;<b> Data Lifecycle Management</b> &gt;<b> Priority cleanup</b>.</li><li>Create a new policy and select <b>Delete data permanently</b> in the policy settings.</li></ul></li><li>Ensure appropriate <b>eDiscovery admin roles and approval processes</b> are in place for content under hold.</li><li>Update internal governance or compliance documentation to reflect this new deletion capability.</li></ul><p><b>Learn more: </b><a href=\"https://learn.microsoft.com/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide#microsoft-365-groups\" rel=\"noopener noreferrer\" target=\"_blank\">Compare types of groups in Microsoft 365 - Microsoft 365 admin | Microsoft Learn</a></p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muprzyi1-12\"><b>Compliance area</b></td><td data-row=\"row-muprzyi1-12\"><b>Explanation</b></td></tr><tr><td data-row=\"row-muprzyi1-13\">Alteration of existing customer data processing</td><td data-row=\"row-muprzyi1-13\">This change introduces a priority cleanup workflow that allows permanent deletion of specific OneDrive and SharePoint content types, even when retention policies or holds exist, subject to required approval.</td></tr><tr><td data-row=\"row-muprzyi1-14\">eDiscovery or Content Search</td><td data-row=\"row-muprzyi1-14\">Content deleted through the priority cleanup workflow is fully removed and no longer discoverable in eDiscovery or Content Search after eDiscovery admin review and approval for items under hold.</td></tr><tr><td data-row=\"row-muprzyi1-15\">Retention policies, holds, or deletion workflows</td><td data-row=\"row-muprzyi1-15\">Adds a new admin-controlled deletion workflow that can override standard retention outcomes through an approved hard-delete process.</td></tr><tr><td data-row=\"row-muprzyi1-16\">Admin controls and compliance monitoring</td><td data-row=\"row-muprzyi1-16\">The feature is managed by administrators in Microsoft Purview and includes review and approval steps that support compliance oversight and auditing.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "558343"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Purview introduces a priority cleanup workflow enabling admins to hard delete specific OneDrive and SharePoint content, even under retention or holds, with required eDiscovery approval. Rolling out from mid-2026, it reduces data exposure while maintaining compliance and requires explicit admin configuration."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2026-12-28T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1261587",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-10-01T16:57:01.687Z",
+    "Services": [
+      "Microsoft Purview"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-03-25T22:52:31Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Purview | Data Lifecycle Management - Hard delete OneDrive and SharePoint files with priority cleanup workflow",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 1, 2026: We have updated the content and timeline. Thank you for your patience.</p><p><b>What it is</b></p><p>Microsoft is rolling out a new feature to streamline how app and agent availability and installation is managed across Teams, Outlook, and Microsoft 365 Copilot. Until now, IT admins configured availability and installation settings separately in both the Microsoft 365 Admin Center (MAC) and the Teams Admin Center (TAC), which led to mismatches. With this update, you’ll be able to unify availability and installation policies for apps and agents across both portals, making app management more consistent and efficient.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=393931\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255);\">393931</a>, <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=485712\" rel=\"noopener noreferrer\" target=\"_blank\">485712</a> and <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=503105\" rel=\"noopener noreferrer\" target=\"_blank\">503105</a>.</p><p><b>When this will happen:&nbsp;</b></p><ul><li>App and agent AVAILABILITY unification (section A): Rollout began in <b>late September 2025</b>. The Phase 3 timeline will be announced separately, at least 60 days before that phase begins.</li><li>App and agent INSTALLATION unification (section B): Rollout begins at the <b>end of September 2026</b>.&nbsp;</li></ul><p><b>A: Unify app availability across admin centers</b></p><p>1. <b>Phase 1 – Default Tenant Unification of App/Agent Availability</b></p><p>We will begin rolling out this feature at the end of September 2025. This initial phase targets tenants that have never modified their organization-wide defaults, app availability, or block/unblock in either the Microsoft 365 admin center or the Teams admin center. At the end of this phase, agent and app manageability will be unified across both Microsoft 365 admin center and Teams admin center ensuring agent and Microsoft 365 <b>apps availability</b> policies are in alignment for all future administrative changes. This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=393931\" rel=\"noopener noreferrer\" target=\"_blank\">393931.</a></p><p>2.<b>Phase 2 – Modified Tenants Unification of App/Agent Availability</b></p><p>This phase targets tenants that have previously modified their organization-wide defaults, app availability, or block/unblock settings in either admin center. These tenants will be transitioned to a unified management experience across both Microsoft 365 and Teams admin centers.</p><ul><li><b>For tenants with no agent or app availability differences across both admin centers</b>, guidance will be provided to help maintain unified availability policy for all future changes.</li></ul><p><b>For tenants with agent or app availability differences across both admin centers, </b>a <b>wizard </b>in the Teams admin center will help identify affected agents and apps and guide through resolving discrepancies.</p><ul><li>As part of this phase we will also enable administrators to manage Microsoft 365 certified SaaS applications within their tenant through org-wide settings for third-party apps. This has been rolled out completely for all tenants.</li><li>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=485712\" rel=\"noopener noreferrer\" target=\"_blank\">485712</a> &amp; <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=503105\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255);\">503105</a>.</li></ul><p>This phase has been fully rolled out to all tenants. Tenants can choose to align through the wizard experience available in Teams admin center.</p><p><b>Note:</b> In this phase, no changes will be applied to org-wide settings or app-level settings without administrator action.</p><p>3. <b>Phase 3 – Automatic Unification (Future)</b></p><p><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">Tenants that have not taken action to unify availability through the wizard experience released in Phase 1 and Phase 2 will have their availability automatically unified across MAC and TAC as part of this phase. We will inform customers of the timeline and additional details at least </span><b style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">60 days in advance</b><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\"> before this phase begins.</span></p><p><b>B: Unified app and agent installation management&nbsp;</b></p><p>This capability unifies installation management across the Teams admin center and Microsoft 365 admin center. Administrators can manage supported app and agent installations from either portal, with changes synchronized across both admin centers.&nbsp;</p><p><b>Who receives this capability?</b>&nbsp;</p><p>Tenants whose app and agent availability has been unified through any of the phases described in section A are eligible. Once rollout begins, this capability will be automatically enabled for tenants whose availability is already unified as part of Section A. Tenants that unify their availability later will receive this capability automatically once unified.&nbsp;</p><p><b>Note:</b> This capability is separate from availability unification described in section A . It does not automatically unify app or agent availability.&nbsp;</p><p><b>When will it roll out?</b>&nbsp;</p><p>Rollout will begin at the end of September 2026 for eligible tenants. This date applies only to installation management (section B).&nbsp;</p><p><b>Is administrator action required?</b>&nbsp;</p><p>No additional action is required to enable installation unification for eligible tenants. Existing installation assignments for supported apps and agents will be synchronized across both admin centers.&nbsp;</p><p><b>Important:</b> App installation is no longer managed through Teams app setup policies. Installations previously made through those policies are not unified as part of this change.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "503105,485712,393931"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft is unifying app and agent availability and installation management across Teams, Outlook, and Microsoft 365 admin centers. Availability unification began in September 2025 in phases, with automatic unification planned. Installation unification starts late September 2026, synchronizing settings without admin action for eligible tenants."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Desktop, Web"
+      }
+    ],
+    "EndDateTime": "2026-10-30T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC796790",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-10-01T16:54:00.373Z",
+    "Services": [
+      "Microsoft Teams",
+      "Microsoft 365 apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2024-05-29T22:15:48Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "Admin impact"
+    ],
+    "Title": "Unified management of app and agent availability and installation in Teams, Outlook, and the Microsoft 365 app",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 1, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>As part of our ongoing mission to deliver a modern, secure, and scalable one-stop management portal for admins, we are transitioning Teams Android device management from the <b>Teams admin center (TAC)</b> to the <b>Teams Rooms Pro Management portal (PMP)</b>.</p><p>This move consolidates management of all Teams devices, including Teams Rooms on Windows, Teams Rooms on Android, Teams phones, and Teams panels, into a single unified portal, providing IT admins a consistent and seamless experience for managing devices at scale.</p><p>This message is associated with Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=555235\" rel=\"noopener noreferrer\" target=\"_blank\">555235</a>.</p><p><b><b>When this will happen:</b></b></p><ul><li>General Availability (Worldwide): Effective <b>July 2, 2026</b>, the rollout is <b>100% complete</b> across all regions in the Public cloud.</li><li>General Availability (GCC High): We expect to start the rollout by <b>mid-August 2026</b> and complete by<b> late-August 2026</b> (previously late-July).</li><li>General Availability (GCC and DoD): We expect to complete the rollout by <b>mid-October 2026</b> (previously late-August).</li><li>Device management deprecation in TAC: The deprecation of Teams device management capabilities in TAC will begin in October 2026 and will roll out in phases based on device type and feature readiness.</li></ul><p><b><b>How this affects your organization:</b></b></p><p><b>Who is affected:</b></p><p>Admins who manage Teams Rooms on Android, Teams phones, Teams panels, and SIP Phones.</p><p><b>What will happen:</b></p><ul><li>By end of June 2026, Android device management capabilities, including inventory, updates, health monitoring, and settings will transition from TAC to PMP for the device types, Teams Rooms on Android, Teams phones, Teams panels and SIP Phones.</li><li>The following capabilities will be available and enhanced in PMP:<ul><li>Device inventories for Android-based Teams Rooms, phones, and panels, including metadata and app information</li><li>Remote device actions (restart, log collection, sign-in/out, provisioning, and more)</li><li>Update management</li><li>Device settings management</li><li>Device health monitoring</li><li>SIP device management</li></ul></li><li>PMP will become the primary portal for all Teams device management. By <b>November 2026</b>, overlapping TAC capabilities (updates, settings, restart, sign-in/out, log collection, provisioning) will be deprecated in TAC.</li><li>The article below serves as the main information source for this transition. It has been updated with the latest timelines, milestones, migration guidance, and readiness steps. We will keep updating it as the rollout progresses.<ul><li><a href=\"https://learn.microsoft.com/microsoftteams/rooms/aboutunifieddevicemanagement-pmp1\" rel=\"noopener noreferrer\" target=\"_blank\">Transitioning Teams Android Device Management from Teams Admin Center to the Teams Rooms Pro Management Portal - Microsoft Teams | Microsoft Learn</a></li></ul></li></ul><p><b><b>What you need to do to prepare:</b></b></p><ul><li>Monitor the below article for any feature specific updates and timelines. This article also provides migration guidance and pre-requisites for successful transition to PMP.<ul><li><a href=\"https://learn.microsoft.com/microsoftteams/rooms/aboutunifieddevicemanagement-pmp1\" rel=\"noopener noreferrer\" target=\"_blank\">Transitioning Teams Android Device Management from Teams Admin Center to the Teams Rooms Pro Management Portal - Microsoft Teams | Microsoft Learn</a></li></ul></li><li>Learn more about Pro Management portal features with these <a href=\"https://www.youtube.com/playlist?list=PLyhj1WZ29G65glMRLXqtlq7DGBvXg-TnT\" rel=\"noopener noreferrer\" target=\"_blank\">Teams Rooms Pro Management short YouTube videos</a>.</li><li>Update internal helpdesk and IT documentation to reference PMP as the new management portal.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "555235"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Teams Android device management is transitioning from the Teams admin center to the Teams Rooms Pro Management portal by July 2026, consolidating all Teams device management into one portal. TAC device management will be deprecated by November 2026. Admins should prepare by monitoring updates and updating documentation accordingly."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Android, Desktop, TeamsAndSurfaceDevices"
+      }
+    ],
+    "EndDateTime": "2026-11-30T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1227622",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-10-01T16:28:19.437Z",
+    "Services": [
+      "Microsoft Teams",
+      "Microsoft 365 for the web"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-02-06T00:41:45Z",
+    "Tags": [
+      "Updated message",
+      "Admin impact"
+    ],
+    "Title": "Transitioning Teams Android Device Management from Teams admin Center to the Teams Rooms Pro Management portal",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
       "Content": "We are announcing the ability to use after conversation presence status for wrap-up activities in Dynamics 365 Contact Center. This feature will reach general availability on October 30, 2026.<br><br>\n<b>How does this affect me?</b><br>\nThis feature disambiguates the Busy/DND presence state of a representative by letting the supervisor clearly distinguish agents performing after-conversation wrap-up work from representatives who are generally Busy or in DND, reducing operational ambiguity.<br><br> \nAfter conversation work presence (ACW) introduces dedicated, system-driven presence states like <b>Busy - After Conversation Work or DND - After Conversation Work</b>, to indicate the post-conversation wrapping-up state of the customer service representatives.<br><br> \nThese states are automatically applied to a representative by the system when they are wrapping up the conversation, depending on how the administrator has configured the wrap-up experience in the admin center. The presence status is set by the system and is visually distinct from other manually set or system evaluated <b>Busy/DND</b> presence states.<br><br> \n<b>What action do I need to take? </b><br>\nThis message is for awareness, and no action is required.<br><br>",
       "ContentType": "html"
     },
@@ -150,7 +292,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836569Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836571Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836572Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836574Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828608Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828608Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828609Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082861Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1002,7 +1144,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835663Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835666Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835667Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828076Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828077Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828078Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2339,54 +2481,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated September 25, 2026: We have updated the content. Thank you for your patience.</p><p><b>What it is</b></p><p>Microsoft is rolling out a new feature to streamline how app and agent availability and installation is managed across Teams, Outlook, and Microsoft 365 Copilot. Until now, IT admins configured availability and installation settings separately in both the Microsoft 365 Admin Center (MAC) and the Teams Admin Center (TAC), which led to mismatches. With this update, you’ll be able to unify availability and installation policies for apps and agents across both portals, making app management more consistent and efficient.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=393931\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255);\">393931</a>, <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=485712\" rel=\"noopener noreferrer\" target=\"_blank\">485712</a> and <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=503105\" rel=\"noopener noreferrer\" target=\"_blank\">503105</a>.</p><p><b>When this will happen:&nbsp;</b></p><p>We will begin rolling out this feature late September 2025. Rollout timeline for phase 3 will be announced later.</p><p><b>A: Unify app availability across admin centers</b></p><p>1. <b>Phase 1 – Default Tenant Unification of App/Agent Availability</b></p><p>We will begin rolling out this feature at the end of September 2025. This initial phase targets tenants that have never modified their organization-wide defaults, app availability, or block/unblock in either the Microsoft 365 admin center or the Teams admin center. At the end of this phase, agent and app manageability will be unified across both Microsoft 365 admin center and Teams admin center ensuring agent and Microsoft 365 <b>apps availability</b> policies are in alignment for all future administrative changes. This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=393931\" rel=\"noopener noreferrer\" target=\"_blank\">393931.</a></p><p>2.<b>Phase 2 – Modified Tenants Unification of App/Agent Availability</b></p><p>This phase targets tenants that have previously modified their organization-wide defaults, app availability, or block/unblock settings in either admin center. These tenants will be transitioned to a unified management experience across both Microsoft 365 and Teams admin centers.</p><ul><li><b>For tenants with no agent or app availability differences across both admin centers</b>, guidance will be provided to help maintain unified availability policy for all future changes.</li></ul><p><b>For tenants with agent or app availability differences across both admin centers, </b>a <b>wizard </b>in the Teams admin center will help identify affected agents and apps and guide through resolving discrepancies.</p><ul><li>As part of this phase we will also enable administrators to manage Microsoft 365 certified SaaS applications within their tenant through org-wide settings for third-party apps. This has been rolled out completely for all tenants.</li><li>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=485712\" rel=\"noopener noreferrer\" target=\"_blank\">485712</a> &amp; <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=503105\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255);\">503105</a>.</li></ul><p>This phase has been fully rolled out to all tenants. Tenants can choose to align through the wizard experience available in Teams admin center.</p><p><b>Note:</b> In this phase, no changes will be applied to org-wide settings or app-level settings without administrator action.</p><p>3. <b>Phase 3 – Automatic Unification (Future)</b></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Tenants that have not taken action to unify availability through the wizard experience released in Phase 1 and Phase 2 will have their availability automatically unified across MAC and TAC as part of this phase. We will inform customers of the timeline and additional details at least </span><b style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">60 days in advance</b><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> before this phase begins.</span></p><p><b>B: Unify app installation across admin centers</b></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(36, 36, 36);\">In this phase, app and agent installation management is unified across the Teams admin center and Microsoft 365 admin center. Admins can manage supported app and agent installations from either portal, and changes remain synchronized across both admin centers.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(36, 36, 36);\">No additional action is required by admins. Existing installation assignments will be synchronized across both admin centers for eligible tenants.</span></p><p><b style=\"background-color: rgb(255, 255, 255); color: rgb(36, 36, 36);\">Eligible tenants</b><span style=\"background-color: rgb(255, 255, 255); color: rgb(36, 36, 36);\">: Any tenant that moved to the unified availability state as part of Phase 1 or Phase 2, or moves as part of Phase 3 in the future, will automatically receive this feature once unified.</span></p><p><b>Timeline: </b>We will release this feature <b>end of September 2026</b> for eligible tenants.</p><p><b style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Important: </b><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">App installation is no longer managed through Teams app setup policies. App installations previously made through app setup policies are not unified as part of this change.</span></p><ul><li><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">This message is associated with Microsoft 365 Roadmap ID </span><b style=\"background-color: rgb(255, 255, 255);\"><a href=\"https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fmicrosoft-365%2Froadmap%3Ffilters%3D%26searchterms%3D567883&amp;data=05%7C02%7Cv-honoggle%40microsoft.com%7C2c612a69595b41c4d05308dee73aa9fd%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639202436349604012%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=rdHKSfvuXeLiBvqPlxFThkNSIlKKUA0wueaS5%2FrliuQ%3D&amp;reserved=0\" rel=\"noopener noreferrer\" target=\"_blank\">567883</a></b></li></ul><p><b>How this will affect your organization</b></p><p>Before this rollout, managing Teams apps that also work in Outlook and the Microsoft 365 app was fragmented across two admin centers:</p><ul><li>the Integrated apps and Agent apps pages in the Microsoft 365 admin center, and</li><li>the Manage apps page in the Teams admin center.</li></ul><p>This sometimes resulted in inconsistent availability settings for the same app.</p><p>With Unified agent app management, admins can manage apps and agents from either the Microsoft 365 admin center or the Teams admin center. Availability settings will remain synchronized across both, ensuring a consistent management experience.</p><p></p><p><b>What you can expect:</b></p><ul><li>You’ll gain a consolidated view of agent and Microsoft 365 app availability across both Microsoft 365 and Teams admin centers.</li><li>Changes made in either admin center to the agent and app availability will automatically apply across all supported hosts.</li><li>Organization-wide defaults for both admin centers will be in sync and govern app availability across Teams, Outlook, and the Microsoft 365 copilot app.</li></ul><p><b>What you need to do to prepare</b></p><p>To ensure a smooth transition, review your tenant-level and individual agent/app settings (app allow/block &amp; user availability) in both the Microsoft 365 Admin Center and the Teams Admin Center. If different departments within your organization manage these settings, we suggest coordinating efforts to complete the review collaboratively.</p><p>This update will be rolled out automatically by the stated date, and no immediate action is required. However, it's a good time to update any internal documentation related to agent and app management policies.</p><p>Learn more: <a href=\"https://learn.microsoft.com/microsoftteams/uam-tac-mac\" rel=\"noopener noreferrer\" target=\"_blank\">Unified agent and app availability management across Microsoft 365 and Teams Admin Centers - Microsoft Teams | Microsoft Learn&nbsp;</a></p>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "503105,485712,393931"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft is unifying app and agent availability and installation management across Teams, Outlook, and Microsoft 365 admin centers to ensure consistent policies. The rollout begins late September 2025 in phases, with full installation unification by September 2026. Admins can manage apps from either portal with synchronized settings."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Desktop, Web"
-      }
-    ],
-    "EndDateTime": "2026-10-30T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC796790",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-09-25T20:39:52.3Z",
-    "Services": [
-      "Microsoft Teams",
-      "Microsoft 365 apps"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2024-05-29T22:15:48Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "Admin impact"
-    ],
-    "Title": "Unified management of app and agent availability and installation in Teams, Outlook, and the Microsoft 365 app",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated September 25, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>We are introducing attendee proximity join for Microsoft Teams Rooms on Windows and Android, enabling users to quickly and effortlessly connect to a nearby room system when joining Microsoft Teams events, including town halls, webinars, and structured meetings. This enhancement simplifies the meeting join experience and helps users connect to the appropriate room device with fewer steps.</p><p>This message is associated with Roadmap ID <a href=\"https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&amp;searchterms=568781\" rel=\"noopener noreferrer\" target=\"_blank\">568781</a>.</p><p><b><b>Rollout Schedule:</b></b></p><ul><li><b>Targeted Release: </b>Rollout will begin in early November 2026 (previously early October) and is expected to complete by mid-November 2026 (previously late October).&nbsp;</li><li><b>General Availability (Worldwide, GCC, GCC High):</b> Rollout will begin in mid-November 2026 (previously late October) and is expected to complete by early December 2026 (previously mid-November).</li></ul><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Users who leverage Microsoft Teams Rooms on Windows or Android to join Teams events.</li></ul><p><b>Platforms and Services:</b></p><ul><li>Microsoft Teams Rooms on Windows</li><li>Microsoft Teams Rooms on Android</li><li>Microsoft Teams events, including town halls and webinars</li></ul><p><b>What will happen:</b></p><ul><li>Users will be able to use proximity join to connect to nearby Microsoft Teams Rooms when joining Teams events.</li><li>The feature provides a faster and more seamless method for joining supported Teams events from room systems.</li><li>This functionality will be available by default as part of the Microsoft Teams Rooms experience.</li></ul><p><b><b>Action Required / Recommendations:</b></b></p><p>No action is required to enable this feature. It will become available automatically during the rollout.</p><p>We recommend informing users who regularly participate in Teams events that they can use proximity join with nearby Microsoft Teams Rooms to simplify the room join experience.</p><p><b><b>Compliance Considerations:</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
       "ContentType": "html"
     },
@@ -2483,7 +2577,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837019Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837021Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828876Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828877Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2922,7 +3016,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837988Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.383799Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837991Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829436Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829437Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829437Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3974,7 +4068,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834659Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834662Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834664Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827501Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827502Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827503Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4026,7 +4120,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.383403Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834034Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834036Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827098Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.08271Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827101Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4078,7 +4172,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836273Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836275Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836276Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828448Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828449Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082845Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4225,7 +4319,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.383734Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837342Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837343Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829066Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829067Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829068Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4371,7 +4465,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835165Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835167Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835194Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835196Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835197Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827799Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.08278Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.08278Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827801Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827802Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4503,7 +4597,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837077Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837079Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837081Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828917Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828918Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828919Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4554,7 +4648,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835421Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835423Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827922Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827923Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4606,7 +4700,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834481Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834484Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834487Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827391Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827392Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1045221\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827393Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5420,7 +5514,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836693Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836694Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836696Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828678Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828679Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082868Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6782,7 +6876,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837553Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837555Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837557Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829207Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829208Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829208Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8399,7 +8493,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835876Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835878Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835879Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835881Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835882Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835885Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828188Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828189Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082819Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828191Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828191Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828193Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8743,7 +8837,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837784Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837786Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829321Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829322Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8795,7 +8889,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.383784Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837842Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837844Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837845Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837847Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829353Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829354Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829354Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829355Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829356Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9501,7 +9595,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837497Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837499Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082916Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0829161Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10273,7 +10367,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835483Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835485Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835487Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827969Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082797Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827971Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10403,7 +10497,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837169Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837171Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837172Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837175Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3837176Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.383718Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828962Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828963Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828964Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828965Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828966Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828967Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10454,7 +10548,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835763Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835765Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835767Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082812Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828121Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC688109\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828121Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11333,7 +11427,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836174Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836176Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836178Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828388Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828389Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082839Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11564,7 +11658,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835002Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835004Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835006Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827704Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827705Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827706Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11726,70 +11820,6 @@
       "Admin impact"
     ],
     "Title": "Microsoft 365 Copilot: Updates to memory and personalization",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "We are announcing the ability to make different corrections within the same journal, correct a wider range of fields, and easily select transactions that need correction in Dynamics 365 Project Operations. This feature will reach general availability on September 30, 2026.<br><br> \n\n <b>How does this affect me?</b><br> \n\nThis feature enhances the update correction journal usability process by reducing manual input, repeat work, and errors by introducing the following changes:<ul> \n<li>Transactions can be marked with “Needs correction” from the billing hub view. Once all required transactions have been marked, you can create the journal, simplifying the journal creation process.</li> \n\n<li>Different transactions added to the same correction journal can be corrected in different ways, reducing the number of journals that need to be created.</li> \n\n<li>A wider set of fields is available for correction, limiting the number of transactions that need to be recalled to the draft entry state (a more complicated process) to complete the required changes.</li> \n\n<li>Time transactions can be split across multiple projects and tasks without recalling the draft entry state.</li> \n\n<li>A UI overhaul will make the corrections process easier and simpler to follow.</li></ul>  \n\n<b>What action do I need to take?</b><br> \nThis message is for awareness, and no action is required.<br><br> \n If you would like more information on this feature, please visit <a href=\"https://aka.ms/ADO17330\"target=\"_blank\">Update correction journal usability</a>.",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [],
-    "EndDateTime": "2026-10-01T16:45:16Z",
-    "HasAttachments": false,
-    "Id": "MC1465655",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-09-01T16:45:52.36Z",
-    "Services": [
-      "Dynamics 365 Apps"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-09-01T16:45:16Z",
-    "Tags": [
-      "New feature"
-    ],
-    "Title": "Dynamics 365 Project Operations - Update correction journal usability",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "We are announcing the ability for users to access video logs for unattended desktop flow runs directly from the portal, improving troubleshooting without needing local machine access in Power Automate. This feature will reach public preview on September 15, 2026.<br><br><b>How does this affect me?</b><br>Video logs captured during unattended desktop flow runs are now stored in Dataverse and surfaced directly in the flow run details page in the Power Automate portal.<br><br>When a run fails, users can access the recorded video immediately from the run details experience, without needing to retrieve files from the local machine. These videos provide visual context of the last moments before failure, helping identify issues such as UI interaction failures, timing problems, or unexpected system prompts.<br><br>This builds on the existing video logging capability for unattended runs and extends it by enabling centralized storage and access through the portal, improving visibility and usability across environments and teams.<br><br><b>What action do I need to take?</b><br>This message is for awareness, and no action is required.",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [],
-    "EndDateTime": "2026-10-01T16:40:26Z",
-    "HasAttachments": false,
-    "Id": "MC1465653",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-09-01T16:41:30.677Z",
-    "Services": [
-      "Microsoft Power Automate"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-09-01T16:40:26Z",
-    "Tags": [
-      "New feature"
-    ],
-    "Title": "Microsoft Power Automate - View unattended run video logs in portal",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -14380,53 +14410,6 @@
     "AdditionalProperties": {}
   },
   {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated August 19, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p>\n<p>We are introducing a new <b>priority cleanup workflow</b> in Microsoft Purview Data Lifecycle Management that allows administrators to <b>permanently delete (hard delete) specific OneDrive and SharePoint content types</b>, even when retention policies or holds are in place. This capability helps reduce data exposure risk from rapidly growing Copilot-related content while maintaining compliance through required eDiscovery admin review and approval.</p><p>This change is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558343\" target=\"_blank\">558343</a>.</p>\n\n<p><b><b>When this will happen:</b></b></p>\n<p>Public Preview: We will begin rolling out <b>mid-August 2026</b> (previously mid-July) and expect to complete by <b>mid-September 2026</b> (previously late July).</p><p>General Availability (Worldwide) Rollout begins<b>&nbsp;late September 2026 </b>(previously mid-October)&nbsp;and is expected to complete by <b>mid-November 2026</b> (previously&nbsp;mid-September).</p>\n\n<p><b><b>How this affects your organization:</b></b></p>\n<p><b>Who is affected:</b></p>\n<ul>\n<li>Microsoft 365 administrators managing <b>Microsoft Purview Data Lifecycle Management</b></li>\n<li>Organizations using <b>OneDrive for Business</b> and <b>SharePoint Online </b>with retention policies or holds</li>\n</ul>\n\n<p><b>What will happen:</b></p>\n<ul>\n<li>Admins can create a<b> priority cleanup policy</b> targeting specific content types in OneDrive and SharePoint.</li>\n<li>A new <b>Delete data permanently </b>option enables <b>hard deletion</b> of targeted items.</li><p><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/03/20306.png\" style=\"width: 400px;\" alt=\"user settings\"></p>\n<li>Content deleted through this workflow is fully removed and is no longer discoverable in:<ul><li>SharePoint search</li><li>Copilot experiences</li><li>eDiscovery (after required approval)</li></ul></li><li>For content under hold, <b>eDiscovery admin review and approval</b> is required before deletion.</li><li>This capability is <b>not enabled by default</b> and requires explicit admin configuration.</li><li>There is <b>no change to user workflows</b> unless an admin configures and applies a priority cleanup policy.</li></ul>\n\n<p><b><b>What you can do to prepare:</b></b></p>\n<ul>\n<li>Review your organization’s data risk and retention strategy, especially for Copilot-generated content such as Teams transcripts.</li><li>In Microsoft Purview, plan and configure a<b> priority cleanup policy</b> if permanent deletion is required for specific content types:<ul><li>Navigate to <b>Microsoft Purview portal</b> &gt;<b> Data Lifecycle Management</b> &gt;<b> Priority cleanup</b>.</li><li>Create a new policy and select <b>Delete data permanently</b> in the policy settings.</li></ul></li><li>Ensure appropriate <b>eDiscovery admin roles and approval processes</b> are in place for content under hold.</li><li>Update internal governance or compliance documentation to reflect this new deletion capability.</li></ul>\n\n<p><b>Learn more: </b><a href=\"https://learn.microsoft.com/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide#microsoft-365-groups\" target=\"_blank\">Compare types of groups in Microsoft 365 - Microsoft 365 admin | Microsoft Learn</a></p><p><b><b>Compliance considerations:</b></b></p>\n<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\">\n<tbody><tr>\n<td><b>Compliance area</b></td>\n<td><b>Explanation</b></td>\n</tr>\n<tr>\n<td>Alteration of existing customer data processing</td>\n<td>This change introduces a priority cleanup workflow that allows permanent deletion of specific OneDrive and SharePoint content types, even when retention policies or holds exist, subject to required approval.</td>\n</tr>\n<tr>\n<td>eDiscovery or Content Search</td>\n<td>Content deleted through the priority cleanup workflow is fully removed and no longer discoverable in eDiscovery or Content Search after eDiscovery admin review and approval for items under hold.</td>\n</tr>\n<tr>\n<td>Retention policies, holds, or deletion workflows</td>\n<td>Adds a new admin-controlled deletion workflow that can override standard retention outcomes through an approved hard-delete process.</td>\n</tr>\n<tr>\n<td>Admin controls and compliance monitoring</td>\n<td>The feature is managed by administrators in Microsoft Purview and includes review and approval steps that support compliance oversight and auditing.</td>\n</tr>\n</tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "558343"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Purview introduces a priority cleanup workflow enabling admins to hard delete specific OneDrive and SharePoint content, even under retention or holds, with required eDiscovery approval. Rolling out from mid-August to mid-November 2026, this feature requires explicit admin setup and supports compliance monitoring."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2026-12-28T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1261587",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-08-19T16:54:01.167Z",
-    "Services": [
-      "Microsoft Purview"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-03-25T22:52:31Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Purview | Data Lifecycle Management - Hard delete OneDrive and SharePoint files with priority cleanup workflow",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
     "ActionRequiredByDateTime": "2026-08-11T07:00:00Z",
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -14614,7 +14597,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"IOS\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835327Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-01T15:13:31.383533Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"IOS\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827882Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1402306\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827884Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15616,7 +15599,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836876Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836878Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836879Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836881Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836883Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082879Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828791Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828792Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828793Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828794Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15927,7 +15910,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836372Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836375Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836376Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828496Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828497Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1218712\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828497Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18738,7 +18721,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834759Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834761Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834762Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834764Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834765Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827547Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827548Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827549Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082755Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827551Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19090,7 +19073,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834589Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3834592Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082744Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827441Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19236,7 +19219,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836775Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836778Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836779Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828743Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828744Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828745Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19889,7 +19872,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835105Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3835108Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827767Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0827768Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19988,7 +19971,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836063Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836065Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836067Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836068Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828305Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828306Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828307Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828308Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20458,7 +20441,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836452Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836455Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836456Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T15:13:31.3836458Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.082855Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828551Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828552Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-01T18:17:57.0828552Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
