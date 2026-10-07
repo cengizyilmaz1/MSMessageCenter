@@ -4,6 +4,133 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
+      "Content": "<p>Updated October 7, 2026: We have decided not to move forward with this change at this time. We apologize for any inconvenience.</p><p><b>What and Why:</b></p><p>To help people discover and understand organizational information more easily, Microsoft is changing the default visibility of 11 existing profile card properties in Microsoft 365 profile cards. Today, these properties can be populated from Microsoft Entra ID and other supported external data sources such as People Graph Connectors and Microsoft 365 Organizational Data, but they are disabled by default and require administrators to manually enable them. You can find more on the existing profile card property management <a href=\"https://learn.microsoft.com/en-us/microsoft-365/admin/manage/customize-profile-cards?view=o365-worldwide\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</p><p>With this update, these properties will be displayed by default when populated with data. This helps organizations surface relevant employee information more consistently while reducing administrative effort for commonly used profile attributes. Organizations retain administrative controls to manage visibility according to their business, privacy, and compliance requirements.</p><p>The following properties are included in this update:</p><ol><li>Division</li><li>Role</li><li>Employee number</li><li>Employee type</li><li>Cost center</li><li>User principal name (UPN)</li><li>Alias</li><li>Fax</li><li>Street address</li><li>State</li><li>Postal code</li></ol><p><b>Rollout Schedule:</b></p><p>General Availability (Worldwide): We have decided not to move forward with this change at this time.</p><p><b>Impact to your organization:</b></p><p><b>Who is affected&nbsp;</b></p><ol><li>Global Administrators and People Administrators responsible for profile card management.</li><li>Organizations with users whose profile data includes one or more of the affected properties.</li></ol><p><b>Platforms/Services&nbsp;</b></p><ol><li>Microsoft 365 Profile Cards</li><li>Microsoft Entra ID</li><li>Microsoft 365 Organizational Data</li><li>Microsoft Entra People Graph Connectors</li><li>Microsoft Graph profile card management APIs</li><li>Microsoft 365 admin center</li></ol><p><b>What will happen&nbsp;</b></p><ol><li>The 11 listed properties will automatically appear on profile cards when the corresponding attributes contain data.</li><li>The change is enabled by default.</li><li>Attributes sourced from Microsoft Entra ID, Microsoft 365 Organizational Data, and Microsoft Entra People Graph Connectors follow the same visibility behavior.</li><li>No changes are made to underlying attribute values or source systems.</li><li>No changes are required from end users.</li><li>Tenants that have never configured profile card settings will automatically receive the new default visibility behavior.</li><li>Only properties with populated values will appear on profile cards.</li></ol><p><b>Action Required/Recommendations:</b></p><p>If your organization does not want specific properties displayed on profile cards, action is recommended before October 31, 2026.</p><p><b>Review current profile card configuration&nbsp;</b></p><p>Use Microsoft Graph to review existing profile card property settings:</p><p><code>HTTP</code></p><pre><code>GET  https://graph.microsoft.com/v1.0/admin/people/profileCardProperties \n\nHide properties before rollout \nTo prevent a property from being displayed, configure the property as hidden using Microsoft Graph.\nExample: Hide Employee Number\nHTTP \n\nPOST\nhttps://graph.microsoft.com/v1.0/admin/people/profileCardProperties \nContent-Type: application/json \n{ \n\"directoryPropertyName\": \"EmployeeId\", \n \"isVisible\": false  \n} \n</code></pre><p>For each property, you can use the property mappings below:</p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muyefyhi-1\"><b>Profile card label&nbsp;</b></td><td data-row=\"row-muyefyhi-1\"><b>directoryPropertyName&nbsp;</b></td></tr><tr><td data-row=\"row-muyefyhi-2\">Division</td><td data-row=\"row-muyefyhi-2\">Division</td></tr><tr><td data-row=\"row-muyefyhi-3\">Role</td><td data-row=\"row-muyefyhi-3\">Role</td></tr><tr><td data-row=\"row-muyefyhi-4\">Employee number</td><td data-row=\"row-muyefyhi-4\">EmployeeId</td></tr><tr><td data-row=\"row-muyefyhi-5\">Employee type</td><td data-row=\"row-muyefyhi-5\">EmployeeType</td></tr><tr><td data-row=\"row-muyefyhi-6\">Cost center</td><td data-row=\"row-muyefyhi-6\">CostCenter</td></tr><tr><td data-row=\"row-muyefyhi-7\">User principal name (UPN)</td><td data-row=\"row-muyefyhi-7\">UserPrincipalName</td></tr><tr><td data-row=\"row-muyefyhi-8\">Alias</td><td data-row=\"row-muyefyhi-8\">Alias</td></tr><tr><td data-row=\"row-muyefyhi-9\">Fax</td><td data-row=\"row-muyefyhi-9\">Fax</td></tr><tr><td data-row=\"row-muyefyhj-10\">Street address</td><td data-row=\"row-muyefyhj-10\">StreetAddress</td></tr><tr><td data-row=\"row-muyefyhj-11\">State</td><td data-row=\"row-muyefyhj-11\">StateOrProvince</td></tr><tr><td data-row=\"row-muyefyhj-12\">Postal code</td><td data-row=\"row-muyefyhj-12\">PostalCode</td></tr></tbody></table><p>Important: Each property requires a separate Microsoft Graph API call. Bulk enable or bulk disable operations are not currently supported. You can find more on using Microsoft Graph APIs for showing and hiding profile card attributes here. Recommended Administrator Actions</p><ol><li>Verify your current profile card configuration using Microsoft Graph and review which of the affected properties contain data in your tenant.</li><li>Use Microsoft Graph Profile Card APIs to hide any properties that should remain unavailable to users before rollout begins on October 31, 2026.</li><li>Communicate the upcoming change to help desk and support teams.</li></ol><p>After rollout, administrators can continue managing profile card visibility through Microsoft 365 admin center &gt; People settings &gt; Profile cards. Changes made can take up to 24 hours to be reflected on profile cards across Microsoft 365 experiences.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft planned to make 11 profile card properties visible by default in Microsoft 365 but decided not to proceed with this change as of October 7, 2026. Administrators can manage visibility using Microsoft Graph APIs, with no automatic rollout occurring at this time."
+      }
+    ],
+    "EndDateTime": "2026-10-09T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1438571",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-10-07T17:51:09.593Z",
+    "Services": [
+      "Microsoft 365 suite"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-07-24T21:56:36Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Default visibility of additional profile card properties in Microsoft 365 profile cards",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 7, 2026: We have updated the timeline and content. GA release will now be tracked separately in an upcoming MC post. Thank you for your patience.&nbsp;&nbsp;</p><p><b><b>What and Why</b></b></p><p>Microsoft is expanding the availability of <b>Copilot for Legal in Microsoft 365 Copilot in Word</b> to Frontier users<b> worldwide</b> in Public Preview.</p><p>Copilot for Legal was previously released in Frontier preview for users located in the United States only. This update expands access globally, enabling more organizations to benefit from this capability.</p><p>Copilot for Legal is a <b>vertical-specific Microsoft 365 Copilot experience designed for legal professionals</b>, built directly into Word. It helps legal teams review and negotiate contracts by identifying risks, comparing clauses to internal playbooks, and proposing edits using Word’s native tracked changes.</p><p>This update helps reduce manual review time while keeping legal professionals fully in control of document workflows.</p><p><b><b>Rollout Schedule</b></b></p><ul><li><b>Frontier Preview: </b>Available starting in mid-June 2026<b>.</b></li><li><b>General Availability: </b>GA release will now be tracked separately in an upcoming MC post.</li></ul><p><b><b>Impact on Your Organization</b>&nbsp;</b></p><p><i>Who is affected</i></p><ul><li>Organizations enrolled in the Microsoft 365 Copilot Frontier program</li><li>Users with Microsoft 365 Copilot licenses, particularly legal professionals (for example, in-house counsel, contract managers, legal ops)</li></ul><p>Organizations not enrolled in the Frontier program are <b>not impacted</b>.</p><p><i>Platforms/Services</i></p><ul><li>Microsoft Word (Copilot) – desktop</li><li>Microsoft 365 Copilot (Frontier)</li></ul><p><i>What will happen</i></p><ul><li><b>Copilot for Legal </b>will be available in <i>Copilot Chat in Word</i> via the “+” (plus) menu.</li><li>Users can:<ul><li>Review contracts to identify risks and non-standard clauses</li><li>Generate redlines using <b>Word tracked changes</b></li><li>Compare clauses against internal legal playbooks</li><li>Analyze document sections for compliance with internal standards</li><li>Receive responses grounded in document content with citations</li></ul></li><li>The feature is <b>enabled by default</b> for tenants enrolled in <i>Frontier</i>.</li><li>No separate installation is required.</li><li>The feature is available immediately after users update to a supported version of Word.</li><li>Availability depends on:<ul><li>Frontier program enrollment</li><li>Microsoft 365 Copilot licensing</li></ul></li><li>There is <b>no dedicated admin or user toggle</b> to disable this feature</li><li>Access is controlled through Frontier enrollment and Copilot license assignment.</li></ul><p><b><b>Action Required / Recommendations</b></b></p><p>No action is required if you do not plan to use this feature.</p><p>If you plan to use this feature:</p><ul><li>Enroll your tenant in the <a href=\"https://www.microsoft.com/microsoft-365-copilot/frontier-program\" rel=\"noopener noreferrer\" target=\"_blank\">Frontier Public Preview program</a>.</li><li>Ensure <b>Microsoft 365 Copilot licenses</b> are assigned to eligible users.</li><li>Review internal legal workflows that may benefit from:<ul><li>Contract analysis</li><li>Playbook-based reviews</li><li>AI-assisted redlining</li></ul></li><li>Communicate this capability to legal teams.</li><li>Update internal documentation or helpdesk guidance if applicable.</li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muwwvm9h-11\"><b>Question</b></td><td data-row=\"row-muwwvm9h-11\"><b>Answer</b></td></tr><tr><td data-row=\"row-muwwvm9h-12\">Does the change alter how existing customer data is processed, stored, or accessed (such as documents, emails, chats, etc.)? If so, how and to what extent?</td><td data-row=\"row-muwwvm9h-12\">Yes. Copilot for Legal processes existing document content in Word to analyze contracts, compare clauses to internal playbooks, and generate suggested edits.</td></tr><tr><td data-row=\"row-muwwvm9h-13\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data? If so, summarize the changes.</td><td data-row=\"row-muwwvm9h-13\">Yes. The change introduces Copilot for Legal within Microsoft 365 Copilot that uses AI to interact with and analyze customer document data.</td></tr><tr><td data-row=\"row-muwwvm9h-14\">Does the change provide end users any new way of interacting with generative AI? If so, how?</td><td data-row=\"row-muwwvm9h-14\">Yes. The change provides a new interaction surface through Copilot for Legal in Copilot Chat in Word, enabling users to generate and review contract insights using AI.</td></tr></tbody></table><p>For more information visit <a href=\"https://support.microsoft.com/en-us/office/get-started-with-the-legal-agent-frontier-c72cc686-552b-45d4-9e46-d731f9d57052\" rel=\"noopener noreferrer\" target=\"_blank\">Get Started with Copilot for Legal in Word</a> and<a href=\"https://support.microsoft.com/en-us/office/legal-agent-transparency-documentation-2d5b3219-1ac9-42cf-ac04-47f0b1ebfa71?preview=true\" rel=\"noopener noreferrer\" target=\"_blank\"> Transparency Documentation&nbsp;</a></p>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Copilot for Legal is now in Public Preview worldwide for Frontier users, expanding beyond the U.S. It helps legal professionals review contracts, identify risks, compare clauses, and generate tracked changes. No separate installation is needed; access requires Frontier enrollment and Copilot licenses."
+      }
+    ],
+    "EndDateTime": "2026-11-16T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1388706",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-07T16:19:48.787Z",
+    "Services": [
+      "Microsoft 365 apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-06-12T16:20:41Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft 365 Copilot: Legal agent available in Frontier worldwide",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 7, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>As part of our ongoing mission to deliver a modern, secure, and scalable one-stop management portal for admins, we are transitioning Teams Android device management from the <b>Teams admin center (TAC)</b> to the <b>Teams Rooms Pro Management portal (PMP)</b>.</p><p>This move consolidates management of all Teams devices, including Teams Rooms on Windows, Teams Rooms on Android, Teams phones, and Teams panels, into a single unified portal, providing IT admins a consistent and seamless experience for managing devices at scale.</p><p>This message is associated with Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=555235\" rel=\"noopener noreferrer\" target=\"_blank\">555235</a>.</p><p><b><b>When this will happen:</b></b></p><ul><li>General Availability (Worldwide): Effective <b>July 2, 2026</b>, the rollout is <b>100% complete</b> across all regions in the Public cloud.</li><li>General Availability (GCC High): We expect to start the rollout by <b>mid-August 2026</b> and complete by<b> late-August 2026</b> (previously late-July).</li><li>General Availability (GCC and DoD): We expect to complete the rollout by <b>mid-October 2026</b> (previously late-August).</li><li>Device management deprecation in TAC: The deprecation of Teams device management capabilities in TAC will begin in October 2026 and will roll out in phases based on device type and feature readiness.<ul><li>For public cloud, we will begin the phased deprecation of SIP device management this week. The rollout will occur in stages and is expected to be fully completed by next week.&nbsp;</li><li>The current planned sequence is: SIP devices → Teams Phones → Teams Rooms on Android &amp; Teams Panels&nbsp;</li><li>For government clouds, the deprecation rollout will follow the readiness of the respective environments. <b>GCCH will follow the public cloud rollout</b>, while GCC and DoD customers will have a migration period after the required convergence features become available.</li></ul></li></ul><p><b><b>How this affects your organization:</b></b></p><p><b>Who is affected:</b></p><p>Admins who manage Teams Rooms on Android, Teams phones, Teams panels, and SIP Phones.</p><p><b>What will happen:</b></p><ul><li>By end of June 2026, Android device management capabilities, including inventory, updates, health monitoring, and settings will transition from TAC to PMP for the device types, Teams Rooms on Android, Teams phones, Teams panels and SIP Phones.</li><li>The following capabilities will be available and enhanced in PMP:<ul><li>Device inventories for Android-based Teams Rooms, phones, and panels, including metadata and app information</li><li>Remote device actions (restart, log collection, sign-in/out, provisioning, and more)</li><li>Update management</li><li>Device settings management</li><li>Device health monitoring</li><li>SIP device management</li></ul></li><li>PMP will become the primary portal for all Teams device management. By <b>November 2026</b>, overlapping TAC capabilities (updates, settings, restart, sign-in/out, log collection, provisioning) will be deprecated in TAC.</li><li>The article below serves as the main information source for this transition. It has been updated with the latest timelines, milestones, migration guidance, and readiness steps. We will keep updating it as the rollout progresses.<ul><li><a href=\"https://learn.microsoft.com/microsoftteams/rooms/aboutunifieddevicemanagement-pmp1\" rel=\"noopener noreferrer\" target=\"_blank\">Transitioning Teams Android Device Management from Teams Admin Center to the Teams Rooms Pro Management Portal - Microsoft Teams | Microsoft Learn</a></li></ul></li></ul><p><b><b>What you need to do to prepare:</b></b></p><ul><li>Monitor the below article for any feature specific updates and timelines. This article also provides migration guidance and pre-requisites for successful transition to PMP.<ul><li><a href=\"https://learn.microsoft.com/microsoftteams/rooms/aboutunifieddevicemanagement-pmp1\" rel=\"noopener noreferrer\" target=\"_blank\">Transitioning Teams Android Device Management from Teams Admin Center to the Teams Rooms Pro Management Portal - Microsoft Teams | Microsoft Learn</a></li></ul></li><li>Learn more about Pro Management portal features with these <a href=\"https://www.youtube.com/playlist?list=PLyhj1WZ29G65glMRLXqtlq7DGBvXg-TnT\" rel=\"noopener noreferrer\" target=\"_blank\">Teams Rooms Pro Management short YouTube videos</a>.</li><li>Update internal helpdesk and IT documentation to reference PMP as the new management portal.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "555235"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Teams Android device management is transitioning from the Teams admin center to the Teams Rooms Pro Management portal by July 2026, consolidating management of all Teams devices into one portal. Deprecation of device management in TAC will begin October 2026, with phased rollouts and migration guidance provided."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Android, Desktop, TeamsAndSurfaceDevices"
+      }
+    ],
+    "EndDateTime": "2026-11-30T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1227622",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-10-07T16:07:54.523Z",
+    "Services": [
+      "Microsoft Teams",
+      "Microsoft 365 for the web"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-02-06T00:41:45Z",
+    "Tags": [
+      "Updated message",
+      "Admin impact"
+    ],
+    "Title": "Transitioning Teams Android Device Management from Teams admin Center to the Teams Rooms Pro Management portal",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
       "Content": "<p>Updated October 6, 2026: We have updated the content. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>If you don’t want to check spelling manually for every message—or you’re worried you might forget!—you can set Outlook to check spelling for you every time before sending emails.</p><p></p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out on mid-November 2026 and expect to complete by early December 2026.</p><p>Targeted Release (Worldwide): We will begin rolling out on mid-October 2026 and expect to complete by late October 2026.</p><p>General Availability (GCC, GCC High, DoD): We will begin rolling out on mid-November 2026 and expect to complete by mid-December 2026.</p><p></p><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Users of new Outlook for Windows and Outlook on the web.</li><li>Help desk and training teams that support Outlook messaging experiences.</li></ul><p><b>Platforms/Services:</b></p><ul><li>Exchange Online.</li><li>New Outlook for Windows and Outlook on the web.</li></ul><p><b>What will happen:</b></p><ul><li>Users can configure Outlook to check spelling automatically before sending email.</li><li>This can help reduce spelling mistakes in sent messages without requiring users to manually start spell check for each message.</li><li>The capability will roll out automatically during the scheduled rollout window.</li><li>This feature requires Connected Experiences to be enabled. Users who have Connected Experiences disabled will not be able to use automatic spell checking before sending email.</li></ul><p><b><b>Action Required/Recommendations:</b></b></p><ul><li>Confirm that your organization’s privacy policies allow the use of connected experiences in Office.</li><li>Inform users that they can enable spell check before sending if they want Outlook to review spelling automatically.</li><li>Update internal Outlook training or help desk guidance if it describes message composition settings.</li></ul><p><b><b>Compliance considerations:</b></b></p><p>This feature requires Connected Experiences in Office. Review as appropriate for your organization.</p>",
       "ContentType": "html"
     },
@@ -729,46 +856,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 6, 2026: We have updated the timeline. Thank you for your patience.&nbsp;&nbsp;</p><p><b><b>What and Why</b></b></p><p>Microsoft is expanding the availability of the <b>Legal agent in Microsoft 365 Copilot in Word</b> to Frontier users<b> worldwide</b> in Public Preview.</p><p>The Legal agent was previously released in Frontier preview for users located in the United States only. This update expands access globally, enabling more organizations to benefit from this capability.</p><p>The Legal agent is a <b>vertical-specific Microsoft 365 Copilot experience designed for legal professionals</b>, built directly into Word. It helps legal teams review and negotiate contracts by identifying risks, comparing clauses to internal playbooks, and proposing edits using Word’s native tracked changes.</p><p>This update helps reduce manual review time while keeping legal professionals fully in control of document workflows.</p><p><b><b>Rollout Schedule</b></b></p><ul><li><b>Frontier Preview: </b>Available starting in mid-June 2026<b>.</b></li><li><b>General Availability: </b>Available starting mid-October 2026 (previously early October).</li></ul><p><b><b>Impact on Your Organization</b>&nbsp;</b></p><p><i>Who is affected</i></p><ul><li>Organizations enrolled in the Microsoft 365 Copilot Frontier program</li><li>Users with Microsoft 365 Copilot licenses, particularly legal professionals (for example, in-house counsel, contract managers, legal ops)</li></ul><p>Organizations not enrolled in the Frontier program are <b>not impacted</b>.</p><p><i>Platforms/Services</i></p><ul><li>Microsoft Word (Copilot) – desktop</li><li>Microsoft 365 Copilot (Frontier)</li></ul><p><i>What will happen</i></p><ul><li>A new <b>Legal agent </b>will be available in <i>Copilot Chat in Word</i> via the “+” (plus) menu.</li><li>Users can:<ul><li>Review contracts to identify risks and non-standard clauses</li><li>Generate redlines using <b>Word tracked changes</b></li><li>Compare clauses against internal legal playbooks</li><li>Analyze document sections for compliance with internal standards</li><li>Receive responses grounded in document content with citations</li></ul></li><li>The feature is <b>enabled by default</b> for tenants enrolled in <i>Frontier</i>.</li><li>No separate installation is required.</li><li>The feature is available immediately after users update to a supported version of Word.</li><li>Availability depends on:<ul><li>Frontier program enrollment</li><li>Microsoft 365 Copilot licensing</li></ul></li><li>There is <b>no dedicated admin or user toggle</b> to disable this feature</li><li>Access is controlled through Frontier enrollment and Copilot license assignment.</li></ul><p><b><b>Action Required / Recommendations</b></b></p><p>No action is required if you do not plan to use this feature.</p><p>If you plan to use this feature:</p><ul><li>Enroll your tenant in the <a href=\"https://www.microsoft.com/microsoft-365-copilot/frontier-program\" rel=\"noopener noreferrer\" target=\"_blank\">Frontier Public Preview program</a>.</li><li>Ensure <b>Microsoft 365 Copilot licenses</b> are assigned to eligible users.</li><li>Review internal legal workflows that may benefit from:<ul><li>Contract analysis</li><li>Playbook-based reviews</li><li>AI-assisted redlining</li></ul></li><li>Communicate this capability to legal teams.</li><li>Update internal documentation or helpdesk guidance if applicable.</li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muwwvm9h-11\"><b>Question</b></td><td data-row=\"row-muwwvm9h-11\"><b>Answer</b></td></tr><tr><td data-row=\"row-muwwvm9h-12\">Does the change alter how existing customer data is processed, stored, or accessed (such as documents, emails, chats, etc.)? If so, how and to what extent?</td><td data-row=\"row-muwwvm9h-12\">Yes. The Legal agent processes existing document content in Word to analyze contracts, compare clauses to internal playbooks, and generate suggested edits.</td></tr><tr><td data-row=\"row-muwwvm9h-13\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data? If so, summarize the changes.</td><td data-row=\"row-muwwvm9h-13\">Yes. The change introduces a new Legal agent within Microsoft 365 Copilot that uses AI to interact with and analyze customer document data.</td></tr><tr><td data-row=\"row-muwwvm9h-14\">Does the change provide end users any new way of interacting with generative AI? If so, how?</td><td data-row=\"row-muwwvm9h-14\">Yes. The change provides a new interaction surface through the Legal agent in Copilot Chat in Word, enabling users to generate and review contract insights using AI.</td></tr></tbody></table><p>For more information visit <a href=\"https://support.microsoft.com/en-us/office/get-started-with-the-legal-agent-frontier-c72cc686-552b-45d4-9e46-d731f9d57052\" rel=\"noopener noreferrer\" target=\"_blank\">Get Started with Legal agent in Word</a> and<a href=\"https://support.microsoft.com/en-us/office/legal-agent-transparency-documentation-2d5b3219-1ac9-42cf-ac04-47f0b1ebfa71?preview=true\" rel=\"noopener noreferrer\" target=\"_blank\"> Transparency Documentation&nbsp;</a></p>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft 365 Copilot's Legal agent in Word, previously US-only, is now in Public Preview worldwide for Frontier users. It helps legal professionals review contracts by identifying risks, comparing clauses, and generating tracked changes. Available mid-June 2026 in preview, general availability mid-October 2026. No separate installation needed."
-      }
-    ],
-    "EndDateTime": "2026-11-16T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1388706",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-06T16:48:12.37Z",
-    "Services": [
-      "Microsoft 365 apps"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-06-12T16:20:41Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft 365 Copilot: Legal agent available in Frontier worldwide",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated September 21, 2026: We have clarified the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p>\n<p>We are updating how users access document summarization in Microsoft Word. Beginning in September 2026, the current Top of Doc summarization experience will transition to other Copilot in Word surfaces.</p>\n<p>This change creates a more unified Copilot experience in Word while preserving users’ ability to quickly understand document content. The document summarization capability is not being removed and will continue to be available through Copilot in Word.</p>\n<p><b><b>Rollout Schedule:</b></b></p>\n<ul>\n<li><b>General Availability (Worldwide, GCC, GCCH, DoD):</b> Rollout will begin early September 2026.</li>\n</ul>\n<p><b><b>Impact on Your Organization:</b></b></p>\n<p>Who is affected</p>\n<ul>\n<li>Users licensed for and able to access Copilot in Word.</li>\n</ul>\n<p>Platforms and services</p>\n<ul>\n<li>Microsoft Word</li>\n<li>Microsoft 365 Copilot in Word</li>\n</ul>\n<p>What will happen</p>\n<ul>\n<li>The existing Top of Doc summarization experience will move to other Copilot surfaces in Word.</li>\n<li>In supported scenarios, users may see a proactive <b>“Summarize this document”</b> suggestion within the Copilot experience.</li>\n<li>Selecting the suggestion will generate a summary of the current document in Copilot.</li>\n<li>Users can open Copilot in Word and request a summary using natural language prompts, such as “Summarize this document.”</li>\n<li>The underlying document summarization capability will remain available; only the access experience is changing.</li>\n</ul>\n<p><b><b>Action Required/Recommendations:</b></b></p>\n<p>No admin action is required.</p>\n<p>We recommend that you:</p>\n<ul>\n<li>Inform users that document summarization is moving from the Top of Doc experience to other Copilot surfaces in Word.</li>\n<li>Update internal training materials, adoption content, and help desk documentation that reference Top of Doc summarization.</li>\n<li>Encourage users to access summaries through Copilot in Word by using the <b>“Summarize this document”</b> suggestion or a natural language prompt.</li>\n</ul>\n<p>Suggested user communication</p>\n<p>Document summaries in Word will continue to be available through Copilot, but the existing Top of Doc summary experience is being retired. To generate a summary, open Copilot in Word and ask Copilot to summarize the current document.</p>\n<p><b><b>Compliance Considerations:</b></b></p>\n<ul>\n<li><b>End users have a new way to interact with generative AI:</b> The summarization capability remains AI-powered and will be accessed through Copilot interactions and prompts.</li>\n<li><b>User workflow change:</b> Users will access the same summarization capability through different Copilot entry points, which may require user awareness and updated training materials.</li>\n</ul>\n<p>No other compliance considerations identified based on the information provided. Review as appropriate for your organization.</p>",
       "ContentType": "html"
     },
@@ -905,7 +992,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153503Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153513Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153514Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153515Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825554Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825555Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825556Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825557Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -957,7 +1044,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153156Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153157Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153161Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153162Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153163Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153165Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825189Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.182519Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825191Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825192Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825193Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825195Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1486,7 +1573,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154244Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154245Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826319Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.182632Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1538,7 +1625,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-07T15:22:26.515249Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152491Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824494Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824496Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2046,7 +2133,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153838Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153839Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.515384Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153841Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.18259Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825901Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825902Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825903Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2298,53 +2385,6 @@
       "Admin impact"
     ],
     "Title": "Unified management of app and agent availability and installation in Teams, Outlook, and the Microsoft 365 app",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated October 1, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>As part of our ongoing mission to deliver a modern, secure, and scalable one-stop management portal for admins, we are transitioning Teams Android device management from the <b>Teams admin center (TAC)</b> to the <b>Teams Rooms Pro Management portal (PMP)</b>.</p><p>This move consolidates management of all Teams devices, including Teams Rooms on Windows, Teams Rooms on Android, Teams phones, and Teams panels, into a single unified portal, providing IT admins a consistent and seamless experience for managing devices at scale.</p><p>This message is associated with Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=555235\" rel=\"noopener noreferrer\" target=\"_blank\">555235</a>.</p><p><b><b>When this will happen:</b></b></p><ul><li>General Availability (Worldwide): Effective <b>July 2, 2026</b>, the rollout is <b>100% complete</b> across all regions in the Public cloud.</li><li>General Availability (GCC High): We expect to start the rollout by <b>mid-August 2026</b> and complete by<b> late-August 2026</b> (previously late-July).</li><li>General Availability (GCC and DoD): We expect to complete the rollout by <b>mid-October 2026</b> (previously late-August).</li><li>Device management deprecation in TAC: The deprecation of Teams device management capabilities in TAC will begin in October 2026 and will roll out in phases based on device type and feature readiness.</li></ul><p><b><b>How this affects your organization:</b></b></p><p><b>Who is affected:</b></p><p>Admins who manage Teams Rooms on Android, Teams phones, Teams panels, and SIP Phones.</p><p><b>What will happen:</b></p><ul><li>By end of June 2026, Android device management capabilities, including inventory, updates, health monitoring, and settings will transition from TAC to PMP for the device types, Teams Rooms on Android, Teams phones, Teams panels and SIP Phones.</li><li>The following capabilities will be available and enhanced in PMP:<ul><li>Device inventories for Android-based Teams Rooms, phones, and panels, including metadata and app information</li><li>Remote device actions (restart, log collection, sign-in/out, provisioning, and more)</li><li>Update management</li><li>Device settings management</li><li>Device health monitoring</li><li>SIP device management</li></ul></li><li>PMP will become the primary portal for all Teams device management. By <b>November 2026</b>, overlapping TAC capabilities (updates, settings, restart, sign-in/out, log collection, provisioning) will be deprecated in TAC.</li><li>The article below serves as the main information source for this transition. It has been updated with the latest timelines, milestones, migration guidance, and readiness steps. We will keep updating it as the rollout progresses.<ul><li><a href=\"https://learn.microsoft.com/microsoftteams/rooms/aboutunifieddevicemanagement-pmp1\" rel=\"noopener noreferrer\" target=\"_blank\">Transitioning Teams Android Device Management from Teams Admin Center to the Teams Rooms Pro Management Portal - Microsoft Teams | Microsoft Learn</a></li></ul></li></ul><p><b><b>What you need to do to prepare:</b></b></p><ul><li>Monitor the below article for any feature specific updates and timelines. This article also provides migration guidance and pre-requisites for successful transition to PMP.<ul><li><a href=\"https://learn.microsoft.com/microsoftteams/rooms/aboutunifieddevicemanagement-pmp1\" rel=\"noopener noreferrer\" target=\"_blank\">Transitioning Teams Android Device Management from Teams Admin Center to the Teams Rooms Pro Management Portal - Microsoft Teams | Microsoft Learn</a></li></ul></li><li>Learn more about Pro Management portal features with these <a href=\"https://www.youtube.com/playlist?list=PLyhj1WZ29G65glMRLXqtlq7DGBvXg-TnT\" rel=\"noopener noreferrer\" target=\"_blank\">Teams Rooms Pro Management short YouTube videos</a>.</li><li>Update internal helpdesk and IT documentation to reference PMP as the new management portal.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "555235"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Teams Android device management is transitioning from the Teams admin center to the Teams Rooms Pro Management portal by July 2026, consolidating all Teams device management into one portal. TAC device management will be deprecated by November 2026. Admins should prepare by monitoring updates and updating documentation accordingly."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Android, Desktop, TeamsAndSurfaceDevices"
-      }
-    ],
-    "EndDateTime": "2026-11-30T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1227622",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-10-01T16:28:19.437Z",
-    "Services": [
-      "Microsoft Teams",
-      "Microsoft 365 for the web"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-02-06T00:41:45Z",
-    "Tags": [
-      "Updated message",
-      "Admin impact"
-    ],
-    "Title": "Transitioning Teams Android Device Management from Teams admin Center to the Teams Rooms Pro Management portal",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -3194,7 +3234,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153035Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153036Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153036Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825076Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825077Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825078Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4512,7 +4552,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153746Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153747Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825804Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825806Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4951,7 +4991,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154356Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154357Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154358Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826432Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826434Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826435Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5878,7 +5918,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152533Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152534Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152536Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824547Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824549Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.182455Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5930,7 +5970,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152146Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152148Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.515215Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.182411Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824133Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824134Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5982,7 +6022,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153384Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153385Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153386Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825432Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825433Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825434Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6129,7 +6169,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154003Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154004Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154005Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826051Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826052Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826053Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6228,7 +6268,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153097Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153098Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153099Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825141Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825142Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825143Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6279,7 +6319,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152824Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152825Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152825Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152826Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152827Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824854Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824855Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824856Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824857Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824858Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6411,7 +6451,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153793Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153796Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153797Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825836Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825837Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825838Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6462,7 +6502,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152904Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152905Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824922Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824923Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6570,46 +6610,6 @@
       "New feature"
     ],
     "Title": "Power Automate - Create and manage custom dashboard tiles",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated September 22, 2026: We have updated the timeline. Thank you for your patience.</p><p><b>What and Why:</b></p><p>To help people discover and understand organizational information more easily, Microsoft is changing the default visibility of 11 existing profile card properties in Microsoft 365 profile cards. Today, these properties can be populated from Microsoft Entra ID and other supported external data sources such as People Graph Connectors and Microsoft 365 Organizational Data, but they are disabled by default and require administrators to manually enable them. You can find more on the existing profile card property management <a href=\"https://learn.microsoft.com/en-us/microsoft-365/admin/manage/customize-profile-cards?view=o365-worldwide\" target=\"_blank\">here</a>. </p><p>With this update, these properties will be displayed by default when populated with data. This helps organizations surface relevant employee information more consistently while reducing administrative effort for commonly used profile attributes. Organizations retain administrative controls to manage visibility according to their business, privacy, and compliance requirements.</p><p>The following properties are included in this update: </p><ol><li>Division </li><li>Role </li><li>Employee number</li><li>Employee type</li><li>Cost center</li><li>User principal name (UPN)</li><li>Alias</li><li>Fax</li><li>Street address</li><li>State</li><li>Postal code</li></ol><p><b>Rollout Schedule:</b></p><p>General Availability (Worldwide): We will begin rollout in late October 2026 (previously late September) and expect to complete by late October 2026 (previously late September).</p><p><b>Impact to your organization:</b></p><p><b>Who is affected </b></p><ol><li>Global Administrators and People Administrators responsible for profile card management. </li><li>Organizations with users whose profile data includes one or more of the affected properties. </li></ol><p><b>Platforms/Services </b></p><ol><li>Microsoft 365 Profile Cards </li><li>Microsoft Entra ID </li><li>Microsoft 365 Organizational Data </li><li>Microsoft Entra People Graph Connectors </li><li>Microsoft Graph profile card management APIs </li><li>Microsoft 365 admin center </li></ol><p><b>What will happen </b></p><ol><li>The 11 listed properties will automatically appear on profile cards when the corresponding attributes contain data.  </li><li>The change is enabled by default. </li><li>Attributes sourced from Microsoft Entra ID, Microsoft 365 Organizational Data, and Microsoft Entra People Graph Connectors follow the same visibility behavior. </li><li>No changes are made to underlying attribute values or source systems. </li><li>No changes are required from end users. </li><li>Tenants that have never configured profile card settings will automatically receive the new default visibility behavior.  </li><li>Only properties with populated values will appear on profile cards. </li></ol><p><b>Action Required/Recommendations:</b></p><p>If your organization does not want specific properties displayed on profile cards, action is recommended before October 31, 2026. </p><p><b>Review current profile card configuration </b></p><p>Use Microsoft Graph to review existing profile card property settings:</p><p><code>HTTP</p><div class=\"ql-code-block\" data-language=\"plain\">GET&nbsp; https://graph.microsoft.com/v1.0/admin/people/profileCardProperties&nbsp;</code></p><p><b>Hide properties before rollout </b></p><p>To prevent a property from being displayed, configure the property as hidden using Microsoft Graph. </p><p>Example: Hide Employee Number </p><p><code>HTTP </p><p></p><p>POST</p><p>https://graph.microsoft.com/v1.0/admin/people/profileCardProperties&nbsp;</p><p>Content-Type: application/json&nbsp;</p><p>{&nbsp;</p><p>\"directoryPropertyName\": \"EmployeeId\",&nbsp;</p><p>&nbsp;\"isVisible\": false&nbsp;&nbsp;</p><p>}&nbsp;</code></p><p>For each property, you can use the property mappings below:</p><table><tbody><tr><td><b>Profile card label </b></td><td><b>directoryPropertyName </b></td></tr><tr><td>Division </td><td>Division </td></tr><tr><td>Role </td><td>Role </td></tr><tr><td>Employee number </td><td>EmployeeId </td></tr><tr><td>Employee type </td><td>EmployeeType </td></tr><tr><td>Cost center </td><td>CostCenter </td></tr><tr><td>User principal name (UPN) </td><td>UserPrincipalName </td></tr><tr><td>Alias </td><td>Alias </td></tr><tr><td>Fax </td><td>Fax </td></tr><tr><td>Street address </td><td>StreetAddress </td></tr><tr><td>State </td><td>StateOrProvince </td></tr><tr><td>Postal code </td><td>PostalCode </td></tr></tbody></table><p><b>Important:</b> Each property requires a separate Microsoft Graph API call. Bulk enable or bulk disable operations are not currently supported.</p><p> You can find more on using Microsoft Graph APIs for showing and hiding profile card attributes <a href=\"https://learn.microsoft.com/en-us/graph/add-properties-profilecard\" target=\"_blank\">here</a>.  </p><p><b>Recommended Administrator Actions </b></p><ol><li>Verify your current profile card configuration using Microsoft Graph and review which of the affected properties contain data in your tenant. </li><li>Use Microsoft Graph Profile Card APIs to hide any properties that should remain unavailable to users before rollout begins on October 31, 2026. </li><li>Communicate the upcoming change to help desk and support teams. </li></ol><p>After rollout, administrators can continue managing profile card visibility through <b>Microsoft 365 admin center &gt; People settings &gt; Profile cards</b>. Changes made can take up to <b>24 hours</b> to be reflected on profile cards across Microsoft 365 experiences.</p>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft 365 will change the default visibility of 11 profile card properties to display by default when populated, starting late October 2026. Administrators can review and hide specific properties using Microsoft Graph APIs before rollout. Visibility management remains available via the Microsoft 365 admin center."
-      }
-    ],
-    "EndDateTime": "2026-11-30T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1438571",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-09-22T16:35:26.07Z",
-    "Services": [
-      "Microsoft 365 suite"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-07-24T21:56:36Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Default visibility of additional profile card properties in Microsoft 365 profile cards",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -7200,7 +7200,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153568Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.515357Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.515357Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825621Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825622Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825623Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8562,7 +8562,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.515412Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154121Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154122Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826199Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.18262Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826201Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10316,7 +10316,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154274Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154275Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154276Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154277Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154277Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826364Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826365Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826366Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826367Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826368Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10898,7 +10898,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-07T15:22:26.515409Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5154091Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826165Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1826166Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11401,7 +11401,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152936Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152937Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152938Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.182497Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824972Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824973Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11531,7 +11531,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153907Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153908Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153909Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.515391Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153911Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153912Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825956Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825957Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825958Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825959Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.182596Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825961Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12417,7 +12417,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.515334Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153341Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153342Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825374Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825375Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825375Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12648,7 +12648,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152731Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152732Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152733Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824759Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.182476Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824761Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15989,7 +15989,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153666Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153667Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153668Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153668Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153669Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825723Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825724Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825725Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825726Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825726Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18357,7 +18357,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152595Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152596Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152597Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152598Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152599Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824595Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824596Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824597Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824598Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824599Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18717,7 +18717,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153622Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153623Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153624Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825667Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825668Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825668Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19276,7 +19276,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152793Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5152794Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824807Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1824808Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19375,7 +19375,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153271Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153272Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153273Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153274Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825298Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825299Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.18253Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825301Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19845,7 +19845,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153447Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153448Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153449Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T15:22:26.5153449Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.182548Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825481Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825482Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-07T18:16:50.1825483Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
