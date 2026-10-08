@@ -4,6 +4,86 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
+      "Content": "<p>Updated October 8, 2026: We have updated the timeline. Thank you for your patience.</p><p><b><b>What and why</b></b></p><p>Microsoft Entra ID will support passkey registration and sign-in for B2B users, including <a href=\"https://learn.microsoft.com/entra/external-id/user-properties\" rel=\"noopener noreferrer\" target=\"_blank\">internal guest users and external users</a>. Eligible B2B users will be able to register and use passkeys issued by the resource tenant to satisfy that tenant's multifactor authentication (MFA) requirements.</p><p>Passkeys are already supported for member users in their home tenant. Until now, B2B users could not use a resource tenant passkey when that tenant required MFA and did not trust the home tenant's MFA. This update closes that gap and gives guest and external users a phishing-resistant way to satisfy MFA requirements in the resource tenant.</p><p>B2B users can register a resource tenant passkey from the resource tenant's My Security Info page, during a proof-up prompt, or through a passkey registration campaign. Once registered, the passkey can satisfy the resource tenant's MFA requirements during sign-in.</p><p>Microsoft Authenticator app passkeys will be supported for internal guest users but not for external users.</p><p>Important: This rollout intersects with the previously announced retirement of SMS and voice authentication. As described in Message Center posts MC1426371 and MC1434201, any user enabled for SMS or voice in the Authentication methods policy or legacy MFA policies will be automatically enabled for all passkey types. This will include eligible B2B users when B2B passkey support becomes available.</p><p><b><b>Rollout schedule</b></b></p><p><b>General Availability (GCC, Worldwide): </b>Beginning in<b> late October 2026,</b> with a phased rollout as outlined below:</p><ul><li><b>Internal guest users: </b>Beginning in <b>late October 2026</b> (previously early October) and is expected to complete by <b>late November 2026 </b>(previously late October)</li><li><b>External users (excluding Microsoft Authenticator app passkeys):</b> Rollout timing will be communicated in a future Message center post update.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Entra administrators managing Authentication methods policies</li><li>Organizations that use Microsoft Entra B2B collaboration</li><li>Internal guest users and external users who are in scope for passkey authentication</li><li>Internal guest users and external users who are enabled for SMS or voice in the Authentication methods policy or legacy MFA policies</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Entra ID</li><li>My Security Info</li><li>Authentication methods policy</li><li>Conditional Access</li></ul><p><i>What will happen</i></p><ul><li>The feature will be enabled by default.</li><li>B2B users who are already in scope for passkeys in your Authentication methods policy will automatically be able to register and sign in with resource tenant passkeys.</li><li>Eligible B2B users may receive prompts to register a passkey during sign-in through proof-up experiences or passkey registration campaigns, if those experiences are configured in your tenant.</li><li>Users can also register a passkey from the resource tenant's My Security Info page.</li><li>If your organization has excluded B2B users from passkeys in the Authentication methods policy, and those users are not separately subject to automatic passkey enablement through the SMS and voice retirement changes, they will not be prompted and will not be able to register or sign in with a resource tenant passkey.</li><li>Under the SMS and voice retirement changes described in MC1426371 and MC1434201, B2B users who are enabled for SMS or voice in the Authentication methods policy or legacy MFA policies will be automatically enabled for all passkey types. Excluding these users from the passkey policy alone will not prevent this automatic enablement if they remain enabled for SMS or voice.</li><li>This change gives guest and external users a phishing-resistant sign-in option and helps organizations extend strong authentication requirements to their B2B population.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required.</p><p>We recommend that administrators review current passkey and MFA configurations before rollout:</p><ul><li>Review your Authentication methods policy. Confirm which users are in scope for passkeys, including guest and external users. B2B users who are in scope will be enabled automatically. Exclude them from the policy if that is not the intended behavior.</li><li>Review Message Center posts MC1426371 and MC1434201 for details about the SMS and voice retirement changes.</li><li>Review SMS and voice assignments in both the Authentication methods policy and legacy MFA policies. If you do not want specific B2B users to be automatically enabled for all passkey types, move those users off SMS and voice in all applicable policies. Excluding them only from the passkey policy is not sufficient while they remain enabled for SMS or voice.</li><li>Review your passkey registration campaign. Confirm that the campaign's user scope includes the intended users.</li><li>Review your Conditional Access policies. Confirm that MFA and authentication strength requirements will apply as intended for B2B users when resource tenant passkeys become available.</li><li>Confirm user scoping across authentication-related policies. Make sure the groups and user types targeted by each policy align with your organization's requirements for guest and external users.</li></ul><p>Consider notifying your help desk and identity support teams that eligible B2B users may begin receiving passkey registration prompts after rollout.</p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mu1lhatd-42\">Question</td><td data-row=\"row-mu1lhatd-42\">Answer</td></tr><tr><td data-row=\"row-mu1lhatd-43\">Does the change store new customer data?</td><td data-row=\"row-mu1lhatd-43\">Passkey credential registration data may be stored as part of Microsoft Entra authentication management.</td></tr><tr><td data-row=\"row-mu1lhatd-44\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mu1lhatd-44\">The change introduces an additional authentication method for B2B users accessing resource tenant resources.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Entra ID will support passkey registration and sign-in for B2B users, enabling phishing-resistant MFA in resource tenants starting late October 2026. Internal guest users get Microsoft Authenticator app passkeys; external users do not. The feature is enabled by default, intersecting with SMS/voice retirement policies. No action required, but administrators should review policies."
+      }
+    ],
+    "EndDateTime": "2027-03-30T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1459133",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-08T16:15:41.837Z",
+    "Services": [
+      "Microsoft Entra"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-08-21T22:38:08Z",
+    "Tags": [
+      "Updated message",
+      "Feature update",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Entra ID: Passkey support for B2B users",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 8, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Users will soon be able to register a passkey as their first multifactor authentication method. Previously, people had to set up an alternate MFA method like SMS or Voice before they could add a passkey (FIDO2), Windows Hello for Business, macOS Platform SSO. That extra step pushed users toward weaker methods and slowed the move to phishing-resistant sign-in. Now password-only users can go straight to a passkey, making it easier to adopt strong authentication from day one. As part of this work, we will also be enabling Authenticator App passwordless sign-in to be a user's first registered MFA method.&nbsp;</p><p><b><b>Rollout schedule</b></b></p><p>This feature will roll out in phases:&nbsp;</p><p>Phase 1: Support for synced passkeys, Microsoft Entra passkeys on Windows, and FIDO2 security keys.&nbsp;&nbsp;</p><p>General Availability (Worldwide, GCC): We will begin rolling out in late October 2026 (previously early October) and expect to complete by late November 2026 (previously mid-November).&nbsp;</p><p>Phase 2: Support for Windows Hello for Business, macOS Platform SSO, Authenticator App passkey, and Authenticator App passwordless sign-in.&nbsp;</p><p>General Availability (Worldwide, GCC): We will begin rolling out in early January 2026 and expect to complete by late February 2027.&nbsp;</p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users who have not yet registered a multifactor authentication method</li><li>Identity and security administrators responsible for authentication onboarding and registration policies</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Entra ID</li><li>Passkeys (FIDO2)</li><li>Windows Hello for Business</li><li>macOS Platform SSO</li><li>Microsoft Authenticator passwordless sign-in</li></ul><p><i>What will happen</i></p><ul><li>Password-only users will be able to register passkeys or passwordless sign-in as their first MFA method.</li><li>Users will no longer need to register a method such as SMS or voice before registering a passkey (FIDO2), Windows Hello for Business, macOS Platform SSO, or Authenticator passwordless sign-in.</li><li>Organizations may see reduced registration friction and increased adoption of phishing-resistant authentication methods.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required for this change.</p><p>We recommend that administrators:</p><ul><li>Review Conditional Access policies related to security information registration.</li><li>Consider requiring MFA to register security information if additional verification is required by your organization.</li><li>Review onboarding and registration guidance so users know to set up a passkey as their preferred first method.</li></ul><p>Learn more&nbsp;</p><ul><li>(To be updated closer to rollout) <a href=\"https://learn.microsoft.com/entra/identity/authentication/how-to-register-passkey\" rel=\"noopener noreferrer\" target=\"_blank\">Register a synced passkey (FIDO2) | Authentication | Microsoft Entra ID | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mu1l5vpg-35\">Question</td><td data-row=\"row-mu1l5vpg-35\">Answer</td></tr><tr><td data-row=\"row-mu1l5vpg-36\">Does the change include an admin control?</td><td data-row=\"row-mu1l5vpg-36\">Yes. Administrators can control which authentication methods users are allowed to register through existing Microsoft Entra authentication method policies and Conditional Access policies.</td></tr><tr><td data-row=\"row-mu1l5vpg-37\">Does the change affect access or authentication controls?</td><td data-row=\"row-mu1l5vpg-37\">Yes. The update changes how users register multifactor authentication methods by allowing eligible users to register supported passkeys or passwordless authentication methods as their first MFA method.</td></tr><tr><td data-row=\"row-mu1l5vpg-38\">Can administrators govern the feature through existing Microsoft Entra controls?</td><td data-row=\"row-mu1l5vpg-38\">Yes. Administrators retain control over the feature through Microsoft Entra authentication method policies and Conditional Access configurations.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Entra will allow users to register passkeys or passwordless sign-in as their first multifactor authentication method, removing the need to set up SMS or voice first. This phased rollout begins late October 2026, aiming to ease adoption of phishing-resistant authentication without requiring user action."
+      }
+    ],
+    "EndDateTime": "2027-03-29T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1450133",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-08T16:10:44.48Z",
+    "Services": [
+      "Microsoft Entra"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-08-07T21:55:44Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Entra: Users can register a passkey or passwordless sign-in as their first multifactor authentication method",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
       "Content": "<p>Updated October 7, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>We're introducing support for Microsoft Purview sensitivity label inheritance from attachments in Outlook for iOS and Android. When users attach files that have Microsoft Purview sensitivity labels applied, Outlook can automatically apply or recommend an email sensitivity label based on your organization's configured labeling policies.</p><p>This enhancement helps organizations maintain consistent data classification and protection, reduces manual labeling effort for users, and supports compliance objectives across Outlook clients.</p><p><b><b>Rollout Schedule:</b></b></p><ul><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Mid-November 2026 (previously late September)</li></ul><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected</b></p><ul><li>Organizations using Microsoft Purview sensitivity labels.</li><li>Users of Outlook for iOS and Android.</li></ul><p><b>Platforms/Services</b></p><ul><li>Outlook for iOS</li><li>Outlook for Android</li><li>Microsoft Purview Information Protection</li></ul><p><b>What will happen</b></p><ul><li>When a user attaches one or more files that have sensitivity labels applied, Outlook may automatically apply or recommend an email sensitivity label.</li><li>The applied or recommended label is determined by your organization's Microsoft Purview sensitivity labeling policies.</li><li>This behavior helps align email classification with the classification of attached content.</li><li>Users may experience fewer manual labeling steps when composing messages that contain labeled content.</li><li>Organizations can benefit from more consistent application of information protection policies across mobile Outlook clients.</li></ul><p><b><b>Action Required / Recommendations:</b></b></p><p>No admin action is required.</p><p>Organizations currently using Microsoft Purview sensitivity labels should:</p><ul><li>Review existing label publishing policies.</li><li>Review sensitivity label inheritance and protection configurations.</li><li>Validate that attachment-based label inheritance aligns with compliance, regulatory, and information protection requirements.</li><li>Update internal user guidance if your organization provides sensitivity labeling training or documentation.</li></ul><p><b><b>Compliance Considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muyqp4u2-23\"><b>Issue</b></td><td data-row=\"row-muyqp4u2-23\"><b>Explanation</b></td></tr><tr><td data-row=\"row-muyqp4u2-24\">Microsoft Purview sensitivity labels</td><td data-row=\"row-muyqp4u2-24\">This update extends sensitivity label behavior to Outlook for iOS and Android by enabling email labeling based on labeled attachments. Organizations should verify that existing labeling and protection policies produce the desired outcomes for email communications.</td></tr></tbody></table><p>For organizations already using Microsoft Purview sensitivity labels, this change helps improve consistency in classification and protection while reducing the risk of emails being sent with a lower sensitivity level than their attachments.</p>",
       "ContentType": "html"
     },
@@ -1452,7 +1532,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053174Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053175Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053176Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053177Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303433Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034331Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034332Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034333Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1504,7 +1584,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052781Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052783Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052784Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052785Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052786Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052788Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033983Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033984Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033985Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033987Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033989Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303399Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2033,7 +2113,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6054074Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6054075Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3035098Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3035099Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2085,7 +2165,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6051944Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6051946Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033296Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033297Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2593,7 +2673,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053584Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053586Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053587Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053588Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034681Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034682Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034683Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034683Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3643,7 +3723,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052627Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052628Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052629Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033854Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033855Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033855Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4961,7 +5041,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053484Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053485Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303459Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034591Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5361,7 +5441,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6054234Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6054235Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6054236Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3035208Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3035209Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303521Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6288,7 +6368,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.605201Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052012Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052014Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033351Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033352Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033353Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6340,7 +6420,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6051652Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6051656Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6051658Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3032996Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3032998Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3032999Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6392,7 +6472,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053034Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053035Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053036Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303421Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034211Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034211Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6539,7 +6619,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053783Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053785Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053786Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034849Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303485Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034851Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6638,7 +6718,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052706Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052708Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052709Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303392Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033921Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033922Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6689,7 +6769,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.605236Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052362Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052363Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052364Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052365Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033639Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303364Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033641Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033642Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033643Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6821,7 +6901,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053532Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053533Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053535Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034637Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034638Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034639Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6872,7 +6952,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052463Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052464Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033719Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303372Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7570,7 +7650,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053261Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053262Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053263Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034401Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034402Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034403Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8932,7 +9012,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053941Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053942Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053943Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034974Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034975Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034975Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9562,86 +9642,6 @@
       "Admin impact"
     ],
     "Title": "Microsoft Purview | Endpoint Data Loss Prevention - Ability to protect files stored in the excluded folders in Windows",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated September 14, 2026: We have updated the content. Thank you for your patience. </p><p><b><b>What and why</b></b></p><p>Microsoft Entra ID will support passkey registration and sign-in for B2B users, including <a href=\"https://learn.microsoft.com/entra/external-id/user-properties\" rel=\"noopener noreferrer\" target=\"_blank\">internal guest users and external users</a>. Eligible B2B users will be able to register and use passkeys issued by the resource tenant to satisfy that tenant's multifactor authentication (MFA) requirements.</p><p>Passkeys are already supported for member users in their home tenant. Until now, B2B users could not use a resource tenant passkey when that tenant required MFA and did not trust the home tenant's MFA. This update closes that gap and gives guest and external users a phishing-resistant way to satisfy MFA requirements in the resource tenant.</p><p>B2B users can register a resource tenant passkey from the resource tenant's My Security Info page, during a proof-up prompt, or through a passkey registration campaign. Once registered, the passkey can satisfy the resource tenant's MFA requirements during sign-in.</p><p>Microsoft Authenticator app passkeys will be supported for internal guest users but not for external users.</p><p>Important: This rollout intersects with the previously announced retirement of SMS and voice authentication. As described in Message Center posts MC1426371 and MC1434201, any user enabled for SMS or voice in the Authentication methods policy or legacy MFA policies will be automatically enabled for all passkey types. This will include eligible B2B users when B2B passkey support becomes available. </p><p><b><b>Rollout schedule</b></b></p><p><b>General Availability (GCC, Worldwide): </b>Beginning in <b>early October 2026</b> and expected to complete by <b>late February 2027</b></p><ul><li><b>Internal guest users: Beginning in early October 2026 and is expected to complete by late October 2026</b></li><li><b>External users (excluding Microsoft Authenticator app passkeys):</b> Rollout timing will be communicated in a future Message center post update.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Entra administrators managing Authentication methods policies</li><li>Organizations that use Microsoft Entra B2B collaboration</li><li>Internal guest users and external users who are in scope for passkey authentication</li><li>Internal guest users and external users who are enabled for SMS or voice in the Authentication methods policy or legacy MFA policies</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Entra ID</li><li>My Security Info</li><li>Authentication methods policy</li><li>Conditional Access</li></ul><p><i>What will happen</i></p><ul><li>The feature will be enabled by default.</li><li>B2B users who are already in scope for passkeys in your Authentication methods policy will automatically be able to register and sign in with resource tenant passkeys.</li><li>Eligible B2B users may receive prompts to register a passkey during sign-in through proof-up experiences or passkey registration campaigns, if those experiences are configured in your tenant.</li><li>Users can also register a passkey from the resource tenant's My Security Info page.</li><li>If your organization has excluded B2B users from passkeys in the Authentication methods policy, and those users are not separately subject to automatic passkey enablement through the SMS and voice retirement changes, they will not be prompted and will not be able to register or sign in with a resource tenant passkey.</li><li>Under the SMS and voice retirement changes described in MC1426371 and MC1434201, B2B users who are enabled for SMS or voice in the Authentication methods policy or legacy MFA policies will be automatically enabled for all passkey types. Excluding these users from the passkey policy alone will not prevent this automatic enablement if they remain enabled for SMS or voice.</li><li>This change gives guest and external users a phishing-resistant sign-in option and helps organizations extend strong authentication requirements to their B2B population.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required.</p><p>We recommend that administrators review current passkey and MFA configurations before rollout:</p><ul><li>Review your Authentication methods policy. Confirm which users are in scope for passkeys, including guest and external users. B2B users who are in scope will be enabled automatically. Exclude them from the policy if that is not the intended behavior.</li><li>Review Message Center posts MC1426371 and MC1434201 for details about the SMS and voice retirement changes.</li><li>Review SMS and voice assignments in both the Authentication methods policy and legacy MFA policies. If you do not want specific B2B users to be automatically enabled for all passkey types, move those users off SMS and voice in all applicable policies. Excluding them only from the passkey policy is not sufficient while they remain enabled for SMS or voice.</li><li>Review your passkey registration campaign. Confirm that the campaign's user scope includes the intended users.</li><li>Review your Conditional Access policies. Confirm that MFA and authentication strength requirements will apply as intended for B2B users when resource tenant passkeys become available.</li><li>Confirm user scoping across authentication-related policies. Make sure the groups and user types targeted by each policy align with your organization's requirements for guest and external users.</li></ul><p>Consider notifying your help desk and identity support teams that eligible B2B users may begin receiving passkey registration prompts after rollout.</p><p><b><b>Compliance considerations</b></b></p><table class=\"table table-bordered\"><tbody><tr><td>Question</td><td>Answer</td></tr><tr><td>Does the change store new customer data?</td><td>Passkey credential registration data may be stored as part of Microsoft Entra authentication management.</td></tr><tr><td>Does the change alter how existing customer data is processed, stored, or accessed?</td><td>The change introduces an additional authentication method for B2B users accessing resource tenant resources.</td></tr></tbody></table><p><b></b></p>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Entra ID will support passkey registration and sign-in for B2B users, enabling phishing-resistant MFA using resource tenant passkeys. Rollout begins October 2026, with automatic enablement for eligible users. Administrators should review authentication policies and configurations; no immediate action is required."
-      }
-    ],
-    "EndDateTime": "2027-03-30T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1459133",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-09-14T18:48:07.21Z",
-    "Services": [
-      "Microsoft Entra"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-08-21T22:38:08Z",
-    "Tags": [
-      "Updated message",
-      "Feature update",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Entra ID: Passkey support for B2B users",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated September 14, 2026: We have updated the content. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Users will soon be able to register a passkey as their first multifactor authentication method. Previously, people had to set up an alternate MFA method like SMS or Voice before they could add a passkey (FIDO2), Windows Hello for Business, macOS Platform SSO. That extra step pushed users toward weaker methods and slowed the move to phishing-resistant sign-in. Now password-only users can go straight to a passkey, making it easier to adopt strong authentication from day one. As part of this work, we will also be enabling Authenticator App passwordless sign-in to be a user's first registered MFA method.&nbsp;</p><p><b><b>Rollout schedule</b></b><b><br></b></p><p>This feature will roll out in phases:&nbsp;</p><p>Phase 1: Support for synced passkeys, Microsoft Entra passkeys on Windows, and FIDO2 security keys.&nbsp;&nbsp;</p><p>General Availability (Worldwide, GCC): We will begin rolling out in early October 2026 (previously mid-October) and expect to complete by mid-November 2026.&nbsp;</p><p>Phase 2: Support for Windows Hello for Business, macOS Platform SSO, Authenticator App passkey, and Authenticator App passwordless sign-in.&nbsp;</p><p>General Availability (Worldwide, GCC): We will begin rolling out in early January 2026 and expect to complete by late February 2027.&nbsp;</p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users who have not yet registered a multifactor authentication method</li><li>Identity and security administrators responsible for authentication onboarding and registration policies</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Entra ID</li><li>Passkeys (FIDO2)</li><li>Windows Hello for Business</li><li>macOS Platform SSO</li><li>Microsoft Authenticator passwordless sign-in</li></ul><p><i>What will happen</i></p><ul><li>Password-only users will be able to register passkeys or passwordless sign-in as their first MFA method.</li><li>Users will no longer need to register a method such as SMS or voice before registering a passkey (FIDO2), Windows Hello for Business, macOS Platform SSO, or Authenticator passwordless sign-in.</li><li>Organizations may see reduced registration friction and increased adoption of phishing-resistant authentication methods.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required for this change.</p><p>We recommend that administrators:</p><ul><li>Review Conditional Access policies related to security information registration.</li><li>Consider requiring MFA to register security information if additional verification is required by your organization.</li><li>Review onboarding and registration guidance so users know to set up a passkey as their preferred first method.</li></ul><p>Learn more&nbsp;</p><ul><li>(To be updated closer to rollout)&nbsp;<a href=\"https://learn.microsoft.com/entra/identity/authentication/how-to-register-passkey\" target=\"_blank\">Register a synced passkey (FIDO2) | Authentication | Microsoft Entra ID | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table class=\"table table-bordered\"><tbody><tr><td>Question</td><td>Answer</td></tr><tr><td>Does the change include an admin control?</td><td>Yes. Administrators can control which authentication methods users are allowed to register through existing Microsoft Entra authentication method policies and Conditional Access policies.</td></tr><tr><td>Does the change affect access or authentication controls?</td><td>Yes. The update changes how users register multifactor authentication methods by allowing eligible users to register supported passkeys or passwordless authentication methods as their first MFA method.</td></tr><tr><td>Can administrators govern the feature through existing Microsoft Entra controls?</td><td>Yes. Administrators retain control over the feature through Microsoft Entra authentication method policies and Conditional Access configurations.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Users can now register passkeys or passwordless sign-in as their first multifactor authentication method in Microsoft Entra, eliminating the need to set up weaker methods first. This change, rolling out in phases from October 2026 to February 2027, aims to increase adoption of phishing-resistant sign-in."
-      }
-    ],
-    "EndDateTime": "2027-03-29T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1450133",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-09-14T18:38:32.82Z",
-    "Services": [
-      "Microsoft Entra"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-08-07T21:55:44Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Entra: Users can register a passkey or passwordless sign-in as their first multifactor authentication method",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -10686,7 +10686,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6054129Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.605413Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6054131Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6054132Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6054133Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303513Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3035131Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3035131Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3035132Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3035133Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11268,7 +11268,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053903Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053904Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034942Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034943Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11771,7 +11771,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052503Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052504Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052505Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033752Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033753Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033754Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11901,7 +11901,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053665Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053667Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053668Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053669Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.605367Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053672Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034748Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034749Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034749Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303475Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034752Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034754Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12747,7 +12747,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.605297Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052972Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052973Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034148Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034149Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303415Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12978,7 +12978,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052245Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052246Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052247Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033543Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033544Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033545Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16319,7 +16319,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053384Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053386Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053387Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053388Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053389Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034504Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034505Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034506Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034507Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034508Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18648,7 +18648,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052081Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052083Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052084Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052085Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052086Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033397Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033398Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033399Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.30334Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033412Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19008,7 +19008,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053328Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.605333Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053331Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034459Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303446Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303446Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19567,7 +19567,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052321Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052322Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033604Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1289725\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3033606Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19666,7 +19666,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052901Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052902Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052904Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6052905Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034089Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.303409Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034091Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034092Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20136,7 +20136,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053106Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053107Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053108Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T15:12:43.6053109Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034273Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034274Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034275Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-08T18:16:23.3034276Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
