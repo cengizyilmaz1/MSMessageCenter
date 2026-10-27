@@ -4,6 +4,507 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
+      "Content": "<b>What and why</b><br><br>\nDynamics 365 apps and Dataverse are being updated to add the new Canadian time zone definitions in support of the 2026 time zone changes in Manitoba, Alberta, and British Columbia. This is a general awareness message to support the changes and complements <b>MC1510951 — Windows updates are available for 2026 time zone changes in Canada</b>. <br><br>\n\n<b>Rollout schedule</b><br>\nThe Dataverse configuration update is being deployed through the regular release train and is scheduled to reach the Canada region by October 26, 2026.<br><br>\n\n<b>How does this affect me?</b><br>\nThis configuration update adds the new Canadian time zone definitions to Dynamics 365 apps and Dataverse.<br><br>\n\n<b>What action do I need to take?</b><br>\nAfter the platform update is available, affected users will need to switch or set their time zone to the appropriate new region-specific time zone for changes to take effect.",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [],
+    "EndDateTime": "2026-11-26T23:37:15Z",
+    "HasAttachments": false,
+    "Id": "MC1526697",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T23:38:34.163Z",
+    "Services": [
+      "Dynamics 365 Apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-26T23:37:15Z",
+    "Tags": [
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Dynamics 365 apps and Dataverse – Information about the 2026 time zone changes in Canada",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and Why:</b></b></p><p>Default Meeting Templates enable IT admins to automatically apply their organization’s preferred meeting options whenever users schedule a Teams meeting through Outlook or Teams calendar. This helps organizations apply meeting options (including protection meeting options) at scale, and reduce the need for organizers to manually configure meeting options.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in early November 2026 and expect to complete by mid November 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>For meeting organizers and co-organizers with a default meeting template applied, their meetings will use the meeting options defined in that template, including protection meeting options. Participants joining those meetings will experience the configured meeting options.</p><p>Please note that only organizers and co-organizers with a Teams Premium license can use the default meeting template.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>Default meeting templates help IT admins provide a consistent meeting experience by automatically applying the configured meeting options, including protection meeting options, to scheduled meetings through Outlook or Teams Calendar. Meet Now, Channel Meetings, and Events are out of scope for default meeting template.</p><ul><li>IT admins first create a custom meeting template and then assign it as the default meeting template. Instructions to create a default meeting template: <a href=\"https://learn.microsoft.com/en-us/microsoftteams/create-custom-meeting-template\" rel=\"noopener noreferrer\" target=\"_blank\">Create a custom meeting template in Microsoft Teams</a>.</li><li><b>Configuration considerations:</b> When configuring the template, admins should review the restrictions and platform limitations associated with the features they enable. Some settings may result in a degraded experience on unsupported platforms.</li><li>If the default meeting template is removed, meetings will no longer use the meeting options defined by that template. Instead, the meeting options currently applicable to the organizer will take effect.</li></ul><p><b>Recommendation:</b> Do not configure the Copilot meeting policy to “On with saved transcript required.” With this configuration, users may encounter errors with default meeting template. We recommend using an alternative Copilot meeting policy configuration.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Default meeting templates let IT admins set organization-wide meeting options for Teams meetings scheduled via Outlook or Teams calendar, ensuring consistency and protection. Rolling out worldwide in November 2026, only Teams Premium licensed organizers can use them. Admins create and assign templates; some meeting types are excluded."
+      }
+    ],
+    "EndDateTime": "2026-12-16T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1526679",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T23:05:02.87Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-26T23:03:10Z",
+    "Tags": [
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams Default meeting template",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and Why:</b></b></p><p>This new capability enables admins the capability to manage Authoritative sources within the Copilot Search experience in the Microsoft 365 Admin Center. As part of current change admins will be able manage SharePoint Online (SPO) sites that can be deemed as authoritative content per their organization.</p><ul><li>Available only to Global admin and Global reader role.</li></ul><p><b><b>Rollout Schedule:</b></b></p><p>Public Preview (Worldwide): We will begin rolling out on late September 2026 and expect to complete by late September 2026.</p><p>General Availability (Worldwide): We will begin rolling out on late September 2026 and expect to complete by late September 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>This will help enhance relevance and ranking of these SharePoint sites.</p><p>The feature introduces a centralized governance layer in Copilot Control Systems, allowing admins to:</p><ul><li>&nbsp;View, add, delete the authoritative SharePoint sites via the UX.</li><li>&nbsp;Will be able to bulk import or export these sources.</li><li>&nbsp;The admins can add only up to 100 sites as authoritative.</li></ul><p><b><b>Action Required/Recommendations:</b></b></p><p>This feature is available to Global admin and Global reader roles.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muh96ixz-1\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-muh96ixz-1\">Yes. The feature uses AI/ML or agent capabilities with Microsoft 365 content, prompts, or service data as described in this message.</td></tr><tr><td data-row=\"row-muh96ixz-2\">Does the change provide end users any new way of interacting with generative AI?</td><td data-row=\"row-muh96ixz-2\">Yes. The feature introduces or updates a user-facing AI or Copilot experience as described in this message.</td></tr><tr><td data-row=\"row-muh96ixz-3\">Does the change include an admin control and, can it be controlled through Entra ID group membership?</td><td data-row=\"row-muh96ixz-3\">Yes. The feature includes or affects admin controls, policies, permissions, roles, authentication, or management settings as described in this message. Review the linked documentation or admin center controls for group-based configuration support.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "503553"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Admins with Global admin or reader roles can manage up to 100 authoritative SharePoint Online sites in Microsoft 365 Copilot Search via the admin center, enhancing search relevance. This AI-driven feature rolls out worldwide in late September 2026 and includes centralized governance and bulk import/export capabilities."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2026-12-31T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1526676",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T23:02:38.46Z",
+    "Services": [
+      "Microsoft 365 suite"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-26T23:02:01Z",
+    "Tags": [
+      "New feature",
+      "Admin impact"
+    ],
+    "Title": "Microsoft 365 admin center: Manage authoritative sources for Microsoft 365 Copilot Search",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and Why:</b></b></p><p>Following the public preview announced in MC1301802, the Change Optics report for Exchange Online is now generally available for worldwide tenants. The report helps Exchange administrators identify email traffic that may be affected by upcoming service changes so they can investigate and remediate potential issues before enforcement occurs.</p><p><b>Learn more:</b> <a href=\"https://techcommunity.microsoft.com/blog/exchange/the-change-optics-report-is-now-generally-available-in-exchange-online/4565858\" rel=\"noopener noreferrer\" target=\"_blank\">The Change Optics report is now generally available in Exchange Online</a></p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): The report is available now.</p><p></p><p><b><b>Impact on Your Organization:</b></b></p><p>The Change Optics report is available in the Exchange Admin Center under <b>Reports &gt; Mail flow &gt; Change Optics Report</b>. The report displays a sample set of messages matching characteristics expected to be affected by Exchange Online transport changes. At GA, the report includes:</p><ul><li><b>OMC (Onmicrosoft.com external traffic):</b> Identifies onmicrosoft.com traffic sent externally so organizations can investigate and reduce usage affected by onmicrosoft.com throttling.</li><li><b>DRS (Direct Send traffic):</b> Identifies Direct Send traffic received by your tenant, helping administrators identify legitimate senders before enabling Reject Direct Send.</li></ul><p>Since Public Preview, we've made improvements to the report thanks to the feedback received.</p><p></p><p><b><b>Action Required/Recommendations:</b></b></p><p>No action is required. Exchange administrators may want to:</p><ul><li>Review the Change Optics Report when future Message Center communications reference a Change Optics scenario.</li><li>Use the OMC scenario to identify and reduce onmicrosoft.com external email usage.</li><li>Use the DRS scenario to identify Direct Send traffic and prepare for enabling Reject Direct Send where appropriate.</li><li>Update internal mail flow operational guidance to incorporate Change Optics as part of change preparation.</li></ul><p></p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "The Change Optics report for Exchange Online is now generally available worldwide, helping admins identify email traffic affected by upcoming service changes. Accessible in the Exchange Admin Center, it highlights onmicrosoft.com external traffic and Direct Send traffic to aid investigation and remediation. No action required."
+      }
+    ],
+    "EndDateTime": "2026-11-26T22:56:52Z",
+    "HasAttachments": false,
+    "Id": "MC1526668",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T22:57:00.62Z",
+    "Services": [
+      "Exchange Online"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-26T22:56:52Z",
+    "Tags": [
+      "Feature update",
+      "Admin impact"
+    ],
+    "Title": "Change Optics Report",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 26, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>We are updating the entry point for Copilot in Outlook to be more visually appealing and consistent. Located next to the Outlook ribbon, the Copilot entry point makes it easier for users to discover and use Copilot as they work. In addition to chat, it also surfaces contextual, AI-powered recommendations based on the task at hand, such as reading email, composing messages, or managing a calendar. With a single click, users can act on these suggestions to quickly summarize content, draft responses, organize information, and accomplish tasks more efficiently. The experience is designed to bring relevant Copilot capabilities closer to the user's workflow while providing a consistent Copilot experience across Microsoft 365 applications.</p><p>This update is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=567007\" rel=\"noopener noreferrer\" target=\"_blank\">567007</a>.</p><p><b><b>Rollout schedule</b></b></p><p><b>General Availability&nbsp;</b></p><ul><li><b>Worldwide:</b> Beginning<b> mid-November 2026</b> (previously late October) and expected to complete by <b>late November 2026</b> (previously mid-November)</li><li><b>GCC and GCC High:</b> Beginning<b> early December 2026 </b>(previously mid-November) and expected to complete by<b> late December 2026 </b>(previously early December)</li><li><b>DoD: </b>Beginning<b> early December 2026 </b>(previously mid-November) and expected to complete by<b> late December 2026</b> (previously early December)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>All users with Copilot license and enterprise license users (with or without Copilot license) will see the new DAB.</li></ul><p><i>Platforms and services</i></p><ul><li>Classic Outlook for Windows</li><li>Microsoft 365 Copilot</li></ul><p><i>What will happen</i></p><ul><li>The entry point for Copilot in classic Outlook will be updated and located next to the Outlook ribbon:&nbsp;</li><li><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/07/21205.png\"></li><li>Users will continue to have access to the Copilot side pane.</li><li>This new entry point will surface contextual, AI-powered recommendations based on the task at hand.</li><li>The feature will be <b>available by default</b> for eligible users with the required Microsoft 365 Copilot license.</li><li>No existing Copilot licensing requirements or admin settings are changing as part of this update.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required.</p><p>We recommend that you:</p><ul><li>Inform users that the Copilot entry point in classic Outlook is moving to a new location.</li><li>Update any internal documentation or training materials that reference the current location of the Copilot button.</li><li>Communicate the change to help desk and support teams so they can assist users when the new experience becomes available.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "567007"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft is updating the Copilot entry point in Classic Outlook to a new location next to the ribbon, offering easier access and AI-powered contextual recommendations. The rollout begins mid-November 2026 worldwide, with no changes to licensing or admin settings. No action is required, but user communication is recommended."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Desktop"
+      }
+    ],
+    "EndDateTime": "2027-02-01T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1441784",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T22:56:12.067Z",
+    "Services": [
+      "Exchange Online"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-07-28T23:23:55Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Copilot for Outlook: New Copilot entry point in Classic Outlook",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 26, 2026: We have updated the content and timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft is introducing Change organizer for eligible Outlook meetings and recurring meeting series. Users can ask another person in their organization to become the organizer, and the selected person must accept before ownership changes. This supports personal and team productivity by maintaining meeting continuity during role changes, leave, and offboarding.</p><p><b><b>Rollout Schedule:</b></b></p><p>This phase supports non-online meetings:</p><ul><li>Worldwide: Early November through early December 2026&nbsp;</li><li>GCC: Late November through late December 2026&nbsp;</li><li>GCC High: Early December through late December 2026&nbsp;</li><li>DoD: Early December through late December 2026&nbsp;</li></ul><p>Phase 2 will add eligible online meetings. For Teams meetings, the transfer will generate a new Teams meeting link owned by the new organizer. Phase 2 will also be rolled out along with phase 1 with the same schedule.&nbsp;</p><p>Phase 3 will add transfer support for eligible Teams meeting artifacts, including chat, meeting options, transcripts, recordings, agenda, notes, and attendance reports. Its timing will be announced separately.</p><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ol><li>Users who organize eligible meetings or recurring series.</li><li>Users selected to become a new organizer.</li><li>Delegates with permission to edit meetings on another user's primary calendar.</li><li>Help desk teams supporting meeting ownership transitions.</li></ol><p><b>Platforms/Services:</b></p><ol><li>Outlook on the web</li><li>New Outlook for Windows</li><li>Teams Microsoft 365 Calendar</li><li>Exchange Online</li></ol><p>Classic Outlook for Windows is not supported.</p><p><b>What will happen:</b></p><ol><li>The current organizer can select one person in the same organization or tenant and send an organizer change request.</li><li>The meeting remains with the current organizer until the selected person accepts.</li><li>The organizer or an authorized delegate can cancel a pending request.</li><li>For recurring series, future instances move to the new organizer's calendar. Earlier instances remain with the previous organizer.</li><li>Internal Exchange Online attendees receive a silent update and do not need to respond again. Their Reminder, Category, Show As, and Private settings are preserved.</li><li>External and on-premises attendees receive a cancellation and a new invitation, which requires a response.</li><li>The meeting body, attachments, and sensitivity labels are preserved. The new organizer might require separate access to OneDrive attachments or links.</li><li>If the meeting has a Teams meeting, a new Teams meeting link will be generated upon transfer which will be owned by the new organizer.</li><li>This feature is enabled by default and requires no tenant configuration. There is no admin setting to control the availability of this feature.</li></ol><p>The meeting must be in the future, use a work or school account, and be stored on the organizer's primary calendar. Draft, canceled, encrypted, group calendar, group mailbox, and shared mailbox meetings are not eligible.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No administrative action is required.</p><ol><li>Review meeting ownership processes for role changes, leave, and offboarding.</li><li>Update internal meeting management and offboarding documentation.</li><li>Tell users that the new organizer must accept the request and that the previous organizer is not automatically retained as an attendee.</li><li>Advise users that external attendees must respond to a replacement invitation.</li><li>Ask users to confirm that the new organizer can access linked OneDrive content.</li><li>Review the Microsoft Support article, Change the organizer of a meeting in Outlook.</li></ol><p><b><b>Compliance Considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mtvtafgk-5\">Consideration</td><td data-row=\"row-mtvtafgk-5\">Impact</td><td data-row=\"row-mtvtafgk-5\">Explanation</td></tr><tr><td data-row=\"row-mtvtafgk-6\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mtvtafgk-6\">Yes</td><td data-row=\"row-mtvtafgk-6\">Future meeting instances move to the new organizer's calendar and can be managed by that organizer. Earlier recurring instances remain with the previous organizer. Meeting content is preserved, but linked OneDrive content might require separate access.</td></tr><tr><td data-row=\"row-mtvtafgk-7\">Does the change provide a new way of communicating between users, tenants, or subscriptions?</td><td data-row=\"row-mtvtafgk-7\">Yes</td><td data-row=\"row-mtvtafgk-7\">The feature adds organizer transfer requests within an organization. Internal attendees receive silent updates, while external and on-premises attendees receive a cancellation and replacement invitation.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft is enabling Outlook users to transfer meeting organizer roles within their organization, improving meeting continuity during role changes or leave. The rollout begins November 2026 for non-online meetings, with phased support for Teams meetings and artifacts. The feature requires acceptance by the new organizer and preserves meeting content."
+      }
+    ],
+    "EndDateTime": "2027-02-01T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1472028",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T22:51:48.777Z",
+    "Services": [
+      "Exchange Online",
+      "Microsoft 365 suite"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-14T23:20:31Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact"
+    ],
+    "Title": "Outlook: Change the organizer of meetings",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and Why:</b></b></p><p>New export improvements are coming to Cloud Update, making it easier for organizations to access and analyze device data. These enhancements will expand export capabilities across Inventory and Cloud Update device views, include additional device and update information, and allow admins to export filtered results so they can focus on the devices most relevant to their needs.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out on early November 2026 and expect to complete by late November 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>We are enhancing export capabilities in Inventory and Cloud Update to make it easier to get the device data you need for reporting, troubleshooting, and sharing with stakeholders. With this update:</p><ul><li>Inventory export: Export from the <b>Inventory</b> &gt; All devices view will include the Cloud Update Status column, which indicates whether each device is managed, onboarding, excluded, or not eligible for Cloud Update.</li><li>Cloud Update device export: You can export device data directly from the <b>Current</b> &gt; Devices and Monthly Enterprise &gt; Devices views. Exports include all table columns, such as rollout wave, update status, and errors.</li><li>Filtered export: You can apply filters to a device view and export only the matching results, such as devices that are not up to date.</li></ul><p>This change does not affect which devices appear in Inventory or Cloud Update, or how those devices are managed.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No preparation or configuration is required. Admins can begin using the new export capabilities as they become available.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft 365 Apps Cloud Update will enhance export capabilities in Inventory and Cloud Update views, adding more device and update details, filtered exports, and new columns like Cloud Update Status. Rollout starts November 2026. No action or compliance changes are needed."
+      }
+    ],
+    "EndDateTime": "2026-11-26T22:38:58Z",
+    "HasAttachments": false,
+    "Id": "MC1526661",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T22:48:15.23Z",
+    "Services": [
+      "Microsoft 365 suite",
+      "Microsoft 365 apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-26T22:38:58Z",
+    "Tags": [
+      "Feature update",
+      "User impact"
+    ],
+    "Title": "Microsoft 365 Apps: Cloud Update - Export Improvements",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b>What and Why:</b></p><p>Microsoft is retiring AI Builder credits and replacing them with Copilot Credits. Organizations using AI Builder must arrange Copilot Credit capacity before their existing AI Builder credit entitlements expire, or sooner if those credits are exhausted, to avoid interruptions.</p><p>&nbsp;AI Builder features are not being retired. They will continue to be supported using Copilot Credits, bringing AI Builder and Microsoft Copilot Studio capabilities onto a common credit-based licensing model.</p><p>When this will happen:</p><ul><li><b>November 1, 2025:</b> Sales of AI Builder capacity add-ons ended for new customers.</li><li><b>November 1, 2026</b>: AI Builder capacity add-ons reach end of life. Credits from active add-on contracts remain usable until those contracts expire.</li><li><b>November 1, 2026</b>: New or renewed eligible Power Platform and Dynamics 365 licenses will no longer include seeded AI Builder credits. Seeded credits included with eligible licenses purchased or renewed before this date remain available through the end of the applicable contract term.</li></ul><p><b>November 1, 2026</b>, is not a universal cutoff for existing credits. Your transition deadline depends on when your applicable contracts expire.</p><p></p><p><b>Rollout Schedule:</b></p><p>General Availability (Worldwide, GCC): We will begin rolling out on early November 2026 and expect to complete by early November 2026.</p><p><b>Impact on Your Organization:</b></p><p>This change affects organizations that use AI Builder credits from capacity add-ons or credits included with eligible Power Platform and Dynamics 365 licenses to run AI Builder features in Power Apps and Power Automate.</p><ul><li>AI Builder features in Power Apps and Power Automate consume available AI Builder credits first. When those credits are unavailable or exhausted, usage automatically falls back to available Copilot Credits.</li><li>If neither credit type is available, affected AI Builder runs are blocked, which can interrupt apps, flows, and business processes.</li><li>AI Builder credits will not automatically convert to Copilot Credits. Consumption rates differ by capability; there is no single conversion ratio.</li><li>AI Builder features in Copilot Studio already consume Copilot Credits.</li><li>This change affects licensing, not feature availability. Administrators must ensure sufficient capacity to continue running AI Builder features.</li></ul><p></p><p><b>Action Required/Recommendations:</b></p><p><b>Admin action is required before November 1, 2026, for organizations with AI Builder capacity add-ons, and before existing credit entitlements expire to prevent disruption.</b></p><ol><li><b>Review your contracts</b>. Identify when your AI Builder capacity add-ons and licenses providing seeded credits expire. For AI Builder capacity add-ons, turn off automatic renewal in the Microsoft 365 admin center or work with your partner to do so in Partner Center.</li><li><b>Review credit consumption across environments</b>. In the <a href=\"https://admin.powerplatform.microsoft.com/\" rel=\"noopener noreferrer\" target=\"_blank\">Power Platform admin center</a>, go to Licensing &gt; Capacity add-ons &gt; Download reports &gt; + New &gt; AI Builder. Generate and download the report to review credits consumed by date, user, and environment during the 30 days preceding the selected target date.</li><li>&nbsp;3.** Identify affected workloads.** In the <a href=\"https://make.powerautomate.com/\" rel=\"noopener noreferrer\" target=\"_blank\">Power Automate portal</a>, select the environment, then go to Automation Center &gt; Monitor &gt; AI Builder activity. Makers can review their own activity for models they can access; users with the System Administrator or System Customizer role can review all activity in the environment. Activity data is also available in the AI Event table in Dataverse.</li><li><b>Plan replacement capacity.</b> Use the <a href=\"https://learn.microsoft.com/en-us/ai-builder/administer-licensing#aibuildercapabilityrate-table\" rel=\"noopener noreferrer\" target=\"_blank\">AI Builder capability rate table</a> to estimate Copilot Credit requirements. Purchase and make sufficient Copilot Credits available to affected environments before existing AI Builder credit entitlements expire. Do not assume that the same number of Copilot Credits will cover your current AI Builder credit usage.</li><li><b>Notify makers and support teams.</b> Update internal licensing guidance and identify business-critical apps and flows that could be interrupted by insufficient capacity.</li></ol><p>Learn more</p><ul><li><a href=\"https://learn.microsoft.com/en-us/ai-builder/endofaibcredits\" rel=\"noopener noreferrer\" target=\"_blank\">End of AI Builder credits</a></li><li><a href=\"https://learn.microsoft.com/en-us/ai-builder/administer-licensing\" rel=\"noopener noreferrer\" target=\"_blank\">AI Builder licensing overview</a></li><li><a href=\"https://learn.microsoft.com/en-us/ai-builder/administer-consumption-report\" rel=\"noopener noreferrer\" target=\"_blank\">AI Builder consumption report</a></li><li><a href=\"https://learn.microsoft.com/en-us/ai-builder/activity-monitoring\" rel=\"noopener noreferrer\" target=\"_blank\">Monitor AI Builder activity</a></li></ul><p></p><p><b>Compliance considerations:</b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft is retiring AI Builder credits by November 1, 2026, replacing them with Copilot Credits. Organizations must plan and purchase Copilot Credits before AI Builder credits expire to avoid service interruptions. AI Builder features continue, but licensing and credit management require admin action."
+      }
+    ],
+    "EndDateTime": "2026-11-26T22:30:25Z",
+    "HasAttachments": false,
+    "Id": "MC1526652",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T22:31:23.217Z",
+    "Services": [
+      "Power Apps",
+      "Microsoft Power Automate"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-26T22:30:25Z",
+    "Tags": [
+      "Feature update",
+      "Admin impact"
+    ],
+    "Title": "AI Builder credits retirement: Prepare to use Copilot Credits",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and why</b></b></p><p>Microsoft Teams is extending malicious URL protection to provide near-real-time detection of malicious destinations embedded in QR codes shared in messages. Teams will analyze QR code destinations to identify potential phishing and fraud threats and display an additional warning when malicious content is detected.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Beginning in<b> early November 2026</b> and expected to complete in<b> mid-November 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users who use Microsoft Teams messaging</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams chats, meeting chats, and channels</li></ul><p><i>What will happen</i></p><ul><li>Teams will decode and evaluate QR code destinations in inline images shared in 1:1 chats, group chats, meeting chats, and channels.</li><li>Detection applies to internal and external communications.</li><li>Images containing QR codes from external senders are already blurred by default. When Teams identifies a malicious QR code, users will also see the warning, “<b>This message contains a link that might be harmful,</b>” and a “<b>Learn about file and link safety</b>” link.</li><li>QR code images from internal senders are not blurred by default. The same warning will appear when Teams detects a malicious QR code.</li><li>For users on Teams mobile in China, QR code images are blurred by default regardless of whether the sender is internal or external, and any messages containing malicious QR code will be blocked.</li><li>Malicious QR code detection is managed by the existing <b>Malicious URL protection</b> setting.</li><li>The setting is enabled by default. Organizations with Malicious URL protection enabled will automatically receive malicious QR code detection as the feature rolls out.</li><li>No separate configuration is available or required for malicious QR code detection.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required.</p><p>Admins can review or change the existing Malicious URL protection setting in <b><i>Teams admin center &gt; Settings and policies &gt; Messaging Safety</i></b>.</p><p>We recommend that you:</p><ul><li>Inform users and help desk staff about the additional warning for detected malicious QR codes.</li><li>Clarify that QR code blurring is a separate precautionary experience and does not mean that Teams has identified a QR code as malicious.</li><li>Review internal documentation about Teams messaging security and update it if necessary.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://support.microsoft.com/teams/troubleshooting/make-sure-chats-links-and-files-are-secure-in-microsoft-teams\" rel=\"noopener noreferrer\" target=\"_blank\">Make sure chats, links, and files are secure in Microsoft Teams | Microsoft Support</a></li><li><a href=\"https://learn.microsoft.com/microsoftteams/malicious-url-protection-teams\" rel=\"noopener noreferrer\" target=\"_blank\">Malicious URL protection in Microsoft Teams - Microsoft Teams | Microsoft Learn</a></li></ul><p>(Both to be updated closer to rollout.)</p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "576198"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams will detect malicious QR codes in messages, providing warnings for phishing or fraud threats starting November 2026. This applies to chats and channels, with QR code blurring for external senders. The feature is enabled by default via Malicious URL protection, requiring no admin action."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Android, Desktop, iOS, Mac, Web"
+      }
+    ],
+    "EndDateTime": "2026-12-13T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1526651",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T22:29:55.467Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-26T22:29:08Z",
+    "Tags": [
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams: Malicious QR code detection in messages",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 26, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft is rolling out new capabilities in Audio Overview to make it easier to navigate longer content, support enterprise information protection, and create audio overviews from more types of content.</p><p><b>Episodes</b></p><p>For longer and more content-rich notebooks, Audio Overview can organize the discussion into topic-based episodes. This makes it easier for users to navigate the audio and focus on different parts of the content.</p><p><b>Sensitivity labels when saving to OneDrive</b></p><p>Audio Overviews now support Microsoft Purview sensitivity labels when saved to OneDrive. If the source content includes sensitivity labels, the saved Audio Overview inherits the most restrictive label from its sources. Sensitivity labels apply to the saved file in OneDrive. Audio Overviews within the notebook are not yet sensitivity labeled.</p><p><b>More supported content types</b></p><p>Audio Overview can now understand and ground its discussion in additional types of content added to a notebook, including:</p><ul><li>OneNote pages</li><li>Loop pages</li><li>Plain text (.txt) files</li><li>Emails</li><li>Teams meetings</li><li>Teams chats</li></ul><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in early November 2026 (previously late October) and expect to complete by late November 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Users who create and consume Audio Overviews.</li><li>Organizations that use Audio Overview with Microsoft 365 content stored or saved in OneDrive.</li></ul><p><b>Platforms/Services:</b></p><ul><li>Microsoft 365 Copilot</li><li>Audio Overview</li><li>OneDrive</li><li>Microsoft Purview sensitivity labels</li></ul><p><b>What will happen:</b></p><ul><li>Users can navigate longer Audio Overviews through topic-based episodes.</li><li>Users can create Audio Overviews grounded in additional content types, including OneNote pages, Loop pages, .txt files, emails, Teams meetings, and Teams chats.</li><li>Audio Overviews saved to OneDrive from labeled source content will inherit the most restrictive sensitivity label from the sources.</li><li>This release does not introduce sensitivity labeling for Audio Overviews while they remain within the notebook.</li></ul><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required to prepare for this update. These Audio Overview improvements will roll out automatically to eligible users.</p><p>For sensitivity labels, when an Audio Overview is saved to OneDrive from labeled source content, the saved file will automatically inherit the most restrictive sensitivity label from its sources. No additional configuration is required as part of this feature rollout.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvptgg9s-9\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-mvptgg9s-9\">Yes. Audio Overview uses AI capabilities to generate audio grounded in Microsoft 365 content, including additional supported content types.</td></tr><tr><td data-row=\"row-mvptgg9s-10\">Does the change provide end users any new way of interacting with generative AI?</td><td data-row=\"row-mvptgg9s-10\">Yes. Users can create and navigate Audio Overviews from more supported Microsoft 365 content sources.</td></tr><tr><td data-row=\"row-mvptgg9s-11\">Does the change modify, interrupt, or disable Purview capabilities such as Information Protection labels?</td><td data-row=\"row-mvptgg9s-11\">Yes. Audio Overviews saved to OneDrive from labeled source content inherit the most restrictive sensitivity label from the sources.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft is enhancing Audio Overview with topic-based episodes for easier navigation, support for more content types (OneNote, Loop, emails, Teams chats/meetings, .txt files), and sensitivity label inheritance when saving to OneDrive. The update rolls out globally from early to late November 2026 with no admin action needed."
+      }
+    ],
+    "EndDateTime": "2026-12-30T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1492959",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T22:18:21.117Z",
+    "Services": [
+      "Microsoft 365 suite",
+      "Microsoft 365 apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-09T20:43:49Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact"
+    ],
+    "Title": "Audio Overview Updates",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 26, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>We're introducing a new <b>MessageContents</b> table in Advanced Hunting for Microsoft Teams messages. This new table helps security operations teams investigate threats in Teams by providing access to Teams message snippets and associated message metadata during threat investigations.</p><p>This capability enhances security investigations by allowing authorized analysts to correlate Teams message activity with other security signals available in Advanced Hunting, helping organizations detect, investigate, and respond to threats more effectively.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Beginning in <b>late September 2026</b> and expected to complete by <b>mid-November 2026</b> (previously mid-October)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Security administrators and security analysts who use Microsoft Defender XDR Advanced Hunting</li><li>Organizations that investigate security incidents involving Microsoft Teams communications</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Defender XDR</li><li>Microsoft Defender for Office 365</li><li>Microsoft Teams</li><li>Advanced Hunting</li></ul><p><i>What will happen</i></p><ul><li>A new MessageContents table will become available in Advanced Hunting.</li><li>Authorized users will be able to query Teams message snippets and related message metadata.</li><li>Analysts can correlate Teams message information with other Advanced Hunting data sources during investigations.</li><li>The table can contain Teams message content, so access is permission controlled.</li><li>Users must have the required Advanced Hunting and message preview permissions to access and query the table. Users without the required permissions will not have access to the table.</li><li>Users without the required permissions will not have access to the table.</li><li>The table currently supports Teams messages available through the underlying Teams message metadata source, including messages containing URLs and federated messages.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required if your organization does not plan to use this capability.</p><p>If you plan to use this feature:</p><ul><li>Review existing role assignments and determine which security administrators and analysts should have access to Teams message content for security investigations.</li><li>Review the required Advanced Hunting and message preview permissions before providing access.</li><li>Consider updating internal security investigation procedures and documentation.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/defender-xdr/advanced-hunting-overview\" rel=\"noopener noreferrer\" target=\"_blank\">Advanced hunting overview in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-loz7\">Question</td><td data-row=\"row-loz7\">Answer</td></tr><tr><td data-row=\"row-qhkr\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-qhkr\">Yes. Authorized users with the required permissions can access Teams message snippets and associated message metadata through the new MessageContents table in Advanced Hunting.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Defender for Office 365 introduces a new MessageContents table in Advanced Hunting for Teams messages, enabling authorized security analysts to query message snippets and metadata for threat investigations. Rollout is from late September to mid-November 2026. Access requires specific permissions and may impact security procedures."
+      }
+    ],
+    "EndDateTime": "2026-12-28T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1474106",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T22:15:52.257Z",
+    "Services": [
+      "Microsoft Defender XDR"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-18T15:14:04Z",
+    "Tags": [
+      "Updated message",
+      "Feature update",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Defender for Office 365: New MessageContents table in Advanced Hunting for Microsoft Teams messages",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 26, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft Teams is introducing additional protection for QR codes shared by external users in Teams messages. To help reduce the risk of phishing and fraud, images containing QR codes from external senders will be obscured by default. Users can choose to reveal the image before viewing or scanning the QR code.</p><p>This security enhancement promotes safer interactions with content received from external users while maintaining flexibility for trusted communications.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release: </b>Beginning in mid-October 2026 (previously early October) and expected to complete in mid-October 2026 (previously early October)</li><li><b>General Availability (Worldwide): </b>Beginning in late October 2026 (previously mid-October) and expected to complete by late October 2026 (previously mid-October)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations that allow communication with external users in Microsoft Teams.</li><li>Users who receive Teams messages from external senders.</li><li>Teams administrators and support teams that manage external collaboration policies.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li><li>Teams desktop</li><li>Teams web</li><li>Teams mobile</li></ul><p><i>What will happen</i></p><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21837.png\" width=\"400\"></p><ul><li>Images containing QR codes sent by external users will be blurred by default in Teams messages.</li><li>Users can reveal the image if they trust the sender and want to view or scan the QR code.</li><li>The blurred image does not indicate that Microsoft Teams has determined the QR code to be malicious.</li><li>The protection is applied automatically to QR code images received from external senders.</li><li>No administrator configuration or policy changes are required.</li><li>The feature will be enabled by default as part of the rollout.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required before rollout.</p><p>We recommend that administrators:</p><ul><li>Inform users that QR code images from external senders may appear blurred by default.</li><li>Remind users to verify the sender before revealing or scanning QR codes.</li><li>Review existing user education materials related to phishing awareness, QR code safety, and external collaboration.</li><li>Update internal help desk documentation to reflect the new user experience.</li></ul><p><b>Learn more:</b></p><ul><li><a href=\"https://learn.microsoft.com/microsoftteams/qr-code-obscuring-teams-messages\" rel=\"noopener noreferrer\" target=\"_blank\">QR code obscuring in Microsoft Teams - Microsoft Teams | Microsoft Learn</a></li><li><a href=\"https://support.microsoft.com/teams/troubleshooting/make-sure-chats-links-and-files-are-secure-in-microsoft-teams\" rel=\"noopener noreferrer\" target=\"_blank\">Make sure chats, links, and files are secure in Microsoft Teams | Microsoft Support</a></li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "570439"
+      },
+      {
+        "Name": "FeatureStatusJson",
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837069Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.183707Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837071Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837072Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837073Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837075Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams will blur QR code images from external users by default starting mid-October 2026 to reduce phishing risks. Users can reveal images if trusted. No admin action is needed, but admins should inform users and update related guidance. The feature applies across all Teams platforms automatically."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Android, Desktop, iOS, Mac, Web"
+      }
+    ],
+    "EndDateTime": "2026-11-30T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1470410",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-26T22:13:59.18Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-10T22:39:10Z",
+    "Tags": [
+      "Updated message",
+      "Feature update",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams: QR code protection for messages from external users",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
       "Content": "<p>Updated October 26, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Users will soon be able to register a passkey as their first multifactor authentication method. Previously, people had to set up an alternate MFA method like SMS or Voice before they could add a passkey (FIDO2), Windows Hello for Business, macOS Platform SSO. That extra step pushed users toward weaker methods and slowed the move to phishing-resistant sign-in. Now password-only users can go straight to a passkey, making it easier to adopt strong authentication from day one. As part of this work, we will also be enabling Authenticator App passwordless sign-in to be a user's first registered MFA method.&nbsp;</p><p><b><b>Rollout schedule</b></b></p><p>This feature will roll out in phases:&nbsp;</p><p>Phase 1: Support for synced passkeys, Microsoft Entra passkeys on Windows, and FIDO2 security keys.&nbsp;&nbsp;</p><p>General Availability (Worldwide, GCC): We will begin rolling out in early November 2026 (previously late October) and expect to complete by early January 2027 (previously late November 2026).&nbsp;</p><p>Phase 2: Support for Windows Hello for Business, macOS Platform SSO, Authenticator App passkey, and Authenticator App passwordless sign-in.&nbsp;</p><p>General Availability (Worldwide, GCC): We will begin rolling out in early January 2026 and expect to complete by late February 2027.&nbsp;</p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users who have not yet registered a multifactor authentication method</li><li>Identity and security administrators responsible for authentication onboarding and registration policies</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Entra ID</li><li>Passkeys (FIDO2)</li><li>Windows Hello for Business</li><li>macOS Platform SSO</li><li>Microsoft Authenticator passwordless sign-in</li></ul><p><i>What will happen</i></p><ul><li>Password-only users will be able to register passkeys or passwordless sign-in as their first MFA method.</li><li>Users will no longer need to register a method such as SMS or voice before registering a passkey (FIDO2), Windows Hello for Business, macOS Platform SSO, or Authenticator passwordless sign-in.</li><li>Organizations may see reduced registration friction and increased adoption of phishing-resistant authentication methods.</li><li>Users who are enabled for passkeys will be prompted to register a passkey by default when completing applicable registration experiences, including those triggered by multifactor authentication (MFA) enforcement and Conditional Access authentication strengths. Security Defaults MFA registration prompts will adopt this experience in January–February 2027.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required for this change.</p><p>We recommend that administrators:</p><ul><li>Review Conditional Access policies related to security information registration.</li><li>Consider requiring MFA to register security information if additional verification is required by your organization.</li><li>Review your user onboarding and registration guidance and update it as needed to reflect that eligible users may be prompted to register a passkey by default.</li></ul><p>Learn more&nbsp;</p><ul><li>(To be updated closer to rollout) <a href=\"https://learn.microsoft.com/entra/identity/authentication/how-to-register-passkey\" rel=\"noopener noreferrer\" target=\"_blank\">Register a synced passkey (FIDO2) | Authentication | Microsoft Entra ID | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mu1l5vpg-35\">Question</td><td data-row=\"row-mu1l5vpg-35\">Answer</td></tr><tr><td data-row=\"row-mu1l5vpg-36\">Does the change include an admin control?</td><td data-row=\"row-mu1l5vpg-36\">Yes. Administrators can control which authentication methods users are allowed to register through existing Microsoft Entra authentication method policies and Conditional Access policies.</td></tr><tr><td data-row=\"row-mu1l5vpg-37\">Does the change affect access or authentication controls?</td><td data-row=\"row-mu1l5vpg-37\">Yes. The update changes how users register multifactor authentication methods by allowing eligible users to register supported passkeys or passwordless authentication methods as their first MFA method.</td></tr><tr><td data-row=\"row-mu1l5vpg-38\">Can administrators govern the feature through existing Microsoft Entra controls?</td><td data-row=\"row-mu1l5vpg-38\">Yes. Administrators retain control over the feature through Microsoft Entra authentication method policies and Conditional Access configurations.</td></tr></tbody></table>",
       "ContentType": "html"
     },
@@ -309,7 +810,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327701Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327702Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836958Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836959Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -359,7 +860,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327457Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327458Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836658Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836659Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -409,7 +910,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327254Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327255Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836407Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836408Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1603,7 +2104,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327372Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327373Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327374Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327375Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327376Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836551Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836552Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836553Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836554Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836555Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3029,7 +3530,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328972Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328973Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328974Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328975Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328976Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838543Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838544Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838546Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838547Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838548Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3081,7 +3582,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328801Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328802Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328803Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838347Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838348Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838349Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3133,7 +3634,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327974Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327975Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327976Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837295Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837296Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837297Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4139,7 +4640,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8329052Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8329053Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8329054Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838645Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838648Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838649Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4286,7 +4787,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328385Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328386Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328387Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837832Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837834Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837835Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5359,54 +5860,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 13, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>We are updating the entry point for Copilot in Outlook to be more visually appealing and consistent. Located next to the Outlook ribbon, the Copilot entry point makes it easier for users to discover and use Copilot as they work. In addition to chat, it also surfaces contextual, AI-powered recommendations based on the task at hand, such as reading email, composing messages, or managing a calendar. With a single click, users can act on these suggestions to quickly summarize content, draft responses, organize information, and accomplish tasks more efficiently. The experience is designed to bring relevant Copilot capabilities closer to the user's workflow while providing a consistent Copilot experience across Microsoft 365 applications.</p><p>This update is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=567007\" rel=\"noopener noreferrer\" target=\"_blank\">567007</a>.</p><p><b><b>Rollout schedule</b></b></p><p><b>General Availability&nbsp;</b></p><ul><li><b>Worldwide:</b> Beginning <b>late October 2026</b> (previously mid-October) and expected to complete by <b>mid-November 2026</b> (previously early November)</li><li><b>GCC and GCC High:</b> Beginning<b> mid-November 2026 </b>(previously early November) and expected to complete by <b>early December 2026</b> (previously late November)</li><li><b>DoD: </b>Beginning<b> mid-November 2026 </b>(previously early November) and expected to complete by <b>early December 2026</b> (previously late November)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>All users with Copilot license and enterprise license users (with or without Copilot license) will see the new DAB.</li></ul><p><i>Platforms and services</i></p><ul><li>Classic Outlook for Windows</li><li>Microsoft 365 Copilot</li></ul><p><i>What will happen</i></p><ul><li>The entry point for Copilot in classic Outlook will be updated and located next to the Outlook ribbon:&nbsp;</li><li><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/07/21205.png\"></li><li>Users will continue to have access to the Copilot side pane.</li><li>This new entry point will surface contextual, AI-powered recommendations based on the task at hand.</li><li>The feature will be <b>available by default</b> for eligible users with the required Microsoft 365 Copilot license.</li><li>No existing Copilot licensing requirements or admin settings are changing as part of this update.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required.</p><p>We recommend that you:</p><ul><li>Inform users that the Copilot entry point in classic Outlook is moving to a new location.</li><li>Update any internal documentation or training materials that reference the current location of the Copilot button.</li><li>Communicate the change to help desk and support teams so they can assist users when the new experience becomes available.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "567007"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft is updating the Copilot entry point in Classic Outlook to a new location next to the ribbon, enhancing visibility and providing AI-powered contextual recommendations. The rollout begins late October 2026 worldwide, with no changes to licensing or admin settings. No action is required, but communication to users is recommended."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Desktop"
-      }
-    ],
-    "EndDateTime": "2027-01-11T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1441784",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-13T17:42:45.047Z",
-    "Services": [
-      "Exchange Online"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-07-28T23:23:55Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Copilot for Outlook: New Copilot entry point in Classic Outlook",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p><b><b>What and why</b></b></p><p>Microsoft Teams Panels will introduce a new administrator setting that allows administrators to choose whether organizer names are shown in <i>Calendar View</i> on Teams Panels.</p><p>Admins can toggle the <b>Show organizer name</b> setting ON or OFF in the Teams Rooms Pro Management portal or on the panel device. When organizer names are hidden, the organizer name is not shown in Calendar View on the panel device.</p><p>This feature is available with Teams Rooms Pro and Teams Shared Spaces licenses.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Beginning in <b>early October 2026</b> and expected to complete by <b>early October 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Administrators who manage Microsoft Teams Panels</li><li>Organizations using Teams Rooms Pro licenses</li><li>Organizations using Teams Shared Spaces licenses</li><li>Users who view meeting information on Teams panel devices</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams Panels</li><li>Teams Rooms Pro Management portal</li></ul><p><i>What will happen</i></p><ul><li>A new setting, <b>Show organizer name</b>, will be available for Teams panel devices.</li><li>Administrators can choose whether organizer names are displayed in <i>Calendar View</i>.</li><li>The setting can be configured from the Teams Rooms Pro Management portal or directly on a Teams panel device.</li><li>By default, organizer names will continue to be displayed in <i>Calendar View</i>.</li></ul><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21929.png\" width=\"400\"></p><p><b><b>Action required and recommendations</b></b></p><p>No action is required if you want organizer names to continue appearing in Calendar View on Teams panel devices.</p><p>If you want to hide organizer names:</p><ul><li>Review your room privacy and display requirements.</li><li>Update the <b>Show organizer name</b> setting in the Teams Rooms Pro Management portal or on individual Teams panel devices.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/microsoftteams/devices/devices-release-notes?branch=main&amp;tabs=panels\" rel=\"noopener noreferrer\" target=\"_blank\">Release notes for devices in Microsoft Teams - Microsoft Teams | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-42fz\">Question</td><td data-row=\"row-42fz\">Answer</td></tr><tr><td data-row=\"row-rh5o\">Does the change include an admin control, and can it be controlled through Entra ID group membership?</td><td data-row=\"row-rh5o\">Yes. Administrators can enable or disable the display of organizer names on Teams Panels. The available information does not indicate support for management through Entra ID group membership.</td></tr></tbody></table>",
       "ContentType": "html"
     },
@@ -5869,45 +6322,6 @@
       "User impact"
     ],
     "Title": "Microsoft Outlook for Android and iOS: Send Availability functionality restored",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and Why:</b></b></p><p>Microsoft is rolling out new capabilities in Audio Overview to make it easier to navigate longer content, support enterprise information protection, and create audio overviews from more types of content.</p><p><b>Episodes</b></p><p>For longer and more content-rich notebooks, Audio Overview can organize the discussion into topic-based episodes. This makes it easier for users to navigate the audio and focus on different parts of the content.</p><p><b>Sensitivity labels when saving to OneDrive</b></p><p>Audio Overviews now support Microsoft Purview sensitivity labels when saved to OneDrive. If the source content includes sensitivity labels, the saved Audio Overview inherits the most restrictive label from its sources. Sensitivity labels apply to the saved file in OneDrive. Audio Overviews within the notebook are not yet sensitivity labeled.</p><p><b>More supported content types</b></p><p>Audio Overview can now understand and ground its discussion in additional types of content added to a notebook, including:</p><ul><li>OneNote pages</li><li>Loop pages</li><li>Plain text (.txt) files</li><li>Emails</li><li>Teams meetings</li><li>Teams chats</li></ul><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in late October 2026 and expect to complete by late November 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Users who create and consume Audio Overviews.</li><li>Organizations that use Audio Overview with Microsoft 365 content stored or saved in OneDrive.</li></ul><p><b>Platforms/Services:</b></p><ul><li>Microsoft 365 Copilot</li><li>Audio Overview</li><li>OneDrive</li><li>Microsoft Purview sensitivity labels</li></ul><p><b>What will happen:</b></p><ul><li>Users can navigate longer Audio Overviews through topic-based episodes.</li><li>Users can create Audio Overviews grounded in additional content types, including OneNote pages, Loop pages, .txt files, emails, Teams meetings, and Teams chats.</li><li>Audio Overviews saved to OneDrive from labeled source content will inherit the most restrictive sensitivity label from the sources.</li><li>This release does not introduce sensitivity labeling for Audio Overviews while they remain within the notebook.</li></ul><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required to prepare for this update. These Audio Overview improvements will roll out automatically to eligible users.</p><p>For sensitivity labels, when an Audio Overview is saved to OneDrive from labeled source content, the saved file will automatically inherit the most restrictive sensitivity label from its sources. No additional configuration is required as part of this feature rollout.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td>Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td>Yes. Audio Overview uses AI capabilities to generate audio grounded in Microsoft 365 content, including additional supported content types.</td></tr><tr><td>Does the change provide end users any new way of interacting with generative AI?</td><td>Yes. Users can create and navigate Audio Overviews from more supported Microsoft 365 content sources.</td></tr><tr><td>Does the change modify, interrupt, or disable Purview capabilities such as Information Protection labels?</td><td>Yes. Audio Overviews saved to OneDrive from labeled source content inherit the most restrictive sensitivity label from the sources.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft is enhancing Audio Overview with topic-based episodes for easier navigation, support for sensitivity labels when saving to OneDrive, and expanded content types including OneNote, Loop pages, emails, and Teams chats. The update rolls out worldwide from late October to November 2026 with no admin action needed."
-      }
-    ],
-    "EndDateTime": "2026-12-30T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1492959",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-09T20:43:58.203Z",
-    "Services": [
-      "Microsoft 365 suite",
-      "Microsoft 365 apps"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-10-09T20:43:49Z",
-    "Tags": [
-      "New feature",
-      "User impact"
-    ],
-    "Title": "Audio Overview Updates",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -7813,7 +8227,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328136Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328137Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328138Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328139Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837522Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837523Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837524Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837526Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7841,58 +8255,6 @@
       "Admin impact"
     ],
     "Title": "Microsoft Teams: Multi-line call history tabs in the Calls app",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated October 6, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft Teams is introducing additional protection for QR codes shared by external users in Teams messages. To help reduce the risk of phishing and fraud, images containing QR codes from external senders will be obscured by default. Users can choose to reveal the image before viewing or scanning the QR code.</p><p>This security enhancement promotes safer interactions with content received from external users while maintaining flexibility for trusted communications.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release: </b>Beginning in mid-October 2026 (previously early October) and expected to complete in mid-October 2026 (previously early October)</li><li><b>General Availability (Worldwide): </b>Beginning in late October 2026 (previously mid-October) and expected to complete by late October 2026 (previously mid-October)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations that allow communication with external users in Microsoft Teams.</li><li>Users who receive Teams messages from external senders.</li><li>Teams administrators and support teams that manage external collaboration policies.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li><li>Teams desktop</li><li>Teams web</li><li>Teams mobile</li></ul><p><i>What will happen</i></p><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21837.png\" width=\"400\"></p><ul><li>Images containing QR codes sent by external users will be blurred by default in Teams messages.</li><li>Users can reveal the image if they trust the sender and want to view or scan the QR code.</li><li>The blurred image does not indicate that Microsoft Teams has determined the QR code to be malicious.</li><li>The protection is applied automatically to QR code images received from external senders.</li><li>No administrator configuration or policy changes are required.</li><li>The feature will be enabled by default as part of the rollout.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required before rollout.</p><p>We recommend that administrators:</p><ul><li>Inform users that QR code images from external senders may appear blurred by default.</li><li>Remind users to verify the sender before revealing or scanning QR codes.</li><li>Review existing user education materials related to phishing awareness, QR code safety, and external collaboration.</li><li>Update internal help desk documentation to reflect the new user experience.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "570439"
-      },
-      {
-        "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327798Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327799Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.83278Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327801Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327802Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327804Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Teams will blur QR code images from external users by default starting mid-October 2026 to reduce phishing risks. Users can reveal images if trusted. No admin action is needed, but admins should inform users and update related guidance. The feature applies across all Teams platforms automatically."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Android, Desktop, iOS, Mac, Web"
-      }
-    ],
-    "EndDateTime": "2026-11-30T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1470410",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-06T16:22:41.297Z",
-    "Services": [
-      "Microsoft Teams"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-09-10T22:39:10Z",
-    "Tags": [
-      "Updated message",
-      "Feature update",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Teams: QR code protection for messages from external users",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -8299,7 +8661,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328937Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328938Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838496Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838497Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8351,7 +8713,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-26T21:11:06.832694Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8326941Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836012Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836014Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8691,7 +9053,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328494Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328495Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328496Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328497Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837962Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837964Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837965Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837966Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9373,7 +9735,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327641Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327643Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327643Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836883Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836884Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836886Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10473,7 +10835,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328353Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328354Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837791Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837792Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11361,7 +11723,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.832698Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8326982Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8326983Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836085Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836087Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836088Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11413,7 +11775,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8326669Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8326673Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8326674Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1835636Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1835643Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1835645Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11465,7 +11827,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328019Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.832802Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328021Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.183735Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837351Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837352Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11612,7 +11974,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328672Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328673Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328674Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838178Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838179Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.183818Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11711,7 +12073,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327733Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327734Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327735Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836998Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837001Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11762,7 +12124,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327286Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327287Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327288Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327289Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.832729Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836458Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836459Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836459Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836461Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836463Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11862,7 +12224,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328449Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.832845Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328451Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837905Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837907Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837908Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11913,7 +12275,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.832749Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327492Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836711Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836712Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12569,45 +12931,6 @@
     "AdditionalProperties": {}
   },
   {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and why</b></b></p><p>We're introducing a new <b>MessageContents</b> table in Advanced Hunting for Microsoft Teams messages. This new table helps security operations teams investigate threats in Teams by providing access to Teams message snippets and associated message metadata during threat investigations.</p><p>This capability enhances security investigations by allowing authorized analysts to correlate Teams message activity with other security signals available in Advanced Hunting, helping organizations detect, investigate, and respond to threats more effectively.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Beginning in <b>late September 2026</b> and expected to complete by <b>mid-October 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><em>Who is affected</em></p><ul><li>Security administrators and security analysts who use Microsoft Defender XDR Advanced Hunting</li><li>Organizations that investigate security incidents involving Microsoft Teams communications</li></ul><p><em>Platforms and services</em></p><ul><li>Microsoft Defender XDR</li><li>Microsoft Defender for Office 365</li><li>Microsoft Teams</li><li>Advanced Hunting</li></ul><p><em>What will happen</em></p><ul><li>A new MessageContents table will become available in Advanced Hunting.</li><li>Authorized users will be able to query Teams message snippets and related message metadata.</li><li>Analysts can correlate Teams message information with other Advanced Hunting data sources during investigations.</li><li>The table can contain Teams message content, so access is permission controlled.</li><li>Users must have the required Advanced Hunting and message preview permissions to access and query the table. Users without the required permissions will not have access to the table.</li><li>Users without the required permissions will not have access to the table.</li><li>The table currently supports Teams messages available through the underlying Teams message metadata source, including messages containing URLs and federated messages.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required if your organization does not plan to use this capability.</p><p>If you plan to use this feature:</p><ul><li>Review existing role assignments and determine which security administrators and analysts should have access to Teams message content for security investigations.</li><li>Review the required Advanced Hunting and message preview permissions before providing access.</li><li>Consider updating internal security investigation procedures and documentation.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/defender-xdr/advanced-hunting-overview\" target=\"_blank\">Advanced hunting overview in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-loz7\">Question</td><td data-row=\"row-loz7\">Answer</td></tr><tr><td data-row=\"row-qhkr\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-qhkr\">Authorized users with the required permissions can access Teams message snippets and associated message metadata through the new MessageContents table in Advanced Hunting.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Defender for Office 365 introduces a new MessageContents table in Advanced Hunting for Teams messages, enabling authorized security analysts to query message snippets and metadata for threat investigations. It rolls out worldwide from late September to mid-October 2026, requiring appropriate permissions for access."
-      }
-    ],
-    "EndDateTime": "2026-11-14T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1474106",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-09-18T15:16:01.247Z",
-    "Services": [
-      "Microsoft Defender XDR"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-09-18T15:14:04Z",
-    "Tags": [
-      "Feature update",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Defender for Office 365: New MessageContents table in Advanced Hunting for Microsoft Teams messages",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
     "ActionRequiredByDateTime": "2027-02-01T08:00:00Z",
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -13244,45 +13567,6 @@
       "Admin impact"
     ],
     "Title": "Microsoft SharePoint : Dashboard Card Visibility on Mobile",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and Why:</b></b></p><p>Microsoft is introducing Change organizer for eligible Outlook meetings and recurring meeting series. Users can ask another person in their organization to become the organizer, and the selected person must accept before ownership changes. This supports personal and team productivity by maintaining meeting continuity during role changes, leave, and offboarding.</p><p><b><b>Rollout Schedule:</b></b></p><p>Phase 1 supports eligible non-online meetings:</p><ul><li>Worldwide: Late September through late October 2026</li><li>GCC: Early October through late October 2026</li><li>GCC High: Early November through late November 2026</li><li>DoD: Early November through late November 2026</li></ul><p>Phase 2 will add eligible online meetings. For Teams meetings, the transfer will generate a new Teams meeting link owned by the new organizer. Phase 3 will add transfer support for eligible Teams meeting artifacts, including chat, meeting options, transcripts, recordings, agenda, notes, and attendance reports. Phase 2 and Phase 3 timing will be announced separately.</p><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Users who organize eligible meetings or recurring series.</li><li>Users selected to become a new organizer.</li><li>Delegates with permission to edit meetings on another user's primary calendar.</li><li>Help desk teams supporting meeting ownership transitions.</li></ul><p><b>Platforms/Services:</b></p><ul><li>Outlook on the web</li><li>New Outlook for Windows</li><li>Teams Microsoft 365 Calendar</li><li>Exchange Online</li></ul><p>Classic Outlook for Windows is not supported.</p><p><b>What will happen:</b></p><ul><li>The current organizer can select one person in the same organization or tenant and send an organizer change request.</li><li>The meeting remains with the current organizer until the selected person accepts.</li><li>The organizer or an authorized delegate can cancel a pending request.</li><li>For recurring series, future instances move to the new organizer's calendar. Earlier instances remain with the previous organizer.</li><li>The previous organizer is not automatically added as an attendee.</li><li>Internal Exchange Online attendees receive a silent update and do not need to respond again. Their Reminder, Category, Show As, and Private settings are preserved.</li><li>External and on-premises attendees receive a cancellation and a new invitation, which requires a response.</li><li>The meeting body, attachments, and sensitivity labels are preserved. The new organizer might require separate access to OneDrive attachments or links.</li><li>Phase 1 does not support online or Teams meetings.</li><li>This feature is enabled by default and requires no tenant configuration.</li></ul><p>The meeting must be in the future, use a work or school account, and be stored on the organizer's primary calendar. Draft, canceled, encrypted, group calendar, group mailbox, and shared mailbox meetings are not eligible.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No administrative action is required.</p><ul><li>Review meeting ownership processes for role changes, leave, and offboarding.</li><li>Inform help desk teams that Phase 1 supports only eligible non-online meetings.</li><li>Update internal meeting management and offboarding documentation.</li><li>Tell users that the new organizer must accept the request and that the previous organizer is not automatically retained as an attendee.</li><li>Advise users that external attendees must respond to a replacement invitation.</li><li>Ask users to confirm that the new organizer can access linked OneDrive content.</li><li>Prepare users for a new Teams meeting link when online meeting transfers become available.</li><li>Review the Microsoft Support article, Change the organizer of a meeting in Outlook.</li></ul><p><b><b>Compliance Considerations:</b></b></p><table><tbody><tr><td>Does the change alter how existing customer data is processed, stored, or accessed?</td><td>Future meeting instances move to the new organizer's calendar and can be managed by that organizer. Earlier recurring instances remain with the previous organizer. Meeting content is preserved, but linked OneDrive content might require separate access.</td></tr><tr><td>Does the change provide a new way of communicating between users, tenants, or subscriptions?</td><td>The feature adds organizer transfer requests within an organization. Internal attendees receive silent updates, while external and on-premises attendees receive a cancellation and replacement invitation.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft is introducing a feature to change the organizer of eligible Outlook meetings, allowing transfer of meeting ownership within an organization. Phase 1 (late 2026) supports non-online meetings; later phases will add online and Teams meetings. The new organizer must accept the transfer, preserving meeting content and attendee settings."
-      }
-    ],
-    "EndDateTime": "2027-01-25T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1472028",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-09-14T23:24:08.363Z",
-    "Services": [
-      "Exchange Online",
-      "Microsoft 365 suite"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-09-14T23:20:31Z",
-    "Tags": [
-      "New feature",
-      "User impact"
-    ],
-    "Title": "Outlook: Change the organizer of meetings",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -14607,7 +14891,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328769Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-26T21:11:06.832877Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838293Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838294Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14983,7 +15267,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327533Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327534Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327535Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.183675Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836751Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836753Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15073,7 +15357,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328565Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328566Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328567Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328568Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328569Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328571Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838052Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838055Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838056Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838058Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.183806Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1838062Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15725,7 +16009,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327192Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327193Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327194Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836346Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836347Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1318124\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836348Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18235,7 +18519,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328271Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328273Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328273Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328274Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328275Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837679Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837681Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837682Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837684Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837686Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19967,7 +20251,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327047Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327048Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327049Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.832705Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327051Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836144Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836146Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836147Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836149Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419802\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1836152Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20279,7 +20563,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328213Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328214Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328215Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837604Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837605Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1219793\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837607Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20628,7 +20912,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327905Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327906Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327907Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8327908Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837208Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837209Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.183721Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837211Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -21060,7 +21344,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328078Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328079Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.832808Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-26T21:11:06.8328081Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837434Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837435Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837436Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-27T00:32:21.1837437Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
