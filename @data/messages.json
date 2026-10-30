@@ -1,5 +1,221 @@
 [
   {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "On November 30, 2026, record-level copresence in model-driven apps will have reached end of support.<br><br>\n<b>How does this affect me?</b><br>\nUsers will no longer see who else is working on the record or have access to a presence card. This change does not affect record sharing, user pictures, or status in grids and lookups.<br><br>\nThe underlying behavior when multiple users edit the same record hasn't changed: if two users save changes to the same record, the most recent save still overwrites any previous changes. What's changing is visibility — without copresence, users won't see that someone else may be viewing or editing the record at the same time.<br><br>\n<b>What action do I need to take?</b><br>\nAdmins should inform their users that copresence in model-driven apps will no longer be available after November 30, 2026. Users can continue to reach other users they collaborate with directly using existing entry points in the app, or through supporting apps like Outlook and Teams.",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [],
+    "EndDateTime": "2026-11-30T20:13:48Z",
+    "HasAttachments": false,
+    "Id": "MC1532182",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-30T20:23:51.767Z",
+    "Services": [
+      "Power Apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-30T20:13:48Z",
+    "Tags": [
+      "Retirement"
+    ],
+    "Title": "Power Apps - Information regarding the end of support for record-level copresence in model-driven apps",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 30, 2026: We have updated the content. Thank you for your patience.&nbsp;</p><p><b><b>Introduction:</b></b></p><p>Microsoft Edge for Business will soon support summarization and contextual grounding with Microsoft 365 Copilot Chat. This enhancement enables users to ask Copilot questions about multiple open browser tabs, and YouTube videos directly from the Edge side pane.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=496364\" rel=\"noopener noreferrer\" target=\"_blank\">496364</a>, <a href=\"https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1%26filters%3D&amp;searchterms=499423\" rel=\"noopener noreferrer\" target=\"_blank\">499423</a>, and <a href=\"https://www.microsoft.com/microsoft-365/roadmap?rtc=1%26filters%3D&amp;searchterms=499424\" rel=\"noopener noreferrer\" target=\"_blank\">499424</a>.</p><p><b><b>When this will happen:</b></b></p><ul><li><b>General Availability (Multiple browser tabs and YouTube videos): </b>Currently Available</li></ul><p><b><b>How this affects your organization:</b></b></p><p><b>Who is affected:</b> Users signed in to Microsoft Edge for Business with their Entra ID and who have access to Microsoft 365 Copilot.</p><p><b>What will happen:</b></p><ul><li>Users will be able to ask Copilot questions about open browser tabs, and YouTube videos.</li><li>The feature will be<b> off by default</b>.</li><li>If Copilot is restricted from accessing page content via <a href=\"https://learn.microsoft.com/DeployEdge/edge-learnmore-copilot-page-summary-results#blocking-copilot-chat-in-edge-for-business-access-to-page-content-through-dlp\" rel=\"noopener noreferrer\" target=\"_blank\">Data Loss Prevention (DLP)</a> or the <a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-policies#edgeentracopilotpagecontext\" rel=\"noopener noreferrer\" target=\"_blank\">EdgeEntraCopilotPageContext policy</a>, it will be suppressed to maintain DLP integrity.</li><li>Existing DLP and policy configurations will be respected.</li></ul><p></p><p><b><b>What you can do to prepare:</b></b></p><ul><li>This rollout will happen automatically by the specified date; no admin action is required before rollout.</li><li>Ensure users who need this capability have access to Microsoft 365 Copilot.</li><li>Ensure your tenant is configured to support Microsoft 365 Copilot and that eligible users meet all licensing prerequisites, including Entra ID sign-in and applicable Microsoft 365 service plans.</li><li>Review your current DLP and Edge policy configurations to determine potential impact.</li><li>Notify users about this upcoming capability.</li><li>Update internal documentation if needed.</li></ul><p><b>Learn more:</b></p><ul><li><a href=\"https://learn.microsoft.com/DeployEdge/edge-learnmore-copilot-page-summary-results\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Copilot Chat in Edge and Access to Page Content | Microsoft Edge | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-policies\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft Edge - Policies | Microsoft Edge | Microsoft Learn</a></li></ul><p></p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muhfe95q-6\"><b>Question</b></td><td data-row=\"row-muhfe95q-6\"><b>Answer</b></td></tr><tr><td data-row=\"row-muhfe95q-7\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-muhfe95q-7\">Yes. Microsoft 365 Copilot introduces contextual grounding and summarization using generative AI across browser tabs, and YouTube videos.</td></tr><tr><td data-row=\"row-muhfe95q-8\">Does the change provide end users any new way of interacting with generative AI?</td><td data-row=\"row-muhfe95q-8\">Yes. Users can now ask Copilot questions about open browser tabs and documents directly from the Edge sidepane, enabling real-time summarization and contextual responses.</td></tr><tr><td data-row=\"row-muhfe95q-9\">Does the change modify Data Loss Prevention (DLP) policies or enforcement?</td><td data-row=\"row-muhfe95q-9\">Yes. If DLP or the EdgeEntraCopilotPageContext policy restricts access, Copilot will be suppressed from accessing page content to maintain DLP integrity.</td></tr><tr><td data-row=\"row-muhfe95q-10\">Does the change include an admin control, and can it be controlled through Entra ID group membership?</td><td data-row=\"row-muhfe95q-10\">Yes. Admins can manage access to Copilot’s contextual grounding capabilities via DLP settings and Edge policy configurations, which can be scoped using Entra ID group membership.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "496364,499423,499424"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Edge for Business now supports Microsoft 365 Copilot Chat to summarize and provide context from multiple open tabs and YouTube videos. The feature is off by default, respects existing Data Loss Prevention (DLP) policies, requires Entra ID sign-in, and is managed via Edge and DLP policies."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2026-11-30T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1187682",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-30T20:15:28.15Z",
+    "Services": [
+      "Microsoft 365 suite"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2025-11-18T16:21:30Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Edge: Microsoft 365 Copilot will support summarization and contextual grounding",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 30, 2026: We have updated this post with additional information as the feature is now generally available. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Choose Your Own Telephony Provider (CYOT) is now generally available in Microsoft Entra ID. With CYOT, your organization can deliver SMS and voice authentication through a supported telecom provider of its choice. You purchase the provider's offer in Microsoft Security Store and manage the commercial relationship directly with the provider.&nbsp;</p><p>Microsoft-provided SMS and voice authentication begins retiring on February 1, 2027. To keep SMS and voice authentication available for users who need it, set up CYOT before that date.&nbsp;</p><p>Microsoft recommends phishing-resistant authentication methods, such as passkeys, instead of SMS or voice. Use telephony-based authentication only for users who have a business, regulatory, or technical need for it.</p><p><b><b>What you need to do</b></b></p><p>If your organization plans to use CYOT:&nbsp;</p><ol><li><b>Identify users who need SMS or voice.</b> Confirm which users have a requirement that phishing-resistant methods can't meet.&nbsp;</li><li><b>Choose a provider.</b> Compare the <a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-phone-providers\" rel=\"noopener noreferrer\" target=\"_blank\">supported telecom providers</a> on coverage, channels, pricing, support, and compliance.&nbsp;</li><li><b>Check purchasing requirements.</b> Confirm that you have a paid Azure subscription that is <a href=\"https://learn.microsoft.com/security/store/customers/how-to-purchase-a-saas-solution-and-deploy-a-linked-solution\" rel=\"noopener noreferrer\" target=\"_blank\">eligible for Security Store purchases</a>, and that you have the Owner role, or Contributor plus Role Based Access Control Administrator.&nbsp;</li><li><b>Estimate costs.</b> Review provider pricing and <a href=\"https://github.com/Azure-Samples/ExternalPhoneProvider-AzureFunction-Sample/blob/main/docs/COST-CALCULATOR.md\" rel=\"noopener noreferrer\" target=\"_blank\">Azure hosting costs.&nbsp;</a></li><li><b>Set up and roll out.</b> Follow <a href=\"https://learn.microsoft.com/entra/identity/authentication/how-to-set-up-sms-voice-api\" rel=\"noopener noreferrer\" target=\"_blank\">Set up SMS and voice</a>. Start in evaluation mode, then increase traffic to your provider in stages.&nbsp;</li><li><b>Complete your transition before February 1, 2027.</b> Review the <a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-sms-voice-retirement\" rel=\"noopener noreferrer\" target=\"_blank\">guidance for the retirement of Microsoft-provided SMS and voice authentication.</a></li></ol><p><b>Learn more</b>&nbsp;</p><ul><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-phone-providers\" rel=\"noopener noreferrer\" target=\"_blank\">Choose your own telephony provider for SMS and voice authentication&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/how-to-set-up-sms-voice-api\" rel=\"noopener noreferrer\" target=\"_blank\">Set up SMS and voice with your own telecom provider&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/troubleshoot-voice-call-sms#monitor-and-troubleshoot-your-own-telephony-provider\" rel=\"noopener noreferrer\" target=\"_blank\">Troubleshoot SMS and voice&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/choose-your-own-telephony-fraud-costs\" rel=\"noopener noreferrer\" target=\"_blank\">Protect against telephony fraud&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/choose-your-own-telephony-reliability\" rel=\"noopener noreferrer\" target=\"_blank\">Plan for resiliency and high availability&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/phone-providers-faq\" rel=\"noopener noreferrer\" target=\"_blank\">Frequently asked questions&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-sms-voice-retirement\" rel=\"noopener noreferrer\" target=\"_blank\">Passkeys by default and retirement of Microsoft-provided SMS and voice authentication</a></li></ul>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Entra ID now generally supports Choose Your Own Telephony Provider (CYOT) for SMS and voice authentication, retiring Microsoft-provided services by February 1, 2027. Organizations must select a provider, set up CYOT, and transition before that date, while Microsoft recommends phishing-resistant methods like passkeys."
+      }
+    ],
+    "EndDateTime": "2026-11-30T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1519855",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-10-30T19:34:52.45Z",
+    "Services": [
+      "Microsoft Entra"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-21T23:24:44Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Entra: Choose your own telephony provider now generally available",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 30, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why</b></b></p><p>Microsoft Teams is introducing AI generated meeting memory files that capture key insights from meetings (formerly archive files). These files help Microsoft 365 Copilot and Facilitator deliver more accurate context aware responses while maintaining strong privacy controls by not storing raw meeting content. This capability supports enterprise ready AI by improving knowledge grounding while keeping data secure and manageable.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558933\" rel=\"noopener noreferrer\" target=\"_blank\">558933</a>.</p><p><b><b>Rollout Schedule</b></b></p><ul><li><b>Targeted Release:</b> Beginning<b> early January 2027 </b>(previously early November 2026) and expected to complete<b> mid-January 2027</b> (previously mid-November 2026)</li><li><b>General Availability (Worldwide): </b>Beginning<b> mid-January 2027 </b>(previously early December 2026) and expected to complete <b>late January 2027</b> (previously early January)</li></ul><p>Teams admin center controls for this feature will be available approximately four weeks before memory file generation begins. The dates above reflect when admin controls become available.</p><p><b><b>Impact on Your Organization:</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Teams administrators</li><li>Users with Microsoft 365 Copilot or Facilitator capabilities enabled</li></ul><p><i>Platforms/Services</i></p><ul><li>Microsoft Teams</li><li>Microsoft 365 Copilot</li><li>SharePoint Embedded</li></ul><p><i>What will happen</i></p><ul><li>AI meeting memory files (.meeting files) will be generated for meetings where Intelligent Recap is turned on. The feature is enabled by default in your organization.</li><li>Memory files are stored in a tenant-owned SharePoint Embedded container, not in user storage. You can control the default expiration time for these files within your organization.</li><li>Users cannot directly view or access memory files.</li><li>When the feature is released, Facilitator will use the memory to answer questions about meetings and responses include citations linking to meeting recaps or invites. In the future, Copilot will also use the memory to answer questions about meetings.&nbsp;</li><li>Memory files cannot be modified, renamed, or moved.</li><li>All content in memory files is AI-generated. No raw transcript snippets are stored.</li><li>Memory generation requires all of the following:<ul><li>Meeting memory is enabled for your organization.</li><li>Intelligent Recap is enabled for the meeting.</li></ul></li><li>Memory files are not created for:<ul><li>Meetings with sensitivity labels that include encryption</li><li>End-to-end encrypted meetings</li><li>Meetings with restricted copying or forwarding</li></ul></li><li>Access and data protection:<ul><li>Only users with access to the meeting can receive responses grounded in its memory and AI tools do not surface insights to users who do not have meeting access.</li><li>Memory knowledge is only shared with users who are in the same tenant as the meeting organizer.</li></ul></li></ul><p><b><b>Action Required / Recommendations</b></b></p><p>No immediate action is required. However, administrators should review configuration settings and consider organizational policy alignment.</p><p>Admins can enable or disable this feature in the <i>Teams admin center</i>.</p><p>Recommended actions:</p><ul><li>Review the AI archive setting in Teams admin center before rollout. Setting path: <b><i>Meeting Policies &gt; Meeting Memory\"</i></b>.</li><li>Evaluate the default expiration period, which is set to five years (1,825 days), and adjust retention settings as needed to align with compliance policies.</li><li>Communicate this capability to helpdesk teams and compliance stakeholders.</li><li>Monitor availability of the memory setting in <i>Teams admin center</i> and review or update settings when they become available. Memory file generation will begin 4 weeks after the setting is released to your organization.</li></ul><p><b>Learn more: </b><a href=\"https://learn.microsoft.com/microsoftteams/ai-archive-teams-meetings?branch=main\" rel=\"noopener noreferrer\" target=\"_blank\">AI Archives for Microsoft Teams Meetings | Microsoft Teams | Microsoft Learn</a><b>&nbsp;</b></p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mubhqf0u-8\">Question</td><td data-row=\"row-mubhqf0u-8\">Answer</td></tr><tr><td data-row=\"row-mubhqf0u-9\">Does the change store new customer data, and if so, where, and is the data cached or permanently stored?</td><td data-row=\"row-mubhqf0u-9\">Yes. The change introduces AI-generated meeting memory files that are stored in a tenant-owned SharePoint Embedded container and retained according to a configurable retention period.</td></tr><tr><td data-row=\"row-mubhqf0u-10\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mubhqf0u-10\">Yes. Meeting transcripts and metadata are processed into structured AI memory files that enable downstream AI systems such as Copilot and Facilitator to reason over meeting content.</td></tr><tr><td data-row=\"row-mubhqf0u-11\">Does the change introduce or significantly modify AI or machine learning capabilities that interact with or provide access to customer data?</td><td data-row=\"row-mubhqf0u-11\">Yes. Copilot and Facilitator use AI meeting memory files to generate context-aware responses grounded in prior meeting content.</td></tr><tr><td data-row=\"row-mubhqf0u-12\">Does the change provide users any new way of interacting with generative AI?</td><td data-row=\"row-mubhqf0u-12\">Yes. Users can interact with Copilot and Facilitator, which leverage meeting memory&nbsp;&nbsp;data to answer questions and provide insights about meetings.</td></tr><tr><td data-row=\"row-mubhqf0u-13\">Does the change modify retention policies, holds, or deletion workflows?</td><td data-row=\"row-mubhqf0u-13\">Yes. AI meeting memory files are governed by a default retention period of five years and are automatically deleted upon expiration.</td></tr><tr><td data-row=\"row-mubhqf0v-14\">Does the change include an admin control, and can it be controlled through Entra ID group membership?</td><td data-row=\"row-mubhqf0v-14\">Yes. Administrators can enable or disable AI meeting memory generation and configure retention settings in the Teams Admin Center.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "558933"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams will generate AI meeting memory files starting January 2027 to enhance Copilot and Facilitator with context-aware insights. Files are stored securely in tenant-owned SharePoint, not user storage, with admin controls for enabling, retention, and compliance. Users cannot access files directly; data privacy is maintained."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2027-03-01T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1429018",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-10-30T18:24:25.17Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-07-15T21:27:20Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams: Meeting memory file generation",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated October 30, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Beginning mid-March 2027, Microsoft will start retiring the Microsoft Purview Data Security Posture Management (DSPM) classic and DSPM for AI classic experiences. Retirement will be completed by end of March 2027.</p><p>As part of our continued investment in Microsoft Purview Data Security Posture Management, we have unified DSPM capabilities into a single experience that helps organizations discover, protect, and investigate data risks across traditional data sources and AI applications and agents.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Retirement (Worldwide, GCC, GCC High, and DoD):</b> Beginning in <b>mid-March 2027</b> (previously late January) and expected to complete in <b>late March 2027</b> (previously late January)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations currently using DSPM classic or DSPM for AI classic in the Microsoft Purview portal</li><li>Microsoft Purview administrators</li><li>Security administrators and compliance administrators responsible for monitoring and managing data security posture</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Purview portal</li><li>Microsoft Purview Data Security Posture Management (DSPM)</li><li>Microsoft Purview DSPM for AI (classic)</li><li>Microsoft Purview DSPM (classic)</li></ul><p><i>What will happen</i></p><ul><li>DSPM classic and DSPM for AI classic experiences will no longer be available after retirement.</li><li>Organizations must use the current Microsoft Purview DSPM experience for posture management and investigation workflows.</li><li>The current DSPM experience provides centralized access to posture metrics, recommendations, reports, investigations, and data security objectives.</li><li>Most new DSPM capabilities and innovations are delivered through the current DSPM experience.</li><li>Organizations that have already transitioned to the current DSPM experience and no longer rely on DSPM classic or DSPM for AI classic do not need to take action.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>Action is required only if your organization currently uses DSPM classic or DSPM for AI classic.</p><p>Recommended actions:</p><ul><li>Review your current DSPM workflows and identify any processes that depend on DSPM classic or DSPM for AI classic.</li><li>Confirm access to the current DSPM experience by navigating to <b>Microsoft Purview portal &gt; Solutions &gt; DSPM</b>.</li><li>Transition any remaining workflows that rely on DSPM classic or DSPM for AI classic to the current DSPM experience before retirement.</li><li>Notify Microsoft Purview administrators, security teams, and compliance teams about this retirement.</li><li>Update internal documentation, training materials, operational procedures, and help desk guidance.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/purview/data-security-posture-management-learn-about\" rel=\"noopener noreferrer\" target=\"_blank\">Learn about Microsoft Purview Data Security Posture Management (DSPM) | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/purview/dspm-task-mapping\" rel=\"noopener noreferrer\" target=\"_blank\">Map tasks that you used to do in Microsoft Purview Data Security Posture Management (DSPM) for AI | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-aagg\">Question</td><td data-row=\"row-aagg\">Answer</td></tr><tr><td data-row=\"row-91il\">Does the change alter how admins can monitor, report on, or demonstrate compliance activities?</td><td data-row=\"row-91il\">Yes. Administrators will no longer use DSPM classic or DSPM for AI classic experiences and will instead use the current unified DSPM experience for posture monitoring, reporting, recommendations, investigations, and objectives. The capability remains available but through a different experience.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "570844"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft will retire Microsoft Purview DSPM classic and DSPM for AI classic experiences by late March 2027, unifying capabilities into a single current DSPM experience. Organizations using the classic versions must transition workflows and update documentation accordingly; no action is needed if already using the current DSPM."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2027-05-03T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1481315",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-10-30T18:20:42.407Z",
+    "Services": [
+      "Microsoft Purview"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-28T23:50:49Z",
+    "Tags": [
+      "Updated message",
+      "User impact",
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Microsoft Purview: Retirement of Data Security Posture Management (DSPM) classic and DSPM for AI classic experiences",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
     "ActionRequiredByDateTime": "2026-10-01T07:00:00Z",
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -356,7 +572,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636437Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636439Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782218Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378222Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -533,7 +749,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.763696Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636961Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636962Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783119Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783121Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783122Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1846,54 +2062,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 27, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Beginning late January 2027, Microsoft will start retiring the Microsoft Purview Data Security Posture Management (DSPM) classic and DSPM for AI classic experiences. Retirement will be completed by end of January 2027.</p><p>As part of our continued investment in Microsoft Purview Data Security Posture Management, we have unified DSPM capabilities into a single experience that helps organizations discover, protect, and investigate data risks across traditional data sources and AI applications and agents.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Retirement (Worldwide, GCC, GCC High, and DoD):</b> Beginning in <b>late January 2027</b> (previously late November 2026) and expected to complete in <b>late January 2027</b> (previously late December 2026)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations currently using DSPM classic or DSPM for AI classic in the Microsoft Purview portal</li><li>Microsoft Purview administrators</li><li>Security administrators and compliance administrators responsible for monitoring and managing data security posture</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Purview portal</li><li>Microsoft Purview Data Security Posture Management (DSPM)</li><li>Microsoft Purview DSPM for AI (classic)</li><li>Microsoft Purview DSPM (classic)</li></ul><p><i>What will happen</i></p><ul><li>DSPM classic and DSPM for AI classic experiences will no longer be available after retirement.</li><li>Organizations must use the current Microsoft Purview DSPM experience for posture management and investigation workflows.</li><li>The current DSPM experience provides centralized access to posture metrics, recommendations, reports, investigations, and data security objectives.</li><li>Most new DSPM capabilities and innovations are delivered through the current DSPM experience.</li><li>Organizations that have already transitioned to the current DSPM experience and no longer rely on DSPM classic or DSPM for AI classic do not need to take action.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>Action is required only if your organization currently uses DSPM classic or DSPM for AI classic.</p><p>Recommended actions:</p><ul><li>Review your current DSPM workflows and identify any processes that depend on DSPM classic or DSPM for AI classic.</li><li>Confirm access to the current DSPM experience by navigating to <b>Microsoft Purview portal &gt; Solutions &gt; DSPM</b>.</li><li>Transition any remaining workflows that rely on DSPM classic or DSPM for AI classic to the current DSPM experience before retirement.</li><li>Notify Microsoft Purview administrators, security teams, and compliance teams about this retirement.</li><li>Update internal documentation, training materials, operational procedures, and help desk guidance.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/purview/data-security-posture-management-learn-about\" rel=\"noopener noreferrer\" target=\"_blank\">Learn about Microsoft Purview Data Security Posture Management (DSPM) | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/purview/dspm-task-mapping\" rel=\"noopener noreferrer\" target=\"_blank\">Map tasks that you used to do in Microsoft Purview Data Security Posture Management (DSPM) for AI | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-aagg\">Question</td><td data-row=\"row-aagg\">Answer</td></tr><tr><td data-row=\"row-91il\">Does the change alter how admins can monitor, report on, or demonstrate compliance activities?</td><td data-row=\"row-91il\">Yes. Administrators will no longer use DSPM classic or DSPM for AI classic experiences and will instead use the current unified DSPM experience for posture monitoring, reporting, recommendations, investigations, and objectives. The capability remains available but through a different experience.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "570844"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Purview will retire DSPM classic and DSPM for AI classic by late January 2027, unifying capabilities into a single DSPM experience. Organizations using the classic versions must transition to the current DSPM experience for data security posture management, reporting, and investigations."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2027-03-01T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1481315",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-10-27T17:46:26.957Z",
-    "Services": [
-      "Microsoft Purview"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-09-28T23:50:49Z",
-    "Tags": [
-      "Updated message",
-      "User impact",
-      "Admin impact",
-      "Retirement"
-    ],
-    "Title": "Microsoft Purview: Retirement of Data Security Posture Management (DSPM) classic and DSPM for AI classic experiences",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated October 27, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft is introducing support for Microsoft Agent 365 agents that implement the Agent2Agent (A2A) protocol, allowing them to be used as connected agents in declarative agents built with Microsoft 365 Agents Toolkit.</p><p>This enhancement expands the types of external agent services that declarative agents can connect to. In addition to existing support for OpenAPI and Model Context Protocol (MCP) servers, declarative agents can now connect to Agent2Agent-enabled agents, enabling natural language interactions and support for more complex workflows.</p><p>This feature gives developers greater flexibility when building declarative agents while providing administrators centralized management and governance through the Microsoft 365 admin center.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Began in <b>late August 2026</b>.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators who manage agents in the Microsoft 365 admin center</li><li>Developers building declarative agents with Microsoft 365 Agents Toolkit</li><li>Users who are assigned access to approved Microsoft Agent 365 agents</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft 365 Copilot</li><li>Microsoft 365 admin center</li><li>Microsoft 365 Agents Toolkit</li><li>Declarative agents</li></ul><p><i>What will happen</i></p><ul><li>Administrators can install Microsoft Agent 365 agents that support the Agent2Agent protocol from the <b>All agents</b> page in the Microsoft 365 admin center.</li><li>Declarative agents can use approved Agent2Agent-enabled agents as connected agents.</li><li>Agent2Agent support is added alongside existing support for OpenAPI and MCP server connections.</li><li>Users cannot install Agent2Agent-enabled Microsoft Agent 365 agents themselves.</li><li>Administrators can review Agent2Agent-connected agents from the <b>Connected agents</b> tab in the declarative agent details page before approving their use.</li></ul><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21727.png\" width=\"400\"></p><p><b><b>Action required and recommendations</b></b></p><p>Action may be required.</p><p>Before rollout:</p><ul><li>Review Microsoft Agent 365 agents available in the <b>All agents</b> page of the Microsoft 365 admin center.</li><li>Determine which Agent2Agent-enabled agents should be made available to users in your organization.</li><li>Review connected agents associated with declarative agents from the <b>Connected agents</b> tab before approving their use.</li><li>Update any internal governance, agent approval, or deployment processes as appropriate.</li></ul><p>Consider notifying administrators and developers in your organization about the availability of Agent2Agent-connected agents and the associated review and approval process.</p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-qfqe\"><b>Compliance consideration</b></td><td data-row=\"row-qfqe\"><b>Answer</b></td></tr><tr><td data-row=\"row-8f7a\">Does this change introduce or significantly modify AI, machine learning, or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-8f7a\"><b>Yes.</b> This update introduces support for Agent2Agent-enabled Microsoft Agent 365 agents as connected agents within declarative agents. Organizations should review how these connected agents interact with customer data before approving them for use.</td></tr><tr><td data-row=\"row-c7r2\">Does this change provide end users with a new way to interact with generative AI?</td><td data-row=\"row-c7r2\"><b>Yes.</b> Users can interact with declarative agents that are connected to Agent2Agent-enabled agents, enabling new AI-powered experiences and workflows.</td></tr><tr><td data-row=\"row-aw6v\">Does this change include an admin control?</td><td data-row=\"row-aw6v\"><b>Yes.</b> Administrators can install, review, and approve Agent2Agent-enabled Microsoft Agent 365 agents through the Microsoft 365 admin center before they are available for use.</td></tr></tbody></table>",
       "ContentType": "html"
     },
@@ -2369,7 +2537,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636531Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636532Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636533Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636535Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636536Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636537Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782375Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782377Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782378Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378238Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782382Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782385Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2715,7 +2883,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636195Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636197Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781793Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781795Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2765,7 +2933,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7635993Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7635994Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781433Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781435Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3920,7 +4088,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636121Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636122Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636123Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636124Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636125Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378166Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781662Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781663Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781665Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781666Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4041,45 +4209,6 @@
       "Admin impact"
     ],
     "Title": "Microsoft Teams: Chat for organizers and presenters in structured meetings and webinars on Teams Rooms on Android",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and why</b></b></p><p>Starting October 30, 2026, Microsoft Entra ID will make Choose Your Own Telephony Provider (CYOT) generally available. CYOT enables organizations to use a supported third-party telecommunications provider for SMS and voice authentication. Organizations select a supported provider through Microsoft Security Store and manage their commercial relationship directly with the provider.</p><p>Microsoft recommends phishing-resistant authentication methods, such as passkeys, instead of SMS or voice authentication. Organizations should use a telephony provider only for user populations that have a business, regulatory, or technical requirement for telephony-based authentication.&nbsp;</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Beginning <b>October 30, 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations with users who require SMS or voice authentication for business, regulatory, or technical reasons</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Entra ID</li><li>Microsoft Security Store</li></ul><p><i>What will happen</i></p><ul><li>Starting October 30, 2026, organizations can choose to configure a supported telephony provider for SMS and voice authentication.</li><li>Your selected provider will deliver the SMS messages or voice calls users need to complete authentication.</li><li>Microsoft Entra ID will continue to enforce authentication method policies and coordinate the authentication experience.</li><li>Your organization will manage its commercial relationship with the selected provider.</li><li>Microsoft-provided SMS and voice authentication is scheduled to be retired on February 1, 2027, for all users except Global Administrators and external users. The retirement date for Global Administrators and external users is July 1, 2027. Internal guest users remain subject to the February 1, 2027 retirement date.</li><li>After the applicable retirement date, users whose only available MFA method is SMS or voice must register a passkey during sign-in unless the organization has configured a supported telephony provider. This registration prompt is blocking.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>If your organization plans to adopt CYOT:</p><ul><li>Identify affected users. Determine which users have a documented business, regulatory, or technical requirement for SMS or voice authentication.</li><li>Evaluate phishing-resistant alternatives. Confirm that a phishing-resistant authentication method does not meet the requirements for those users.</li><li>Review supported telephony providers. Compare providers based on geographic coverage, supported delivery channels, pricing, support, security, and compliance capabilities.</li><li>Review organizational requirements. Work with the appropriate teams to review procurement, privacy, and regulatory requirements before selecting a provider.</li><li>Plan your transition. Review Passkeys by default and retirement of Microsoft-provided SMS and voice authentication and plan your transition based on the retirement date applicable to each user population.</li><li>Validate purchasing requirements. Review Purchase a SaaS solution and deploy a linked solution. Purchasing through Security Store requires an Azure billing subscription and resource group, plus the appropriate Azure subscription role.</li><li>Estimate costs. Review provider pricing and expected Azure infrastructure charges before deployment.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-phone-providers\" rel=\"noopener noreferrer\" target=\"_blank\">Choose a telephony provider for SMS and voice authentication - Microsoft Entra ID | Microsoft Learn</a></li><li>Estimate telephony provider and Azure hosting costs: <a href=\"https://github.com/Azure-Samples/ExternalPhoneProvider-AzureFunction-Sample/blob/main/docs/COST-CALCULATOR.md\" rel=\"noopener noreferrer\" target=\"_blank\">ExternalPhoneProvider-AzureFunction-Sample/docs/COST-CALCULATOR.md at main · Azure-Samples/ExternalPhoneProvider-AzureFunction-Sample</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-sms-voice-retirement\" rel=\"noopener noreferrer\" target=\"_blank\">Passkeys by default and retirement of Microsoft-provided SMS and voice authentication - Microsoft Entra ID | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/security/store/customers/how-to-purchase-a-saas-solution-and-deploy-a-linked-solution\" rel=\"noopener noreferrer\" target=\"_blank\">Purchase and deploy a SaaS solution from Security Store - Microsoft Security Store | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-f2bj\">Question</td><td data-row=\"row-f2bj\">Answer</td></tr><tr><td data-row=\"row-dw13\">Does the change add any integration to third-party software products, and if so, what?</td><td data-row=\"row-dw13\"><b>Yes.</b> The change enables organizations to use a supported third-party telephony provider for SMS and voice authentication. Organizations select a provider through Microsoft Security Store, and the selected provider delivers the SMS messages or voice calls used for authentication.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Starting October 30, 2026, Microsoft Entra ID allows organizations to choose a supported third-party telephony provider for SMS and voice authentication via Microsoft Security Store. Microsoft-provided SMS/voice authentication retires by February 1, 2027, except for some users until July 1, 2027. Organizations manage provider relationships directly."
-      }
-    ],
-    "EndDateTime": "2026-11-30T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1519855",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-21T23:24:58.663Z",
-    "Services": [
-      "Microsoft Entra"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-10-21T23:24:44Z",
-    "Tags": [
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Entra: Choose your own telephony provider for SMS and voice authentication",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -5260,7 +5389,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637694Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637695Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637696Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637697Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637698Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784412Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784414Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784416Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784417Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784419Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5312,7 +5441,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637527Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637528Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637529Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784122Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784124Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784125Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5364,7 +5493,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636712Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636713Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636714Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782684Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782685Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782687Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6282,7 +6411,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637784Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637785Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637786Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784537Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784553Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784555Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6429,7 +6558,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637133Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637134Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637135Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783405Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783408Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783409Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7617,54 +7746,6 @@
       "Retirement"
     ],
     "Title": "Microsoft Purview Audit: AuditLogQuery API generally available and Search-UnifiedAuditLog retiring",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated October 12, 2026: We have updated the content. Thank you for your patience.&nbsp;</p><p><b><b>What and Why</b></b></p><p>Microsoft Teams is introducing AI generated meeting memory files that capture key insights from meetings (formerly archive files). These files help Microsoft 365 Copilot and Facilitator deliver more accurate context aware responses while maintaining strong privacy controls by not storing raw meeting content. This capability supports enterprise ready AI by improving knowledge grounding while keeping data secure and manageable.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558933\" rel=\"noopener noreferrer\" target=\"_blank\">558933</a>.</p><p><b><b>Rollout Schedule</b></b></p><ul><li><b>Targeted Release:</b> Beginning<b> early November 2026</b> (previously early October) and expected to complete <b>mid-November 2026</b> (previously mid-October)</li><li><b>General Availability (Worldwide): </b>Beginning<b> early December 2026 </b>(previously mid-October) and expected to complete <b>early January 2027 </b>(previously late October 2026)</li></ul><p>Teams admin center controls for this feature will be available approximately four weeks before memory file generation begins. The dates above reflect when admin controls become available.</p><p><b><b>Impact on Your Organization:</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Teams administrators</li><li>Users with Microsoft 365 Copilot or Facilitator capabilities enabled</li></ul><p><i>Platforms/Services</i></p><ul><li>Microsoft Teams</li><li>Microsoft 365 Copilot</li><li>SharePoint Embedded</li></ul><p><i>What will happen</i></p><ul><li>AI meeting memory files (.meeting files) will be generated for meetings where Intelligent Recap is turned on. The feature is enabled by default in your organization.</li><li>Memory files are stored in a tenant-owned SharePoint Embedded container, not in user storage. You can control the default expiration time for these files within your organization.</li><li>Users cannot directly view or access memory files.</li><li>When the feature is released, Facilitator will use the memory to answer questions about meetings and responses include citations linking to meeting recaps or invites. In the future, Copilot will also use the memory to answer questions about meetings.&nbsp;</li><li>Memory files cannot be modified, renamed, or moved.</li><li>All content in memory files is AI-generated. No raw transcript snippets are stored.</li><li>Memory generation requires all of the following:<ul><li>Meeting memory is enabled for your organization.</li><li>Intelligent Recap is enabled for the meeting.</li></ul></li><li>Memory files are not created for:<ul><li>Meetings with sensitivity labels that include encryption</li><li>End-to-end encrypted meetings</li><li>Meetings with restricted copying or forwarding</li></ul></li><li>Access and data protection:<ul><li>Only users with access to the meeting can receive responses grounded in its memory and AI tools do not surface insights to users who do not have meeting access.</li><li>Memory knowledge is only shared with users who are in the same tenant as the meeting organizer.</li></ul></li></ul><p><b><b>Action Required / Recommendations</b></b></p><p>No immediate action is required. However, administrators should review configuration settings and consider organizational policy alignment.</p><p>Admins can enable or disable this feature in the <i>Teams admin center</i>.</p><p>Recommended actions:</p><ul><li>Review the AI archive setting in Teams admin center before rollout. Setting path: <b><i>Meeting Policies &gt; Meeting Memory\"</i></b>.</li><li>Evaluate the default expiration period, which is set to five years (1,825 days), and adjust retention settings as needed to align with compliance policies.</li><li>Communicate this capability to helpdesk teams and compliance stakeholders.</li><li>Monitor availability of the memory setting in <i>Teams admin center</i> and review or update settings when they become available. Memory file generation will begin 4 weeks after the setting is released to your organization.</li></ul><p><b>Learn more: </b><a href=\"https://learn.microsoft.com/microsoftteams/ai-archive-teams-meetings?branch=main\" rel=\"noopener noreferrer\" target=\"_blank\">AI Archives for Microsoft Teams Meetings | Microsoft Teams | Microsoft Learn</a><b>&nbsp;</b></p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mubhqf0u-8\">Question</td><td data-row=\"row-mubhqf0u-8\">Answer</td></tr><tr><td data-row=\"row-mubhqf0u-9\">Does the change store new customer data, and if so, where, and is the data cached or permanently stored?</td><td data-row=\"row-mubhqf0u-9\">Yes. The change introduces AI-generated meeting memory files that are stored in a tenant-owned SharePoint Embedded container and retained according to a configurable retention period.</td></tr><tr><td data-row=\"row-mubhqf0u-10\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mubhqf0u-10\">Yes. Meeting transcripts and metadata are processed into structured AI memory files that enable downstream AI systems such as Copilot and Facilitator to reason over meeting content.</td></tr><tr><td data-row=\"row-mubhqf0u-11\">Does the change introduce or significantly modify AI or machine learning capabilities that interact with or provide access to customer data?</td><td data-row=\"row-mubhqf0u-11\">Yes. Copilot and Facilitator use AI meeting memory files to generate context-aware responses grounded in prior meeting content.</td></tr><tr><td data-row=\"row-mubhqf0u-12\">Does the change provide users any new way of interacting with generative AI?</td><td data-row=\"row-mubhqf0u-12\">Yes. Users can interact with Copilot and Facilitator, which leverage meeting memory&nbsp;&nbsp;data to answer questions and provide insights about meetings.</td></tr><tr><td data-row=\"row-mubhqf0u-13\">Does the change modify retention policies, holds, or deletion workflows?</td><td data-row=\"row-mubhqf0u-13\">Yes. AI meeting memory files are governed by a default retention period of five years and are automatically deleted upon expiration.</td></tr><tr><td data-row=\"row-mubhqf0v-14\">Does the change include an admin control, and can it be controlled through Entra ID group membership?</td><td data-row=\"row-mubhqf0v-14\">Yes. Administrators can enable or disable AI meeting memory generation and configure retention settings in the Teams Admin Center.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "558933"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Teams will generate AI meeting memory files capturing key meeting insights to enhance Microsoft 365 Copilot and Facilitator responses. These files, stored securely in tenant-owned SharePoint, are enabled by default with admin controls and configurable retention. Rollout starts November 2026, requiring no immediate action but admin review."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2027-02-12T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1429018",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-10-12T21:16:26.993Z",
-    "Services": [
-      "Microsoft Teams"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-07-15T21:27:20Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Teams: Meeting memory file generation",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -9447,7 +9528,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636884Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636886Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636886Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636887Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782987Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782989Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378299Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782992Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9794,7 +9875,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637646Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637647Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784325Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784327Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9846,7 +9927,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7635839Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7635841Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781167Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781169Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10186,7 +10267,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637233Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637234Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637235Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637236Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783607Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783609Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783611Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783612Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10718,7 +10799,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636376Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636378Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636379Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378211Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782112Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782113Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11589,54 +11670,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated September 25, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction:</b></b></p><p>Microsoft Edge for Business will soon support summarization and contextual grounding with Microsoft 365 Copilot Chat. This enhancement enables users to ask Copilot questions about multiple open browser tabs, Microsoft 365 documents (such as Word, Excel, PowerPoint), and YouTube videos directly from the Edge side pane.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=496364\" rel=\"noopener noreferrer\" target=\"_blank\">496364</a>, <a href=\"https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1%26filters%3D&amp;searchterms=499423\" rel=\"noopener noreferrer\" target=\"_blank\">499423</a>, and <a href=\"https://www.microsoft.com/microsoft-365/roadmap?rtc=1%26filters%3D&amp;searchterms=499424\" rel=\"noopener noreferrer\" target=\"_blank\">499424</a>.</p><p><b><b>When this will happen:</b></b></p><ul><li><b>General Availability (Multiple browser tabs and YouTube videos): </b>Currently Available</li><li><b>General Availability (Microsoft 365 documents): </b>Rollout is expected to begin mid-October 2026 (previously mid-September)</li></ul><p><b><b>How this affects your organization:</b></b></p><p><b>Who is affected:</b> Users signed in to Microsoft Edge for Business with their Entra ID and who have access to Microsoft 365 Copilot.</p><p><b>What will happen:</b></p><ul><li>Users will be able to ask Copilot questions about open browser tabs, Microsoft 365 documents, and YouTube videos.</li><li>The feature will be<b> off by default</b>.</li><li>If Copilot is restricted from accessing page content via <a href=\"https://learn.microsoft.com/DeployEdge/edge-learnmore-copilot-page-summary-results#blocking-copilot-chat-in-edge-for-business-access-to-page-content-through-dlp\" rel=\"noopener noreferrer\" target=\"_blank\">Data Loss Prevention (DLP)</a> or the <a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-policies#edgeentracopilotpagecontext\" rel=\"noopener noreferrer\" target=\"_blank\">EdgeEntraCopilotPageContext policy</a>, it will be suppressed to maintain DLP integrity.</li><li>Existing DLP and policy configurations will be respected.</li></ul><p></p><p><b><b>What you can do to prepare:</b></b></p><ul><li>This rollout will happen automatically by the specified date; no admin action is required before rollout.</li><li>Ensure users who need this capability have access to Microsoft 365 Copilot.</li><li>Ensure your tenant is configured to support Microsoft 365 Copilot and that eligible users meet all licensing prerequisites, including Entra ID sign-in and applicable Microsoft 365 service plans.</li><li>Review your current DLP and Edge policy configurations to determine potential impact.</li><li>Notify users about this upcoming capability.</li><li>Update internal documentation if needed.</li></ul><p><b>Learn more:</b></p><ul><li><a href=\"https://learn.microsoft.com/DeployEdge/edge-learnmore-copilot-page-summary-results\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Copilot Chat in Edge and Access to Page Content | Microsoft Edge | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-policies\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft Edge - Policies | Microsoft Edge | Microsoft Learn</a></li></ul><p></p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muhfe95q-6\"><b>Question</b></td><td data-row=\"row-muhfe95q-6\"><b>Answer</b></td></tr><tr><td data-row=\"row-muhfe95q-7\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-muhfe95q-7\">Yes. Microsoft 365 Copilot introduces contextual grounding and summarization using generative AI across browser tabs, Microsoft 365 documents, and YouTube videos.</td></tr><tr><td data-row=\"row-muhfe95q-8\">Does the change provide end users any new way of interacting with generative AI?</td><td data-row=\"row-muhfe95q-8\">Yes. Users can now ask Copilot questions about open browser tabs and documents directly from the Edge sidepane, enabling real-time summarization and contextual responses.</td></tr><tr><td data-row=\"row-muhfe95q-9\">Does the change modify Data Loss Prevention (DLP) policies or enforcement?</td><td data-row=\"row-muhfe95q-9\">Yes. If DLP or the EdgeEntraCopilotPageContext policy restricts access, Copilot will be suppressed from accessing page content to maintain DLP integrity.</td></tr><tr><td data-row=\"row-muhfe95q-10\">Does the change include an admin control, and can it be controlled through Entra ID group membership?</td><td data-row=\"row-muhfe95q-10\">Yes. Admins can manage access to Copilot’s contextual grounding capabilities via DLP settings and Edge policy configurations, which can be scoped using Entra ID group membership.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "496364,499423,499424"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Edge for Business now supports Microsoft 365 Copilot Chat for summarizing and contextualizing multiple browser tabs, YouTube videos (available), and Microsoft 365 documents (rolling out mid-October 2026). The feature is off by default, respects DLP and policy settings, and requires Entra ID sign-in and proper licensing."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2026-11-30T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1187682",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-09-25T20:42:37.743Z",
-    "Services": [
-      "Microsoft 365 suite"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2025-11-18T16:21:30Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Edge: Microsoft 365 Copilot will support summarization and contextual grounding",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated September 25, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>We are introducing attendee proximity join for Microsoft Teams Rooms on Windows and Android, enabling users to quickly and effortlessly connect to a nearby room system when joining Microsoft Teams events, including town halls, webinars, and structured meetings. This enhancement simplifies the meeting join experience and helps users connect to the appropriate room device with fewer steps.</p><p>This message is associated with Roadmap ID <a href=\"https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&amp;searchterms=568781\" rel=\"noopener noreferrer\" target=\"_blank\">568781</a>.</p><p><b><b>Rollout Schedule:</b></b></p><ul><li><b>Targeted Release: </b>Rollout will begin in early November 2026 (previously early October) and is expected to complete by mid-November 2026 (previously late October).&nbsp;</li><li><b>General Availability (Worldwide, GCC, GCC High):</b> Rollout will begin in mid-November 2026 (previously late October) and is expected to complete by early December 2026 (previously mid-November).</li></ul><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Users who leverage Microsoft Teams Rooms on Windows or Android to join Teams events.</li></ul><p><b>Platforms and Services:</b></p><ul><li>Microsoft Teams Rooms on Windows</li><li>Microsoft Teams Rooms on Android</li><li>Microsoft Teams events, including town halls and webinars</li></ul><p><b>What will happen:</b></p><ul><li>Users will be able to use proximity join to connect to nearby Microsoft Teams Rooms when joining Teams events.</li><li>The feature provides a faster and more seamless method for joining supported Teams events from room systems.</li><li>This functionality will be available by default as part of the Microsoft Teams Rooms experience.</li></ul><p><b><b>Action Required / Recommendations:</b></b></p><p>No action is required to enable this feature. It will become available automatically during the rollout.</p><p>We recommend informing users who regularly participate in Teams events that they can use proximity join with nearby Microsoft Teams Rooms to simplify the room join experience.</p><p><b><b>Compliance Considerations:</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
       "ContentType": "html"
     },
@@ -11733,7 +11766,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637088Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637089Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783349Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783351Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12582,7 +12615,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7635878Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.763588Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7635881Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781239Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781241Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781243Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12634,7 +12667,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7635542Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7635545Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7635546Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3780863Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3780866Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3780868Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12686,7 +12719,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636769Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.763677Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636771Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782782Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782784Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782785Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12833,7 +12866,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637407Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637408Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637409Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783884Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783886Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783888Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12932,7 +12965,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636471Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636473Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636484Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782277Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782278Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378228Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12983,7 +13016,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636035Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636036Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636037Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636038Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636039Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781512Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781514Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781515Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781517Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781519Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -13083,7 +13116,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637177Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637178Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637179Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783506Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783508Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783509Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -13134,7 +13167,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636243Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636244Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378187Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781871Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15625,7 +15658,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637495Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637496Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784064Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3784066Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16001,7 +16034,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636276Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636277Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636278Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781931Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781932Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3781934Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16091,7 +16124,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637291Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637293Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637294Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637295Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637296Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637298Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783711Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783713Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783714Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783716Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783717Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378372Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18752,7 +18785,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637007Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637008Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637009Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7637009Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.763701Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783204Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783206Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783208Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3783209Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378321Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20716,7 +20749,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636639Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.763664Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636641Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636642Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782561Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782563Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782564Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782566Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -21148,7 +21181,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636815Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636816Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636817Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T18:09:56.7636818Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782866Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782867Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.3782869Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-10-30T21:06:17.378287Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
