@@ -4,6 +4,323 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
+      "Content": "<p>Updated November 9, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>To help organizations manage SharePoint storage more flexibly and avoid over-provisioning, Microsoft is introducing a <b>pay-as-you-go, consumption-based billing model for SharePoint storage overages</b>. This option allows you to pay only for the additional storage you actually use, rather than pre-purchasing extra capacity. The experience integrates with Microsoft 365 Archive and helps align storage costs with real usage.</p><p>This change is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=506743\" rel=\"noopener noreferrer\" target=\"_blank\">506743</a>.</p><p><b><b>When this will happen:</b></b></p><ul><li>Public Preview (Worldwide): We completed rollout in June 2026.</li><li>General Availability (WW): We expect to begin rolling out in<b> early January 2027 </b>(previously early November)<b> </b>and to complete rolling by <b>late January 2027</b> (previously end of November).&nbsp;</li></ul><p><b><b>How this affects your organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Microsoft 365 administrators managing <b>SharePoint Online storage</b></li><li><b>Note: </b>This feature isn’t currently available to education tenants. Let us know if you’d like it to be supported in the future.</li></ul><p><b>What will happen:</b></p><ul><li>Admins can <b>enable pay-as-you-go SharePoint storage billing</b> in the Microsoft 365 admin center.</li><li>Storage used above the included tenant quota will be automatically billed based on consumption.</li><li>There is no impact to users.</li><li>The existing<b> Office 365 Extra File Storage</b> add‑on remains available if you prefer to <b>manually increase your storage quota</b> instead.</li><li>The feature is <b>opt-in</b> and<b> off by default</b>.</li></ul><p><b><b>What you can do to prepare:</b></b></p><ul><li>No immediate action is required. However, we recommend the following:</li><li>Review your tenant’s current SharePoint storage usage in the <b>SharePoint admin center</b> &gt; <b>Active sites</b>.</li><li>Evaluate whether a <b>consumption‑based model</b> or <b>manually purchased storage</b> best fits your organization’s cost and governance preferences.</li><li>If you plan to enable pay‑as‑you‑go billing:<ul><li>Ensure the appropriate <b>Azure subscription and billing permissions</b> are in place.</li><li>Update internal documentation or cost‑management processes as needed.</li></ul></li><li>Share this information with finance or procurement teams if they track usage‑based charges.</li></ul><p>Learn more:<a href=\"https://learn.microsoft.com/microsoft-365/commerce/add-storage-space?view=o365-worldwide\" rel=\"noopener noreferrer\" target=\"_blank\"> Add more SharePoint storage to your subscription | Microsoft Learn</a></p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mw9lwxr1-1\">Compliance area</td><td data-row=\"row-mw9lwxr1-1\">Impact and explanation</td></tr><tr><td data-row=\"row-mw9lwxr1-2\">Admin monitoring and reporting</td><td data-row=\"row-mw9lwxr1-2\">SharePoint storage usage above the included tenant quota will be reflected in consumption-based billing and usage reports, which may affect how admins monitor and track storage consumption and costs.</td></tr><tr><td data-row=\"row-mw9lwxr2-3\">Admin control</td><td data-row=\"row-mw9lwxr2-3\">Administrators must explicitly enable</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "506743"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft is introducing a pay-as-you-go billing model for SharePoint storage overages, allowing admins to pay only for extra storage used beyond the included quota. This opt-in feature, rolling out globally in January 2027, integrates with Microsoft 365 Archive and requires Azure billing permissions."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2027-03-01T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1330893",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-09T18:42:50.47Z",
+    "Services": [
+      "SharePoint Online"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-06-01T23:26:28Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "Admin impact"
+    ],
+    "Title": "Pay-as-you-go consumption-based meter for your extra SharePoint storage needs",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 9, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>To improve transparency and troubleshooting for Microsoft Purview role-based access control (RBAC), we are enhancing audit logging for permission checks performed in the Microsoft Purview portal. These new audit records will provide administrators with clearer visibility into role and scoped-role authorization decisions, helping them investigate access issues and better understand how access evaluations are performed.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&amp;searchterms=569363\" rel=\"noopener noreferrer\" target=\"_blank\">569363</a>.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Beginning in <b>late September 2026</b> and expected to complete by <b>mid-November 2026</b> (previously late October)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Purview administrators and compliance administrators who review audit logs for access investigations and troubleshooting</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Purview portal</li><li>Microsoft Purview Audit</li></ul><p><i>What will happen</i></p><ul><li>New audit records will be generated when access checks are performed in the Microsoft Purview portal.</li><li>Two new audit operations will be available:<ul><li>CheckUsersInRoles</li><li>CheckUserInRolesWithScopes</li></ul></li><li>Administrators will be able to review these audit records as part of SecurityComplianceRBAC audit activities.</li><li>The enhancement is enabled by default and requires no configuration.</li><li>Audit records will only be generated for access checks that occur after the feature is deployed.</li><li>No historical or retroactive audit records will be created for prior access checks.</li><li>There is no impact for organizations.</li><li>Supported permission-assignment and role-group change audit records will include the ClientPortal field within PreExecutionMessage, helping administrators distinguish changes initiated from Microsoft Purview and Microsoft Defender.&nbsp;<ul><li>Supported activities for portal attribution&nbsp;<ul><li>Permission assignments: Granting, updating, or removing permission assignments.&nbsp;</li><li>Role groups: Creating, updating, or deleting role groups.&nbsp;</li></ul></li></ul></li><li>Expected ClientPortal values:&nbsp;<ul><li>Microsoft Purview portal: \"ClientPortal\": \"Microsoft Purview\"&nbsp;</li><li>Microsoft Defender portal: \"ClientPortal\": \"Microsoft Defender\"&nbsp;</li></ul></li></ul><p><i>RBAC audit-CheckUserInRolesWithScopes:</i></p><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21765-1.png\" width=\"400\"></p><p><i>RBAC audit-checkusersinroles:</i></p><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21765-2.png\" width=\"400\"></p><p><b><b>Action required and recommendations</b></b></p><p><b>No action is required</b>. We recommend that administrators:</p><ul><li>Review internal monitoring and audit procedures to determine whether the new audit activities should be included in access investigations.</li><li>Inform compliance and security teams about the availability of the new audit operations.</li><li>Update any internal documentation or reporting processes that reference Microsoft Purview RBAC audit data.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/en-us/purview/purview-permissions\" rel=\"noopener noreferrer\" target=\"_blank\">Permissions in the Microsoft Purview portal | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-1plq\">Question</td><td data-row=\"row-1plq\">Answer</td></tr><tr><td data-row=\"row-jnpf\">Does the change modify, interrupt, or disable audit logging capabilities?</td><td data-row=\"row-jnpf\">Yes. The change enhances audit logging capabilities by adding two new audit operations.</td></tr><tr><td data-row=\"row-0y5x\">Does the change alter how admins can monitor, report on, or demonstrate compliance activities?</td><td data-row=\"row-0y5x\">Yes. Administrators gain additional audit visibility into RBAC access evaluation outcomes, improving monitoring and troubleshooting capabilities.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "569363"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Purview is enhancing audit logging for role-based access control, adding two new audit operations to improve transparency and troubleshooting. The update, rolling out worldwide from late September to mid-November 2026, requires no action but helps administrators better investigate access issues and monitor compliance."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2026-12-14T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1473155",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-09T18:00:53.78Z",
+    "Services": [
+      "Microsoft Purview"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-16T22:24:18Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Purview: permissions audit log improvements",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 9, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft is introducing support for Microsoft Agent 365 agents that implement the Agent2Agent (A2A) protocol, allowing them to be used as connected agents in declarative agents built with Microsoft 365 Agents Toolkit.</p><p>This enhancement expands the types of external agent services that declarative agents can connect to. In addition to existing support for OpenAPI and Model Context Protocol (MCP) servers, declarative agents can now connect to Agent2Agent-enabled agents, enabling natural language interactions and support for more complex workflows.</p><p>This feature gives developers greater flexibility when building declarative agents while providing administrators centralized management and governance through the Microsoft 365 admin center.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Began in <b>late August 2026 </b>and is expected to complete by<b> end of December 2026</b>.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators who manage agents in the Microsoft 365 admin center</li><li>Developers building declarative agents with Microsoft 365 Agents Toolkit</li><li>Users who are assigned access to approved Microsoft Agent 365 agents</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft 365 Copilot</li><li>Microsoft 365 admin center</li><li>Microsoft 365 Agents Toolkit</li><li>Declarative agents</li></ul><p><i>What will happen</i></p><ul><li>Administrators can install Microsoft Agent 365 agents that support the Agent2Agent protocol from the <b>All agents</b> page in the Microsoft 365 admin center.</li><li>Declarative agents can use approved Agent2Agent-enabled agents as connected agents.</li><li>Agent2Agent support is added alongside existing support for OpenAPI and MCP server connections.</li><li>Users cannot install Agent2Agent-enabled Microsoft Agent 365 agents themselves.</li><li>Administrators can review Agent2Agent-connected agents from the <b>Connected agents</b> tab in the declarative agent details page before approving their use.</li></ul><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21727.png\" width=\"400\"></p><p><b><b>Action required and recommendations</b></b></p><p>Action may be required.</p><p>Before rollout:</p><ul><li>Review Microsoft Agent 365 agents available in the <b>All agents</b> page of the Microsoft 365 admin center.</li><li>Determine which Agent2Agent-enabled agents should be made available to users in your organization.</li><li>Review connected agents associated with declarative agents from the <b>Connected agents</b> tab before approving their use.</li><li>Update any internal governance, agent approval, or deployment processes as appropriate.</li></ul><p>Consider notifying administrators and developers in your organization about the availability of Agent2Agent-connected agents and the associated review and approval process.</p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-qfqe\"><b>Compliance consideration</b></td><td data-row=\"row-qfqe\"><b>Answer</b></td></tr><tr><td data-row=\"row-8f7a\">Does this change introduce or significantly modify AI, machine learning, or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-8f7a\"><b>Yes.</b> This update introduces support for Agent2Agent-enabled Microsoft Agent 365 agents as connected agents within declarative agents. Organizations should review how these connected agents interact with customer data before approving them for use.</td></tr><tr><td data-row=\"row-c7r2\">Does this change provide end users with a new way to interact with generative AI?</td><td data-row=\"row-c7r2\"><b>Yes.</b> Users can interact with declarative agents that are connected to Agent2Agent-enabled agents, enabling new AI-powered experiences and workflows.</td></tr><tr><td data-row=\"row-aw6v\">Does this change include an admin control?</td><td data-row=\"row-aw6v\"><b>Yes.</b> Administrators can install, review, and approve Agent2Agent-enabled Microsoft Agent 365 agents through the Microsoft 365 admin center before they are available for use.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "567670"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft 365 now supports Microsoft Agent 365 agents using the Agent2Agent protocol as connected agents in declarative agents, expanding integration options. Administrators manage and approve these agents via the Microsoft 365 admin center. Rollout began in August 2026 and completes by December 2026, enabling enhanced AI interactions and workflows."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Android, Desktop, iOS, Web"
+      }
+    ],
+    "EndDateTime": "2027-02-01T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1478975",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-09T17:50:16.753Z",
+    "Services": [
+      "Microsoft 365 Copilot Chat"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-25T00:04:12Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft 365 Copilot: Use Microsoft Agent 365 agents as connected agents in declarative agents",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and why</b></b></p><p>Microsoft 365 Copilot is introducing legal plugins in <i>Word and Cowork</i>. These plugins provide purpose-built skills to help legal professionals summarize, draft, review, and redline legal documents. They can use work context from Microsoft 365 and connect to supported third-party legal sources, helping legal professionals complete legal work in the Microsoft 365 experiences they already use.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Public Preview (Worldwide):</b> Rollout began in <b>late April 2026</b> and is expected to complete by <b>mid-December 2026</b></li><li><b>General Availability (Worldwide):</b> We will begin rolling out in <b>mid-October 2026</b> and expect to complete by <b>mid-December 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users with Microsoft 365 Copilot commercial licenses</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft 365 Copilot</li><li>Word desktop</li><li>Cowork</li></ul><p><i>What will happen</i></p><ul><li>Legal plugins in Copilot provide purpose-built skills to help legal professionals summarize, draft, review, and redline legal documents.</li><li>The plugins can use work context from Microsoft 365 and connect to supported third-party legal sources.</li><li>The legal capabilities include more than 20 purpose-built legal skills.</li><li>In Word desktop, the legal plugin is enabled by default. When enabled, Copilot can use legal skills to complete legal tasks in Word.</li><li>In Cowork, users must add the legal plugin before Copilot can use legal skills to complete legal tasks.</li><li>The legal skills can help users review contracts against playbooks, draft contracts using templates and precedent agreements, compare contracts with precedents, templates, and policies, and explain tracked changes.</li><li><span style=\"color: rgb(0, 0, 0);\">The Legal Agent is being retired. Existing Legal Agent users will lose access to the product.</span></li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin setup is required.</p><p>If your organization plans to use the legal plugins:</p><ul><li>Ensure Microsoft 365 Copilot licenses are assigned to eligible users.</li><li>Review internal legal workflows that may benefit from these capabilities.</li><li>Communicate these capabilities to your legal teams.</li><li>Update internal documentation or help desk guidance as appropriate.</li><li>Instruct legal team users to add the legal plugin in Cowork.</li><li>Instruct legal team users to use legal skills in Copilot in Word desktop.</li></ul><p>If your organization does not plan to use the legal plugins:</p><ul><li>Turn off <b>Legal Skills in M365 Copilot in Word</b> in the <i>Microsoft 365 Apps admin center</i> to disable the legal plugin in Word for all users.</li><li>Turn off the <b>Cowork for Legal</b> plugin in the <i>Microsoft 365 admin center</i> to disable the plugin in Cowork for all users.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/microsoft-365/admin/manage/manage-copilot-for-legal?view=o365-worldwide\" rel=\"noopener noreferrer\" target=\"_blank\">Manage Copilot for legal - Microsoft 365 admin | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-8upp\">Question</td><td data-row=\"row-8upp\">Answer</td></tr><tr><td data-row=\"row-d5xt\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-d5xt\">Yes. The legal plugins can use work context from Microsoft 365 to support legal tasks. The supplied source does not specify changes to data storage or caching.</td></tr><tr><td data-row=\"row-74ky\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-74ky\">Yes. Legal capabilities previously released as the Legal Agent are being made available as legal plugins in Word and Cowork. They provide purpose-built legal skills and can use work context from Microsoft 365.</td></tr><tr><td data-row=\"row-wvhv\">Does the change provide users a new way of interacting with generative AI?</td><td data-row=\"row-wvhv\">Yes. Users can use purpose-built legal skills in Copilot in Word and Cowork to summarize, draft, review, and redline legal documents.</td></tr><tr><td data-row=\"row-g4ss\">Does the change add integration with third-party software products?</td><td data-row=\"row-g4ss\">Yes. The legal plugins can connect to supported third-party legal sources. The supplied sources do not identify specific third-party products.</td></tr><tr><td data-row=\"row-h2z5\">Does the change include an admin control?</td><td data-row=\"row-h2z5\">Yes. Admins can turn off Legal Skills in M365 Copilot in Word in the Microsoft 365 Apps admin center and turn off the Cowork for Legal plugin in the Microsoft 365 admin center. The supplied source does not specify whether these controls support Entra ID group membership.</td></tr><tr><td data-row=\"row-mv71ugij-1\">Does the change allow a user to enable or disable the feature themselves?</td><td data-row=\"row-mv71ugij-1\">Yes. In Cowork, users must add the legal plugin before using its legal skills. The supplied source does not state that users can independently disable the Word legal plugin.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "571884"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft 365 Copilot introduces legal plugins in Word and Cowork to help legal professionals summarize, draft, review, and redline documents using Microsoft 365 context and third-party sources. Rollout occurs from April to December 2026. Admins can enable or disable these plugins; no setup is required."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Desktop"
+      }
+    ],
+    "EndDateTime": "2026-11-29T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1509799",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-09T17:47:55.967Z",
+    "Services": [
+      "Microsoft 365 apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-15T23:10:00Z",
+    "Tags": [
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft 365 Copilot: Legal plugins in Word and Cowork",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 3, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>We’re updating the thumbs-down feedback experience in Microsoft Copilot to make it easier for users to provide specific, actionable feedback. Today, many thumbs-down responses are submitted without comments, providing sentiment but limited information about the issue. When users select thumbs down, they’ll be able to select one or more feedback categories and optionally provide additional comments, giving each categorized response a signal that can be routed to the appropriate team or issue type.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in mid-November 2026 (previously late October) and expect to complete by mid-November 2026 (previously late October).</p><p><b><b>Impact on Your Organization:</b></b></p><p>Users who can submit feedback in supported Microsoft Copilot experiences may see the updated thumbs-down feedback form. The planned audience includes users signed in with Microsoft Entra ID organizational accounts, users signed in with consumer Microsoft accounts, and users in Education tenants. The feature isn’t currently planned for Mobile, GCC, GCC High, DoD, or other sovereign cloud environments.</p><p>The updated feedback experience is planned for Microsoft Copilot, Copilot in Microsoft Edge, Copilot in Microsoft Outlook, and Copilot in Microsoft Teams, across web browsers, Windows, and macOS. The WXPN/Catalyst experience isn’t currently included.</p><p>When a user selects thumbs down on a Copilot response, they may see selectable categories describing the issue, can select more than one category, and can optionally enter additional feedback in a free-text field. The thumbs-up feedback experience isn’t changing. This update applies only to the existing “Allow users to submit feedback to Microsoft” admin policy; all other feedback policy experiences remain unchanged. During the controlled rollout, some users will continue to see the existing feedback experience.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required for this change. It will be visible to users who are already allowed to submit feedback under the existing policy.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvtuz3f3-1\"><b>Question</b></td><td data-row=\"row-mvtuz3f3-1\"><b>Answer</b></td></tr><tr><td data-row=\"row-mvtuz3f3-2\">Does the change store new customer data?</td><td data-row=\"row-mvtuz3f3-2\">Yes. When a user chooses to submit thumbs-down feedback, the selected categories, optional free-text comment, and optional screenshot are new data captured as part of that submission.</td></tr><tr><td data-row=\"row-mvtuz3f3-3\">Does the change include an admin control and can it be controlled through Entra ID group membership?</td><td data-row=\"row-mvtuz3f3-3\">Yes. This UX change applies to the existing \"Allow users to submit feedback to Microsoft\" admin policy; all other feedback policy experiences remain unchanged.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Copilot is updating the thumbs-down feedback to include selectable categories and optional comments for more actionable input. The rollout begins mid-November 2026 worldwide, affecting organizational, consumer, and education accounts on web, Windows, and macOS. No admin action is needed; data is stored per existing feedback policies."
+      }
+    ],
+    "EndDateTime": "2026-12-28T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1530595",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-09T17:41:45.033Z",
+    "Services": [
+      "Microsoft 365 Copilot Chat"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-29T18:13:33Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact"
+    ],
+    "Title": "Microsoft Copilot Feedback UX update",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 9, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>Introduction</b></p><p>Microsoft Edge for Business will soon support <i>Writing Assistance</i>, a new feature powered by Microsoft 365 Copilot Chat. This capability helps users draft and rephrase editable text directly within <i>Edge</i>, enhancing productivity and writing quality. Users can access <i>Writing Assistance </i>by highlighting editable text and right-clicking to open the context menu.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=420335\" rel=\"noopener noreferrer\" target=\"_blank\">420335</a>.</p><p><b>When this will happen</b></p><p><b>General Availability (Worldwide): </b>We will begin rolling<b> late January 2027</b> (previously <b>end of October 2026)</b> and expect to complete rollout by<b> late January 2027 </b>(previously late October).&nbsp;</p><p><b>How this affects your organization</b></p><ul><li><i>Writing Assistance </i>will be <b>enabled by default</b> for Edge for Business users.&nbsp;</li><li>Users can access <i>Writing Assistance </i>by highlighting editable text and right-clicking to open the context menu.</li><li><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2025/08/18620-1-rewrite-dialog-2.png\"></li><li>If Microsoft 365 Copilot is restricted from accessing page content due to Data Loss Prevention (DLP) policies, <i>Writing Assistance </i>will not function on that content.</li><li>Admins can manage this feature using the <a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-browser-policies/composeinlineenabled\" rel=\"noopener noreferrer\" target=\"_blank\">InlineComposeEnabled</a> policy setting.</li></ul><p><b>What you can do to prepare</b></p><p>No admin action is required before rollout.</p><p>We recommend:</p><ul><li>Reviewing your current DLP configurations to understand how they may impact <i>Writing Assistance </i>functionality.</li><li>Notifying users about this new capability.</li><li>Updating internal documentation to reflect this change.</li></ul><p>Learn more about how DLP affects Copilot access to page content: <a href=\"https://learn.microsoft.com/DeployEdge/edge-learnmore-copilot-page-summary-results\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Copilot Chat in Edge and Access to Page Content | Microsoft Edge | Microsoft Learn</a></p><p><b>Compliance considerations</b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mtucg90s-6\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-mtucg90s-6\">Yes. This change introduces a new generative AI capability through Microsoft 365 Copilot Chat, allowing users to rewrite or draft text directly in Edge for Business.</td></tr><tr><td data-row=\"row-mtucg90s-7\">Does the change provide end users any new way of interacting with generative AI?</td><td data-row=\"row-mtucg90s-7\">Yes. Users can interact with Copilot Chat by highlighting editable text and using the right-click context menu to access Writing Assistance, enabling AI-assisted drafting and rephrasing.</td></tr><tr><td data-row=\"row-mtucg90s-8\">Does the change modify Data Loss Prevention (DLP) policies or enforcement?</td><td data-row=\"row-mtucg90s-8\">Yes. If DLP policies restrict Copilot from accessing page content, the Writing Assistance<i> </i>feature will not function on that content.</td></tr><tr><td data-row=\"row-mtucg90s-9\">Does the change include an admin control and can it be controlled through Entra ID group membership?</td><td data-row=\"row-mtucg90s-9\">Yes. Admins can manage the availability of this feature using the InlineComposeEnabled policy setting.</td></tr><tr><td data-row=\"row-mtucg90s-10\">Does the change allow a user to enable and disable the feature themselves?</td><td data-row=\"row-mtucg90s-10\">Yes. Users can choose to use the Writing Assistance feature by manually invoking it through the right-click context menu in Edge.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "420335"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft 365 Copilot Chat’s Writing Assistance will roll out in Edge for Business by late January 2027, enabled by default. Users can access it via right-click on editable text. Admins can control it with the InlineComposeEnabled policy. DLP policies may restrict its functionality on certain content."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2027-03-05T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1146821",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-09T17:27:07.923Z",
+    "Services": [
+      "Microsoft 365 Copilot Chat"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2025-09-02T23:22:03Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Rewrite with Microsoft 365 Copilot Chat coming soon to Edge for Business users",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": "2026-10-01T07:00:00Z",
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 9, 2026: We have updated the timeline. Gov rollout of this feature is still paused at this time. We will communicate via Message center when we are ready to proceed. We apologize for any inconvenience.</p><p><b>What and Why:</b></p><p>Exchange Web Services (EWS) deprecation begins <b>October 1, 2026</b>. Cross-tenant collaboration features — Free/Busy, MailTips, and Calendar Sharing — currently rely on EWS.</p><p>Cross-tenant Free/Busy, MailTips will be available by <b>September 2026 </b>and Calendar Sharing will be available by <b>late November 2026</b> (previously early November) via Microsoft 365 Cross-Tenant Access Policy, which replaces EWS-based cross-tenant collaboration.</p><p><b>Rollout Schedule:</b></p><ul><li>Worldwide: We will begin rolling out in <b>August 2026</b> and expect to complete by <b>September 15, 2026</b> for Free/Busy, Mailtips and <b>November 23, 2026</b> (previously November 3) for Calendar Sharing.</li><li>GCC, GCC High, DoD: We will communicate via Message center when we are ready to proceed.</li></ul><p><b>Impact on your organization:</b></p><p>Sharing Free/Busy, Calendars, and MailTips (e.g., out of office message) with another Microsoft 365 organization via Organization Relationship or Sharing Policy relies on Exchange Web Services (EWS), which is being deprecated. To preserve these cross-tenant collaboration scenarios, you will need to start migrating to Microsoft 365 Cross Tenant Access Policy.</p><p>Your tenant is affected if it uses any of the following Exchange Online configurations:</p><ul><li><b>Organization Relationships</b> — sharing Free/Busy or MailTips with other Microsoft 365 tenants&nbsp;</li><li><b>Sharing Policies</b> — sharing calendars externally, either via invitations sent to recipients in other Microsoft 365 organizations or calendars published for anonymous access via an internet URL</li></ul><p>Run these commands in Exchange Online PowerShell to check if your tenant is affected:&nbsp;</p><ul><li><ul><li><code>Get-OrganizationRelationship | Format-List Name, DomainNames, Enabled, FreeBusyAccessEnabled, FreeBusyAccessLevel, FreeBusyAccessScope, MailTipsAccessEnabled, MailTipsAccessLevel, MailTipsAccessScope</code>If results show (1) Enabled: True, and (2) either FreeBusyAccessEnabled: True or MailtipsAccessEnabled: True, and (3) the external organization is hosted in Microsoft 365, your tenant is affected and in scope to migrate. Else, no action is needed.&nbsp;</li><li><code>Get-SharingPolicy | Format-List Name, Domains, Enabled, Default</code>If results show (1) Enabled: True, and (2) the Domains property contains at least one rule with a CalendarSharingFreeBusy access level (Simple, Detail, or Reviewer), and (3) the targeted external organization is hosted in Microsoft 365, and (4) the policy is assigned to one or more mailboxes, your tenant is affected and in scope to migrate. Else, no action is needed.</li><li>Note: rules that begin with Anonymous: represent calendar publishing to anonymous internet recipients via a published URL - these also appear in this output.</li></ul></li></ul><p><i><u>What happens if I do nothing:</u></i></p><p>Starting October 1, 2026, Exchange Web Services (EWS) will be gradually disabled in line with previous communications linked to this message. As this rollout reaches your tenant, cross-tenant Free/Busy, MailTips, and Calendar Sharing that rely on EWS will be affected — recipients in partner organizations may no longer see Free/Busy, MailTips, or shared calendars from your tenant.&nbsp;</p><p>If your organization <b>is not ready to migrate</b>, you can retain EWS access by following the guidance of the latest blog we published: <a href=\"https://techcommunity.microsoft.com/blog/exchange/exchange-online-ews-your-time-is-almost-up/4492361\" rel=\"noopener noreferrer\" target=\"_blank\">ExchangeOnline EWS, Your Time is Almost Up</a> (<b><i>EWSEnabled</i></b><i> set to </i><b><i>True</i></b>) while you prepare and execute the migration steps attached to this message. EWS access through this extension will remain available until the final EWS shutdown on April 1, 2027.&nbsp;</p><p><b>Action Required/Recommendations:</b></p><ul><li><b>Follow this Message center post</b> for updates to the rollout schedule. To avoid impact, <b>plan to migrate after the rollout reaches your tenant and before EWS deprecation</b>.</li><li><b>Review the migration guide linked below</b> for step-by-step instructions to understand your current configurations, set up new Microsoft 365 Cross Tenant Access Policies, validate the new configurations, and remove unused configurations.&nbsp;</li><li><b>Check the blog post linked below</b> for additional information and answers to frequently asked questions.&nbsp;</li><li><b>Hybrid and on-premises scenarios are not in scope</b>. This update applies to fully cloud-hosted (Exchange Online ↔ Exchange Online) cross-tenant and cross-cloud configurations only. For organizations running on-premises Exchange and Exchange Online in a Hybrid Deployment, migrate to <a href=\"https://learn.microsoft.com/exchange/hybrid-deployment/deploy-dedicated-hybrid-app\" rel=\"noopener noreferrer\" target=\"_blank\">Dedicated Hybrid App</a>. For organizations hosted in Exchange Online sharing with another organization running Exchange on-premises, kindly monitor future Message Center posts for guidance on migration paths as they become available.&nbsp;</li></ul><p><b>Additional information:</b></p><ul><li><b>Migration guide:</b> <a href=\"https://learn.microsoft.com/exchange/sharing/migrate-to-m365-xtap\" rel=\"noopener noreferrer\" target=\"_blank\">Migrating to Microsoft 365 Cross-Tenant Access Policy for sharing Free/Busy, Calendars, and MailTips</a>.</li><li><a href=\"https://learn.microsoft.com/graph/api/resources/m365-cross-tenant-access-policy-overview?view=graph-rest-1.0\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Cross-Tenant Access Policy Microsoft Graph API Overview</a></li><li><a href=\"https://techcommunity.microsoft.com/blog/exchange/exchange-online-ews-your-time-is-almost-up/4492361\" rel=\"noopener noreferrer\" target=\"_blank\">Exchange Online EWS, Your Time is Almost Up</a></li><li><a href=\"https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online\" rel=\"noopener noreferrer\" target=\"_blank\">Deprecation of EWS in Exchange Online&nbsp;</a></li><li><a href=\"https://www.microsoft.com/en-us/security/blog/2025/07/08/enhancing-microsoft-365-security-by-eliminating-high-privilege-access/\" rel=\"noopener noreferrer\" target=\"_blank\">Enhancing Microsoft 365 security by eliminating high-privilege access</a>&nbsp;</li><li><b>Blog Post:</b> <a href=\"https://techcommunity.microsoft.com/blog/exchange/cross-tenant-freebusy-mailtips-and-calendar-sharing-are-moving-to-cross-tenant-a/4545169\" rel=\"noopener noreferrer\" target=\"_blank\">Cross-tenant Free/Busy, MailTips, and Calendar Sharing are moving to Cross-Tenant Access Policy</a></li></ul>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Exchange Web Services (EWS) deprecation starts October 1, 2026, affecting cross-tenant Free/Busy, MailTips, and Calendar Sharing. Microsoft 365 Cross-Tenant Access Policy will replace EWS by late November 2026. Organizations must migrate to avoid disruption; migration guides and updates are provided. GCC rollout is paused."
+      }
+    ],
+    "EndDateTime": "2026-12-28T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1446796",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-11-09T17:10:32.65Z",
+    "Services": [
+      "Exchange Online"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-08-03T22:18:34Z",
+    "Tags": [
+      "Updated message",
+      "User impact",
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Migrate Free/Busy, MailTips, and Calendar Sharing before EWS deprecation",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
       "Content": "<p><b><b>What and why</b></b></p><p>Microsoft OneDrive and SharePoint on the web will support annotation for PDFs encrypted with Microsoft Purview sensitivity labels. Users who have the appropriate editing usage rights will be able to annotate protected PDFs in their browser without removing the sensitivity label. The file's sensitivity label, encryption, and usage rights will be preserved when changes are saved.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Beginning in <b>late January 2027</b> and expected to complete in <b>late January 2027</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>OneDrive for Business and SharePoint customers</li><li>This feature does not apply to OneDrive Consumer.</li></ul><p><i>Platforms and services</i></p><ul><li>OneDrive for Business and SharePoint on the web</li><li>All browsers are supported.</li></ul><p><i>What will happen</i></p><ul><li>Users who have editing usage rights can annotate sensitivity label-protected, encrypted PDFs in the <i>OneDrive or SharePoint web PDF viewer</i>.</li><li>Available annotation tools include ink, highlight, free text, notes, signatures, image/shape/date stamps, bookmarks, and form fields.</li><li>Users can save annotations without removing the sensitivity label.</li><li>The sensitivity label, encryption, and usage rights are preserved when the annotated PDF is saved.</li><li>Users with view-only rights will continue to see the PDF as read-only and cannot annotate.</li><li>This change does not grant users additional access or editing rights.</li><li>No feature-specific admin control or configuration is required. Existing sensitivity label and usage-rights settings determine who can view or edit protected PDFs.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No feature-specific admin action is required to enable this update.</p><p>We recommend that you:</p><ul><li>Inform users who routinely review labeled or regulated documents that they can annotate protected PDFs in place.</li><li>Confirm that your sensitivity label and usage-rights configuration reflects who should be able to edit or view protected PDFs.</li><li>Update internal documentation and helpdesk guidance as appropriate.</li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-imuu\">Question</td><td data-row=\"row-imuu\">Answer</td></tr><tr><td data-row=\"row-9qre\">Does the change alter how existing customer data is accessed or modified?</td><td data-row=\"row-9qre\"><b>Yes.</b> Users with existing editing usage rights gain a new way to modify protected PDFs by adding annotations in the OneDrive or SharePoint web PDF viewer.</td></tr><tr><td data-row=\"row-0r1l\">Does the change preserve Information Protection label behavior?</td><td data-row=\"row-0r1l\"><b>Yes.</b> Users can annotate PDFs protected by sensitivity labels without removing the label. The sensitivity label, encryption, and usage rights are preserved when the file is saved.</td></tr></tbody></table>",
       "ContentType": "html"
     },
@@ -813,7 +1130,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"Android\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057935Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057936Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"Android\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908202Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908203Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2090,7 +2407,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058085Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058086Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058087Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058088Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058089Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058091Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908321Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908322Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190833Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908334Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908335Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908337Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2142,7 +2459,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059392Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059393Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909371Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909372Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2242,7 +2559,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7056956Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7056959Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705696Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907552Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907553Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907554Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2294,7 +2611,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059617Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059618Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059619Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059621Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059622Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909556Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909557Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909557Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909558Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909559Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2346,7 +2663,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057629Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057631Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057632Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907939Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190794Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907941Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2398,7 +2715,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059286Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059287Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059288Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909279Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190928Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909281Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2450,7 +2767,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058299Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.70583Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058301Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908489Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190849Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908491Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2502,7 +2819,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058014Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058015Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058017Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908276Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908277Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908278Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2983,45 +3300,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated November 3, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>We’re updating the thumbs-down feedback experience in Microsoft Copilot to make it easier for users to provide specific, actionable feedback. Today, many thumbs-down responses are submitted without comments, providing sentiment but limited information about the issue. When users select thumbs down, they’ll be able to select one or more feedback categories and optionally provide additional comments, giving each categorized response a signal that can be routed to the appropriate team or issue type.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in mid-November 2026 (previously late October) and expect to complete by mid-November 2026 (previously late October).</p><p><b><b>Impact on Your Organization:</b></b></p><p>Users who can submit feedback in supported Microsoft Copilot experiences may see the updated thumbs-down feedback form. The planned audience includes users signed in with Microsoft Entra ID organizational accounts, users signed in with consumer Microsoft accounts, and users in Education tenants. The feature isn’t currently planned for Mobile, GCC, GCC High, DoD, or other sovereign cloud environments.</p><p>The updated feedback experience is planned for Microsoft Copilot, Copilot in Microsoft Edge, Copilot in Microsoft Outlook, and Copilot in Microsoft Teams, across web browsers, Windows, and macOS. The WXPN/Catalyst experience isn’t currently included.</p><p>When a user selects thumbs down on a Copilot response, they may see selectable categories describing the issue, can select more than one category, and can optionally enter additional feedback in a free-text field. The thumbs-up feedback experience isn’t changing. This update applies only to the existing “Allow users to submit feedback to Microsoft” admin policy; all other feedback policy experiences remain unchanged. During the controlled rollout, some users will continue to see the existing feedback experience.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required for this change. It will be visible to users who are already allowed to submit feedback under the existing policy.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvtuz3f3-1\"><b>Question</b></td><td data-row=\"row-mvtuz3f3-1\"><b>Answer</b></td></tr><tr><td data-row=\"row-mvtuz3f3-2\">Does the change store new customer data?</td><td data-row=\"row-mvtuz3f3-2\">Yes. When a user chooses to submit thumbs-down feedback, the selected categories, optional free-text comment, and optional screenshot are new data captured as part of that submission.</td></tr><tr><td data-row=\"row-mvtuz3f3-3\">Does the change include an admin control and can it be controlled through Entra ID group membership?</td><td data-row=\"row-mvtuz3f3-3\">Yes. This UX change applies to the existing \"Allow users to submit feedback to Microsoft\" admin policy; all other feedback policy experiences remain unchanged.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Copilot is updating the thumbs-down feedback to include selectable categories and optional comments for more actionable input. The rollout begins mid-November 2026 worldwide, affecting organizational, consumer, and education accounts on web, Windows, and macOS. No admin action is needed; data is stored per existing feedback policies."
-      }
-    ],
-    "EndDateTime": "2026-12-28T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1530595",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-11-03T17:09:47.007Z",
-    "Services": [
-      "Microsoft 365 Copilot Chat"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-10-29T18:13:33Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact"
-    ],
-    "Title": "Microsoft Copilot Feedback UX update",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated November 3, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>We are introducing a new policy that separates Teams Events attendance and engagement report controls from Teams Meetings attendance and engagement report controls. With this change, administrators can independently manage organizer access to attendance and engagement reports for Teams Events through <b>CsTeamsEventsPolicy</b>, without affecting attendance and engagement report settings for Teams Meetings managed through <b>CsTeamsMeetingPolicy</b>.</p><p>This update provides greater administrative flexibility by allowing separate configuration of attendance and engagement reporting for Teams Events and Teams Meetings.</p><p><b><b>Rollout schedule:</b></b></p><ul><li><b>General Availability (Worldwide, GCC):</b> Rollout will begin in mid-December 2026 (previously early November) and is expected to complete by early January 2027 (previously early December 2026)</li></ul><p><b><b>Impact on your organization:</b></b></p><ul><li>Teams Events attendance and engagement report controls will be managed separately from Teams Meetings.</li><li>A new attendance and engagement report setting will be available in <b>CsTeamsEventsPolicy</b>.</li><li>Administrators can configure one of the following policy values:<ul><li><b>On</b><ul><li>Organizers can view and download attendance and engagement reports for all events. Organizers cannot disable attendance and engagement reporting.</li></ul></li><li><b>Off</b><ul><li>Organizers cannot view or download attendance and engagement reports for any events.</li></ul></li><li><b>On, organizers can turn it off (default)</b><ul><li>Organizers can view and download attendance and engagement reports for events and can disable attendance and engagement reporting in event options.</li></ul></li><li><b>Off, organizers can turn it on</b><ul><li>Attendance and engagement reporting is disabled by default. Organizers can enable attendance and engagement reporting in event options for individual events.</li></ul></li></ul></li></ul><p><b><b>Action Required / Recommendations:</b>&nbsp;</b></p><ul><li>Review your current attendance and engagement reporting requirements for Teams Events.</li><li>Configure the appropriate setting in the new <b>Teams Events attendance and engagement report policy</b> based on your organizational needs.</li><li>Do not assume Teams Events will continue to inherit attendance and engagement report settings from <b>CsTeamsMeetingPolicy</b>.</li><li>Update internal administrative documentation and guidance if you currently manage attendance reporting through Teams meeting policies.</li></ul><p>No immediate action is required before rollout. However, we recommend reviewing and validating policy settings after the feature becomes available to ensure Teams Events reporting behavior aligns with your organization's requirements.</p>",
       "ContentType": "html"
     },
@@ -3033,7 +3311,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058714Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058716Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908824Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908825Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3245,7 +3523,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.70591Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059101Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059102Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909133Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909135Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909136Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4277,46 +4555,6 @@
     "AdditionalProperties": {}
   },
   {
-    "ActionRequiredByDateTime": "2026-10-01T07:00:00Z",
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated October 30, 2026: Gov rollout of this feature is paused at this time. We will communicate via Message center when we are ready to proceed. We apologize for any inconvenience.</p><p><b>What and Why:</b></p><p>Exchange Web Services (EWS) deprecation begins <b>October 1, 2026</b>. Cross-tenant collaboration features — Free/Busy, MailTips, and Calendar Sharing — currently rely on EWS.</p><p>Cross-tenant Free/Busy, MailTips will be available by <b>September 2026 </b>and Calendar Sharing will be available by <b>early November 2026</b> (previously end-October) via Microsoft 365 Cross-Tenant Access Policy, which replaces EWS-based cross-tenant collaboration.</p><p><b>Rollout Schedule:</b></p><ul><li>Worldwide: We will begin rolling out in <b>August 2026</b> and expect to complete by <b>September 15, 2026</b> for Free/Busy, Mailtips and <b>November 6, 2026</b> (previously October 30) for Calendar Sharing.</li><li>GCC, GCC High, DoD: We will communicate via Message center when we are ready to proceed.</li></ul><p><b>Impact on your organization:</b></p><p>Sharing Free/Busy, Calendars, and MailTips (e.g., out of office message) with another Microsoft 365 organization via Organization Relationship or Sharing Policy relies on Exchange Web Services (EWS), which is being deprecated. To preserve these cross-tenant collaboration scenarios, you will need to start migrating to Microsoft 365 Cross Tenant Access Policy.</p><p>Your tenant is affected if it uses any of the following Exchange Online configurations:</p><ul><li><b>Organization Relationships</b> — sharing Free/Busy or MailTips with other Microsoft 365 tenants&nbsp;</li><li><b>Sharing Policies</b> — sharing calendars externally, either via invitations sent to recipients in other Microsoft 365 organizations or calendars published for anonymous access via an internet URL</li></ul><p>Run these commands in Exchange Online PowerShell to check if your tenant is affected:&nbsp;</p><ul><li><ul><li><code>Get-OrganizationRelationship | Format-List Name, DomainNames, Enabled, FreeBusyAccessEnabled, FreeBusyAccessLevel, FreeBusyAccessScope, MailTipsAccessEnabled, MailTipsAccessLevel, MailTipsAccessScope</code>If results show (1) Enabled: True, and (2) either FreeBusyAccessEnabled: True or MailtipsAccessEnabled: True, and (3) the external organization is hosted in Microsoft 365, your tenant is affected and in scope to migrate. Else, no action is needed.&nbsp;</li><li><code>Get-SharingPolicy | Format-List Name, Domains, Enabled, Default</code>If results show (1) Enabled: True, and (2) the Domains property contains at least one rule with a CalendarSharingFreeBusy access level (Simple, Detail, or Reviewer), and (3) the targeted external organization is hosted in Microsoft 365, and (4) the policy is assigned to one or more mailboxes, your tenant is affected and in scope to migrate. Else, no action is needed.</li><li>Note: rules that begin with Anonymous: represent calendar publishing to anonymous internet recipients via a published URL - these also appear in this output.</li></ul></li></ul><p><i><u>What happens if I do nothing:</u></i></p><p>Starting October 1, 2026, Exchange Web Services (EWS) will be gradually disabled in line with previous communications linked to this message. As this rollout reaches your tenant, cross-tenant Free/Busy, MailTips, and Calendar Sharing that rely on EWS will be affected — recipients in partner organizations may no longer see Free/Busy, MailTips, or shared calendars from your tenant.&nbsp;</p><p>If your organization <b>is not ready to migrate</b>, you can retain EWS access by following the guidance of the latest blog we published: <a href=\"https://techcommunity.microsoft.com/blog/exchange/exchange-online-ews-your-time-is-almost-up/4492361\" rel=\"noopener noreferrer\" target=\"_blank\">ExchangeOnline EWS, Your Time is Almost Up</a> (<b><i>EWSEnabled</i></b><i> set to </i><b><i>True</i></b>) while you prepare and execute the migration steps attached to this message. EWS access through this extension will remain available until the final EWS shutdown on April 1, 2027.&nbsp;</p><p><b>Action Required/Recommendations:</b></p><ul><li><b>Follow this Message center post</b> for updates to the rollout schedule. To avoid impact, <b>plan to migrate after the rollout reaches your tenant and before EWS deprecation</b>.</li><li><b>Review the migration guide linked below</b> for step-by-step instructions to understand your current configurations, set up new Microsoft 365 Cross Tenant Access Policies, validate the new configurations, and remove unused configurations.&nbsp;</li><li><b>Check the blog post linked below</b> for additional information and answers to frequently asked questions.&nbsp;</li><li><b>Hybrid and on-premises scenarios are not in scope</b>. This update applies to fully cloud-hosted (Exchange Online ↔ Exchange Online) cross-tenant and cross-cloud configurations only. For organizations running on-premises Exchange and Exchange Online in a Hybrid Deployment, migrate to <a href=\"https://learn.microsoft.com/exchange/hybrid-deployment/deploy-dedicated-hybrid-app\" rel=\"noopener noreferrer\" target=\"_blank\">Dedicated Hybrid App</a>. For organizations hosted in Exchange Online sharing with another organization running Exchange on-premises, kindly monitor future Message Center posts for guidance on migration paths as they become available.&nbsp;</li></ul><p><b>Additional information:</b></p><ul><li><b>Migration guide:</b> <a href=\"https://learn.microsoft.com/exchange/sharing/migrate-to-m365-xtap\" rel=\"noopener noreferrer\" target=\"_blank\">Migrating to Microsoft 365 Cross-Tenant Access Policy for sharing Free/Busy, Calendars, and MailTips</a>.</li><li><a href=\"https://learn.microsoft.com/graph/api/resources/m365-cross-tenant-access-policy-overview?view=graph-rest-1.0\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Cross-Tenant Access Policy Microsoft Graph API Overview</a></li><li><a href=\"https://techcommunity.microsoft.com/blog/exchange/exchange-online-ews-your-time-is-almost-up/4492361\" rel=\"noopener noreferrer\" target=\"_blank\">Exchange Online EWS, Your Time is Almost Up</a></li><li><a href=\"https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online\" rel=\"noopener noreferrer\" target=\"_blank\">Deprecation of EWS in Exchange Online&nbsp;</a></li><li><a href=\"https://www.microsoft.com/en-us/security/blog/2025/07/08/enhancing-microsoft-365-security-by-eliminating-high-privilege-access/\" rel=\"noopener noreferrer\" target=\"_blank\">Enhancing Microsoft 365 security by eliminating high-privilege access</a>&nbsp;</li><li><b>Blog Post:</b> <a href=\"https://techcommunity.microsoft.com/blog/exchange/cross-tenant-freebusy-mailtips-and-calendar-sharing-are-moving-to-cross-tenant-a/4545169\" rel=\"noopener noreferrer\" target=\"_blank\">Cross-tenant Free/Busy, MailTips, and Calendar Sharing are moving to Cross-Tenant Access Policy</a></li></ul>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Exchange Web Services (EWS) deprecation starts October 1, 2026, affecting cross-tenant Free/Busy, MailTips, and Calendar Sharing. Microsoft 365 Cross-Tenant Access Policy will replace EWS by November 2026. Organizations must migrate to avoid service disruption; migration guidance and updates are provided."
-      }
-    ],
-    "EndDateTime": "2026-12-28T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1446796",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-10-30T16:13:46.707Z",
-    "Services": [
-      "Exchange Online"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-08-03T22:18:34Z",
-    "Tags": [
-      "Updated message",
-      "User impact",
-      "Admin impact",
-      "Retirement"
-    ],
-    "Title": "Migrate Free/Busy, MailTips, and Calendar Sharing before EWS deprecation",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
     "ActionRequiredByDateTime": null,
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -4600,7 +4838,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057977Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057978Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908234Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908235Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4730,7 +4968,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705865Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058651Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058653Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908783Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908784Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908784Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5721,54 +5959,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 27, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft is introducing support for Microsoft Agent 365 agents that implement the Agent2Agent (A2A) protocol, allowing them to be used as connected agents in declarative agents built with Microsoft 365 Agents Toolkit.</p><p>This enhancement expands the types of external agent services that declarative agents can connect to. In addition to existing support for OpenAPI and Model Context Protocol (MCP) servers, declarative agents can now connect to Agent2Agent-enabled agents, enabling natural language interactions and support for more complex workflows.</p><p>This feature gives developers greater flexibility when building declarative agents while providing administrators centralized management and governance through the Microsoft 365 admin center.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Began in <b>late August 2026</b>.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators who manage agents in the Microsoft 365 admin center</li><li>Developers building declarative agents with Microsoft 365 Agents Toolkit</li><li>Users who are assigned access to approved Microsoft Agent 365 agents</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft 365 Copilot</li><li>Microsoft 365 admin center</li><li>Microsoft 365 Agents Toolkit</li><li>Declarative agents</li></ul><p><i>What will happen</i></p><ul><li>Administrators can install Microsoft Agent 365 agents that support the Agent2Agent protocol from the <b>All agents</b> page in the Microsoft 365 admin center.</li><li>Declarative agents can use approved Agent2Agent-enabled agents as connected agents.</li><li>Agent2Agent support is added alongside existing support for OpenAPI and MCP server connections.</li><li>Users cannot install Agent2Agent-enabled Microsoft Agent 365 agents themselves.</li><li>Administrators can review Agent2Agent-connected agents from the <b>Connected agents</b> tab in the declarative agent details page before approving their use.</li></ul><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21727.png\" width=\"400\"></p><p><b><b>Action required and recommendations</b></b></p><p>Action may be required.</p><p>Before rollout:</p><ul><li>Review Microsoft Agent 365 agents available in the <b>All agents</b> page of the Microsoft 365 admin center.</li><li>Determine which Agent2Agent-enabled agents should be made available to users in your organization.</li><li>Review connected agents associated with declarative agents from the <b>Connected agents</b> tab before approving their use.</li><li>Update any internal governance, agent approval, or deployment processes as appropriate.</li></ul><p>Consider notifying administrators and developers in your organization about the availability of Agent2Agent-connected agents and the associated review and approval process.</p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-qfqe\"><b>Compliance consideration</b></td><td data-row=\"row-qfqe\"><b>Answer</b></td></tr><tr><td data-row=\"row-8f7a\">Does this change introduce or significantly modify AI, machine learning, or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-8f7a\"><b>Yes.</b> This update introduces support for Agent2Agent-enabled Microsoft Agent 365 agents as connected agents within declarative agents. Organizations should review how these connected agents interact with customer data before approving them for use.</td></tr><tr><td data-row=\"row-c7r2\">Does this change provide end users with a new way to interact with generative AI?</td><td data-row=\"row-c7r2\"><b>Yes.</b> Users can interact with declarative agents that are connected to Agent2Agent-enabled agents, enabling new AI-powered experiences and workflows.</td></tr><tr><td data-row=\"row-aw6v\">Does this change include an admin control?</td><td data-row=\"row-aw6v\"><b>Yes.</b> Administrators can install, review, and approve Agent2Agent-enabled Microsoft Agent 365 agents through the Microsoft 365 admin center before they are available for use.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "567670"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft 365 now supports Microsoft Agent 365 agents using the Agent2Agent protocol as connected agents in declarative agents, expanding integration options. Administrators manage and approve these agents via the Microsoft 365 admin center. This update enables new AI interactions and requires review of data compliance and governance."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Android, Desktop, iOS, Web"
-      }
-    ],
-    "EndDateTime": "2026-12-31T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1478975",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-27T16:14:02.94Z",
-    "Services": [
-      "Microsoft 365 Copilot Chat"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-09-25T00:04:12Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft 365 Copilot: Use Microsoft Agent 365 agents as connected agents in declarative agents",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p><b><b>What and Why:</b></b></p><p>Default Meeting Templates enable IT admins to automatically apply their organization’s preferred meeting options whenever users schedule a Teams meeting through Outlook or Teams calendar. This helps organizations apply meeting options (including protection meeting options) at scale, and reduce the need for organizers to manually configure meeting options.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in early November 2026 and expect to complete by mid November 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>For meeting organizers and co-organizers with a default meeting template applied, their meetings will use the meeting options defined in that template, including protection meeting options. Participants joining those meetings will experience the configured meeting options.</p><p>Please note that only organizers and co-organizers with a Teams Premium license can use the default meeting template.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>Default meeting templates help IT admins provide a consistent meeting experience by automatically applying the configured meeting options, including protection meeting options, to scheduled meetings through Outlook or Teams Calendar. Meet Now, Channel Meetings, and Events are out of scope for default meeting template.</p><ul><li>IT admins first create a custom meeting template and then assign it as the default meeting template. Instructions to create a default meeting template: <a href=\"https://learn.microsoft.com/en-us/microsoftteams/create-custom-meeting-template\" rel=\"noopener noreferrer\" target=\"_blank\">Create a custom meeting template in Microsoft Teams</a>.</li><li><b>Configuration considerations:</b> When configuring the template, admins should review the restrictions and platform limitations associated with the features they enable. Some settings may result in a degraded experience on unsupported platforms.</li><li>If the default meeting template is removed, meetings will no longer use the meeting options defined by that template. Instead, the meeting options currently applicable to the organizer will take effect.</li></ul><p><b>Recommendation:</b> Do not configure the Copilot meeting policy to “On with saved transcript required.” With this configuration, users may encounter errors with default meeting template. We recommend using an alternative Copilot meeting policy configuration.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
       "ContentType": "html"
     },
@@ -6264,54 +6454,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 26, 2026: We have updated the content. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>To improve transparency and troubleshooting for Microsoft Purview role-based access control (RBAC), we are enhancing audit logging for permission checks performed in the Microsoft Purview portal. These new audit records will provide administrators with clearer visibility into role and scoped-role authorization decisions, helping them investigate access issues and better understand how access evaluations are performed.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&amp;searchterms=569363\" rel=\"noopener noreferrer\" target=\"_blank\">569363</a>.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Beginning in <b>late September 2026</b> and expected to complete by <b>late October 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Purview administrators and compliance administrators who review audit logs for access investigations and troubleshooting</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Purview portal</li><li>Microsoft Purview Audit</li></ul><p><i>What will happen</i></p><ul><li>New audit records will be generated when access checks are performed in the Microsoft Purview portal.</li><li>Two new audit operations will be available:<ul><li>CheckUsersInRoles</li><li>CheckUserInRolesWithScopes</li></ul></li><li>Administrators will be able to review these audit records as part of SecurityComplianceRBAC audit activities.</li><li>The enhancement is enabled by default and requires no configuration.</li><li>Audit records will only be generated for access checks that occur after the feature is deployed.</li><li>No historical or retroactive audit records will be created for prior access checks.</li><li>There is no impact for organizations.</li><li>Supported permission-assignment and role-group change audit records will include the ClientPortal field within PreExecutionMessage, helping administrators distinguish changes initiated from Microsoft Purview and Microsoft Defender.&nbsp;<ul><li>Supported activities for portal attribution&nbsp;<ul><li>Permission assignments: Granting, updating, or removing permission assignments.&nbsp;</li><li>Role groups: Creating, updating, or deleting role groups.&nbsp;</li></ul></li></ul></li><li>Expected ClientPortal values:&nbsp;<ul><li>Microsoft Purview portal: \"ClientPortal\": \"Microsoft Purview\"&nbsp;</li><li>Microsoft Defender portal: \"ClientPortal\": \"Microsoft Defender\"&nbsp;</li></ul></li></ul><p><i>RBAC audit-CheckUserInRolesWithScopes:</i></p><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21765-1.png\" width=\"400\"></p><p><i>RBAC audit-checkusersinroles:</i></p><p><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21765-2.png\" width=\"400\"></p><p><b><b>Action required and recommendations</b></b></p><p><b>No action is required</b>. We recommend that administrators:</p><ul><li>Review internal monitoring and audit procedures to determine whether the new audit activities should be included in access investigations.</li><li>Inform compliance and security teams about the availability of the new audit operations.</li><li>Update any internal documentation or reporting processes that reference Microsoft Purview RBAC audit data.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/en-us/purview/purview-permissions\" rel=\"noopener noreferrer\" target=\"_blank\">Permissions in the Microsoft Purview portal | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-1plq\">Question</td><td data-row=\"row-1plq\">Answer</td></tr><tr><td data-row=\"row-jnpf\">Does the change modify, interrupt, or disable audit logging capabilities?</td><td data-row=\"row-jnpf\">Yes. The change enhances audit logging capabilities by adding two new audit operations.</td></tr><tr><td data-row=\"row-0y5x\">Does the change alter how admins can monitor, report on, or demonstrate compliance activities?</td><td data-row=\"row-0y5x\">Yes. Administrators gain additional audit visibility into RBAC access evaluation outcomes, improving monitoring and troubleshooting capabilities.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "569363"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Purview is enhancing audit logging for role-based access control, adding two new audit operations to improve transparency and troubleshooting of access checks. This update, rolling out worldwide from late September to October 2026, requires no action and provides administrators better visibility into access evaluations."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2026-11-27T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1473155",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-26T19:22:40.657Z",
-    "Services": [
-      "Microsoft Purview"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-09-16T22:24:18Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Purview: permissions audit log improvements",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated October 26, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Users of new Outlook for Windows and Outlook on the web will be able to create inbox rules that automatically reply to incoming messages using a saved template. This helps users reduce repetitive work while providing faster, more consistent responses. This change supports personal and team productivity by automating routine email responses.</p><p>This message is associated with Microsoft 365 Roadmap ID 567318.</p><p><b><b>Rollout Schedule:</b></b></p><p>Targeted Release (Worldwide): We will begin rolling out in mid-October 2026 and expect to complete by early November 2026.</p><p>General Availability (Worldwide): We will begin rolling out in early December 2026 and expect to complete by late December 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Who is affected: Users of new Outlook for Windows and Outlook on the web who use inbox rules and want to automatically reply to incoming messages using saved templates.</p><p>Platforms/Services:</p><ul><li>New Outlook for Windows and Outlook on the web</li><li>Outlook inbox rules</li></ul><p>What will happen:</p><ul><li>Users can create an inbox rule with conditions for incoming messages.</li><li>Users can select a saved template as the automatic reply.</li><li>When an incoming message meets the rule conditions, Outlook automatically sends the configured template response.</li><li>This provides users with a way to automate repetitive, consistent responses.</li><li>The capability will roll out automatically during the scheduled rollout window.</li></ul><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required before rollout.</p><ul><li>Inform your help desk about this new inbox-rule capability.</li><li>Update internal Outlook guidance if your organization documents inbox rules or automated responses.</li><li>Consider whether your organization has policies or guidance governing automated email responses.</li><li>Review Microsoft Outlook documentation as it is updated for this capability.</li></ul><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
       "ContentType": "html"
     },
@@ -6490,7 +6632,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705753Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057532Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907861Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907862Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"}]}"
       },
       {
         "Name": "Summary",
@@ -6540,7 +6682,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057223Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057225Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190766Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907661Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7485,7 +7627,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057684Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057685Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057686Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057687Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057688Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705769Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907995Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907996Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907996Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907998Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907999Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908001Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7576,7 +7718,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057431Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057432Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057433Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057435Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057436Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190779Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907791Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907791Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907792Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907793Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8701,7 +8843,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059429Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705943Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059431Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909402Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909403Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909404Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8801,7 +8943,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705858Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058582Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058583Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908727Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908728Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908729Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9306,53 +9448,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p><b><b>What and why</b></b></p><p>Microsoft 365 Copilot is introducing legal plugins in <i>Word and Cowork</i>. These plugins provide purpose-built skills to help legal professionals summarize, draft, review, and redline legal documents. They can use work context from Microsoft 365 and connect to supported third-party legal sources, helping legal professionals complete legal work in the Microsoft 365 experiences they already use.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Public Preview (Worldwide):</b> Rollout began in <b>late April 2026</b> and is expected to complete by <b>mid-December 2026</b></li><li><b>General Availability (Worldwide):</b> We will begin rolling out in <b>mid-October 2026</b> and expect to complete by <b>mid-December 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users with Microsoft 365 Copilot commercial licenses</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft 365 Copilot</li><li>Word desktop</li><li>Cowork</li></ul><p><i>What will happen</i></p><ul><li>Legal plugins in Copilot provide purpose-built skills to help legal professionals summarize, draft, review, and redline legal documents.</li><li>The plugins can use work context from Microsoft 365 and connect to supported third-party legal sources.</li><li>The legal capabilities include more than 20 purpose-built legal skills.</li><li>In Word desktop, the legal plugin is enabled by default. When enabled, Copilot can use legal skills to complete legal tasks in Word.</li><li>In Cowork, users must add the legal plugin before Copilot can use legal skills to complete legal tasks.</li><li>The legal skills can help users review contracts against playbooks, draft contracts using templates and precedent agreements, compare contracts with precedents, templates, and policies, and explain tracked changes.</li><li><span style=\"color: rgb(0, 0, 0);\">The Legal Agent is being retired. Existing Legal Agent users will lose access to the product.</span></li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin setup is required.</p><p>If your organization plans to use the legal plugins:</p><ul><li>Ensure Microsoft 365 Copilot licenses are assigned to eligible users.</li><li>Review internal legal workflows that may benefit from these capabilities.</li><li>Communicate these capabilities to your legal teams.</li><li>Update internal documentation or help desk guidance as appropriate.</li><li>Instruct legal team users to add the legal plugin in Cowork.</li><li>Instruct legal team users to use legal skills in Copilot in Word desktop.</li></ul><p>If your organization does not plan to use the legal plugins:</p><ul><li>Turn off <b>Legal Skills in M365 Copilot in Word</b> in the <i>Microsoft 365 Apps admin center</i> to disable the legal plugin in Word for all users.</li><li>Turn off the <b>Cowork for Legal</b> plugin in the <i>Microsoft 365 admin center</i> to disable the plugin in Cowork for all users.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/microsoft-365/admin/manage/manage-copilot-for-legal?view=o365-worldwide\" rel=\"noopener noreferrer\" target=\"_blank\">Manage Copilot for legal - Microsoft 365 admin | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-8upp\">Question</td><td data-row=\"row-8upp\">Answer</td></tr><tr><td data-row=\"row-d5xt\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-d5xt\">Yes. The legal plugins can use work context from Microsoft 365 to support legal tasks. The supplied source does not specify changes to data storage or caching.</td></tr><tr><td data-row=\"row-74ky\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-74ky\">Yes. Legal capabilities previously released as the Legal Agent are being made available as legal plugins in Word and Cowork. They provide purpose-built legal skills and can use work context from Microsoft 365.</td></tr><tr><td data-row=\"row-wvhv\">Does the change provide users a new way of interacting with generative AI?</td><td data-row=\"row-wvhv\">Yes. Users can use purpose-built legal skills in Copilot in Word and Cowork to summarize, draft, review, and redline legal documents.</td></tr><tr><td data-row=\"row-g4ss\">Does the change add integration with third-party software products?</td><td data-row=\"row-g4ss\">Yes. The legal plugins can connect to supported third-party legal sources. The supplied sources do not identify specific third-party products.</td></tr><tr><td data-row=\"row-h2z5\">Does the change include an admin control?</td><td data-row=\"row-h2z5\">Yes. Admins can turn off Legal Skills in M365 Copilot in Word in the Microsoft 365 Apps admin center and turn off the Cowork for Legal plugin in the Microsoft 365 admin center. The supplied source does not specify whether these controls support Entra ID group membership.</td></tr><tr><td data-row=\"row-mv71ugij-1\">Does the change allow a user to enable or disable the feature themselves?</td><td data-row=\"row-mv71ugij-1\">Yes. In Cowork, users must add the legal plugin before using its legal skills. The supplied source does not state that users can independently disable the Word legal plugin.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "571884"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft 365 Copilot introduces legal plugins in Word and Cowork to help legal professionals summarize, draft, review, and redline documents using Microsoft 365 context and third-party sources. Rollout occurs from April to December 2026. Admins can enable or disable these plugins; no setup is required."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Desktop"
-      }
-    ],
-    "EndDateTime": "2026-11-29T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1509799",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-15T23:10:05.607Z",
-    "Services": [
-      "Microsoft 365 apps"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-10-15T23:10:00Z",
-    "Tags": [
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft 365 Copilot: Legal plugins in Word and Cowork",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p><b><b>What and Why:</b></b></p><p>As <a href=\"https://techcommunity.microsoft.com/blog/microsoft_365blog/only-6-months-until-office-ltsc-2021-end-of-support-%E2%80%93-are-you-ready/4509673\" rel=\"noopener noreferrer\" target=\"_blank\">previously communicated</a>, support for Office LTSC 2021 ended on October 13, 2026. Microsoft no longer provides security updates, bug fixes, or technical support for this version of Office. Although the applications may continue to function, using unsupported software could expose your organization to potential security and compliance risks, system incompatibilities, and other issues.</p><p>Support for Visio LTSC 2021, Project LTSC 2021, and <a href=\"https://techcommunity.microsoft.com/blog/officeeos/office-20162019-support-ends-today-%E2%80%94-prepare-for-office-ltsc-2021-end-of-support/4461272\" rel=\"noopener noreferrer\" target=\"_blank\">several other products</a> also ended on October 13, 2026. Organizations that continue to use these products should transition to a supported version as soon as possible to receive ongoing security updates, bug fixes, and technical support.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): Support for Office LTSC 2021, Visio LTSC 2021, Project LTSC 2021, and other affected products ended on October 13, 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Devices running Office LTSC 2021 or another affected product no longer receive security updates, bug fixes, or technical assistance. The applications do not automatically stop working, but continued use of unsupported software may increase your organization's exposure to security and compliance risks and could result in compatibility or reliability issues.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>Identify any devices in your organization that are still running Office LTSC 2021 or another affected product and move them to a supported solution.</p><p>For most organizations, we recommend upgrading devices to a Microsoft 365 or Office 365 suite that includes Microsoft 365 Apps for enterprise or Microsoft 365 Apps for business. Microsoft 365 Apps provides always-up-to-date versions of familiar apps like Word, Excel, and PowerPoint for desktop, mobile, and web with continuous support under the Modern Lifecycle Policy, and is eligible for use with Microsoft Copilot.</p><ul><li>Enterprises should review <a href=\"https://www.microsoft.com/microsoft-365/enterprise/e3\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 E3</a>, <a href=\"https://www.microsoft.com/microsoft-365/enterprise/office-365-e3\" rel=\"noopener noreferrer\" target=\"_blank\">Office 365 E3</a>, or <a href=\"https://www.microsoft.com/microsoft-365/enterprise/microsoft-365-apps-for-enterprise-product\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Apps for enterprise</a>.</li><li>Organizations with fewer than 300 users should review <a href=\"https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Business Premium</a>, <a href=\"https://www.microsoft.com/microsoft-365/business/microsoft-365-business-standard\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Business Standard</a>, or <a href=\"https://www.microsoft.com/microsoft-365/business/microsoft-365-apps-for-business\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Apps for business</a>.</li></ul><p>For scenarios that require a fully disconnected solution, we recommend upgrading to <a href=\"https://aka.ms/OfficeLTSC2024-EOSLearn\" rel=\"noopener noreferrer\" target=\"_blank\">Office LTSC 2024</a>. Office LTSC 2024 is Microsoft's current supported on-premises version of Office for commercial customers and is supported until October 2029 under the <a href=\"https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy\" rel=\"noopener noreferrer\" target=\"_blank\">Fixed Lifecycle Policy</a>.</p><p>Resources:</p><ul><li>Read the <a href=\"https://docs.microsoft.com/DeployOffice/endofsupport/plan-upgrade-older-versions-office\" rel=\"noopener noreferrer\" target=\"_blank\">upgrade guidance</a> for an overview of how to move from Office LTSC 2021 to Microsoft 365 Apps.</li><li>Consider engaging <a href=\"https://www.microsoft.com/fasttrack/microsoft-365\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft FastTrack</a>, a Microsoft support service, for moving to Microsoft 365.</li></ul><p>Take action now to help maintain security, compliance, and access to supported Office apps.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mv9s14wr-1\"><b>Question</b></td><td data-row=\"row-mv9s14wr-1\"><b>Answer</b></td></tr><tr><td data-row=\"row-mv9s14wr-2\">Does the change modify, interrupt, or disable any Microsoft 365 service capability?</td><td data-row=\"row-mv9s14wr-2\">Yes. Support for Office LTSC 2021 and other affected products ended on October 13, 2026. Organizations should move to supported versions to receive ongoing updates and support.</td></tr><tr><td data-row=\"row-mv9s14wr-3\">Does the change require admin action?</td><td data-row=\"row-mv9s14wr-3\">Yes. Admins should identify affected devices and move them to a supported Microsoft 365 Apps, Office, Visio, or Project version as appropriate.</td></tr></tbody></table>",
       "ContentType": "html"
     },
@@ -9481,7 +9576,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059711Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059712Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059713Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909634Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909635Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909636Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9628,7 +9723,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058894Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058896Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058897Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908974Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908975Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908976Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12241,7 +12336,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058504Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058507Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705851Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058511Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908656Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908657Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908658Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908659Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12457,7 +12552,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059572Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059574Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909508Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909509Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12509,7 +12604,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7056892Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7056894Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907511Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907512Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12819,7 +12914,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059018Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059019Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705902Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059022Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909068Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909069Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190907Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909071Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -13025,7 +13120,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057865Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057867Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057868Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908143Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908144Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908145Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -13905,7 +14000,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058857Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058858Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908933Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908934Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14754,7 +14849,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7056643Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7056645Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7056646Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907208Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190721Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190721Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14806,7 +14901,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058351Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058352Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058353Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908542Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908543Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908544Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15000,7 +15095,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057289Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057291Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057292Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057294Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057296Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907708Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907709Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190771Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907711Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907712Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15100,7 +15195,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058963Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058964Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058965Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909025Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909026Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909027Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15151,7 +15246,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705758Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7057581Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907908Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1907909Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -17230,54 +17325,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated September 9, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>Introduction</b></p><p>Microsoft Edge for Business will soon support <i>Rewrite</i>, a new feature powered by Microsoft 365 Copilot Chat. This capability helps users draft and rephrase editable text directly within <i>Edge</i>, enhancing productivity and writing quality. Users can access <i>Rewrite</i> by highlighting editable text and right-clicking to open the context menu.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=420335\" target=\"_blank\">420335</a>.</p><p><b>When this will happen</b></p><p><b>General Availability (Worldwide): </b>We will begin rolling <b>end of September 2026</b> (previously late August) and expect to complete rollout by<b> late October 2026</b>.&nbsp;</p><p><b>How this affects your organization</b></p><ul><li><i>Rewrite</i> will be <b>enabled by default</b> for Edge for Business users.&nbsp;</li><li>Users can access <i>Rewrite</i> by highlighting editable text and right-clicking to open the context menu.</li><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2025/08/18620-1-rewrite-dialog-2.png\" style=\"width: 623.982px;\"><p></p><li>If Microsoft 365 Copilot is restricted from accessing page content due to Data Loss Prevention (DLP) policies, <i>Rewrite</i> will not function on that content.</li><li>Admins can manage this feature using the <a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-browser-policies/composeinlineenabled\" target=\"_blank\">InlineComposeEnabled</a> policy setting.</li></ul><p><b>What you can do to prepare</b></p><p>No admin action is required before rollout. </p><p>We recommend:</p><ul><li>Reviewing your current DLP configurations to understand how they may impact <i>Rewrite </i>functionality.</li><li>Notifying users about this new capability.</li><li>Updating internal documentation to reflect this change.</li></ul><p>Learn more about how DLP affects Copilot access to page content:&nbsp;<a href=\"https://learn.microsoft.com/DeployEdge/edge-learnmore-copilot-page-summary-results\" target=\"_blank\">Microsoft 365 Copilot Chat in Edge and Access to Page Content | Microsoft Edge | Microsoft Learn</a></p><p><b>Compliance considerations</b></p><table class=\"table table-bordered\"><tbody><tr><td>Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td>Yes. This change introduces a new generative AI capability through Microsoft 365 Copilot Chat, allowing users to rewrite or draft text directly in Edge for Business.</td></tr><tr><td>Does the change provide end users any new way of interacting with generative AI?</td><td>Yes. Users can interact with Copilot Chat by highlighting editable text and using the right-click context menu to access Rewrite, enabling AI-assisted drafting and rephrasing.</td></tr><tr><td>Does the change modify Data Loss Prevention (DLP) policies or enforcement?</td><td>Yes. If DLP policies restrict Copilot from accessing page content, the Rewrite feature will not function on that content.</td></tr><tr><td>Does the change include an admin control and can it be controlled through Entra ID group membership?</td><td>Yes. Admins can manage the availability of this feature using the InlineComposeEnabled policy setting.</td></tr><tr><td>Does the change allow a user to enable and disable the feature themselves?</td><td>Yes. Users can choose to use the Rewrite feature by manually invoking it through the right-click context menu in Edge.</td></tr></tbody></table><p></p>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "420335"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Edge for Business will roll out the Microsoft 365 Copilot Chat-powered Rewrite feature by late October 2026, enabling users to draft and rephrase text via right-click. It’s enabled by default, respects DLP policies, and can be managed by admins through the InlineComposeEnabled policy."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2026-11-23T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1146821",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-09-09T17:00:20.26Z",
-    "Services": [
-      "Microsoft 365 Copilot Chat"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2025-09-02T23:22:03Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Rewrite with Microsoft 365 Copilot Chat coming soon to Edge for Business users",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p><b>What and why:</b></p><p>Microsoft Whiteboard is retiring the standalone Whiteboard applications for Windows, iOS, and Android. Beginning October 16, 2026, the standalone Microsoft Whiteboard apps will no longer be supported for work or school accounts and personal Microsoft accounts. Users should access Whiteboard through Microsoft Teams and supported web experiences going forward. After the retirement date, already-installed standalone apps will display a retirement experience and will no longer provide access to Whiteboard galleries or existing Whiteboard content.</p><p>This post is a follow-up reminder to MC1441775 (Microsoft Whiteboard: Retirement of legacy whiteboards and transition to OneDrive-backed whiteboards) and focuses on the upcoming retirement of the standalone Microsoft Whiteboard applications.</p><p>Find more details: <a href=\"https://support.microsoft.com/en-us/whiteboard/retirement-standalone-microsoft-whiteboard-apps\" rel=\"noopener noreferrer\" target=\"_blank\">Whiteboard Standalone App Retirement | Microsoft Support</a></p><p><b>Rollout schedule:</b></p><p>Worldwide, GCC, GCC High, DoD: We will begin rolling out on mid-October 2026 and expect to complete by mid-October 2026.</p><p><b>Impact on your organization:</b></p><p>Organizations and users who currently rely on the standalone Microsoft Whiteboard apps for Windows, iOS, or Android will be affected. Beginning <strong>October 16</strong>, <strong>2026</strong>, the standalone apps will no longer be supported and users will need to access Whiteboard through Microsoft Teams or supported web experiences.</p><p>This change only affects the standalone applications. Whiteboard functionality available through Microsoft Teams continues to be supported. Organizations that have already adopted Teams-based Whiteboard experiences will experience minimal impact.</p><p><b>Action required / Recommendations:</b></p><p>Admins should prepare their organizations for the retirement of the standalone Whiteboard apps by:</p><p>Communicating the retirement date (October 16, 2026) to affected users.</p><p>Encouraging users to transition to Microsoft Whiteboard in Microsoft Teams and supported web experiences before the retirement date.</p><p>Updating internal documentation, training materials, onboarding content, and support resources that reference the standalone Whiteboard applications.</p><p>Validating that users know how to access and collaborate on Whiteboards through Teams and supported web experiences before the standalone apps are retired.</p><p>No additional administrative configuration is required. However, organizations should ensure users are prepared to use the supported Teams-based Whiteboard experience before the retirement date.</p>",
       "ContentType": "html"
     },
@@ -17704,7 +17751,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059173Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059175Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059176Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059178Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059178Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7059181Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909179Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.190918Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909181Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909182Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909183Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1909185Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18022,53 +18069,6 @@
       "Admin impact"
     ],
     "Title": "Teams web client users will be redirected to teams.cloud.microsoft",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated September 1, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p>\n<p>To help organizations manage SharePoint storage more flexibly and avoid over-provisioning, Microsoft is introducing a <b>pay-as-you-go, consumption-based billing model for SharePoint storage overages</b>. This option allows you to pay only for the additional storage you actually use, rather than pre-purchasing extra capacity. The experience integrates with Microsoft 365 Archive and helps align storage costs with real usage.</p>\n\n<p>This change is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=506743\" target=\"_blank\">506743</a>.</p>\n\n<p><b><b>When this will happen:</b></b></p>\n<ul>\n  <li>Public Preview (Worldwide): We completed rollout in June 2026.</li><li>General Availability (WW): We expect to begin rolling out in<b> early November 2026</b> (previously&nbsp;September)<b> </b>and to complete rolling by <b>end of November 2026</b> (previously&nbsp;end of October).&nbsp;</li>\n</ul>\n\n<p><b><b>How this affects your organization:</b></b></p>\n<p><b>Who is affected:</b></p>\n<ul>\n  <li>Microsoft 365 administrators managing <b>SharePoint Online storage</b></li><li><b>Note: </b>This feature isn’t currently available to education tenants. Let us know if you’d like it to be supported in the future.</li>\n</ul>\n\n<p><b>What will happen:</b></p>\n<ul>\n  <li>Admins can <b>enable pay-as-you-go SharePoint storage billing</b> in the Microsoft 365 admin center.</li>\n  <li>Storage used above the included tenant quota will be automatically billed based on consumption.</li>\n  <li>There is no impact to users.</li>\n  <li>The existing<b> Office 365 Extra File Storage</b> add‑on remains available if you prefer to <b>manually increase your storage quota</b> instead.</li><li>The feature is <b>opt-in</b> and<b> off by default</b>.</li>\n</ul>\n\n<p><b><b>What you can do to prepare:</b></b></p>\n<ul>\n  <li>No immediate action is required. However, we recommend the following:</li>\n<li>Review your tenant’s current SharePoint storage usage in the <b>SharePoint admin center</b> &gt; <b>Active sites</b>.</li><li>Evaluate whether a <b>consumption‑based model</b> or <b>manually purchased storage</b> best fits your organization’s cost and governance preferences.</li><li>If you plan to enable pay‑as‑you‑go billing:<ul><li>Ensure the appropriate <b>Azure subscription and billing permissions</b> are in place.</li><li>Update internal documentation or cost‑management processes as needed.</li></ul></li><li>Share this information with finance or procurement teams if they track usage‑based charges.</li></ul>\n\n<p>Learn more:<a href=\"https://learn.microsoft.com/microsoft-365/commerce/add-storage-space?view=o365-worldwide\"> Add more SharePoint storage to your subscription | Microsoft Learn</a></p>\n\n<p><b><b>Compliance considerations</b></b></p>\n<table border=\"1\" cellpadding=\"6\" cellspacing=\"0\">\n  <tbody><tr>\n    <th align=\"left\">Compliance area</th>\n    <th align=\"left\">Impact and explanation</th>\n  </tr>\n  <tr>\n    <td>Admin monitoring and reporting</td>\n    <td>SharePoint storage usage above the included tenant quota will be reflected in consumption-based billing and usage reports, which may affect how admins monitor and track storage consumption and costs.</td>\n  </tr>\n  <tr>\n    <td>Admin control</td>\n    <td>Administrators must explicitly enable</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "506743"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft is introducing a pay-as-you-go billing model for SharePoint storage overages, allowing admins to pay only for extra storage used beyond the quota. Available from November 2026, it’s opt-in, excludes education tenants, and requires Azure billing permissions. No user impact; manual storage purchase remains an option."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2026-12-30T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1330893",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-09-01T21:55:18.43Z",
-    "Services": [
-      "SharePoint Online"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-06-01T23:26:28Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "Admin impact"
-    ],
-    "Title": "Pay-as-you-go consumption-based meter for your extra SharePoint storage needs",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -19675,7 +19675,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058754Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058756Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058757Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058759Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705876Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908865Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908866Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908866Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908867Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908868Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -21382,7 +21382,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.705822Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058221Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058222Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058223Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908433Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908434Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908435Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908436Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -21768,7 +21768,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058421Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058422Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058423Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T15:08:28.7058424Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.19086Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908601Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908602Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-09T21:07:19.1908603Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
