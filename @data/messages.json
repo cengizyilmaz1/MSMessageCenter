@@ -4,6 +4,478 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
+      "Content": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>What and Why:</b></p><p></p><p><b>Azure PST Import</b> provides a structured, PowerShell-based way for administrators to import PST files stored in <b>Azure Blob Storage</b> into <b>Exchange Online mailboxes</b>, which are commonly used to store archived Outlook mailbox content. This capability helps organizations migrate historical email data in a controlled and auditable way by validating readiness before importing and by providing reports throughout the process. The process starts by creating an Azure PST Import endpoint to establish the connection between Azure storage and Exchange Online. Administrators then run a migration batch in <b>Analyze</b> mode to review readiness and validate the input before proceeding. Once the analysis results are reviewed, they use those results to create and start the import batch, which begins importing the PST files into the specified mailboxes.</p><p></p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1%26filters%3D&amp;searchterms=565865#Roadmap\" rel=\"noopener noreferrer\" target=\"_blank\">565865</a></p><p><b>Rollout Schedule:</b></p><p>Global: We will begin rolling out early April 2027 (previously early December 2026) and expect to complete by late April 2027 (previously late December 2026).</p><p><b>Impact on your organization:</b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators managing <b>Exchange Online</b></li><li>Administrators using <b>Microsoft Purview Data Lifecycle Management</b></li><li>Organizations that import PST files into user or archive mailboxes</li></ul><p><i>What will happen</i></p><ul><li>Administrators complete the Azure PST Import process using <b>PowerShell cmdlets only</b>.</li><li>The workflow includes:<ul><li>Creating an Azure PST Import migration endpoint</li><li>Running a migration batch in <b>Analyze</b> mode to validate readiness</li><li>Reviewing analysis results and reports</li><li>Creating and starting the <b>import</b> batch</li><li>Performing post-import cleanup</li></ul></li><li>This experience is<b> not available through a graphical user interface (GUI)</b>.</li><li>Existing mailbox prerequisites and quotas are validated before importing begins.</li><li>There is<b> no direct user impact</b>; the feature is admin-driven.</li></ul><p><b>Action Required / Recommendations:</b></p><p></p><ul><li>Ensure your <b>Azure storage account and container exist</b> and are reachable; the endpoint creation cmdlet validates both during setup.</li><li>Grant the <b>Storage Blob Data Reader </b>role to the <b>Office 365 Import Service</b> app on the target storage account. Without this permission, creating the Azure PST Import endpoint will fail.</li><li>Prepare your <b>batch input files (XML and/or CSV) </b>and run the migration batch in <b>Analyze</b> mode first so the service can validate readiness before importing.</li><li>Confirm analysis prerequisites for target mailboxes:<ul><li>Appropriate license assigned</li><li>Mailbox is not inactive or soft-deleted</li><li>Recipient type is <b>UserMailbox</b></li><li>Archive is enabled if importing to archive</li><li>Quota validations (ArchiveQuota / RecoverableItemsQuota) occur during analysis</li></ul></li><li>Validate PST files ahead of time:<ul><li>Analysis verifies that all specified PST files exist</li><li>PST file size is validated during analysis</li></ul></li></ul><p>For detailed cmdlet usage and guidance, review the Azure PST Import documentation on Microsoft Learn.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvjwgh0b-8\">Question</td><td data-row=\"row-mvjwgh0b-8\">Answer</td></tr><tr><td data-row=\"row-mvjwgh0b-9\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mvjwgh0b-9\">Yes. The feature enables administrators to import existing customer email data contained in PST files into Exchange Online mailboxes, where the data is then stored and processed according to existing Exchange Online behaviors.</td></tr><tr><td data-row=\"row-mvjwgh0b-10\">Does the change store customer data, and if so, where is it stored?</td><td data-row=\"row-mvjwgh0b-10\">Yes. PST file contents are imported into Exchange Online mailboxes within the customer’s Microsoft 365 tenant and are stored according to the tenant’s data residency and storage configuration.</td></tr><tr><td data-row=\"row-mvjwgh0b-11\">Does the change modify retention policies, holds, or deletion workflows?</td><td data-row=\"row-mvjwgh0b-11\">Yes. Once imported, mailbox data becomes subject to any existing Microsoft Purview retention policies, retention labels, holds, and deletion workflows already configured for the target mailboxes.</td></tr><tr><td data-row=\"row-mvjwgh0b-12\">Does the change affect audit logging capabilities?</td><td data-row=\"row-mvjwgh0b-12\">Yes. Administrative actions related to PST import and the resulting mailbox changes are logged using existing Exchange Online and Microsoft Purview audit logging mechanisms.</td></tr><tr><td data-row=\"row-mvjwgh0b-13\">Does the change alter how admins can monitor or demonstrate compliance?</td><td data-row=\"row-mvjwgh0b-13\">Yes. Administrators can use existing Exchange Online and Microsoft Purview reporting and audit tools to monitor PST import activity and demonstrate compliance after the data is imported.</td></tr><tr><td data-row=\"row-mvjwgh0b-14\">Does the change include an admin control?</td><td data-row=\"row-mvjwgh0b-14\">Yes. The feature is controlled through administrator access to PowerShell cmdlets and Azure role assignments, including permissions on the Azure storage account used for PST import.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "565865"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Azure PST Import enables Microsoft 365 admins to import PST files from Azure Blob Storage into Exchange Online mailboxes using PowerShell. The process includes readiness analysis, import batching, and compliance with existing retention and audit policies. Rollout begins April 2027, requiring specific Azure permissions and mailbox prerequisites."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2027-05-31T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1455013",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T18:02:14.39Z",
+    "Services": [
+      "Microsoft Purview"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-08-14T21:32:20Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Purview: Data Lifecycle Management- Azure PST Import",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p><b>Azure PST Import</b> provides a structured, PowerShell-based way for administrators to import PST files stored in <b>Azure Blob Storage</b> into <b>Exchange Online mailboxes</b>, which are commonly used to store archived Outlook mailbox content. This capability helps organizations migrate historical email data in a controlled and auditable way by validating readiness before importing and by providing reports throughout the process. The process starts by creating an Azure PST Import endpoint to establish the connection between Azure storage and Exchange Online. Administrators then run a migration batch in <b>Analyze</b> mode to review readiness and validate the input before proceeding. Once the analysis results are reviewed, they use those results to create and start the import batch, which begins importing the PST files into the specified mailboxes.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=557559\" rel=\"noopener noreferrer\" target=\"_blank\">557559</a></b>.</p><p><b><b>When this will happen</b></b></p><ul><li>Public Preview: We will begin rolling out <b>mid-January 2027</b> (previously mid-October 2026) and expect to complete by <b>mid-February 2027</b> (previously<b> </b>late October 2026).</li><li>Worldwide: We will begin rolling out <b>early March 2027</b> (previously late January) and expect to complete by <b>late March 2027</b> (previously late February).</li></ul><p><b><b>How this affects your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators managing <b>Exchange Online</b></li><li>Administrators using <b>Microsoft Purview Data Lifecycle Management</b></li><li>Organizations that import PST files into user or archive mailboxes</li></ul><p><i>What will happen</i></p><ul><li>Administrators complete the Azure PST Import process using <b>PowerShell cmdlets only</b>.</li><li>The workflow includes:<ul><li>Creating an Azure PST Import migration endpoint</li><li>Running a migration batch in <b>Analyze</b> mode to validate readiness</li><li>Reviewing analysis results and reports</li><li>Creating and starting the <b>import</b> batch</li><li>Performing post-import cleanup</li></ul></li><li>This experience is<b> not available through a graphical user interface (GUI)</b>.</li><li>Existing mailbox prerequisites and quotas are validated before importing begins.</li><li>There is<b> no direct user impact</b>; the feature is admin-driven.</li></ul><p><b><b>What you can do to prepare</b></b></p><ul><li>Ensure your <b>Azure storage account and container exist</b> and are reachable; the endpoint creation cmdlet validates both during setup.</li><li>Grant the <b>Storage Blob Data Reader </b>role to the <b>Office 365 Import Service</b> app on the target storage account. Without this permission, creating the Azure PST Import endpoint will fail.</li><li>Prepare your <b>batch input files (XML and/or CSV) </b>and run the migration batch in <b>Analyze</b> mode first so the service can validate readiness before importing.</li><li>Confirm analysis prerequisites for target mailboxes:<ul><li>Appropriate license assigned</li><li>Mailbox is not inactive or soft-deleted</li><li>Recipient type is <b>UserMailbox</b></li><li>Archive is enabled if importing to archive</li><li>Quota validations (ArchiveQuota / RecoverableItemsQuota) occur during analysis</li></ul></li><li>Validate PST files ahead of time:<ul><li>Analysis verifies that all specified PST files exist</li><li>PST file size is validated during analysis</li></ul></li></ul><p>For detailed cmdlet usage and guidance, review the Azure PST Import documentation on Microsoft Learn.</p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvjwdhhi-1\">Question</td><td data-row=\"row-mvjwdhhi-1\">Answer</td></tr><tr><td data-row=\"row-mvjwdhhi-2\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mvjwdhhi-2\">Yes. The feature enables administrators to import existing customer email data contained in PST files into Exchange Online mailboxes, where the data is then stored and processed according to existing Exchange Online behaviors.</td></tr><tr><td data-row=\"row-mvjwdhhi-3\">Does the change store customer data, and if so, where is it stored?</td><td data-row=\"row-mvjwdhhi-3\">Yes. PST file contents are imported into Exchange Online mailboxes within the customer’s Microsoft 365 tenant and are stored according to the tenant’s data residency and storage configuration.</td></tr><tr><td data-row=\"row-mvjwdhhi-4\">Does the change modify retention policies, holds, or deletion workflows?</td><td data-row=\"row-mvjwdhhi-4\">Yes. Once imported, mailbox data becomes subject to any existing Microsoft Purview retention policies, retention labels, holds, and deletion workflows already configured for the target mailboxes.</td></tr><tr><td data-row=\"row-mvjwdhhi-5\">Does the change affect audit logging capabilities?</td><td data-row=\"row-mvjwdhhi-5\">Yes. Administrative actions related to PST import and the resulting mailbox changes are logged using existing Exchange Online and Microsoft Purview audit logging mechanisms.</td></tr><tr><td data-row=\"row-mvjwdhhi-6\">Does the change alter how admins can monitor or demonstrate compliance?</td><td data-row=\"row-mvjwdhhi-6\">Yes. Administrators can use existing Exchange Online and Microsoft Purview reporting and audit tools to monitor PST import activity and demonstrate compliance after the data is imported.</td></tr><tr><td data-row=\"row-mvjwdhhi-7\">Does the change include an admin control?</td><td data-row=\"row-mvjwdhhi-7\">Yes. The feature is controlled through administrator access to PowerShell cmdlets and Azure role assignments, including permissions on the Azure storage account used for PST import.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "557559"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Azure PST Import enables Microsoft 365 admins to import PST files from Azure Blob Storage into Exchange Online mailboxes using PowerShell. It includes readiness analysis, reporting, and post-import cleanup. Rollout is delayed to early 2027. Imported data follows existing retention, compliance, and audit policies, with no user impact."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2027-04-30T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1281505",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T17:58:01.04Z",
+    "Services": [
+      "Microsoft Purview"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-04-15T23:29:09Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Purview: Data Lifecycle Management- Azure PST Import",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "We are announcing the ability to upgrade in-queue overflow to Conversation orchestration in Dynamics 365 Apps. This feature reached general availability on November 13, 2026.<br><br>  \n\n <b>How does this affect me?</b><br> \n\nThis feature enables you to upgrade your existing in-queue overflow settings to a Conversation orchestration (CO) playbook, for one queue or many at once.<br><br> \n\nKey functionality of this feature includes:<ul> \n\n<li><b>Increased flexibility, with advanced options</b>: Conversation orchestration offers capabilities that in-queue overflow doesn’t, including a wider range of conditions, actions tailored to different customer scenarios, and a single playbook that can be reused across multiple queues.</li> \n\n<li> <b>Review before you confirm</b>: See how your settings carry over to the playbook. Nothing changes until you confirm.</li> \n\n<li> <b>One place for new overflow</b>: New in-queue overflow configurations are now created in Conversation orchestration.</li></ul> \n\nPlaybooks that match your current in-queue overflow setup are free. Playbooks with additional conditions, branches or context variables use Copilot credits. Your existing in-queue overflow keeps working and remains editable until you choose to upgrade.<br><br> \n\n <b>What action do I need to take?</b><br> \nThis message is for awareness, and no action is required.<br><br> \nIf you would like more information on this feature, please visit <a href=\"https://aka.ms/MCRP22548\"target=\"_blank\">Upgrade legacy in-queue overflow to a conversation orchestration playbook</a>.",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [],
+    "EndDateTime": "2026-12-17T17:45:24Z",
+    "HasAttachments": false,
+    "Id": "MC1557671",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T17:47:02.367Z",
+    "Services": [
+      "Dynamics 365 Apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-11-17T17:45:24Z",
+    "Tags": [
+      "New feature"
+    ],
+    "Title": "Dynamics 365 Apps - Upgrade in-queue overflow to Conversation orchestration",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Organizations can now allow trusted external presenters to manage Microsoft Teams event production controls. Federated (B2B) users and guest users can be assigned through the <b>Who has control of production</b> <b>tools</b> setting, enabling them to manage the attendee viewing experience during Teams events.</p><p>This feature helps organizations that work with external event producers, agencies, and third-party event management partners by allowing authorized external presenters to perform production tasks without requiring internal staff to manage the event.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=567298\" rel=\"noopener noreferrer\" target=\"_blank\">567298</a>.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release:</b> Beginning in <b>early August 2026</b> and expected to complete by <b>early October 2026 </b>(previously early September) (previously mid-August)</li><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Beginning <b>early August 2026</b> and expected to complete by <b>late November 2026</b> (previously early November)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations that use Microsoft Teams events</li><li>Event organizers who work with external presenters, production vendors, agencies, or trusted partners</li><li>Federated (B2B) users and guest users who are invited to participate in Teams events</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li><li>Teams events</li></ul><p><i>What will happen</i></p><ul><li>Event organizers can grant production control permissions to federated (B2B) users and guest users.</li><li>Authorized external presenters can manage production controls and determine what attendees see during an event.</li><li>The feature is available only when an organizer explicitly assigns production control access.</li><li>Existing events and configurations will not be modified automatically.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required before rollout.</p><p>We recommend that you:</p><ul><li>Review internal guidance and governance policies for Teams events that include external participants.</li><li>Inform event organizers about this new capability.</li><li>Determine which external presenters, vendors, or partners should be authorized to receive production control permissions.</li><li>Update any training or documentation used by event organizers, if applicable.</li></ul><p>Organizers can use the <b>Who has control of production tools</b> setting when configuring a Teams event to grant production access to trusted external users.</p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mu2wt8tj-5\">Question</td><td data-row=\"row-mu2wt8tj-5\">Answer</td></tr><tr><td data-row=\"row-mu2wt8tj-6\">Does this change provide a new way for users, tenants, or subscriptions to communicate?</td><td data-row=\"row-mu2wt8tj-6\">Yes. This feature enables organizations to include federated (B2B) and guest users in Teams event production workflows, expanding collaboration and communication capabilities with trusted external participants.</td></tr><tr><td data-row=\"row-mu2wt8tj-7\">Does this change include an admin or organizer control?</td><td data-row=\"row-mu2wt8tj-7\">Yes. Event organizers can use the Who has control of production tools setting to grant or restrict production control access for trusted external users when configuring a Teams event.</td></tr><tr><td data-row=\"row-mu2wt8tj-8\">Can users enable or disable this capability themselves?</td><td data-row=\"row-mu2wt8tj-8\">Yes. Event organizers can choose whether to grant production control permissions to federated (B2B) and guest users when setting up an event.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "567298"
+      },
+      {
+        "Name": "FeatureStatusJson",
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147834Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147836Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147838Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams now allows event organizers to grant trusted external presenters (federated B2B and guest users) production control during events, enabling them to manage attendee viewing. This feature, rolling out August to November 2026, requires explicit organizer assignment and supports collaboration with external partners."
+      }
+    ],
+    "EndDateTime": "2026-12-31T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1443517",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T17:39:27.03Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-07-31T00:25:38Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams: External presenters can manage event production controls",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>To help organizations deliver more polished and branded town hall events, Microsoft Teams is introducing the ability for organizers and presenters to <b>upload custom background images</b> in the <i>Manage what attendees see experience</i>. This enhancement allows teams to replace default backgrounds with branded visuals—such as company logos or event-specific designs—so presenters and shared content appear consistently on brand for attendees. This feature is available for Teams events organizers with a Teams Enterprise license. This update applies to Teams for Windows desktop and Mac desktop.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?searchterms=561493\" rel=\"noopener noreferrer\" target=\"_blank\">561493</a></b>.</p><p><b><b>When this will happen</b></b></p><ul><li><b>Targeted Release: </b>Rollout begins in<b> early June 2026 </b>(previously late May)<b> </b>and is expected to complete by<b> early June 2026 </b>(previously late May).</li><li><b>General Availability (Worldwide): </b>Rollout begins in<b> early June 2026</b> and is expected to complete by <b>late November 2026</b> (previously early November).</li></ul><p><b><b>How this affects your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizers and presenters of <b>Teams town hall events</b></li><li>Users assigned a <b>Teams Premium </b>license</li><li>Tenants using <b>Manage what attendees see</b> in <i>town halls</i></li></ul><p><i>What will happen</i></p><ul><li>Organizers and presenters can upload<b> custom background images </b>directly within the <b><i>Manage what attendees see</i></b><i> experience</i>.</li><li>Uploaded backgrounds appear behind presenters and shared content in supported town hall layouts.</li><li>JPEG and PNG image formats are supported, with recommended resolution guidance shown during upload.</li><li><b>Custom backgrounds</b> appear alongside existing default background options in the background picker.</li><li>The feature is<b> enabled by default </b>for eligible users and <b>applies only to town hall events where Manage what attendees see is enabled</b>.</li><li>There is<b> no change</b> to standard Teams meetings or webinars.</li></ul><p><b><b>What you can do to prepare</b></b></p><ul><li>No admin action is required before rollout.</li><li>Consider notifying users who organize or present town halls about this new capability.</li><li>Prepare branded background images that align with your organization’s visual identity guidelines.</li><li>Update internal documentation or event playbooks if you provide guidance on hosting town halls.</li><li>Optionally, run a test town hall event to familiarize presenters with the upload flow and attendee experience.</li></ul><p><b>Learn more:</b> <a href=\"https://support.microsoft.com/office/manage-what-attendees-see-in-microsoft-teams-19bfd690-8122-49f4-bc04-c2c5f69b4e16#bkmk_customize_event_screen\" rel=\"noopener noreferrer\" target=\"_blank\">Customize the event screen - Manage what attendees see in Microsoft Teams | Microsoft Support</a></p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvfj8v25-5\"><b>Question</b></td><td data-row=\"row-mvfj8v25-5\"><b>Answer</b></td></tr><tr><td data-row=\"row-mvfj8v25-6\">Does the change store new customer data?</td><td data-row=\"row-mvfj8v25-6\"><b>Yes.</b> Uploaded custom background images are stored as part of the Teams town hall event configuration.</td></tr><tr><td data-row=\"row-mvfj8v25-7\">Does the change alter how existing customer data is processed or accessed?</td><td data-row=\"row-mvfj8v25-7\"><b>Yes.</b> Background images are rendered behind presenters and shared content during the live event for attendees.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "561493"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams will allow organizers and presenters of town hall events with Teams Premium licenses to upload custom background images in the \"Manage what attendees see\" feature. Rollout begins early June 2026, enabling branded visuals behind presenters and shared content in supported layouts, with no admin action needed."
+      }
+    ],
+    "EndDateTime": "2026-12-31T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1307982",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T17:37:19.507Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-05-12T01:21:10Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams Town halls: Upload custom backgrounds in Manage what attendees see",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft Teams will enable users to report guest invitations for security concerns directly from Teams. When users receive an unexpected or potentially malicious invitation to join another organization as a guest, they can report it to their IT admin for review, helping identify and mitigate phishing and other abuse through guest invitations.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in late November 2026 (previously mid-November) and expect to complete by late November 2026 (previously mid-November).</p><p><b><b>Impact on Your Organization:</b></b></p><p>Users can report suspicious guest invitations when declining them in Teams. Reports are shared with their IT admin through the User reported security submissions report in the Teams admin center and with Microsoft for review.</p><p><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/10/22185-1.png\" width=\"300\"></p><p><b><b>Action Required/Recommendations:</b></b></p><p>No action is required for organizations that already have <b>Report a security concern</b> enabled in their Teams messaging policy. Admins can manage this capability through <b>Teams admin center &gt; Messaging policies &gt; Report a security concern</b>.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvigt7hj-1\"><b>Question</b></td><td data-row=\"row-mvigt7hj-1\"><b>Answer</b></td></tr><tr><td data-row=\"row-mvigt7hk-2\">Does the change include an admin control?</td><td data-row=\"row-mvigt7hk-2\">Yes. The capability is controlled through the Teams messaging policy setting for Report a security concern.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "571297"
+      },
+      {
+        "Name": "FeatureStatusJson",
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114719Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147192Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147194Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams will let users report suspicious guest invitations for security concerns starting late November 2026. Reports go to IT admins via the Teams admin center. No action is needed if \"Report a security concern\" is already enabled in messaging policies, which control this feature."
+      }
+    ],
+    "EndDateTime": "2027-01-15T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1530615",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T17:34:34.37Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-29T18:35:09Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams: Report guest invitations for security concerns",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Organizations can enhance meeting security with synthetic audio and video detection solutions provided by certified third-party providers. Third-party detection solutions analyze meeting media for signs of synthetic or manipulated audio and video and send detection signals to Teams, enabling integrated in-meeting experiences and controls.</p><p><b>Important:</b> Synthetic media detection is performed by the third-party provider. Microsoft Teams provides the platform integration and experiences for surfacing and acting on detection signals from supported providers.</p><p>This message is associated with Microsoft 365 Roadmap ID 573451.</p><p><b><b>Rollout Schedule:</b></b></p><p>Targeted Release (Worldwide): We will begin rolling out in late November 2026 (previously mid-November) and expect to complete by late November 2026.</p><p>General Availability (Worldwide): We will communicate via Message center when we are ready to proceed.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Organizations can choose and integrate certified third-party deepfake detection solutions into Microsoft Teams meetings, helping protect users from emerging AI-generated voice and video threats. This gives customers more flexibility to meet security and compliance needs while enabling users to make more informed trust decisions during meetings.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>To use third-party Synthetic Audio and Video Detection in Microsoft Teams, administrators should evaluate and select a supported detection provider, deploy the provider app through Manage apps in the Teams admin center, grant required permissions, and configure applicable Teams meeting policies.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvjr00xj-1\"><b>Question</b></td><td data-row=\"row-mvjr00xj-1\"><b>Answer</b></td></tr><tr><td data-row=\"row-mvjr00xj-2\">Does the change introduce or significantly modify AI/ML capabilities that interact with customer data?</td><td data-row=\"row-mvjr00xj-2\">Yes. Certified third-party providers may analyze meeting audio/video signals for synthetic media detection. Review provider terms, data handling, and compliance documentation before enabling.</td></tr><tr><td data-row=\"row-mvjr00xj-3\">Does the change include an admin control?</td><td data-row=\"row-mvjr00xj-3\">Yes. Admins manage provider app deployment, permissions, and Teams meeting policy configuration.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "573451"
+      },
+      {
+        "Name": "FeatureStatusJson",
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145266Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145267Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145269Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114527Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145272Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145274Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams will support certified third-party synthetic audio and video detection in meetings starting late November 2026. Organizations can integrate these solutions to enhance security against AI-generated media threats. Admins must deploy provider apps, grant permissions, and configure meeting policies. Detection is performed by third parties, with Microsoft Teams enabling integration."
+      }
+    ],
+    "EndDateTime": "2027-02-15T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1509787",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T17:34:21.327Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-15T23:01:09Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams: Third-party synthetic audio and video detection in meetings",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft Teams is introducing an onboarding workflow that helps new team members get started faster by automatically connecting them to relevant channels when they join a team. This can improve engagement, accelerate onboarding, and make important information easier to find from the start.</p><p>This message is associated with Microsoft 365 Roadmap ID 573452.</p><p><b><b>Rollout Schedule:</b></b></p><p>Targeted Release (Worldwide): We will begin rolling out in late November 2026 (previously mid-November) and expect to complete in late November 2026 (previously mid-November).</p><p>General Availability (Worldwide): We will begin rolling out in early December 2026 and expect to complete by mid-December 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Today, new team members may need to manually discover and join the channels that are most relevant to their work. With this update, team owners can automatically add new members to relevant channels through the onboarding workflow when they are added to a team.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required. You may want to inform team owners about this upcoming improvement so they understand how to connect new members to relevant channels more efficiently during onboarding.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "573452"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams will introduce an onboarding workflow to automatically connect new members to relevant channels, improving engagement and onboarding speed. Rollout starts late November 2026 for Targeted Release and early December 2026 for General Availability. No admin action is required."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Android, Desktop, iOS, Mac"
+      }
+    ],
+    "EndDateTime": "2027-02-15T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1518033",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T17:29:22.283Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-20T23:00:34Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact"
+    ],
+    "Title": "Microsoft Teams: Onboarding workflow for new team members",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Beginning in late November 2026, Microsoft Purview will roll out improvements to the setup and activation experience for inline collection and Data Loss Prevention (DLP) policies that protect interactions with unmanaged cloud apps in <i>Microsoft Edge for Business</i>.</p><p>This update adds support for organizations that use Microsoft Intune multi-admin approval and provides clearer status information, more detailed error reporting, and remediation guidance in the <i>Microsoft Purview portal</i>. These enhancements help administrators activate protection more efficiently while preserving existing Intune approval controls.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Worldwide:</b> Beginning in <b>early January 2027</b> (previously late November 2026) and expected to complete by <b>end of January 2027 </b>(previously early December 2026)</li></ul><p>The rollout will occur progressively. Until the update reaches your tenant, Microsoft Purview may continue to display the current setup experience or indicate that Intune multi-admin approval is not supported.</p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations using Microsoft Purview collection or DLP policies to monitor and protect supported activities with unmanaged cloud apps in Microsoft Edge for Business</li><li>Organizations using Microsoft Intune multi-admin approval</li><li>Organizations that require coordination between Purview and Intune administrators</li></ul><p><i>Platforms/services</i></p><ul><li>Microsoft Purview</li><li>Microsoft Intune</li><li>Microsoft Edge for Business</li></ul><p><i>What will happen</i></p><ul><li>Microsoft Purview inline protection for unmanaged apps will support tenants that use Intune multi-admin approval.</li><li>Required Intune configuration changes will continue through your existing multi-admin approval process.</li><li>Microsoft Purview will not bypass Intune approval requirements.</li><li>The Microsoft Purview portal will provide clearer setup status information, more detailed error information, and guidance about actions required to complete activation.</li><li>When Intune administrator assistance is required, a Purview administrator can send a task to the appropriate Intune administrator.</li><li>Sending a task does not grant permissions, bypass approval requirements, or automatically complete requested Intune changes.</li><li>Protection may remain pending or inactive until required Intune approvals or administrator actions are completed.</li><li>You do not need to migrate or recreate existing collection or DLP policies.</li><li>This update does not expand supported applications, browsers, activities, licenses, devices, or cloud environments.</li><li>Existing DLP enforcement behavior remains unchanged.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required before rollout.</p><p>After the update reaches your tenant, if Microsoft Purview indicates that administrator action is required:</p><ul><li>Review the status and error details in the Microsoft Purview portal to identify the required next step.</li><li>In Microsoft Purview, send a task to the appropriate Intune administrator and have that administrator complete the requested action.</li><li>Return to Microsoft Purview, review the request status, and complete any remaining steps.</li><li>Check again after approximately one hour to confirm the supporting configuration and activation status are complete and that the error no longer appears.</li></ul><p>If your organization does not use Intune multi-admin approval and your policies are already active, no action is required.</p><p>For questions or support, contact your Microsoft account representative or Microsoft Support.</p><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/intune/governance/admin-tasks\" rel=\"noopener noreferrer\" target=\"_blank\">Centrally manage Admin Tasks - Microsoft Intune | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/purview/dlp-browser-dlp-learn#policies-for-unmanaged-app-interactions\" rel=\"noopener noreferrer\" target=\"_blank\">Learn about Data Loss Prevention for Cloud Apps in Edge for Business | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/intune/fundamentals/role-based-access-control/multi-admin-approval\" rel=\"noopener noreferrer\" target=\"_blank\">Use Multi Admin Approval in Intune - Microsoft Intune | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-z3vd\"><b>Question</b></td><td data-row=\"row-z3vd\"><b>Answer</b></td></tr><tr><td data-row=\"row-mux87f4f-1\">Does the change alter how administrators can monitor, report on, or demonstrate compliance activities, for example, through Microsoft Purview or administrator reporting?</td><td data-row=\"row-mux87f4f-1\">Yes. Administrators will receive clearer setup status information, more detailed error information, remediation guidance, and task-based coordination between Microsoft Purview and Microsoft Intune administrators.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Purview DLP will enhance setup and activation for unmanaged apps in Edge for Business, supporting Intune multi-admin approval with clearer status, error reporting, and task coordination. Rollout starts January 2027, requiring no prior action; existing policies remain unchanged and Intune approvals continue as before."
+      }
+    ],
+    "EndDateTime": "2027-03-01T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1489971",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T17:21:44.683Z",
+    "Services": [
+      "Microsoft Purview"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-06T23:07:36Z",
+    "Tags": [
+      "Updated message",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Purview DLP: Improved setup and Intune multi-admin approval support for unmanaged apps in Edge for Business",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>We are enhancing how <b>Microsoft Defender for Office 365</b> identifies and manages promotional email. Promotional messages will be tagged as “promotions” (previously “Bulk” in preview) and can be moved automatically to a new Promotions folder. The system learns from user actions, such as moving messages into or out of the <b><i>Promotions folder</i></b> and applies those preferences to future messages. These improvements reduce inbox clutter and help users stay focused while still receiving promotional content they want.</p><p><b><b>When this will happen</b></b></p><ul><li><b>Public Preview (Limited): </b>We will begin rolling out in <b>mid-April 2026</b> and expect to complete by <b>mid-May 2026</b> (previously<b> </b>end of April). To be included in the public preview program, send an email to <a href=\"mailto://BulkMailPreviews@microsoft.com\" rel=\"noopener noreferrer\" target=\"_blank\">BulkMailPreviews@microsoft.com</a> indicating: Organization name, Tenant ID and your onmicrosoft.com domain (e.g contoso.onmicrosoft.com). Slots are limited and will close on <b>May 15th, 2026</b>.</li><li><b>General Availability (Worldwide): </b>Rollout begins in <b>late July 2026</b> (previously early July) and is expected to complete by <b>mid-February 2027</b> (previously late November 2026)<b>.</b></li><li><b>General Availability (DoD, GCC, GCC High): </b>We will begin rolling out in<b> late July 2026</b> (previously early July)<b> </b>and expect to complete by <b>end of March 2027</b> (previously late November 2026).</li></ul><p><b><b>How this affects your organization</b></b></p><p><i>Who is affected</i></p><ul><li>All organizations that use <b>Microsoft Defender for Office 365</b> across Worldwide, GCC, GCC High, and DoD clouds</li></ul><p><i>What will happen</i></p><ul><li>Incoming promotional messages will be tagged as “<b><i>promotions</i></b>.” (previously “Bulk” in private and public preview)</li><li>If the <b>Bulk Moves Enabled setting</b> is turned on, tagged messages will automatically move to a <b>Promotions folder</b> created in user mailboxes.</li><li>The system will learn from user actions when they move messages into or out of the Promotions folder. Future messages will follow the learned behavior.</li><li>Users will be able to <b>create inbox rules that reference the promotions tag</b>.<ul><li><b>During the Public Preview:</b> <b>Tagging will be opt-in</b> and configured using Exchange transport rules.</li><li>Folder routing will be enabled through anti-spam policy settings (“Bulk moves enabled”).</li><li>Both features will be able to be scoped to pilot security groups for a staged rollout.</li></ul></li><li><b>At Worldwide General Availability, tagging will be enabled by default for all tenants and will always remain that way.</b></li><li><b>For the tagging experience</b>, supported outlooks clients are Outlook on the web and outlook for Windows. Other client such as Outlook for IOS/Android and classic outlook will follow subsequently</li><li><b>For the promotions folder experiences</b>, Outlook on the web, outlook for Windows, Outlook for IOS/Android and classic outlook are all supported.&nbsp;</li></ul><p><i>Figure one - Admin configuration for tagging using exchange transport rule (required for public preview opt-In):</i></p><p><i>&nbsp;</i><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/110e041c-9767-4ff6-b95a-b37dc4815cdc/8a8a6f9d519799822a0259a099b17f2aaf5f39b3.png\" alt=\"user settings\"></p><p><i>Figure two - Admin configuration for Bulk moves enabled to provision the promotions folder:</i></p><p><i>&nbsp;</i><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/a815915f-989a-4391-b135-19e188ee232d/05e417e5652a87e20081358693796972210ab83e.png\" alt=\"user settings\"></p><p><i>Figure three - System tagging of “Promotions” in outlook client and promotions folder (previously&nbsp;&nbsp;tagged as “Bulk” in private and public preview):</i></p><p>&nbsp;<img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/6680f473-9df6-4ed8-8c16-ecbc69c42fb6/88c6582e0698b7b767ac961bf617cce0e1b00d3d.png\" alt=\"user settings\"></p><p><i>Figure four - User inbox rules using the promotions” tag:</i></p><p>&nbsp;<img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/62e24477-b653-432f-8840-edbc788b00e5/7acb536715ce421af5ac3ff77a913e3ba596384f.png\" alt=\"user settings\"></p><p><b><b>What you can do to prepare</b></b></p><ul><li>To be included in the public preview program, send an email to <a href=\"mailto://BulkMailPreviews@microsoft.com\" rel=\"noopener noreferrer\" target=\"_blank\">BulkMailPreviews@microsoft.com</a> indicating: Organization name, Tenant ID and your onmicrosoft.com domain (e.g contoso.onmicrosoft.com). Slots are limited and will close on April 30th, 2026.</li><li>Review your internal mailbox and message handling guidance and update training materials if needed.</li><li>If you plan to participate in the Public Preview, review your Exchange transport rule and anti-spam policy configurations to determine if you want to opt-in.</li><li>Monitor the product documentation. You can review the following: <a href=\"https://learn.microsoft.com/defender-office-365/anti-spam-bulk-complaint-level-bcl-about\" rel=\"noopener noreferrer\" target=\"_blank\">Bulk email detection and bulk complaint level (BCL) in cloud organizations</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mur5tawc-6\"><b>Question</b></td><td data-row=\"row-mur5tawc-6\"><b>Answer</b></td></tr><tr><td data-row=\"row-mur5tawc-7\"><b>Does the change alter how existing customer data is processed, stored, or accessed?</b></td><td data-row=\"row-mur5tawc-7\"><b>Yes. </b>Incoming email will receive the promotions classification and may be moved automatically to the Promotions folder depending on admin configuration.</td></tr><tr><td data-row=\"row-mur5tawc-8\"><b>Does the change introduce or significantly modify AI or ML that interacts with customer data?</b></td><td data-row=\"row-mur5tawc-8\"><b>Yes. </b>The system learns from user actions when they move messages and applies that learning to future similar messages.</td></tr><tr><td data-row=\"row-mur5tawc-9\"><b>Does the change include an admin control, and can it be controlled through Entra ID group membership?</b></td><td data-row=\"row-mur5tawc-9\"><b>Yes. </b>Admins can enable or disable Bulk Moves Enabled and can opt in to tagging during Public Preview. These controls can be scoped using existing admin delegation models.</td></tr><tr><td data-row=\"row-mur5tawc-10\"><b>Does the change allow a user to enable or disable the feature themselves?</b></td><td data-row=\"row-mur5tawc-10\"><b>Yes. </b>Users can override tagging behavior by moving messages in or out of the Promotions folder, which trains the ML model and adjusts future message handling.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Defender for Office 365 will tag promotional emails as “promotions” and can auto-move them to a Promotions folder, learning from user actions. Public preview starts mid-April 2026; general rollout begins late July 2026. Admins control settings; users can train the system by moving messages."
+      }
+    ],
+    "EndDateTime": "2027-04-30T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1279093",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-11-17T17:19:09.147Z",
+    "Services": [
+      "Microsoft Defender XDR"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-04-13T22:54:05Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Defender for Office 365: Enhancing how we handle promotional mail",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "We are increasing the maximum frequency of orchestration playbook re-evaluations by reducing the wait time from 30 seconds down to 5 seconds in Dynamics 365 Contact Center. This change reached general availability today, November 17, 2026.  <br><br>\n<b>How does this affect me?</b><br>\nWith this shorter interval, you get finer control over priority escalation and Bullseye pool expansion. As a result, conversations reach the right queue or specialist sooner when wait times or queue status change. Once available, you can update existing playbooks and reduce the wait time to as low as 5 seconds.<br><br>\n<b>What action do I need to take?</b><br>\nThis message is for awareness, and no action is required.",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [],
+    "EndDateTime": "2026-12-17T17:09:29Z",
+    "HasAttachments": false,
+    "Id": "MC1557570",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-17T17:13:12.383Z",
+    "Services": [
+      "Dynamics 365 Apps"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-11-17T17:09:29Z",
+    "Tags": [
+      "Feature update"
+    ],
+    "Title": "Dynamics 365 Contact Center - Set wait times as short as 5 seconds in Orchestration playbooks",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
       "Content": "<p>Updated November 16, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>A variety of symbols can be added to an email message that you are composing. On the Insert tab, select Symbols.</p><p></p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out <b>early January 2027</b> (previously late November 2026) and expect to complete by <b>late January 2027</b> (previously late December 2026).</p><p>Targeted Release (Worldwide): We will begin rolling out on <b>mid-October 2026</b> and expect to complete by <b>mid-November 2026</b> (previously early November).</p><p>General Availability (GCC): We will begin rolling out on <b>early January 2027</b> (previously late November 2026) and expect to complete by <b>late January 2027</b> (previously late December 2026).</p><p>General Availability (GCC High): We will begin rolling out on <b>early January 2027</b> (previously late November 2026) and expect to complete by <b>late January 2027</b> (previously late December 2026).</p><p>General Availability (DoD): We will begin rolling out on <b>early January 2027</b> (previously late November 2026) and expect to complete by <b>late January 2027</b> (previously late December 2026).</p><p></p><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Users composing emails in new Outlook for Windows and Outlook on the web.</li><li>Help desk and training teams that support Outlook message composition experiences.</li></ul><p><b>Platforms/Services:</b></p><ul><li>Exchange Online.</li><li>New Outlook for Windows and Outlook on the web.</li></ul><p><b>What will happen:</b></p><ul><li>Users will be able to insert symbols into email messages from the <b>Insert</b> tab.</li><li>This adds a built-in way to include special characters and symbols while composing messages.</li><li>The capability will roll out automatically during the scheduled rollout window.</li></ul><p><b><b>Action Required/Recommendations:</b></b></p><ul><li>No admin action is required.</li><li>Inform users that symbols can be inserted from the <b>Insert</b> tab when composing email.</li><li>Update internal Outlook training or help desk guidance if it references how users add special characters to messages.</li></ul><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p><p>----------------------------For Processing Do Not Delete------------------------------</p><p></p><p>Do you need to update your Service description: No</p><p></p><p>Post Publish Date: 9/16/2026</p><p></p><p>Change type: Feature</p><p></p><p>Product marketing manager: sarahspieler@microsoft.com</p><p></p><p>Major Update: No</p>",
       "ContentType": "html"
     },
@@ -211,7 +683,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1556098\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477978Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1556098\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477979Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1556098\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147969Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1556098\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147971Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -832,7 +1304,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477372Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477373Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477374Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147041Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147043Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147045Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -970,7 +1442,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1552392\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476918Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1552392\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476919Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1552392\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146372Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1552392\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146374Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1064,7 +1536,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1552390\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476539Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1552390\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547654Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1552390\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145811Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1552390\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145813Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1675,7 +2147,7 @@
     "Details": [
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476752Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"Web\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476753Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476754Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146155Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"Web\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146157Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146159Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -1771,7 +2243,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476352Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476353Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476354Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145493Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145495Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145497Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2057,44 +2529,6 @@
       "Retirement"
     ],
     "Title": "Power BI retiring standalone Copilot experiences (preview)",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated November 9, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Beginning in late November 2026, Microsoft Purview will roll out improvements to the setup and activation experience for inline collection and Data Loss Prevention (DLP) policies that protect interactions with unmanaged cloud apps in <i>Microsoft Edge for Business</i>.</p><p>This update adds support for organizations that use Microsoft Intune multi-admin approval and provides clearer status information, more detailed error reporting, and remediation guidance in the <i>Microsoft Purview portal</i>. These enhancements help administrators activate protection more efficiently while preserving existing Intune approval controls.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Worldwide:</b> Beginning in <b>late November 2026</b> (previously early November) and expected to complete by <b>early December 2026</b> (previously mid-November)</li></ul><p>The rollout will occur progressively. Until the update reaches your tenant, Microsoft Purview may continue to display the current setup experience or indicate that Intune multi-admin approval is not supported.</p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations using Microsoft Purview collection or DLP policies to monitor and protect supported activities with unmanaged cloud apps in Microsoft Edge for Business</li><li>Organizations using Microsoft Intune multi-admin approval</li><li>Organizations that require coordination between Purview and Intune administrators</li></ul><p><i>Platforms/services</i></p><ul><li>Microsoft Purview</li><li>Microsoft Intune</li><li>Microsoft Edge for Business</li></ul><p><i>What will happen</i></p><ul><li>Microsoft Purview inline protection for unmanaged apps will support tenants that use Intune multi-admin approval.</li><li>Required Intune configuration changes will continue through your existing multi-admin approval process.</li><li>Microsoft Purview will not bypass Intune approval requirements.</li><li>The Microsoft Purview portal will provide clearer setup status information, more detailed error information, and guidance about actions required to complete activation.</li><li>When Intune administrator assistance is required, a Purview administrator can send a task to the appropriate Intune administrator.</li><li>Sending a task does not grant permissions, bypass approval requirements, or automatically complete requested Intune changes.</li><li>Protection may remain pending or inactive until required Intune approvals or administrator actions are completed.</li><li>You do not need to migrate or recreate existing collection or DLP policies.</li><li>This update does not expand supported applications, browsers, activities, licenses, devices, or cloud environments.</li><li>Existing DLP enforcement behavior remains unchanged.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required before rollout.</p><p>After the update reaches your tenant, if Microsoft Purview indicates that administrator action is required:</p><ul><li>Review the status and error details in the Microsoft Purview portal to identify the required next step.</li><li>In Microsoft Purview, send a task to the appropriate Intune administrator and have that administrator complete the requested action.</li><li>Return to Microsoft Purview, review the request status, and complete any remaining steps.</li><li>Check again after approximately one hour to confirm the supporting configuration and activation status are complete and that the error no longer appears.</li></ul><p>If your organization does not use Intune multi-admin approval and your policies are already active, no action is required.</p><p>For questions or support, contact your Microsoft account representative or Microsoft Support.</p><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/intune/governance/admin-tasks\" rel=\"noopener noreferrer\" target=\"_blank\">Centrally manage Admin Tasks - Microsoft Intune | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/purview/dlp-browser-dlp-learn#policies-for-unmanaged-app-interactions\" rel=\"noopener noreferrer\" target=\"_blank\">Learn about Data Loss Prevention for Cloud Apps in Edge for Business | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/intune/fundamentals/role-based-access-control/multi-admin-approval\" rel=\"noopener noreferrer\" target=\"_blank\">Use Multi Admin Approval in Intune - Microsoft Intune | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-z3vd\"><b>Question</b></td><td data-row=\"row-z3vd\"><b>Answer</b></td></tr><tr><td data-row=\"row-mux87f4f-1\">Does the change alter how administrators can monitor, report on, or demonstrate compliance activities, for example, through Microsoft Purview or administrator reporting?</td><td data-row=\"row-mux87f4f-1\">Yes. Administrators will receive clearer setup status information, more detailed error information, remediation guidance, and task-based coordination between Microsoft Purview and Microsoft Intune administrators.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Purview DLP will improve setup and activation for unmanaged apps in Edge for Business starting late November 2026, adding support for Intune multi-admin approval. Enhancements include clearer status, detailed errors, and task coordination between Purview and Intune admins, with no policy migration needed."
-      }
-    ],
-    "EndDateTime": "2027-01-11T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1489971",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-11-10T00:12:37.56Z",
-    "Services": [
-      "Microsoft Purview"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-10-06T23:07:36Z",
-    "Tags": [
-      "Updated message",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Purview DLP: Improved setup and Intune multi-admin approval support for unmanaged apps in Edge for Business",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -3349,7 +3783,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"Android\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476413Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476414Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"Android\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114562Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145623Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4500,7 +4934,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476574Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476575Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476576Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476577Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476578Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476589Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145882Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145884Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145886Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145887Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145889Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145891Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4552,7 +4986,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547784Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477842Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147771Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147772Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4652,7 +5086,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475709Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475711Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475712Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144583Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144585Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144586Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4704,7 +5138,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5478011Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5478013Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5478013Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5478014Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5478015Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1148016Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1148018Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1148019Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1148021Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1148022Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4756,7 +5190,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476136Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476137Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476138Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114518Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145181Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145182Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4808,7 +5242,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477748Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477749Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547775Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114763Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147632Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147633Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4860,7 +5294,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476819Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547682Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476821Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146225Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146227Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146229Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4912,7 +5346,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476478Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476479Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547648Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145738Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114574Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145742Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5082,105 +5516,6 @@
       "Admin impact"
     ],
     "Title": "Microsoft Teams: Two presenters can share their screens or windows simultaneously in meetings",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated November 3, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft Teams will enable users to report guest invitations for security concerns directly from Teams. When users receive an unexpected or potentially malicious invitation to join another organization as a guest, they can report it to their IT admin for review, helping identify and mitigate phishing and other abuse through guest invitations.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in mid-November 2026 (previously early November) and expect to complete by mid-November 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Users can report suspicious guest invitations when declining them in Teams. Reports are shared with their IT admin through the User reported security submissions report in the Teams admin center and with Microsoft for review.</p><p><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/10/22185-1.png\" width=\"300\"></p><p><b><b>Action Required/Recommendations:</b></b></p><p>No action is required for organizations that already have <b>Report a security concern</b> enabled in their Teams messaging policy. Admins can manage this capability through <b>Teams admin center &gt; Messaging policies &gt; Report a security concern</b>.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvigt7hj-1\"><b>Question</b></td><td data-row=\"row-mvigt7hj-1\"><b>Answer</b></td></tr><tr><td data-row=\"row-mvigt7hk-2\">Does the change include an admin control?</td><td data-row=\"row-mvigt7hk-2\">Yes. The capability is controlled through the Teams messaging policy setting for Report a security concern.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "571297"
-      },
-      {
-        "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477472Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477473Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477474Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Teams will let users report suspicious guest invitations for security concerns starting mid-November 2026. Reports go to IT admins via the Teams admin center. No action is needed if \"Report a security concern\" is already enabled in messaging policies, which control this feature."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Desktop, Mac, Web"
-      }
-    ],
-    "EndDateTime": "2027-01-15T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1530615",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-11-03T17:37:27.523Z",
-    "Services": [
-      "Microsoft Teams"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-10-29T18:35:09Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Teams: Report guest invitations for security concerns",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated November 3, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft Teams is introducing an onboarding workflow that helps new team members get started faster by automatically connecting them to relevant channels when they join a team. This can improve engagement, accelerate onboarding, and make important information easier to find from the start.</p><p>This message is associated with Microsoft 365 Roadmap ID 573452.</p><p><b><b>Rollout Schedule:</b></b></p><p>Targeted Release (Worldwide): We will begin rolling out in mid-November 2026 (previously early November) and expect to complete in mid-November 2026 (previously early November).</p><p>General Availability (Worldwide): We will begin rolling out in early December 2026 and expect to complete by mid-December 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Today, new team members may need to manually discover and join the channels that are most relevant to their work. With this update, team owners can automatically add new members to relevant channels through the onboarding workflow when they are added to a team.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required. You may want to inform team owners about this upcoming improvement so they understand how to connect new members to relevant channels more efficiently during onboarding.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "573452"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Teams will introduce an onboarding workflow to automatically connect new members to relevant channels, improving engagement and onboarding speed. Rollout starts mid-November 2026 for Targeted Release and early December 2026 for General Availability. No admin action is required."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Android, Desktop, iOS, Mac"
-      }
-    ],
-    "EndDateTime": "2027-02-15T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1518033",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-11-03T17:35:48.897Z",
-    "Services": [
-      "Microsoft Teams"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-10-20T23:00:34Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact"
-    ],
-    "Title": "Microsoft Teams: Onboarding workflow for new team members",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -5408,7 +5743,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477209Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547721Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146791Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146793Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5620,7 +5955,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477586Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477587Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477588Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147387Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147389Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114739Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6935,7 +7270,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476447Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476448Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145673Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145675Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7065,7 +7400,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477164Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477165Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477166Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146724Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146726Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146727Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8567,7 +8902,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476047Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476049Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145054Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145057Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"}]}"
       },
       {
         "Name": "Summary",
@@ -8617,7 +8952,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475832Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475833Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114475Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144752Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -9206,101 +9541,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 22, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>What and Why:</b></p><p></p><p><b>Azure PST Import</b> provides a structured, PowerShell-based way for administrators to import PST files stored in <b>Azure Blob Storage</b> into <b>Exchange Online mailboxes</b>, which are commonly used to store archived Outlook mailbox content. This capability helps organizations migrate historical email data in a controlled and auditable way by validating readiness before importing and by providing reports throughout the process. The process starts by creating an Azure PST Import endpoint to establish the connection between Azure storage and Exchange Online. Administrators then run a migration batch in <b>Analyze</b> mode to review readiness and validate the input before proceeding. Once the analysis results are reviewed, they use those results to create and start the import batch, which begins importing the PST files into the specified mailboxes.</p><p></p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=1%26filters%3D&amp;searchterms=565865#Roadmap\" rel=\"noopener noreferrer\" target=\"_blank\">565865</a></p><p><b>Rollout Schedule:</b></p><p>Global: We will begin rolling out late March 2027 (previously early December 2026) and expect to complete by late April 2027 (previously late December 2026).</p><p><b>Impact on your organization:</b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators managing <b>Exchange Online</b></li><li>Administrators using <b>Microsoft Purview Data Lifecycle Management</b></li><li>Organizations that import PST files into user or archive mailboxes</li></ul><p><i>What will happen</i></p><ul><li>Administrators complete the Azure PST Import process using <b>PowerShell cmdlets only</b>.</li><li>The workflow includes:<ul><li>Creating an Azure PST Import migration endpoint</li><li>Running a migration batch in <b>Analyze</b> mode to validate readiness</li><li>Reviewing analysis results and reports</li><li>Creating and starting the <b>import</b> batch</li><li>Performing post-import cleanup</li></ul></li><li>This experience is<b> not available through a graphical user interface (GUI)</b>.</li><li>Existing mailbox prerequisites and quotas are validated before importing begins.</li><li>There is<b> no direct user impact</b>; the feature is admin-driven.</li></ul><p><b>Action Required / Recommendations:</b></p><p></p><ul><li>Ensure your <b>Azure storage account and container exist</b> and are reachable; the endpoint creation cmdlet validates both during setup.</li><li>Grant the <b>Storage Blob Data Reader </b>role to the <b>Office 365 Import Service</b> app on the target storage account. Without this permission, creating the Azure PST Import endpoint will fail.</li><li>Prepare your <b>batch input files (XML and/or CSV) </b>and run the migration batch in <b>Analyze</b> mode first so the service can validate readiness before importing.</li><li>Confirm analysis prerequisites for target mailboxes:<ul><li>Appropriate license assigned</li><li>Mailbox is not inactive or soft-deleted</li><li>Recipient type is <b>UserMailbox</b></li><li>Archive is enabled if importing to archive</li><li>Quota validations (ArchiveQuota / RecoverableItemsQuota) occur during analysis</li></ul></li><li>Validate PST files ahead of time:<ul><li>Analysis verifies that all specified PST files exist</li><li>PST file size is validated during analysis</li></ul></li></ul><p>For detailed cmdlet usage and guidance, review the Azure PST Import documentation on Microsoft Learn.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvjwgh0b-8\">Question</td><td data-row=\"row-mvjwgh0b-8\">Answer</td></tr><tr><td data-row=\"row-mvjwgh0b-9\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mvjwgh0b-9\">Yes. The feature enables administrators to import existing customer email data contained in PST files into Exchange Online mailboxes, where the data is then stored and processed according to existing Exchange Online behaviors.</td></tr><tr><td data-row=\"row-mvjwgh0b-10\">Does the change store customer data, and if so, where is it stored?</td><td data-row=\"row-mvjwgh0b-10\">Yes. PST file contents are imported into Exchange Online mailboxes within the customer’s Microsoft 365 tenant and are stored according to the tenant’s data residency and storage configuration.</td></tr><tr><td data-row=\"row-mvjwgh0b-11\">Does the change modify retention policies, holds, or deletion workflows?</td><td data-row=\"row-mvjwgh0b-11\">Yes. Once imported, mailbox data becomes subject to any existing Microsoft Purview retention policies, retention labels, holds, and deletion workflows already configured for the target mailboxes.</td></tr><tr><td data-row=\"row-mvjwgh0b-12\">Does the change affect audit logging capabilities?</td><td data-row=\"row-mvjwgh0b-12\">Yes. Administrative actions related to PST import and the resulting mailbox changes are logged using existing Exchange Online and Microsoft Purview audit logging mechanisms.</td></tr><tr><td data-row=\"row-mvjwgh0b-13\">Does the change alter how admins can monitor or demonstrate compliance?</td><td data-row=\"row-mvjwgh0b-13\">Yes. Administrators can use existing Exchange Online and Microsoft Purview reporting and audit tools to monitor PST import activity and demonstrate compliance after the data is imported.</td></tr><tr><td data-row=\"row-mvjwgh0b-14\">Does the change include an admin control?</td><td data-row=\"row-mvjwgh0b-14\">Yes. The feature is controlled through administrator access to PowerShell cmdlets and Azure role assignments, including permissions on the Azure storage account used for PST import.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "565865"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Azure PST Import enables Microsoft 365 admins to import PST files from Azure Blob Storage into Exchange Online mailboxes using PowerShell. It includes readiness validation, reporting, and audit logging. The rollout starts late March 2027. Admins must prepare Azure storage, assign roles, and validate mailboxes before import."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2027-05-31T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1455013",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-22T18:55:27.163Z",
-    "Services": [
-      "Microsoft Purview"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-08-14T21:32:20Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Purview: Data Lifecycle Management- Azure PST Import",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated October 22, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p><b>Azure PST Import</b> provides a structured, PowerShell-based way for administrators to import PST files stored in <b>Azure Blob Storage</b> into <b>Exchange Online mailboxes</b>, which are commonly used to store archived Outlook mailbox content. This capability helps organizations migrate historical email data in a controlled and auditable way by validating readiness before importing and by providing reports throughout the process. The process starts by creating an Azure PST Import endpoint to establish the connection between Azure storage and Exchange Online. Administrators then run a migration batch in <b>Analyze</b> mode to review readiness and validate the input before proceeding. Once the analysis results are reviewed, they use those results to create and start the import batch, which begins importing the PST files into the specified mailboxes.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=557559\" rel=\"noopener noreferrer\" target=\"_blank\">557559</a></b>.</p><p><b><b>When this will happen</b></b></p><ul><li>Public Preview: We will begin rolling out <b>mid-October 2026</b> (previously mid-September) and expect to complete by<b> late October 2026</b> (previously late September).</li><li>Worldwide: We will begin rolling out <b>late January 2027</b> (previously early December 2026) and expect to complete by <b>late February 2027</b> (previously late December 2026).</li></ul><p><b><b>How this affects your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators managing <b>Exchange Online</b></li><li>Administrators using <b>Microsoft Purview Data Lifecycle Management</b></li><li>Organizations that import PST files into user or archive mailboxes</li></ul><p><i>What will happen</i></p><ul><li>Administrators complete the Azure PST Import process using <b>PowerShell cmdlets only</b>.</li><li>The workflow includes:<ul><li>Creating an Azure PST Import migration endpoint</li><li>Running a migration batch in <b>Analyze</b> mode to validate readiness</li><li>Reviewing analysis results and reports</li><li>Creating and starting the <b>import</b> batch</li><li>Performing post-import cleanup</li></ul></li><li>This experience is<b> not available through a graphical user interface (GUI)</b>.</li><li>Existing mailbox prerequisites and quotas are validated before importing begins.</li><li>There is<b> no direct user impact</b>; the feature is admin-driven.</li></ul><p><b><b>What you can do to prepare</b></b></p><ul><li>Ensure your <b>Azure storage account and container exist</b> and are reachable; the endpoint creation cmdlet validates both during setup.</li><li>Grant the <b>Storage Blob Data Reader </b>role to the <b>Office 365 Import Service</b> app on the target storage account. Without this permission, creating the Azure PST Import endpoint will fail.</li><li>Prepare your <b>batch input files (XML and/or CSV) </b>and run the migration batch in <b>Analyze</b> mode first so the service can validate readiness before importing.</li><li>Confirm analysis prerequisites for target mailboxes:<ul><li>Appropriate license assigned</li><li>Mailbox is not inactive or soft-deleted</li><li>Recipient type is <b>UserMailbox</b></li><li>Archive is enabled if importing to archive</li><li>Quota validations (ArchiveQuota / RecoverableItemsQuota) occur during analysis</li></ul></li><li>Validate PST files ahead of time:<ul><li>Analysis verifies that all specified PST files exist</li><li>PST file size is validated during analysis</li></ul></li></ul><p>For detailed cmdlet usage and guidance, review the Azure PST Import documentation on Microsoft Learn.</p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvjwdhhi-1\">Question</td><td data-row=\"row-mvjwdhhi-1\">Answer</td></tr><tr><td data-row=\"row-mvjwdhhi-2\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mvjwdhhi-2\">Yes. The feature enables administrators to import existing customer email data contained in PST files into Exchange Online mailboxes, where the data is then stored and processed according to existing Exchange Online behaviors.</td></tr><tr><td data-row=\"row-mvjwdhhi-3\">Does the change store customer data, and if so, where is it stored?</td><td data-row=\"row-mvjwdhhi-3\">Yes. PST file contents are imported into Exchange Online mailboxes within the customer’s Microsoft 365 tenant and are stored according to the tenant’s data residency and storage configuration.</td></tr><tr><td data-row=\"row-mvjwdhhi-4\">Does the change modify retention policies, holds, or deletion workflows?</td><td data-row=\"row-mvjwdhhi-4\">Yes. Once imported, mailbox data becomes subject to any existing Microsoft Purview retention policies, retention labels, holds, and deletion workflows already configured for the target mailboxes.</td></tr><tr><td data-row=\"row-mvjwdhhi-5\">Does the change affect audit logging capabilities?</td><td data-row=\"row-mvjwdhhi-5\">Yes. Administrative actions related to PST import and the resulting mailbox changes are logged using existing Exchange Online and Microsoft Purview audit logging mechanisms.</td></tr><tr><td data-row=\"row-mvjwdhhi-6\">Does the change alter how admins can monitor or demonstrate compliance?</td><td data-row=\"row-mvjwdhhi-6\">Yes. Administrators can use existing Exchange Online and Microsoft Purview reporting and audit tools to monitor PST import activity and demonstrate compliance after the data is imported.</td></tr><tr><td data-row=\"row-mvjwdhhi-7\">Does the change include an admin control?</td><td data-row=\"row-mvjwdhhi-7\">Yes. The feature is controlled through administrator access to PowerShell cmdlets and Azure role assignments, including permissions on the Azure storage account used for PST import.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "557559"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Azure PST Import enables Microsoft 365 admins to import PST files from Azure Blob Storage into Exchange Online mailboxes using PowerShell. The process includes readiness analysis, import execution, and reporting. Rollout begins mid-October 2026 (public preview) and late January 2027 (worldwide). It supports compliance via existing retention and audit tools."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2027-03-29T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1281505",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-22T18:53:18.15Z",
-    "Services": [
-      "Microsoft Purview"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-04-15T23:29:09Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Purview: Data Lifecycle Management- Azure PST Import",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated October 22, 2026: We have updated the timeline. Thank you for your patience.</p><p>Coming soon for Microsoft Purview: We are announcing the public preview of the integration of Adaptive protection with Data Lifecycle Management (DLM) to help you find the right balance to protect against data sabotage while enabling productivity. This new integration leverages DLM features to provide an additional control for Adaptive protection that automatically preserves items deleted by a user with an elevated risk level, so items can be restored if needed.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=392839\" rel=\"noopener noreferrer\" target=\"_blank\">392839</a>.</p><p><b>When this will happen:</b></p><p>Public preview: We will begin rolling out in late June 2024 (previously early May) and expect to complete by late July 2024 (previously mid-July).</p><p>General Availability:&nbsp;&nbsp;We will begin rolling out late December 2026 (previously late November) and expect to complete by mid-January 2027 (previously mid-December).</p><p><b>How this will affect your organization:</b></p><p>After the rollout, and after you enable Adaptive protection for your tenant, the retention label and auto-apply policy for data lifecycle management will be automatically created for you. This policy will automatically include elevated risk users identified by Microsoft Purview | Insider Risk Management solution. If these users delete content from Microsoft SharePoint, Microsoft OneDrive, or Microsoft Exchange, a retention label is automatically applied to that content to retain it for 120 days. Retention labels are automatically applied to unlabeled content deleted by these users. When these users are no longer at the elevated risk level, they are automatically removed from the DLM policy, and the system will no longer keep a copy of content they delete. Any content copies previously retained when the user had an elevated risk level will be kept for the 120 days as specified by the retention label.</p><p>Unlike other retention labeling scenarios, users do not see the retention label, and you do not need to create or manage the retention label or policy. At this time, you can't change the retention period or assign different policies based on the different risk levels, or for different locations. The single retention label and auto-labeling policy for your tenant is not visible in the Microsoft Purview compliance portal.</p><p><b>What you need to do to prepare:</b></p><p>Learn more: <a href=\"https://learn.microsoft.com/purview/retention#dynamically-mitigate-the-risk-of-accidental-or-malicious-deletes\" rel=\"noopener noreferrer\" target=\"_blank\">Learn about retention policies &amp; labels to retain or delete | Microsoft Learn</a></p><p>If you're using Adaptive protection and want to automatically retain content deleted by elevated risk users, follow these steps to turn on this new integration.</p><ol><li>Sign in to the <a href=\"https://compliance.microsoft.com/\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft Purview compliance portal</a>.</li><li>Navigate to <i>Data lifecycle management &gt; Microsoft 365 &gt; Adaptive protection settings</i> in the top right corner.</li><li>Turn the setting ON and select <i>Save</i>.</li></ol><p></p><p><img src=\"https://cxcs.microsoft.net/file/messagecenter/en-us/fe6a20ed-77ce-44ce-b862-bc7f4b78b93e\" alt=\"admin settings\"></p><p><img src=\"https://cxcs.microsoft.net/file/messagecenter/en-us/521b359c-13a9-41ef-ad96-215789a32eb3\" alt=\"admin settings\"></p><p>If you’re not using Adaptive protection already, turn on Adaptive protection and the new feature will be enabled along with Adaptive protection.</p><p>This rollout will happen automatically by the specified date with no admin action required before the rollout. You may want to notify your users about this change and update any relevant documentation as appropriate.</p>",
       "ContentType": "html"
     },
@@ -9504,58 +9744,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 22, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Organizations can enhance meeting security with synthetic audio and video detection solutions provided by certified third-party providers. Third-party detection solutions analyze meeting media for signs of synthetic or manipulated audio and video and send detection signals to Teams, enabling integrated in-meeting experiences and controls.</p><p><b>Important:</b> Synthetic media detection is performed by the third-party provider. Microsoft Teams provides the platform integration and experiences for surfacing and acting on detection signals from supported providers.</p><p>This message is associated with Microsoft 365 Roadmap ID 573451.</p><p><b><b>Rollout Schedule:</b></b></p><p>Targeted Release (Worldwide): We will begin rolling out in mid-November 2026 and expect to complete by late November 2026.</p><p>General Availability (Worldwide): We will communicate via Message center when we are ready to proceed.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Organizations can choose and integrate certified third-party deepfake detection solutions into Microsoft Teams meetings, helping protect users from emerging AI-generated voice and video threats. This gives customers more flexibility to meet security and compliance needs while enabling users to make more informed trust decisions during meetings.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>To use third-party Synthetic Audio and Video Detection in Microsoft Teams, administrators should evaluate and select a supported detection provider, deploy the provider app through Manage apps in the Teams admin center, grant required permissions, and configure applicable Teams meeting policies.</p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvjr00xj-1\"><b>Question</b></td><td data-row=\"row-mvjr00xj-1\"><b>Answer</b></td></tr><tr><td data-row=\"row-mvjr00xj-2\">Does the change introduce or significantly modify AI/ML capabilities that interact with customer data?</td><td data-row=\"row-mvjr00xj-2\">Yes. Certified third-party providers may analyze meeting audio/video signals for synthetic media detection. Review provider terms, data handling, and compliance documentation before enabling.</td></tr><tr><td data-row=\"row-mvjr00xj-3\">Does the change include an admin control?</td><td data-row=\"row-mvjr00xj-3\">Yes. Admins manage provider app deployment, permissions, and Teams meeting policy configuration.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "573451"
-      },
-      {
-        "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476182Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476183Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476184Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476185Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476186Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476187Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Teams will support certified third-party synthetic audio and video detection in meetings starting mid-November 2026. Organizations can integrate these solutions to enhance security against AI-generated media threats. Admins must deploy provider apps, grant permissions, and configure meeting policies. Detection is performed by third parties, with Microsoft Teams enabling integration."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Desktop, Mac, Web"
-      }
-    ],
-    "EndDateTime": "2027-02-15T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1509787",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-22T16:22:31.007Z",
-    "Services": [
-      "Microsoft Teams"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-10-15T23:01:09Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Teams: Third-party synthetic audio and video detection in meetings",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p><b><b>What and why</b></b></p><p>Microsoft Teams is introducing AI-powered, context-aware phishing detection to help identify phishing, social engineering, impersonation attempts, and deceptive intent. The capability analyzes conversation context to identify suspicious behavior that may not include traditional indicators such as malicious links or files.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release:</b> Beginning in <b>early November 2026</b> and expected to complete by <b>mid-November 2026</b></li><li><b>General Availability (Worldwide):</b> Beginning in <b>early December 2026</b> and expected to complete by <b>mid-December 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>For most users, detection focuses on external first-contact chats.</li><li>Teams mobile users in China may also receive additional phishing and fraud protection for in-tenant conversations.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li></ul><p><i>What will happen</i></p><ul><li>Teams will use AI-powered, context-aware detection to identify potential phishing and related suspicious behavior.</li><li>During initial quality validation, detection may run in the background without showing warnings to users.</li><li>After validation, users may see a warning when potential phishing is detected:&nbsp;</li></ul><p class=\"ql-indent-1\"><img src=\"\nhttps://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/10/22201.png\" width=\"400\"></p><ul><li>For Teams mobile users in China, additional protection may also apply to in-tenant conversations to address fraud patterns observed in the region.</li><li>This capability is used only for security protection and not for productivity, summarization, advertising, user monitoring, or other non-security purposes.</li><li>Customer message content is not retained by the detection system for model training or other secondary uses.</li><li>No new admin configuration is required.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required to enable this protection.</p><p>We recommend that admins review organizational guidance for interacting with unfamiliar external contacts and remind users to report suspicious activity or incorrect detections through available Teams reporting experiences.</p><p><b>Learn more</b></p><ul><li><a href=\"https://support.microsoft.com/teams/chat/phishing-content-detection-microsoft-teams\" rel=\"noopener noreferrer\" target=\"_blank\">Phishing content detection in Microsoft Teams | Microsoft Support</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-ca43\">Question</td><td data-row=\"row-ca43\">Answer</td></tr><tr><td data-row=\"row-em4r\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-em4r\">Yes. Teams analyzes conversation context to detect suspicious behavior. The request states that customer message content is not retained by the detection system for model training or other secondary uses.</td></tr><tr><td data-row=\"row-dlaz\">Does the change introduce or significantly modify AI/ML capabilities that interact with customer data?</td><td data-row=\"row-dlaz\">Yes. The change introduces AI-powered, context-aware detection that analyzes conversation context for phishing, social engineering, impersonation attempts, and deceptive intent.</td></tr></tbody></table>",
       "ContentType": "html"
     },
@@ -9567,7 +9755,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475956Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475957Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475958Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475959Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475961Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144927Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144929Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144931Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144932Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144933Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10681,106 +10869,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 19, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Organizations can now allow trusted external presenters to manage Microsoft Teams event production controls. Federated (B2B) users and guest users can be assigned through the <b>Who has control of production</b> <b>tools</b> setting, enabling them to manage the attendee viewing experience during Teams events.</p><p>This feature helps organizations that work with external event producers, agencies, and third-party event management partners by allowing authorized external presenters to perform production tasks without requiring internal staff to manage the event.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=567298\" rel=\"noopener noreferrer\" target=\"_blank\">567298</a>.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release:</b> Beginning in <b>early August 2026</b> and expected to complete by <b>early October 2026 </b>(previously early September) (previously mid-August)</li><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Beginning <b>early August 2026</b> and expected to complete by <b>early November 2026</b> (previously early October)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations that use Microsoft Teams events</li><li>Event organizers who work with external presenters, production vendors, agencies, or trusted partners</li><li>Federated (B2B) users and guest users who are invited to participate in Teams events</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li><li>Teams events</li></ul><p><i>What will happen</i></p><ul><li>Event organizers can grant production control permissions to federated (B2B) users and guest users.</li><li>Authorized external presenters can manage production controls and determine what attendees see during an event.</li><li>The feature is available only when an organizer explicitly assigns production control access.</li><li>Existing events and configurations will not be modified automatically.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required before rollout.</p><p>We recommend that you:</p><ul><li>Review internal guidance and governance policies for Teams events that include external participants.</li><li>Inform event organizers about this new capability.</li><li>Determine which external presenters, vendors, or partners should be authorized to receive production control permissions.</li><li>Update any training or documentation used by event organizers, if applicable.</li></ul><p>Organizers can use the <b>Who has control of production tools</b> setting when configuring a Teams event to grant production access to trusted external users.</p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mu2wt8tj-5\">Question</td><td data-row=\"row-mu2wt8tj-5\">Answer</td></tr><tr><td data-row=\"row-mu2wt8tj-6\">Does this change provide a new way for users, tenants, or subscriptions to communicate?</td><td data-row=\"row-mu2wt8tj-6\">Yes. This feature enables organizations to include federated (B2B) and guest users in Teams event production workflows, expanding collaboration and communication capabilities with trusted external participants.</td></tr><tr><td data-row=\"row-mu2wt8tj-7\">Does this change include an admin or organizer control?</td><td data-row=\"row-mu2wt8tj-7\">Yes. Event organizers can use the Who has control of production tools setting to grant or restrict production control access for trusted external users when configuring a Teams event.</td></tr><tr><td data-row=\"row-mu2wt8tj-8\">Can users enable or disable this capability themselves?</td><td data-row=\"row-mu2wt8tj-8\">Yes. Event organizers can choose whether to grant production control permissions to federated (B2B) and guest users when setting up an event.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "567298"
-      },
-      {
-        "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477887Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477888Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477889Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Teams now allows event organizers to grant production control permissions to trusted external presenters, including federated (B2B) and guest users, enabling them to manage event production controls. This feature, rolling out August–November 2026, enhances collaboration with external partners without automatic changes to existing events."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Desktop, Mac, Web"
-      }
-    ],
-    "EndDateTime": "2026-12-14T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1443517",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-19T17:44:24.607Z",
-    "Services": [
-      "Microsoft Teams"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-07-31T00:25:38Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Teams: External presenters can manage event production controls",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated October 19, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>To help organizations deliver more polished and branded town hall events, Microsoft Teams is introducing the ability for organizers and presenters to <b>upload custom background images</b> in the <i>Manage what attendees see experience</i>. This enhancement allows teams to replace default backgrounds with branded visuals—such as company logos or event-specific designs—so presenters and shared content appear consistently on brand for attendees. This feature is available for Teams events organizers with a Teams Enterprise license. This update applies to Teams for Windows desktop and Mac desktop.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?searchterms=561493\" rel=\"noopener noreferrer\" target=\"_blank\">561493</a></b>.</p><p><b><b>When this will happen</b></b></p><ul><li><b>Targeted Release: </b>Rollout begins in<b> early June 2026 </b>(previously late May)<b> </b>and is expected to complete by<b> early June 2026 </b>(previously late May).</li><li><b>General Availability (Worldwide): </b>Rollout begins in<b> early June 2026</b> and is expected to complete by <b>early November 2026</b> (previously mid-September).</li></ul><p><b><b>How this affects your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizers and presenters of <b>Teams town hall events</b></li><li>Users assigned a <b>Teams Premium </b>license</li><li>Tenants using <b>Manage what attendees see</b> in <i>town halls</i></li></ul><p><i>What will happen</i></p><ul><li>Organizers and presenters can upload<b> custom background images </b>directly within the <b><i>Manage what attendees see</i></b><i> experience</i>.</li><li>Uploaded backgrounds appear behind presenters and shared content in supported town hall layouts.</li><li>JPEG and PNG image formats are supported, with recommended resolution guidance shown during upload.</li><li><b>Custom backgrounds</b> appear alongside existing default background options in the background picker.</li><li>The feature is<b> enabled by default </b>for eligible users and <b>applies only to town hall events where Manage what attendees see is enabled</b>.</li><li>There is<b> no change</b> to standard Teams meetings or webinars.</li></ul><p><b><b>What you can do to prepare</b></b></p><ul><li>No admin action is required before rollout.</li><li>Consider notifying users who organize or present town halls about this new capability.</li><li>Prepare branded background images that align with your organization’s visual identity guidelines.</li><li>Update internal documentation or event playbooks if you provide guidance on hosting town halls.</li><li>Optionally, run a test town hall event to familiarize presenters with the upload flow and attendee experience.</li></ul><p><b>Learn more:</b> <a href=\"https://support.microsoft.com/office/manage-what-attendees-see-in-microsoft-teams-19bfd690-8122-49f4-bc04-c2c5f69b4e16#bkmk_customize_event_screen\" rel=\"noopener noreferrer\" target=\"_blank\">Customize the event screen - Manage what attendees see in Microsoft Teams | Microsoft Support</a></p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mvfj8v25-5\"><b>Question</b></td><td data-row=\"row-mvfj8v25-5\"><b>Answer</b></td></tr><tr><td data-row=\"row-mvfj8v25-6\">Does the change store new customer data?</td><td data-row=\"row-mvfj8v25-6\"><b>Yes.</b> Uploaded custom background images are stored as part of the Teams town hall event configuration.</td></tr><tr><td data-row=\"row-mvfj8v25-7\">Does the change alter how existing customer data is processed or accessed?</td><td data-row=\"row-mvfj8v25-7\"><b>Yes.</b> Background images are rendered behind presenters and shared content during the live event for attendees.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "561493"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Teams will allow organizers and presenters of town hall events with Teams Premium licenses to upload custom background images in the \"Manage what attendees see\" feature. Rollout begins early June 2026, enabling branded visuals behind presenters and shared content in supported layouts. No admin action required."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Desktop, Mac"
-      }
-    ],
-    "EndDateTime": "2026-12-14T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1307982",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-19T17:34:40.523Z",
-    "Services": [
-      "Microsoft Teams"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-05-12T01:21:10Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Teams Town halls: Upload custom backgrounds in Manage what attendees see",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated October 19, 2026: We have updated the timeline. Thank you for your patience.</p><p><b><b>What and why</b></b></p><p>We are introducing a more consistent way for users to access and manage important resources in Microsoft Teams chats and channels. Users will be able to pin frequently used resources directly below the chat or channel header, pin multiple messages alongside other resources, and organize them into folders. On Microsoft Teams mobile, users will be able to access shared resources and folders by tapping the chat or channel header. This change will help users stay organized and provide them with a centralized location to quickly find, access, and manage important resources.</p><p>As part of this update, the <i>In this chat </i>and <i>In this channel </i>panes will be removed. Existing resources within these panes will be accessible through the new resource management experience.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release (Worldwide):</b> Rollout begins in late September 2026 and is expected to complete by early October 2026.</li><li><b>General Availability (Worldwide, GCC, GCC High, and DoD): </b>Rollout begins in early November 2026 (previously early October) and is expected to complete by mid-November 2026 (previously mid-October).</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users who access or manage resources in Microsoft Teams chats and channels.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li><li>Microsoft Teams mobile</li></ul><p><i>What will happen</i></p><ul><li>Users will have a centralized location to find, access, and manage important resources.</li><li>Users will be able to pin frequently used resources directly below the chat or channel header, pin multiple messages alongside other resources, and organize them into folders.</li><li>On mobile devices, users will be able to access shared resources and folders by tapping the chat or channel header.</li><li>The <i>In this chat </i>and <i>In this channel</i> panes will be removed; existing resources within these panes will be accessed and managed through the updated experience.</li></ul><p>Screenshot - <i>Comparison before and after</i></p><p><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21769-1.png\"></p><p><b><b>Action required and recommendations</b></b></p><p>No administrative action is required. We recommend that you:</p><ul><li>Inform users about the updated resource pinning and management experience.</li><li>Update any internal training or support documentation that references the <i>In this chat</i> and <i>In this channel</i> panes.</li></ul><p><b><b>Learn more</b></b></p><p>We will update this post with new documentation.</p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
       "ContentType": "html"
     },
@@ -10792,7 +10880,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.54771Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477101Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477102Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146637Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146639Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1473153\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114664Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11301,7 +11389,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5478103Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5478104Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5478105Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1148138Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114814Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1148141Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -13579,7 +13667,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477028Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477029Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547703Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477031Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146531Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146532Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146534Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146535Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -13717,7 +13805,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477931Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477933Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147899Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147901Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -13769,7 +13857,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475643Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475644Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144504Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144507Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -13989,46 +14077,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 2, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>We are enhancing how <b>Microsoft Defender for Office 365</b> identifies and manages promotional email. Promotional messages will be tagged as “promotions” (previously “Bulk” in preview) and can be moved automatically to a new Promotions folder. The system learns from user actions, such as moving messages into or out of the <b><i>Promotions folder</i></b> and applies those preferences to future messages. These improvements reduce inbox clutter and help users stay focused while still receiving promotional content they want.</p><p><b><b>When this will happen</b></b></p><ul><li><b>Public Preview (Limited): </b>We will begin rolling out in <b>mid-April 2026</b> and expect to complete by <b>mid-May 2026</b> (previously<b> </b>end of April). To be included in the public preview program, send an email to <a href=\"mailto://BulkMailPreviews@microsoft.com\" rel=\"noopener noreferrer\" target=\"_blank\">BulkMailPreviews@microsoft.com</a> indicating: Organization name, Tenant ID and your onmicrosoft.com domain (e.g contoso.onmicrosoft.com). Slots are limited and will close on <b>May 15th, 2026</b>.</li><li><b>General Availability (Worldwide): </b>We will begin rolling out in<b> late July 2026 </b>(previously early July)<b> </b>and expect to complete by <b>late October 2026</b> (previously late August).</li><li><b>General Availability (DoD, GCC, GCC High): </b>We will begin rolling out in<b> late July 2026</b> (previously early July)<b> </b>and expect to complete by <b>late November 2026</b> (previously mid-September).</li></ul><p><b><b>How this affects your organization</b></b></p><p><i>Who is affected</i></p><ul><li>All organizations that use <b>Microsoft Defender for Office 365</b> across Worldwide, GCC, GCC High, and DoD clouds</li></ul><p><i>What will happen</i></p><ul><li>Incoming promotional messages will be tagged as “<b><i>promotions</i></b>.” (previously “Bulk” in private and public preview)</li><li>If the <b>Bulk Moves Enabled setting</b> is turned on, tagged messages will automatically move to a <b>Promotions folder</b> created in user mailboxes.</li><li>The system will learn from user actions when they move messages into or out of the Promotions folder. Future messages will follow the learned behavior.</li><li>Users will be able to <b>create inbox rules that reference the promotions tag</b>.<ul><li><b>During the Public Preview:</b> <b>Tagging will be opt-in</b> and configured using Exchange transport rules.</li><li>Folder routing will be enabled through anti-spam policy settings (“Bulk moves enabled”).</li><li>Both features will be able to be scoped to pilot security groups for a staged rollout.</li></ul></li><li><b>At Worldwide General Availability, tagging will be enabled by default for all tenants and will always remain that way.</b></li><li><b>For the tagging experience</b>, supported outlooks clients are Outlook on the web and outlook for Windows. Other client such as Outlook for IOS/Android and classic outlook will follow subsequently</li><li><b>For the promotions folder experiences</b>, Outlook on the web, outlook for Windows, Outlook for IOS/Android and classic outlook are all supported.&nbsp;</li></ul><p><i>Figure one - Admin configuration for tagging using exchange transport rule (required for public preview opt-In):</i></p><p><i>&nbsp;</i><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/110e041c-9767-4ff6-b95a-b37dc4815cdc/8a8a6f9d519799822a0259a099b17f2aaf5f39b3.png\" alt=\"user settings\"></p><p><i>Figure two - Admin configuration for Bulk moves enabled to provision the promotions folder:</i></p><p><i>&nbsp;</i><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/a815915f-989a-4391-b135-19e188ee232d/05e417e5652a87e20081358693796972210ab83e.png\" alt=\"user settings\"></p><p><i>Figure three - System tagging of “Promotions” in outlook client and promotions folder (previously&nbsp;&nbsp;tagged as “Bulk” in private and public preview):</i></p><p>&nbsp;<img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/6680f473-9df6-4ed8-8c16-ecbc69c42fb6/88c6582e0698b7b767ac961bf617cce0e1b00d3d.png\" alt=\"user settings\"></p><p><i>Figure four - User inbox rules using the promotions” tag:</i></p><p>&nbsp;<img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/62e24477-b653-432f-8840-edbc788b00e5/7acb536715ce421af5ac3ff77a913e3ba596384f.png\" alt=\"user settings\"></p><p><b><b>What you can do to prepare</b></b></p><ul><li>To be included in the public preview program, send an email to <a href=\"mailto://BulkMailPreviews@microsoft.com\" rel=\"noopener noreferrer\" target=\"_blank\">BulkMailPreviews@microsoft.com</a> indicating: Organization name, Tenant ID and your onmicrosoft.com domain (e.g contoso.onmicrosoft.com). Slots are limited and will close on April 30th, 2026.</li><li>Review your internal mailbox and message handling guidance and update training materials if needed.</li><li>If you plan to participate in the Public Preview, review your Exchange transport rule and anti-spam policy configurations to determine if you want to opt-in.</li><li>Monitor the product documentation. You can review the following: <a href=\"https://learn.microsoft.com/defender-office-365/anti-spam-bulk-complaint-level-bcl-about\" rel=\"noopener noreferrer\" target=\"_blank\">Bulk email detection and bulk complaint level (BCL) in cloud organizations</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mur5tawc-6\"><b>Question</b></td><td data-row=\"row-mur5tawc-6\"><b>Answer</b></td></tr><tr><td data-row=\"row-mur5tawc-7\"><b>Does the change alter how existing customer data is processed, stored, or accessed?</b></td><td data-row=\"row-mur5tawc-7\"><b>Yes. </b>Incoming email will receive the promotions classification and may be moved automatically to the Promotions folder depending on admin configuration.</td></tr><tr><td data-row=\"row-mur5tawc-8\"><b>Does the change introduce or significantly modify AI or ML that interacts with customer data?</b></td><td data-row=\"row-mur5tawc-8\"><b>Yes. </b>The system learns from user actions when they move messages and applies that learning to future similar messages.</td></tr><tr><td data-row=\"row-mur5tawc-9\"><b>Does the change include an admin control, and can it be controlled through Entra ID group membership?</b></td><td data-row=\"row-mur5tawc-9\"><b>Yes. </b>Admins can enable or disable Bulk Moves Enabled and can opt in to tagging during Public Preview. These controls can be scoped using existing admin delegation models.</td></tr><tr><td data-row=\"row-mur5tawc-10\"><b>Does the change allow a user to enable or disable the feature themselves?</b></td><td data-row=\"row-mur5tawc-10\"><b>Yes. </b>Users can override tagging behavior by moving messages in or out of the Promotions folder, which trains the ML model and adjusts future message handling.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Defender for Office 365 will tag promotional emails as “promotions” and can auto-move them to a Promotions folder, learning from user actions. Public preview starts mid-April 2026; general rollout completes by late 2026. Admins control settings; users can customize via message moves."
-      }
-    ],
-    "EndDateTime": "2026-12-31T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1279093",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-10-02T16:12:47.213Z",
-    "Services": [
-      "Microsoft Defender XDR"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-04-13T22:54:05Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Defender for Office 365: Enhancing how we handle promotional mail",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p><b><b>What and why</b></b></p><p>As previously communicated in <i>MC1466860</i> and <i>MC1447678</i>, Microsoft is continuing the retirement of Exchange Web Services (EWS) in Exchange Online.</p><p>Beginning October 10, 2026, setting EWSEnabled=True will no longer be sufficient to allow EWS access for affected Worldwide tenants. Organizations that require EWS must configure EWSAllowedAppIDs to specify which applications are permitted to access EWS.</p><p>This change is part of the final phase of EWS retirement and is intended to help organizations identify EWS dependencies, reduce service disruption, and support migration planning.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Worldwide, GCC, GCC High, DoD:</b> Beginning in <b>early October 2026</b> and expected to complete by <b>early July 2027</b></li></ul><p><b>Key milestones for Worldwide tenants with EWSEnabled=True and no configured EWSAllowedAppIDs list:</b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muq1rbu2-4\"><b>Date</b></td><td data-row=\"row-muq1rbu2-4\"><b>Milestone</b></td></tr><tr><td data-row=\"row-muq1rbu2-5\">October 2, 2026</td><td data-row=\"row-muq1rbu2-5\">Microsoft identifies affected Worldwide tenants. After this date, tenants that enable EWS must configure EWSAllowedAppIDs themselves.</td></tr><tr><td data-row=\"row-muq1rbu2-6\">October 8-9, 2026</td><td data-row=\"row-muq1rbu2-6\">Microsoft creates and populates EWSAllowedAppIDs for qualifying Worldwide tenants based on EWS activity observed during the previous 60 days.</td></tr><tr><td data-row=\"row-muq1rbu2-7\">October 10, 2026</td><td data-row=\"row-muq1rbu2-7\">EWSAllowedAPPIDs becomes required when EWSEnabled=True. Applications note included in the allow list may lose access to EWS.</td></tr></tbody></table><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Exchange Online administrators</li><li>Organizations that continue to use applications or services that depend on EWS</li><li>Tenants with <b>EWSEnabled=True</b></li></ul><p><i>Platforms and services</i></p><ul><li>Exchange Online</li><li>Exchange Web Services (EWS)</li></ul><p><i>What will happen</i></p><ul><li>Beginning October 10, 2026, affected Worldwide tenants with EWSEnabled=True must have a configured EWSAllowedAppIDs allow list. Applications not included in the allow list may lose access to EWS.</li><li>For identified Worldwide tenants with EWSEnabled=True and no configured EWSAllowedAppIDs list on October 3 2026, Microsoft creates and populates an allow list using EWS activity observed during the previous 60 days. Infrequently used applications may not be identified.</li><li>Cross-tenant organization relationships are not affected by the EWSAllowedAppIDs requirement.</li><li>Organizations remain responsible for reviewing, validating, and maintaining EWSAllowedAppIDs.</li><li>EWSAllowedAppIDs is a replacement list. Ensure all required AppIDs are included whenever the configuration is updated.</li><li>Microsoft applications and scenarios that may generate EWS traffic include Outlook for Windows, Classic Outlook for Mac, Excel Power Query, Power BI, and Exchange Server hybrid scenarios.</li><li>Outlook for Windows customers should be on August 2026 build 16.0.20430.20092 or later. If EWS-related issues continue after disabling EWS, the cause may be customer-forced configuration. Test whether blocking EWS for the Office client AppID is possible without impact.</li><li>New Outlook for Mac is not affected. If your organization continues to use Classic Outlook for Mac, ensure the Microsoft Office AppID is included in EWSAllowedAppIDs.</li><li>Tenants with EWSEnabled not configured (Null) remain subject to Microsoft's phased EWS retirement process and will have EWS disabled as part of that rollout.</li><li>Organizations with EWSEnabled=True and a configured EWSAllowedAppIDs allow list will not have their EWSEnabled setting modified by Microsoft before April 2027.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>If your organization relies on EWS:</p><ul><li>Review EWS usage reports and identify applications and services that require continued EWS access.</li><li>Configure and validate an EWSAllowedAppIDs allow list before October 10, 2026.</li><li>Include Microsoft first-party applications that continue to rely on EWS if they appear in your usage reporting.</li><li>Ensure all required AppIDs are included whenever EWSAllowedAppIDs is updated.</li><li>Keep the allow list current as applications are added, removed, or migrated away from EWS.</li><li>Enable EWS only when required for approved applications.</li><li>Continue planning migration from EWS to Microsoft Graph where possible.</li></ul><p>To verify the configured allow list: <code>Get-OrganizationConfig -RetrieveEwsOperationAccessPolicy | Format-List EwsAllowedAppIDs</code></p><p>Allow up to 24 hours for EWSAllowedAppIDs changes to take effect and approximately one hour for EWSEnabled changes.</p><p><b><i>Important:</i></b><i> EWSAllowList is unrelated to EWS retirement and does not replace EWSAllowedAppIDs.</i></p><p><b>Learn more</b></p><ul><li><a href=\"https://techcommunity.microsoft.com/blog/exchange/exchange-online-ews-your-time-is-almost-up/4492361\" rel=\"noopener noreferrer\" target=\"_blank\">Exchange Online EWS, Your Time is Almost Up | Microsoft Community Hub</a></li><li><a href=\"https://support.microsoft.com/support/known-issues/how-to-revert-the-outlook-desktop-webview-based-room-finder-to-the-legacy-room-finder\" rel=\"noopener noreferrer\" target=\"_blank\">How to revert the Outlook Desktop WebView based Room Finder to the legacy Room Finder | Microsoft Support</a></li><li><a href=\"https://techcommunity.microsoft.com/blog/exchange/impact-of-exchange-online-ews-deprecation-on-hybrid-rich-coexistence-and-cross-o/4561161\" rel=\"noopener noreferrer\" target=\"_blank\">Impact of Exchange Online EWS Deprecation on Hybrid Rich Coexistence and Cross-org Sharing | Microsoft Community Hub</a></li><li><a href=\"https://techcommunity.microsoft.com/blog/exchange/notes-from-the-field-testing-ewsallowedappids-safely/4548568\" rel=\"noopener noreferrer\" target=\"_blank\">Notes from the field: testing EWSAllowedAppIDs safely | Microsoft Community Hub</a></li></ul><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muq0zcka-3\">Question</td><td data-row=\"row-muq0zcka-3\">Answer</td></tr><tr><td data-row=\"row-muq0zcka-4\">Does this change include an admin control?</td><td data-row=\"row-muq0zcka-4\">Yes. EWSAllowedAppIDs introduces a tenant-level administrative control that allows Exchange Online administrators to explicitly define which applications are permitted to access EWS.</td></tr><tr><td data-row=\"row-muq0zcka-5\">Does this change alter how existing customer data is accessed?</td><td data-row=\"row-muq0zcka-5\">Yes. The change modifies how applications are authorized to access Exchange Online data through EWS by requiring administrators to explicitly allow approved application IDs as retirement enforcement begins.</td></tr><tr><td data-row=\"row-muq0zcka-6\">Does this change alter how admins monitor, manage, or demonstrate compliance-related activities?</td><td data-row=\"row-muq0zcka-6\">Yes. Administrators must identify EWS dependencies, configure and maintain an EWSAllowedAppIDs allow list, and validate application access as part of preparing for EWS retirement.</td></tr></tbody></table>",
       "ContentType": "html"
     },
@@ -14079,7 +14127,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477529Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477531Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477531Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477533Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147281Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147283Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147284Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147286Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15038,7 +15086,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547733Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477331Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146993Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146995Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15762,7 +15810,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475275Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547528Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475282Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144117Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114412Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144122Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15814,7 +15862,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476873Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476874Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476875Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146306Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146308Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146309Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16008,7 +16056,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547587Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475871Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475872Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475873Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5475874Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144818Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114482Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144821Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144823Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1144825Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16108,7 +16156,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477415Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477416Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477417Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147125Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147126Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147128Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16159,7 +16207,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476085Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476086Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1145109Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114511Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18192,7 +18240,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477648Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547765Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547765Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477654Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477655Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477657Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147464Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147466Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147468Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147471Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147473Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1147476Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -19871,7 +19919,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477259Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477261Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477262Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477263Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5477264Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146863Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146864Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146866Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146867Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146869Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -21263,7 +21311,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476694Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476695Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476695Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476696Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146049Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.114605Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146052Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146053Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -21649,7 +21697,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476968Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476969Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.547697Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T15:08:44.5476971Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146443Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146445Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146446Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-17T18:10:15.1146449Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
