@@ -1,5 +1,352 @@
 [
   {
+    "ActionRequiredByDateTime": "2027-02-28T08:00:00Z",
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p><b><b>What and why</b></b></p><p>As previously announced in <b>MC1464926</b>, we are introducing restrictions on classic publishing and custom scripting in SharePoint Online to reduce security and governance risks associated with legacy customization. Beginning March 1, 2027, we will block the creation of new classic publishing sites and the activation of publishing features for site collections and subsites across all tenants. Administrators will no longer be able to override these restrictions using the <code>AllowClassicPublishingSiteCreation</code> tenant setting.</p><p>This reminder outlines the changes taking effect on March 1, 2027, and the steps administrators should take to prepare.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Rollout will begin in early March 2027 and is expected to complete by early October 2028.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>All SharePoint Online tenants.</li><li>Administrators managing classic publishing sites, custom scripts, provisioning automation, and migration workflows.</li><li>Tenants created on or after March 1, 2027, which will have additional restrictions.</li></ul><p><i>Platforms and services</i></p><ul><li>SharePoint Online</li></ul><p><i>What will happen</i></p><p><b>All tenants, beginning March 1, 2027:</b></p><ul><li>SharePoint Online will block the creation of classic publishing sites and the activation of publishing features for site collections and subsites.</li><li>SharePoint Online will enforce the <code>AllowClassicPublishingSiteCreation</code> tenant setting as False. Administrators will no longer be able to change this setting.</li></ul><p><b>Additional restrictions for tenants created on or after March 1, 2027:</b></p><ul><li>Users will no longer be able to create or edit classic user-created pages or add or update custom scripts.</li><li>SharePoint Online will enforce the <code>DenyAddAndCustomizePages</code> site setting as <b>True</b>. Administrators will no longer be able to change this setting.</li><li>The <b><i>Allow users to create new modern pages</i></b> setting in <b>SharePoint admin center &gt; <i>Settings</i> &gt; <i>Pages</i></b><i> </i>will be enabled and cannot be disabled.</li><li>This modern-page setting change will not affect existing tenants.</li></ul><p><b>Classic user-created pages in scope:</b></p><ul><li>Affected pages include wiki, Web Part, blog, publishing, and custom ASPX pages.</li><li>List and library views and list form pages are excluded from the page read-only change.</li><li>Custom scripts embedded in these experiences will remain subject to scripting restrictions when the applicable phase takes effect.</li></ul><p><b><b>Action required and recommendations</b></b></p><p><b>Before March 1, 2027:</b></p><ul><li>Identify provisioning automation and migration plans that create classic publishing site collections or subsites or activate publishing features.</li><li>Update affected workflows to use modern alternatives.</li></ul><p><b>To prepare for October 1, 2028</b>, we recommend that existing tenants:</p><ul><li>Review the requirements for the classic pages assessment.</li><li>Inventory classic pages using the <a href=\"https://pnp.github.io/pnpassessment/index.html\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft 365 Assessment Tool</a> and assign modernization owners.</li><li>Pilot the transformation of classic SharePoint pages to modern pages. Transformation approaches vary by page type, and customized pages may require rebuilding.</li></ul><p><b><b>Learn more</b></b></p><ul><li><a href=\"https://learn.microsoft.com/sharepoint/dev/transform/assessment-tool-classic-pages-requirements\" rel=\"noopener noreferrer\" target=\"_blank\">Requirements for the classic pages assessment | Microsoft Learn</a></li><li><a href=\"https://learn.microsoft.com/sharepoint/dev/transform/modernize-userinterface-site-pages\" rel=\"noopener noreferrer\" target=\"_blank\">Transform classic SharePoint pages to modern pages | Microsoft Learn</a></li></ul>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Starting March 1, 2027, SharePoint Online will block creation and activation of classic publishing sites and features, enforcing restrictions on custom scripting. New tenants face additional limits on classic pages. Administrators must update workflows and modernize pages before the rollout completes by October 2028."
+      }
+    ],
+    "EndDateTime": "2028-10-31T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1565964",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-11-23T22:43:52.533Z",
+    "Services": [
+      "SharePoint Online"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-11-23T22:43:31Z",
+    "Tags": [
+      "Feature update",
+      "User impact",
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Microsoft SharePoint Online: Classic publishing restrictions begin March 1, 2027",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Starting January 4, 2027, or soon after, we are updating Microsoft Intune Data Warehouse infrastructure to align policy-related reporting with updated Intune reporting infrastructure. This update applies to the following collections:</p><ul><li>policyDeviceActivities</li><li>policyTypeActivities</li><li>policyUserActivities</li><li>deviceConfigurationProfileDeviceActivities</li><li>deviceConfigurationProfileUserActivities</li><li>compliancePolicyStatusDeviceActivities</li><li>compliancePolicyStatusDevicePerPolicyActivities</li></ul><p></p><p><b>How this will affect your organization:</b></p><p>Existing Data Warehouse connections and report schemas will remain unchanged. Following this update, you may notice differences in policy-status counts in reports that use the affected collections.&nbsp;</p><p><b>Note:</b> Counts in Data Warehouse may also differ from reports in the Intune admin center due to differences in refresh timing and data aggregation.</p><p><b>What you need to do to prepare:</b></p><p>No action is required. If your organization uses the affected collections for custom reporting or analysis, you may notice that policy-status counts may change following the update.</p><p></p><p>Learn more: <a href=\"https://learn.microsoft.com/intune/developer/data-warehouse/create-reports\" rel=\"noopener noreferrer\" target=\"_blank\">Use the Intune Data Warehouse - Microsoft Intune | Microsoft Learn</a></p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Starting January 4, 2027, Microsoft Intune Data Warehouse will update policy-related reporting collections, possibly causing changes in policy-status counts. Existing connections and schemas remain unchanged, and no action is required. Differences from Intune admin center reports may occur due to timing and aggregation."
+      }
+    ],
+    "EndDateTime": "2027-03-31T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1565960",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-23T22:41:42.297Z",
+    "Services": [
+      "Microsoft Intune"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-11-23T22:41:36Z",
+    "Tags": [
+      "Admin impact"
+    ],
+    "Title": "Plan for Change: Updates to policy-related reporting in Microsoft Intune Data Warehouse",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 23, 2026: We have updated the timeline. Thank you for your patience.</p><p><b><b>What and why</b>&nbsp;</b></p><p>Microsoft Purview Data Lifecycle Management now allows admins to archive SharePoint files based on retention policies. This helps organizations reduce storage costs by moving inactive content to Microsoft 365 Archive while maintaining compliance and discoverability. Archived content is excluded from Copilot indexing, which can improve the relevance of Copilot responses by focusing results on current, active data.</p><p><b><b>Rollout schedule</b>&nbsp;</b></p><p><b>General Availability (GCC, GCC High, DoD):</b> Beginning in <b>mid-January 2027</b> (previously early December 2026) and expected to complete by <b>mid-February 2027</b> (previously early January)</p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Admins managing Microsoft Purview Data Lifecycle Management</li><li>Organizations using retention policies in SharePoint Online and OneDrive</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Purview (Data Lifecycle Management)</li><li>SharePoint Online</li><li>OneDrive</li><li>Microsoft 365 Archive</li><li>Microsoft Copilot</li></ul><p><i>What will happen</i></p><ul><li>A new Archive option will be available within retention policy settings in Data Lifecycle Management.</li><li>Admins can configure retention policies to move inactive files to Microsoft 365 Archive storage.</li><li>Archived files remain available for compliance scenarios, including eDiscovery.</li><li>Archived content will be excluded from Copilot indexing, helping improve answer relevance.</li><li>This feature is not enabled by default and requires admin configuration.</li><li>Existing retention policies and compliance configurations remain unchanged unless updated by admins.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No immediate action is required. To prepare for and take advantage of this feature, we recommend that you:</p><ul><li>Review your current retention policies in Microsoft Purview Data Lifecycle Management.</li><li>Evaluate opportunities to reduce storage costs by archiving inactive content.</li><li>Update retention policies to include the new Archive option where appropriate.</li><li>Inform compliance and records management stakeholders about this new capability.</li><li>Review internal documentation and processes related to data lifecycle and storage optimization.</li></ul><p><b>Learn more:</b> <a href=\"https://learn.microsoft.com/purview/retention-settings#archiving-retained-sharepoint-files\" rel=\"noopener noreferrer\" target=\"_blank\">Configure Microsoft 365 retention settings to automatically retain or delete content | Microsoft Learn</a></p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mu5ri3hk-1\">Question</td><td data-row=\"row-mu5ri3hk-1\">Answer</td></tr><tr><td data-row=\"row-mu5ri3hk-2\">Does the change store new customer data, and if so where, is it cached or permanently stored?</td><td data-row=\"row-mu5ri3hk-2\">Files moved by retention policies are relocated to Microsoft 365 Archive storage, a distinct storage tier, and are stored there until restored or otherwise actioned.</td></tr><tr><td data-row=\"row-mu5ri3hk-3\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mu5ri3hk-3\">Archived files move out of active storage into Microsoft 365 Archive, changing how those files are stored and accessed going forward.</td></tr><tr><td data-row=\"row-mu5ri3hk-4\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-mu5ri3hk-4\">Archived content is excluded from Copilot indexing, which changes what data Copilot can access and surface in responses.</td></tr><tr><td data-row=\"row-mu5ri3hk-5\">Does the change modify, interrupt, or disable Purview capabilities such as retention policies, holds, or eDiscovery?</td><td data-row=\"row-mu5ri3hk-5\">Retention policies gain a new archive action, and archived files remain subject to eDiscovery, extending existing retention and discovery workflows.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "562345"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Purview Data Lifecycle Management will enable admins to archive inactive SharePoint files under retention policies starting mid-January 2027. Archived files move to Microsoft 365 Archive, remain compliant and discoverable, and are excluded from Copilot indexing to improve response relevance. Admin configuration is required."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2027-03-29T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1472601",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-23T22:27:57.953Z",
+    "Services": [
+      "Microsoft Purview"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-09-15T23:08:32Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Purview: Archive SharePoint files under retention policies",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 23, 2026: We have updated the timeline. Thank you for your patience.</p><p><b><b>What and Why</b></b></p><p>Microsoft Purview Data Lifecycle Management is introducing the ability to archive SharePoint files based on retention policies. This feature helps organizations reduce storage costs by moving inactive content to <b>Microsoft 365 Archive</b> while maintaining compliance and discoverability. By excluding archived content from Copilot indexing, organizations can also improve the relevance and quality of Copilot responses, ensuring users focus on current, active data.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=561208\" rel=\"noopener noreferrer\" target=\"_blank\">561208</a></b>.</p><p><b><b>Rollout Schedule</b></b></p><p><b>Public Preview: </b>We will begin rolling out <b>early September 2026</b> (previously mid-August) and expect to complete by <b>early October 2026</b> (previously early September).</p><p><b>General Availability (Worldwide): </b>Rollout will begin<b> early December 2026</b> (previously<b> </b>mid-November) and is expected to complete by<b> early January 2027 </b>(previously early December 2026).</p><p><b><b>Impact on Your Organization</b></b></p><p><i>Who is affected</i></p><ul><li>Admins managing Microsoft Purview Data Lifecycle Management</li><li>Organizations using retention policies in SharePoint Online and OneDrive</li></ul><p>Platforms/Services<i>Platforms/Services</i></p><ul><li>Microsoft Purview (Data Lifecycle Management)</li><li>SharePoint Online</li><li>Microsoft 365 Archive</li><li>Microsoft Copilot</li></ul><p><i>What will happen</i></p><ul><li>A new Archive option will be available within retention policy settings in<i> Data Lifecycle Management</i>.</li><li>Admins can configure retention policies to move inactive files to Microsoft 365 Archive storage.</li><li>Archived files remain available for compliance scenarios, including eDiscovery.</li><li>Archived content will be excluded from Copilot indexing, helping improve answer relevance.</li><li>This feature is <b>not enabled by default and requires admin configuration</b>.</li><li>Existing retention policies and compliance configurations remain unchanged unless updated by admins.<img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/eae47258-a343-4a8a-82e0-3272e67210cb/847f4fb4901c57ad9a2a93ee30d153470863406e.png\" alt=\"user settings\"></li></ul><p><b><b>Action Required / Recommendations</b></b></p><p>No immediate action is required.</p><p>To prepare and take advantage of this feature:</p><ul><li>Review your current retention policies in Microsoft Purview Data Lifecycle Management.</li><li>Evaluate opportunities to reduce storage costs by archiving inactive content.</li><li>Update retention policies to include the new Archive option where appropriate.</li><li>Inform compliance and records management stakeholders about this new capability.</li><li>Review internal documentation and processes related to data lifecycle and storage optimization.</li></ul><p><b><b>Compliance Considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mrtrsmyj-129\"><b>Question</b></td><td data-row=\"row-mrtrsmyj-129\"><b>Answer</b></td></tr><tr><td data-row=\"row-mrtrsmyj-130\">Does the change store new customer data?</td><td data-row=\"row-mrtrsmyj-130\">Yes. Archived files are stored in Microsoft 365 Archive (low-cost storage tier).</td></tr><tr><td data-row=\"row-mrtrsmyj-131\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mrtrsmyj-131\">Yes. Files meeting retention criteria can be moved from active storage to archive storage while remaining discoverable.</td></tr><tr><td data-row=\"row-mrtrsmyj-132\">Does the change introduce or modify AI/ML capabilities interacting with data?</td><td data-row=\"row-mrtrsmyj-132\">Yes. Archived content is excluded from Copilot indexing, influencing how Copilot processes and retrieves organizational data.</td></tr><tr><td data-row=\"row-mrtrsmyj-133\">Does the change modify Purview retention policies or workflows?</td><td data-row=\"row-mrtrsmyj-133\">Yes. Adds a new Archive action within retention policy configuration in Data Lifecycle Management.</td></tr><tr><td data-row=\"row-mrtrsmyj-134\">Does the change affect eDiscovery or Content Search?</td><td data-row=\"row-mrtrsmyj-134\">Yes. Archived content remains discoverable for compliance workflows such as eDiscovery.</td></tr><tr><td data-row=\"row-mrtrsmyj-135\">Does the change include an admin control?</td><td data-row=\"row-mrtrsmyj-135\">Yes. Admins configure and enable the feature through retention policy settings in Purview.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "561208"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Purview Data Lifecycle Management will add an Archive option to retention policies, allowing admins to move inactive SharePoint files to Microsoft 365 Archive for cost savings while maintaining compliance and discoverability. Archived content is excluded from Copilot indexing. Rollout begins September 2026; admin configuration is required."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2027-02-15T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1325441",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-23T22:25:28.683Z",
+    "Services": [
+      "Microsoft Purview"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-05-28T22:04:22Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Purview | Data Lifecycle Management - Archive SharePoint files under retention",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 23, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>We are introducing a new <b>priority cleanup workflow</b> in Microsoft Purview Data Lifecycle Management that allows administrators to <b>permanently delete (hard delete) specific OneDrive and SharePoint content types</b>, even when retention policies or holds are in place. This capability helps reduce data exposure risk from rapidly growing Copilot-related content while maintaining compliance through required eDiscovery admin review and approval.</p><p>This change is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558343\" rel=\"noopener noreferrer\" target=\"_blank\">558343</a>.</p><p><b><b>When this will happen:</b></b></p><p>Public Preview: We will begin rolling out <b>mid-August 2026</b> (previously mid-July) and expect to complete by <b>early December 2026</b> (previously end of November).</p><p>General Availability (Worldwide) Rollout begins<b> early December 2026</b> (previously end of November) and is expected to complete by<b> mid-January 2027 </b>(previously early January).</p><p><b><b>How this affects your organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Microsoft 365 administrators managing <b>Microsoft Purview Data Lifecycle Management</b></li><li>Organizations using <b>OneDrive for Business</b> and <b>SharePoint Online </b>with retention policies or holds</li></ul><p><b>What will happen:</b></p><ul><li>Admins can create a<b> priority cleanup policy</b> targeting specific content types in OneDrive and SharePoint.</li><li>A new <b>Delete data permanently </b>option enables <b>hard deletion</b> of targeted items.</li><li><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/d4952292-7b09-45aa-8255-c94bb5be4158\" alt=\"user settings\"></li><li>Content deleted through this workflow is fully removed and is no longer discoverable in:<ul><li>SharePoint search</li><li>Copilot experiences</li><li>eDiscovery (after required approval)</li></ul></li><li>For content under hold, <b>eDiscovery admin review and approval</b> is required before deletion.</li><li>This capability is <b>not enabled by default</b> and requires explicit admin configuration.</li><li>There is <b>no change to user workflows</b> unless an admin configures and applies a priority cleanup policy.</li></ul><p><b><b>What you can do to prepare:</b></b></p><ul><li>Review your organization’s data risk and retention strategy, especially for Copilot-generated content such as Teams transcripts.</li><li>In Microsoft Purview, plan and configure a<b> priority cleanup policy</b> if permanent deletion is required for specific content types:<ul><li>Navigate to <b>Microsoft Purview portal</b> &gt;<b> Data Lifecycle Management</b> &gt;<b> Priority cleanup</b>.</li><li>Create a new policy and select <b>Delete data permanently</b> in the policy settings.</li></ul></li><li>Ensure appropriate <b>eDiscovery admin roles and approval processes</b> are in place for content under hold.</li><li>Update internal governance or compliance documentation to reflect this new deletion capability.</li></ul><p><b>Learn more: </b><a href=\"https://learn.microsoft.com/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide#microsoft-365-groups\" rel=\"noopener noreferrer\" target=\"_blank\">Compare types of groups in Microsoft 365 - Microsoft 365 admin | Microsoft Learn</a></p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muprzyi1-12\"><b>Compliance area</b></td><td data-row=\"row-muprzyi1-12\"><b>Explanation</b></td></tr><tr><td data-row=\"row-muprzyi1-13\">Alteration of existing customer data processing</td><td data-row=\"row-muprzyi1-13\">This change introduces a priority cleanup workflow that allows permanent deletion of specific OneDrive and SharePoint content types, even when retention policies or holds exist, subject to required approval.</td></tr><tr><td data-row=\"row-muprzyi1-14\">eDiscovery or Content Search</td><td data-row=\"row-muprzyi1-14\">Content deleted through the priority cleanup workflow is fully removed and no longer discoverable in eDiscovery or Content Search after eDiscovery admin review and approval for items under hold.</td></tr><tr><td data-row=\"row-muprzyi1-15\">Retention policies, holds, or deletion workflows</td><td data-row=\"row-muprzyi1-15\">Adds a new admin-controlled deletion workflow that can override standard retention outcomes through an approved hard-delete process.</td></tr><tr><td data-row=\"row-muprzyi1-16\">Admin controls and compliance monitoring</td><td data-row=\"row-muprzyi1-16\">The feature is managed by administrators in Microsoft Purview and includes review and approval steps that support compliance oversight and auditing.</td></tr></tbody></table>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "558343"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Purview introduces a priority cleanup workflow allowing admins to hard delete specific OneDrive and SharePoint content, overriding retention policies with eDiscovery admin approval. Rolling out mid-August 2026 (preview) and early December 2026 (general availability), this feature requires explicit admin setup and supports compliance oversight."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Web"
+      }
+    ],
+    "EndDateTime": "2027-02-22T07:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1261587",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-11-23T22:22:22.543Z",
+    "Services": [
+      "Microsoft Purview"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-03-25T22:52:31Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Purview | Data Lifecycle Management - Hard delete OneDrive and SharePoint files with priority cleanup workflow",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 23, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>We are updating how the <b>Who has access to the recording or transcript</b> option appears for Microsoft Teams Events scheduling through the Events App including town halls and webinars. Currently, when <code>AllowCloudRecording</code> is set to false, this option does not appear for these events. After this change, the option will appear only when the applicable <code>RecordingForTownhall</code> or <code>RecordingForWebinar</code> setting in <code>CsTeamsEventsPolicy</code> is enabled.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Beginning in <b>mid-January 2027</b> (previously early-November 2026) and expected to complete by<b> late January 2027 </b>(previously mid-November 2026)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Teams organizers of Events created via the Events App including town halls and webinars</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft TeamsEvents created via the Events App including town halls and webinars</li></ul><p><i>What will happen</i></p><p>The <b>Who has access to the recording or transcript</b> option will be based on the applicable <code>RecordingForTownhall</code> or <code>RecordingForWebinar</code> setting. It will no longer be based on the <code>AllowCloudRecording</code> setting.</p><p><b><b>Action required and recommendations</b></b></p><p>No action is required to enable this change.</p><p>We recommend updating your internal documentation to reflect this change.</p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "ContentType": "html"
+    },
+    "Category": "preventOrFixIssue",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Teams is updating the \"Who has access to the recording or transcript\" option for Events App town halls and webinars. Starting mid-January 2027, access will depend on the RecordingForTownhall or RecordingForWebinar settings, not AllowCloudRecording. No action is required."
+      }
+    ],
+    "EndDateTime": "2027-03-01T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1550542",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-23T22:19:25.7Z",
+    "Services": [
+      "Microsoft Teams"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-11-12T16:19:06Z",
+    "Tags": [
+      "Updated message",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Teams: Updated recording and transcript access setting behavior for town halls and webinars",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": "2026-12-07T08:00:00Z",
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 23, 2026: We have updated the timeline and content. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b>&nbsp;</b></p><p>We're retiring the <b>legacy live event experience</b> in Engage. Starting <b>December 7, 2026</b>, users will no longer be able to create new events with the legacy option, which appears as the link \"<i>Want to schedule an event with the legacy live event feature? Click here.</i>\"&nbsp;</p><p><b>This change doesn't affect Engage events.</b> Organizers can still create all Engage event types from communities and storylines:&nbsp;</p><ul><li>Broadcast events (powered by Teams town hall)&nbsp;</li><li>Meeting events (powered by Teams webinar)&nbsp;</li><li>Async events&nbsp;</li></ul><p><b><b>Rollout schedule</b></b>&nbsp;</p><p><b>December 7, 2026: </b>The legacy live event creation option is removed from Engage. <b>Previously scheduled legacy events will run as planned.&nbsp;</b></p><p><b><b>Impact on your organization</b>&nbsp;</b></p><p><i>Who is affected&nbsp;</i></p><ul><li>Event organizers who still create events with the legacy live event option in Engage.&nbsp;</li><li>Organizers who already use Engage events won't see any change.&nbsp;</li></ul><p><i>Platforms and services&nbsp;</i></p><ul><li>Microsoft Viva Engage&nbsp;</li></ul><p><b><b>What will happen</b></b>&nbsp;</p><ul><li>The legacy live event link will no longer appear when organizers create an event in Engage.&nbsp;</li><li>Legacy events that were already scheduled will continue to run as planned.&nbsp;</li><li>Engage events (Broadcast, Meeting and Async) will stay available from communities and storylines, with no change to how they work.&nbsp;</li></ul><p><b><b>Action required and recommendations</b>&nbsp;</b></p><ul><li>We recommend that you: Tell organizers who use the legacy option about this change before<b> December 7, 2026.&nbsp;</b></li><li>Point organizers to Engage events for new and upcoming events.&nbsp;</li><li>Update any internal documentation, training materials or guidance that mentions the legacy live event option.&nbsp;</li></ul><p><b><b>Learn more</b>&nbsp;</b></p><p>Engage events overview | Microsoft Support&nbsp;</p><p><a href=\"https://support-uat.microsoft.com/en-us/viva/engage/engage-events-overview\" rel=\"noopener noreferrer\" target=\"_blank\">https://support-uat.microsoft.com/en-us/viva/engage/engage-events-overview</a>&nbsp;</p><p></p><p>Organize an Engage event | Microsoft Support&nbsp;</p><p><a href=\"https://support.microsoft.com/viva/engage/organize-an-engage-event \" rel=\"noopener noreferrer\" target=\"_blank\">https://support.microsoft.com/viva/engage/organize-an-engage-event&nbsp;</a></p><p></p><p>Microsoft Teams events: A new unified experience makes it easier to discover, create, and manage events | Microsoft Community Hub <a href=\"https://techcommunity.microsoft.com/blog/microsoftteamsblog/microsoft-teams-events-a-new-unified-experience-makes-it-easier-to-discover-crea/4488299\" rel=\"noopener noreferrer\" target=\"_blank\">https://techcommunity.microsoft.com/blog/microsoftteamsblog/microsoft-teams-events-a-new-unified-experience-makes-it-easier-to-discover-crea/4488299</a></p>",
+      "ContentType": "html"
+    },
+    "Category": "planForChange",
+    "Details": [
+      {
+        "Name": "RoadmapIds",
+        "Value": "537280"
+      },
+      {
+        "Name": "Summary",
+        "Value": "Starting December 7, 2026, Microsoft Viva Engage will retire the legacy live event creation option. Organizers can no longer create legacy events but can still use Broadcast, Meeting, and Async Engage events. Existing legacy events will run as planned. Update organizers and documentation accordingly."
+      },
+      {
+        "Name": "Platforms",
+        "Value": "Android, iOS, Web"
+      }
+    ],
+    "EndDateTime": "2027-01-08T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1552394",
+    "IsMajorChange": true,
+    "LastModifiedDateTime": "2026-11-23T22:15:32.34Z",
+    "Services": [
+      "Microsoft Viva"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-11-13T23:48:00Z",
+    "Tags": [
+      "Updated message",
+      "User impact",
+      "Admin impact",
+      "Retirement"
+    ],
+    "Title": "Microsoft Viva Engage: Retiring the legacy live event creation option in Engage",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
+    "ActionRequiredByDateTime": null,
+    "Attachments": null,
+    "AttachmentsArchive": null,
+    "Body": {
+      "Content": "<p>Updated November 23, 2026: Bring Your Own Telephony (BYOT) is now generally available. We've updated this post with BYOT details.</p><p>Updated October 30, 2026: We have updated this post with additional information as the feature is now generally available. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Choose Your Own Telephony Provider (CYOT) and Bring Your Own Telephony Provider (BYOT) are now generally available in Microsoft Entra ID. Both connect Microsoft Entra to a telephony provider through an integration in your Azure subscription, but you purchase and deploy them differently. Microsoft Entra continues to manage the authentication experience, including one-time passcode (OTP) generation and validation, and your provider delivers the SMS messages and voice calls.&nbsp;</p><ul><li><b>CYOT </b>is the recommended option when a supported offering meets your coverage, contractual and compliance requirements. It gives you providers evaluated by Microsoft for geographic coverage and fraud protection, purchasing through Microsoft Security Store, billing through your Azure subscription and guided deployment in the Microsoft Entra admin center.&nbsp;</li><li><b>BYOT </b>is for cases where an existing provider agreement or a specific requirement can't be met by the supported CYOT offerings. You get your provider's ready-to-deploy integration package, set up your account directly with the provider, and configure the integration through APIs.&nbsp;</li></ul><p>With either option, your organization owns the Azure resources in your subscription and your telephony provider account.&nbsp;</p><p>Microsoft-provided SMS and voice authentication starts retiring on <b>February 1, 2027</b>. If your users need SMS or voice after that date, set up CYOT or BYOT before then.&nbsp;</p><p>Microsoft recommends phishing-resistant authentication methods, such as passkeys, instead of SMS or voice. Use a telephony provider only for user groups that have a business, regulatory or technical need for telephony-based authentication.</p><p><b><b>What you need to do</b></b></p><p>If your organization needs to keep SMS or voice authentication:&nbsp;</p><ol><li><b>Identify users who need SMS or voice.</b> Confirm which users have a requirement that phishing-resistant methods can't meet.&nbsp;</li><li><b>Choose your option and provider. </b>Review <a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-telephony-providers\" rel=\"noopener noreferrer\" target=\"_blank\">CYOT and BYOT</a>. Use CYOT when a <a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-telephony-providers\" rel=\"noopener noreferrer\" target=\"_blank\">supported provider</a> meets your coverage, contractual and compliance requirements. Otherwise, use BYOT.&nbsp;</li><li><b>Check prerequisites.</b> You need an Azure subscription with a valid payment method to host the integration, plus the Owner role or Contributor plus Role Based Access Control Administrator. For CYOT, the subscription must also be <a href=\"https://learn.microsoft.com/security/store/customers/how-to-purchase-a-saas-solution-and-deploy-a-linked-solution\" rel=\"noopener noreferrer\" target=\"_blank\">eligible for Security Store purchases</a>.&nbsp;</li><li><b>Estimate costs.</b> Review provider pricing and <a href=\"https://github.com/Azure-Samples/ExternalPhoneProvider-AzureFunction-Sample/blob/main/docs/COST-CALCULATOR.md\" rel=\"noopener noreferrer\" target=\"_blank\">Azure hosting costs</a>.&nbsp;</li><li><b>Set up and roll out.</b> Follow the setup guide for <a href=\"https://learn.microsoft.com/entra/identity/authentication/choose-your-own-telephony-set-up\" rel=\"noopener noreferrer\" target=\"_blank\">CYOT</a> or <a href=\"https://learn.microsoft.com/entra/identity/authentication/bring-your-own-telephony-set-up\" rel=\"noopener noreferrer\" target=\"_blank\">BYOT</a>. Start in evaluation mode, then move traffic to your provider in stages.&nbsp;</li><li><b>Complete your transition before February 1, 2027.</b> Review the guidance for the retirement of Microsoft-provided SMS and voice authentication.</li></ol><p><b>Learn more</b>&nbsp;</p><ul><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-phone-providers\" rel=\"noopener noreferrer\" target=\"_blank\">Choose your own telephony provider for SMS and voice authentication&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/how-to-set-up-sms-voice-api\" rel=\"noopener noreferrer\" target=\"_blank\">Set up SMS and voice with your own telecom provider&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/troubleshoot-voice-call-sms#monitor-and-troubleshoot-your-own-telephony-provider\" rel=\"noopener noreferrer\" target=\"_blank\">Troubleshoot SMS and voice&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/choose-your-own-telephony-fraud-costs\" rel=\"noopener noreferrer\" target=\"_blank\">Protect against telephony fraud&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/choose-your-own-telephony-reliability\" rel=\"noopener noreferrer\" target=\"_blank\">Plan for resiliency and high availability&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/phone-providers-faq\" rel=\"noopener noreferrer\" target=\"_blank\">Frequently asked questions&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-sms-voice-retirement\" rel=\"noopener noreferrer\" target=\"_blank\">Passkeys by default and retirement of Microsoft-provided SMS and voice authentication</a></li></ul>",
+      "ContentType": "html"
+    },
+    "Category": "stayInformed",
+    "Details": [
+      {
+        "Name": "Summary",
+        "Value": "Microsoft Entra now generally supports Choose Your Own Telephony Provider (CYOT) and Bring Your Own Telephony Provider (BYOT) for SMS and voice authentication. Microsoft-provided SMS/voice retires February 1, 2027. Organizations must transition by then, prioritizing phishing-resistant methods and using telephony only when necessary."
+      }
+    ],
+    "EndDateTime": "2026-11-30T08:00:00Z",
+    "HasAttachments": false,
+    "Id": "MC1519855",
+    "IsMajorChange": false,
+    "LastModifiedDateTime": "2026-11-23T22:07:24.723Z",
+    "Services": [
+      "Microsoft Entra"
+    ],
+    "Severity": "normal",
+    "StartDateTime": "2026-10-21T23:24:44Z",
+    "Tags": [
+      "Updated message",
+      "New feature",
+      "User impact",
+      "Admin impact"
+    ],
+    "Title": "Microsoft Entra: Choose your own telephony provider now generally available",
+    "ViewPoint": {
+      "IsArchived": null,
+      "IsFavorited": null,
+      "IsRead": null
+    },
+    "Source": "messageCenter",
+    "AdditionalProperties": {}
+  },
+  {
     "ActionRequiredByDateTime": null,
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -152,7 +499,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1562279\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127449Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562279\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127451Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562279\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127451Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1562279\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150475Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562279\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504751Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562279\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504751Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -202,7 +549,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1562278\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127277Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562278\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127278Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562278\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127279Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562278\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112728Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1562278\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504616Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562278\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504616Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562278\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504617Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1562278\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504618Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -369,7 +716,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1559642\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112532Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1559642\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125322Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1559642\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125323Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1559642\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503038Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1559642\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503039Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1559642\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150304Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2070,7 +2417,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127155Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127156Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127157Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504532Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504533Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443517\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504534Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2162,7 +2509,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126813Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126814Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126814Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504244Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504244Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530615\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504245Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2210,7 +2557,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125732Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125733Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125735Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125736Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125736Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125738Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503374Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503375Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503375Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503376Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503376Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1509787\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503377Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -2564,7 +2911,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1556098\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127239Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1556098\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112724Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1556098\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504596Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1556098\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504597Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3108,7 +3455,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126716Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126716Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126717Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150417Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504171Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1506734\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504171Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3184,53 +3531,6 @@
     "AdditionalProperties": {}
   },
   {
-    "ActionRequiredByDateTime": "2026-12-07T08:00:00Z",
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p><b><b>What and why</b></b></p><p>We are retiring the option to create Microsoft Teams town hall events from Viva Engage. Starting <b>December 7, 2026</b>, users will no longer be able to create new Teams town hall events from Engage. Organizers should use the new Events experience in Viva Engage or Microsoft Teams to create events.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>December 7, 2026:</b> Users will no longer be able to create Teams town hall events from Viva Engage.<b> Previously scheduled events will run as planned.</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Event organizers who create Teams town hall events from Viva Engage.</li><li>Communications teams responsible for organizing events.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Viva Engage</li><li>Microsoft Teams</li></ul><p><i>What will happen</i></p><ul><li>Users will no longer be able to create new Teams town hall events from Viva Engage. <b>Previously scheduled events will continue to run as planned.</b></li><li>Organizers will need to use the new Events experience to create events:<ul><li><b>In Viva Engage:</b> Create town hall, community town hall, or AMA events using Engage events.</li><li><b>In Microsoft Teams:</b> Create town hall events directly in Teams.</li></ul></li></ul><p><b><b>Action required and recommendations</b></b></p><p>We recommend that you:</p><ul><li>Inform event organizers and communications teams about this change <b>before December 7, 2026</b>.</li><li>Create new and upcoming events using the new Events experience in Viva Engage or Microsoft Teams.</li><li>Update internal documentation, training materials, and guidance that reference creating Teams town hall events from Viva Engage.</li></ul><p><b><b>Learn more</b></b></p><ul><li><a href=\"https://techcommunity.microsoft.com/blog/microsoftteamsblog/microsoft-teams-events-a-new-unified-experience-makes-it-easier-to-discover-crea/4488299\" rel=\"noopener noreferrer\" target=\"_blank\">Microsoft Teams events: A new unified experience makes it easier to discover, create, and manage events | Microsoft Community Hub</a></li><li><a href=\"https://support.microsoft.com/viva/engage/organize-an-engage-event\" rel=\"noopener noreferrer\" target=\"_blank\">Organize an Engage event | Microsoft Support</a></li></ul>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "537280"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Starting December 7, 2026, users cannot create Teams town hall events from Viva Engage; previously scheduled events will continue. Organizers must use the new Events experience in Viva Engage or Microsoft Teams. Organizations should inform teams and update documentation accordingly before this date."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Android, iOS, Web"
-      }
-    ],
-    "EndDateTime": "2027-01-08T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1552394",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-11-13T23:48:40.413Z",
-    "Services": [
-      "Microsoft Viva"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-11-13T23:48:00Z",
-    "Tags": [
-      "User impact",
-      "Admin impact",
-      "Retirement"
-    ],
-    "Title": "Microsoft Viva Engage: Retirement of Teams town hall event creation",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
     "ActionRequiredByDateTime": null,
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -3246,7 +3546,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1552392\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126371Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1552392\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126372Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1552392\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503899Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1552392\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503899Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3340,7 +3640,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1552390\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126041Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1552390\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126042Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1552390\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150363Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1552390\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503631Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -3672,44 +3972,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p><b><b>What and why</b></b></p><p>We are updating how the <b>Who has access to the recording or transcript</b> option appears for Microsoft Teams Events scheduling through the Events App including town halls and webinars. Currently, when <code>AllowCloudRecording</code> is set to false, this option does not appear for these events. After this change, the option will appear only when the applicable <code>RecordingForTownhall</code> or <code>RecordingForWebinar</code> setting in <code>CsTeamsEventsPolicy</code> is enabled.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Beginning in <b>early-November 2026</b> and expected to complete by<b> mid-November 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Teams organizers of Events created via the Events App including town halls and webinars</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft TeamsEvents created via the Events App including town halls and webinars</li></ul><p><i>What will happen</i></p><p>The <b>Who has access to the recording or transcript</b> option will be based on the applicable <code>RecordingForTownhall</code> or <code>RecordingForWebinar</code> setting. It will no longer be based on the <code>AllowCloudRecording</code> setting.</p><p><b><b>Action required and recommendations</b></b></p><p>No action is required to enable this change.</p><p>We recommend updating your internal documentation to reflect this change.</p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
-      "ContentType": "html"
-    },
-    "Category": "preventOrFixIssue",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Teams is updating the \"Who has access to the recording or transcript\" option for Events App town halls and webinars. It will depend on the RecordingForTownhall or RecordingForWebinar settings instead of AllowCloudRecording. The change rolls out worldwide in early to mid-November 2026 with no action required."
-      }
-    ],
-    "EndDateTime": "2026-12-16T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1550542",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-11-12T16:19:15.447Z",
-    "Services": [
-      "Microsoft Teams"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-11-12T16:19:06Z",
-    "Tags": [
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Teams: Updated recording and transcript access setting behavior for town halls and webinars",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated November 11, 2026: We have updated the content. Thank you for your patience.&nbsp;</p><p><b>What and Why:</b></p><p>Microsoft is making Copilot more accessible within Word, Excel, and PowerPoint by adding a new prompt input directly to the Copilot button and providing contextual prompt experiences when users select content. This update helps users engage with Microsoft 365 Copilot without leaving their workflow, enabling faster content creation, editing, and task completion. This change supports personal and team productivity by bringing Copilot assistance directly into the document experience.</p><p><b>Rollout Schedule:</b></p><ul><li>General Availability (Worldwide): Rollout begins September 2026 and is expected to complete by the end of December 2026.</li><li>Available in Word, Excel, and PowerPoint on Windows desktop, macOS, and web.</li><li>Rollout may occur on different platforms at different times.</li></ul><p><b>Impact on Your Organization:</b></p><p><b>Who is affected:</b></p><ul><li>Microsoft 365 users eligible for Microsoft 365 Copilot using Word, Excel, or PowerPoint on Windows desktop, macOS, or web.</li></ul><p><b>Platforms/Services:</b></p><ul><li>Microsoft 365 Copilot</li><li>Word</li><li>Excel</li><li>PowerPoint</li><li>Windows desktop</li><li>macOS desktop</li><li>Web</li></ul><p><b>What will happen:</b></p><ul><li>Users will see a new button and prompt in the top right (by default).</li><li><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/11/21669-1b.png \" width=\"400\"></li><li>Users can type or dictate prompts without opening the Copilot pane.</li><li>Users can reference Microsoft 365 content directly from the prompt input experience.</li><li>When content is selected in Word or PowerPoint, a contextual Copilot input will appear.</li><li>Suggested actions such as Rewrite and Shorten will be shown when appropriate.</li><li><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/08/21669-2.png \" width=\"400\"></li><li>Windows shortcut: <b>Alt + C</b>.</li><li>Mac shortcut: <b>Command + Control + I</b>.</li><li>The feature is enabled by default for eligible users.</li><li>Existing Copilot administration controls continue to apply.</li><li>No separate admin control is available for the prompt input experience.</li></ul><p><b>Action Required / Recommendations:</b></p><p>No admin action is required.</p><ul><li>Update user training and adoption materials.</li><li>Update help desk documentation.</li><li>Review the <a href=\"https://go.microsoft.com/fwlink/?linkid=2310640\" rel=\"noopener noreferrer\" target=\"_blank\">Pin Microsoft 365 Copilot Chat setting</a>.</li><li>Communicate the change to end users.</li><li>Review <a href=\"https://learn.microsoft.com/en-us/copilot/manage\" rel=\"noopener noreferrer\" target=\"_blank\">Manage Microsoft 365 Copilot Chat documentation</a>.</li><li>Review <a href=\"https://learn.microsoft.com/en-us/microsoft-365/copilot/pin-copilot-chat-navbar\" rel=\"noopener noreferrer\" target=\"_blank\">Pin Microsoft 365 Copilot Chat in Microsoft 365 apps documentation</a>.</li><li>Review <a href=\"https://support.microsoft.com/en-us/office/foundations-experiences/copilot-dab/the-copilot-dynamic-action-button-in-word-excel-and-powerpoint\" rel=\"noopener noreferrer\" target=\"_blank\">The Copilot Dynamic Action Button in Word, Excel, and PowerPoint documentation</a>.</li></ul><p><b>Compliance Considerations:</b></p><ul><li>New generative AI interaction entry points are introduced.</li><li>The update expands how users invoke existing Copilot capabilities.</li><li>Existing admin controls remain available through the Pin Microsoft 365 Copilot Chat setting.</li></ul>",
       "ContentType": "html"
     },
@@ -3911,7 +4173,7 @@
     "Details": [
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126243Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"Web\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126245Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126246Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503782Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"Web\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503783Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530611\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503784Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -4007,7 +4269,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125868Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125869Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112587Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503495Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503495Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1465768\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503496Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -5421,7 +5683,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"Android\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125931Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125931Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"Android\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503523Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1540349\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503524Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6488,7 +6750,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126084Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126085Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126085Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126086Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126087Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126088Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503652Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503653Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503653Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503654Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503654Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1470410\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503655Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6540,7 +6802,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127129Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112713Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504498Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1467357\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504499Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6640,7 +6902,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125361Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125362Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125363Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503085Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503086Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1447682\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503086Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6692,7 +6954,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127324Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127325Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127326Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127327Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127328Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504667Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504667Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504668Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504669Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443518\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504669Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6744,7 +7006,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125683Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125684Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125685Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503329Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150333Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150333Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6796,7 +7058,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112705Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112705Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127051Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504432Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504432Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1317836\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504433Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6848,7 +7110,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126285Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126286Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126286Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503825Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503826Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1330891\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503826Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -6900,7 +7162,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125999Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126001Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Desktop\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503582Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"Mac\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503583Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1323270\",\"Platform\":\"All\",\"Status\":\"Launched\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503584Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7297,7 +7559,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126586Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126587Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504058Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1455014\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504058Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -7509,7 +7771,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126909Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112691Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112691Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504334Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504336Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1536056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504337Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8361,46 +8623,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 30, 2026: We have updated this post with additional information as the feature is now generally available. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Choose Your Own Telephony Provider (CYOT) is now generally available in Microsoft Entra ID. With CYOT, your organization can deliver SMS and voice authentication through a supported telecom provider of its choice. You purchase the provider's offer in Microsoft Security Store and manage the commercial relationship directly with the provider.&nbsp;</p><p>Microsoft-provided SMS and voice authentication begins retiring on February 1, 2027. To keep SMS and voice authentication available for users who need it, set up CYOT before that date.&nbsp;</p><p>Microsoft recommends phishing-resistant authentication methods, such as passkeys, instead of SMS or voice. Use telephony-based authentication only for users who have a business, regulatory, or technical need for it.</p><p><b><b>What you need to do</b></b></p><p>If your organization plans to use CYOT:&nbsp;</p><ol><li><b>Identify users who need SMS or voice.</b> Confirm which users have a requirement that phishing-resistant methods can't meet.&nbsp;</li><li><b>Choose a provider.</b> Compare the <a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-phone-providers\" rel=\"noopener noreferrer\" target=\"_blank\">supported telecom providers</a> on coverage, channels, pricing, support, and compliance.&nbsp;</li><li><b>Check purchasing requirements.</b> Confirm that you have a paid Azure subscription that is <a href=\"https://learn.microsoft.com/security/store/customers/how-to-purchase-a-saas-solution-and-deploy-a-linked-solution\" rel=\"noopener noreferrer\" target=\"_blank\">eligible for Security Store purchases</a>, and that you have the Owner role, or Contributor plus Role Based Access Control Administrator.&nbsp;</li><li><b>Estimate costs.</b> Review provider pricing and <a href=\"https://github.com/Azure-Samples/ExternalPhoneProvider-AzureFunction-Sample/blob/main/docs/COST-CALCULATOR.md\" rel=\"noopener noreferrer\" target=\"_blank\">Azure hosting costs.&nbsp;</a></li><li><b>Set up and roll out.</b> Follow <a href=\"https://learn.microsoft.com/entra/identity/authentication/how-to-set-up-sms-voice-api\" rel=\"noopener noreferrer\" target=\"_blank\">Set up SMS and voice</a>. Start in evaluation mode, then increase traffic to your provider in stages.&nbsp;</li><li><b>Complete your transition before February 1, 2027.</b> Review the <a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-sms-voice-retirement\" rel=\"noopener noreferrer\" target=\"_blank\">guidance for the retirement of Microsoft-provided SMS and voice authentication.</a></li></ol><p><b>Learn more</b>&nbsp;</p><ul><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-phone-providers\" rel=\"noopener noreferrer\" target=\"_blank\">Choose your own telephony provider for SMS and voice authentication&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/how-to-set-up-sms-voice-api\" rel=\"noopener noreferrer\" target=\"_blank\">Set up SMS and voice with your own telecom provider&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/troubleshoot-voice-call-sms#monitor-and-troubleshoot-your-own-telephony-provider\" rel=\"noopener noreferrer\" target=\"_blank\">Troubleshoot SMS and voice&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/choose-your-own-telephony-fraud-costs\" rel=\"noopener noreferrer\" target=\"_blank\">Protect against telephony fraud&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/choose-your-own-telephony-reliability\" rel=\"noopener noreferrer\" target=\"_blank\">Plan for resiliency and high availability&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/phone-providers-faq\" rel=\"noopener noreferrer\" target=\"_blank\">Frequently asked questions&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/entra/identity/authentication/concept-sms-voice-retirement\" rel=\"noopener noreferrer\" target=\"_blank\">Passkeys by default and retirement of Microsoft-provided SMS and voice authentication</a></li></ul>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Entra ID now generally supports Choose Your Own Telephony Provider (CYOT) for SMS and voice authentication, retiring Microsoft-provided services by February 1, 2027. Organizations must select a provider, set up CYOT, and transition before that date, while Microsoft recommends phishing-resistant methods like passkeys."
-      }
-    ],
-    "EndDateTime": "2026-11-30T08:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1519855",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-30T19:34:52.45Z",
-    "Services": [
-      "Microsoft Entra"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-10-21T23:24:44Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Entra: Choose your own telephony provider now generally available",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated October 30, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why</b></b></p><p>Microsoft Teams is introducing AI generated meeting memory files that capture key insights from meetings (formerly archive files). These files help Microsoft 365 Copilot and Facilitator deliver more accurate context aware responses while maintaining strong privacy controls by not storing raw meeting content. This capability supports enterprise ready AI by improving knowledge grounding while keeping data secure and manageable.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558933\" rel=\"noopener noreferrer\" target=\"_blank\">558933</a>.</p><p><b><b>Rollout Schedule</b></b></p><ul><li><b>Targeted Release:</b> Beginning<b> early January 2027 </b>(previously early November 2026) and expected to complete<b> mid-January 2027</b> (previously mid-November 2026)</li><li><b>General Availability (Worldwide): </b>Beginning<b> mid-January 2027 </b>(previously early December 2026) and expected to complete <b>late January 2027</b> (previously early January)</li></ul><p>Teams admin center controls for this feature will be available approximately four weeks before memory file generation begins. The dates above reflect when admin controls become available.</p><p><b><b>Impact on Your Organization:</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Teams administrators</li><li>Users with Microsoft 365 Copilot or Facilitator capabilities enabled</li></ul><p><i>Platforms/Services</i></p><ul><li>Microsoft Teams</li><li>Microsoft 365 Copilot</li><li>SharePoint Embedded</li></ul><p><i>What will happen</i></p><ul><li>AI meeting memory files (.meeting files) will be generated for meetings where Intelligent Recap is turned on. The feature is enabled by default in your organization.</li><li>Memory files are stored in a tenant-owned SharePoint Embedded container, not in user storage. You can control the default expiration time for these files within your organization.</li><li>Users cannot directly view or access memory files.</li><li>When the feature is released, Facilitator will use the memory to answer questions about meetings and responses include citations linking to meeting recaps or invites. In the future, Copilot will also use the memory to answer questions about meetings.&nbsp;</li><li>Memory files cannot be modified, renamed, or moved.</li><li>All content in memory files is AI-generated. No raw transcript snippets are stored.</li><li>Memory generation requires all of the following:<ul><li>Meeting memory is enabled for your organization.</li><li>Intelligent Recap is enabled for the meeting.</li></ul></li><li>Memory files are not created for:<ul><li>Meetings with sensitivity labels that include encryption</li><li>End-to-end encrypted meetings</li><li>Meetings with restricted copying or forwarding</li></ul></li><li>Access and data protection:<ul><li>Only users with access to the meeting can receive responses grounded in its memory and AI tools do not surface insights to users who do not have meeting access.</li><li>Memory knowledge is only shared with users who are in the same tenant as the meeting organizer.</li></ul></li></ul><p><b><b>Action Required / Recommendations</b></b></p><p>No immediate action is required. However, administrators should review configuration settings and consider organizational policy alignment.</p><p>Admins can enable or disable this feature in the <i>Teams admin center</i>.</p><p>Recommended actions:</p><ul><li>Review the AI archive setting in Teams admin center before rollout. Setting path: <b><i>Meeting Policies &gt; Meeting Memory\"</i></b>.</li><li>Evaluate the default expiration period, which is set to five years (1,825 days), and adjust retention settings as needed to align with compliance policies.</li><li>Communicate this capability to helpdesk teams and compliance stakeholders.</li><li>Monitor availability of the memory setting in <i>Teams admin center</i> and review or update settings when they become available. Memory file generation will begin 4 weeks after the setting is released to your organization.</li></ul><p><b>Learn more: </b><a href=\"https://learn.microsoft.com/microsoftteams/ai-archive-teams-meetings?branch=main\" rel=\"noopener noreferrer\" target=\"_blank\">AI Archives for Microsoft Teams Meetings | Microsoft Teams | Microsoft Learn</a><b>&nbsp;</b></p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mubhqf0u-8\">Question</td><td data-row=\"row-mubhqf0u-8\">Answer</td></tr><tr><td data-row=\"row-mubhqf0u-9\">Does the change store new customer data, and if so, where, and is the data cached or permanently stored?</td><td data-row=\"row-mubhqf0u-9\">Yes. The change introduces AI-generated meeting memory files that are stored in a tenant-owned SharePoint Embedded container and retained according to a configurable retention period.</td></tr><tr><td data-row=\"row-mubhqf0u-10\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mubhqf0u-10\">Yes. Meeting transcripts and metadata are processed into structured AI memory files that enable downstream AI systems such as Copilot and Facilitator to reason over meeting content.</td></tr><tr><td data-row=\"row-mubhqf0u-11\">Does the change introduce or significantly modify AI or machine learning capabilities that interact with or provide access to customer data?</td><td data-row=\"row-mubhqf0u-11\">Yes. Copilot and Facilitator use AI meeting memory files to generate context-aware responses grounded in prior meeting content.</td></tr><tr><td data-row=\"row-mubhqf0u-12\">Does the change provide users any new way of interacting with generative AI?</td><td data-row=\"row-mubhqf0u-12\">Yes. Users can interact with Copilot and Facilitator, which leverage meeting memory&nbsp;&nbsp;data to answer questions and provide insights about meetings.</td></tr><tr><td data-row=\"row-mubhqf0u-13\">Does the change modify retention policies, holds, or deletion workflows?</td><td data-row=\"row-mubhqf0u-13\">Yes. AI meeting memory files are governed by a default retention period of five years and are automatically deleted upon expiration.</td></tr><tr><td data-row=\"row-mubhqf0v-14\">Does the change include an admin control, and can it be controlled through Entra ID group membership?</td><td data-row=\"row-mubhqf0v-14\">Yes. Administrators can enable or disable AI meeting memory generation and configure retention settings in the Teams Admin Center.</td></tr></tbody></table>",
       "ContentType": "html"
     },
@@ -8776,7 +8998,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125959Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112596Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503562Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523090\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503563Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -8906,7 +9128,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126535Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126536Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126536Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504031Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504031Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1530613\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504032Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -10224,53 +10446,6 @@
     "AdditionalProperties": {}
   },
   {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated October 26, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>We are introducing a new <b>priority cleanup workflow</b> in Microsoft Purview Data Lifecycle Management that allows administrators to <b>permanently delete (hard delete) specific OneDrive and SharePoint content types</b>, even when retention policies or holds are in place. This capability helps reduce data exposure risk from rapidly growing Copilot-related content while maintaining compliance through required eDiscovery admin review and approval.</p><p>This change is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558343\" rel=\"noopener noreferrer\" target=\"_blank\">558343</a>.</p><p><b><b>When this will happen:</b></b></p><p>Public Preview: We will begin rolling out <b>mid-August 2026</b> (previously mid-July) and expect to complete by <b>end of November 2026</b> (previously mid-September).</p><p>General Availability (Worldwide) Rollout begins<b> end of November 2026 </b>(previously mid-October) and is expected to complete by<b> early January 2027 </b>(previously end of November 2026).</p><p><b><b>How this affects your organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Microsoft 365 administrators managing <b>Microsoft Purview Data Lifecycle Management</b></li><li>Organizations using <b>OneDrive for Business</b> and <b>SharePoint Online </b>with retention policies or holds</li></ul><p><b>What will happen:</b></p><ul><li>Admins can create a<b> priority cleanup policy</b> targeting specific content types in OneDrive and SharePoint.</li><li>A new <b>Delete data permanently </b>option enables <b>hard deletion</b> of targeted items.</li><li><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/d4952292-7b09-45aa-8255-c94bb5be4158\" alt=\"user settings\"></li><li>Content deleted through this workflow is fully removed and is no longer discoverable in:<ul><li>SharePoint search</li><li>Copilot experiences</li><li>eDiscovery (after required approval)</li></ul></li><li>For content under hold, <b>eDiscovery admin review and approval</b> is required before deletion.</li><li>This capability is <b>not enabled by default</b> and requires explicit admin configuration.</li><li>There is <b>no change to user workflows</b> unless an admin configures and applies a priority cleanup policy.</li></ul><p><b><b>What you can do to prepare:</b></b></p><ul><li>Review your organization’s data risk and retention strategy, especially for Copilot-generated content such as Teams transcripts.</li><li>In Microsoft Purview, plan and configure a<b> priority cleanup policy</b> if permanent deletion is required for specific content types:<ul><li>Navigate to <b>Microsoft Purview portal</b> &gt;<b> Data Lifecycle Management</b> &gt;<b> Priority cleanup</b>.</li><li>Create a new policy and select <b>Delete data permanently</b> in the policy settings.</li></ul></li><li>Ensure appropriate <b>eDiscovery admin roles and approval processes</b> are in place for content under hold.</li><li>Update internal governance or compliance documentation to reflect this new deletion capability.</li></ul><p><b>Learn more: </b><a href=\"https://learn.microsoft.com/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide#microsoft-365-groups\" rel=\"noopener noreferrer\" target=\"_blank\">Compare types of groups in Microsoft 365 - Microsoft 365 admin | Microsoft Learn</a></p><p><b><b>Compliance considerations:</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-muprzyi1-12\"><b>Compliance area</b></td><td data-row=\"row-muprzyi1-12\"><b>Explanation</b></td></tr><tr><td data-row=\"row-muprzyi1-13\">Alteration of existing customer data processing</td><td data-row=\"row-muprzyi1-13\">This change introduces a priority cleanup workflow that allows permanent deletion of specific OneDrive and SharePoint content types, even when retention policies or holds exist, subject to required approval.</td></tr><tr><td data-row=\"row-muprzyi1-14\">eDiscovery or Content Search</td><td data-row=\"row-muprzyi1-14\">Content deleted through the priority cleanup workflow is fully removed and no longer discoverable in eDiscovery or Content Search after eDiscovery admin review and approval for items under hold.</td></tr><tr><td data-row=\"row-muprzyi1-15\">Retention policies, holds, or deletion workflows</td><td data-row=\"row-muprzyi1-15\">Adds a new admin-controlled deletion workflow that can override standard retention outcomes through an approved hard-delete process.</td></tr><tr><td data-row=\"row-muprzyi1-16\">Admin controls and compliance monitoring</td><td data-row=\"row-muprzyi1-16\">The feature is managed by administrators in Microsoft Purview and includes review and approval steps that support compliance oversight and auditing.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "558343"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Purview introduces a priority cleanup workflow allowing admins to hard delete specific OneDrive and SharePoint content, even under retention or holds, with required eDiscovery approval. Rolling out mid-August 2026, it enhances data risk management and compliance without affecting user workflows unless configured by admins."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2027-02-08T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1261587",
-    "IsMajorChange": true,
-    "LastModifiedDateTime": "2026-10-26T16:53:16.52Z",
-    "Services": [
-      "Microsoft Purview"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-03-25T22:52:31Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Purview | Data Lifecycle Management - Hard delete OneDrive and SharePoint files with priority cleanup workflow",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
     "ActionRequiredByDateTime": "2027-01-31T08:00:00Z",
     "Attachments": null,
     "AttachmentsArchive": null,
@@ -10359,7 +10534,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125611Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125612Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"IOS\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503285Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"},{\"RoadmapId\":0,\"McPostId\":\"MC1523087\",\"Platform\":\"All\",\"Status\":\"InRollout\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503286Z\",\"LatestRing\":\"StandardRelease\",\"TenantRolloutRing\":\"StandardRelease\"}]}"
       },
       {
         "Name": "Summary",
@@ -10409,7 +10584,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125426Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125427Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503139Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1523086\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150314Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -11087,7 +11262,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125529Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112553Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125531Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125532Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125533Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503226Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503227Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503228Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503228Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1519866\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503229Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -12037,54 +12212,6 @@
     "Attachments": null,
     "AttachmentsArchive": null,
     "Body": {
-      "Content": "<p>Updated October 19, 2026: We have updated the timeline. Thank you for your patience.</p><p><b><b>What and why</b>&nbsp;</b></p><p>Microsoft Purview Data Lifecycle Management now allows admins to archive SharePoint files based on retention policies. This helps organizations reduce storage costs by moving inactive content to Microsoft 365 Archive while maintaining compliance and discoverability. Archived content is excluded from Copilot indexing, which can improve the relevance of Copilot responses by focusing results on current, active data.</p><p><b><b>Rollout schedule</b>&nbsp;</b></p><p><b>General Availability (GCC, GCC High, DoD):</b> Beginning in <b>early December 2026</b> and expected to complete by <b>early January 2027</b> (previously early November 2026)</p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Admins managing Microsoft Purview Data Lifecycle Management</li><li>Organizations using retention policies in SharePoint Online and OneDrive</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Purview (Data Lifecycle Management)</li><li>SharePoint Online</li><li>OneDrive</li><li>Microsoft 365 Archive</li><li>Microsoft Copilot</li></ul><p><i>What will happen</i></p><ul><li>A new Archive option will be available within retention policy settings in Data Lifecycle Management.</li><li>Admins can configure retention policies to move inactive files to Microsoft 365 Archive storage.</li><li>Archived files remain available for compliance scenarios, including eDiscovery.</li><li>Archived content will be excluded from Copilot indexing, helping improve answer relevance.</li><li>This feature is not enabled by default and requires admin configuration.</li><li>Existing retention policies and compliance configurations remain unchanged unless updated by admins.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No immediate action is required. To prepare for and take advantage of this feature, we recommend that you:</p><ul><li>Review your current retention policies in Microsoft Purview Data Lifecycle Management.</li><li>Evaluate opportunities to reduce storage costs by archiving inactive content.</li><li>Update retention policies to include the new Archive option where appropriate.</li><li>Inform compliance and records management stakeholders about this new capability.</li><li>Review internal documentation and processes related to data lifecycle and storage optimization.</li></ul><p><b>Learn more:</b> <a href=\"https://learn.microsoft.com/purview/retention-settings#archiving-retained-sharepoint-files\" rel=\"noopener noreferrer\" target=\"_blank\">Configure Microsoft 365 retention settings to automatically retain or delete content | Microsoft Learn</a></p><p><b><b>Compliance considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mu5ri3hk-1\">Question</td><td data-row=\"row-mu5ri3hk-1\">Answer</td></tr><tr><td data-row=\"row-mu5ri3hk-2\">Does the change store new customer data, and if so where, is it cached or permanently stored?</td><td data-row=\"row-mu5ri3hk-2\">Files moved by retention policies are relocated to Microsoft 365 Archive storage, a distinct storage tier, and are stored there until restored or otherwise actioned.</td></tr><tr><td data-row=\"row-mu5ri3hk-3\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mu5ri3hk-3\">Archived files move out of active storage into Microsoft 365 Archive, changing how those files are stored and accessed going forward.</td></tr><tr><td data-row=\"row-mu5ri3hk-4\">Does the change introduce or significantly modify AI/ML or agent capabilities that interact with or provide access to customer data?</td><td data-row=\"row-mu5ri3hk-4\">Archived content is excluded from Copilot indexing, which changes what data Copilot can access and surface in responses.</td></tr><tr><td data-row=\"row-mu5ri3hk-5\">Does the change modify, interrupt, or disable Purview capabilities such as retention policies, holds, or eDiscovery?</td><td data-row=\"row-mu5ri3hk-5\">Retention policies gain a new archive action, and archived files remain subject to eDiscovery, extending existing retention and discovery workflows.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "planForChange",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "562345"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Purview Data Lifecycle Management will allow admins to archive inactive SharePoint files under retention policies starting early December 2026. Archived files move to Microsoft 365 Archive, remain compliant and discoverable, and are excluded from Copilot indexing to improve response relevance. This feature requires admin configuration."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2027-02-15T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1472601",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-19T17:51:39.83Z",
-    "Services": [
-      "Microsoft Purview"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-09-15T23:08:32Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Purview: Archive SharePoint files under retention policies",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
       "Content": "<p>Updated October 19, 2026: We have updated the timeline. Thank you for your patience.</p><p><b><b>What and why</b></b></p><p>We are introducing a more consistent way for users to access and manage important resources in Microsoft Teams chats and channels. Users will be able to pin frequently used resources directly below the chat or channel header, pin multiple messages alongside other resources, and organize them into folders. On Microsoft Teams mobile, users will be able to access shared resources and folders by tapping the chat or channel header. This change will help users stay organized and provide them with a centralized location to quickly find, access, and manage important resources.</p><p>As part of this update, the <i>In this chat </i>and <i>In this channel </i>panes will be removed. Existing resources within these panes will be accessible through the new resource management experience.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release (Worldwide):</b> Rollout begins in late September 2026 and is expected to complete by early October 2026.</li><li><b>General Availability (Worldwide, GCC, GCC High, and DoD): </b>Rollout begins in early November 2026 (previously early October) and is expected to complete by mid-November 2026 (previously mid-October).</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users who access or manage resources in Microsoft Teams chats and channels.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li><li>Microsoft Teams mobile</li></ul><p><i>What will happen</i></p><ul><li>Users will have a centralized location to find, access, and manage important resources.</li><li>Users will be able to pin frequently used resources directly below the chat or channel header, pin multiple messages alongside other resources, and organize them into folders.</li><li>On mobile devices, users will be able to access shared resources and folders by tapping the chat or channel header.</li><li>The <i>In this chat </i>and <i>In this channel</i> panes will be removed; existing resources within these panes will be accessed and managed through the updated experience.</li></ul><p>Screenshot - <i>Comparison before and after</i></p><p><img src=\"https://support.microsoft.com/en-us/customercomms/media/messagecenter/2026/09/21769-1.png\"></p><p><b><b>Action required and recommendations</b></b></p><p>No administrative action is required. We recommend that you:</p><ul><li>Inform users about the updated resource pinning and management experience.</li><li>Update any internal training or support documentation that references the <i>In this chat</i> and <i>In this channel</i> panes.</li></ul><p><b><b>Learn more</b></b></p><p>We will update this post with new documentation.</p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
       "ContentType": "html"
     },
@@ -12121,54 +12248,6 @@
       "Retirement"
     ],
     "Title": "Microsoft Teams: New centralized experience for organizing important resources in chats and channels",
-    "ViewPoint": {
-      "IsArchived": null,
-      "IsFavorited": null,
-      "IsRead": null
-    },
-    "Source": "messageCenter",
-    "AdditionalProperties": {}
-  },
-  {
-    "ActionRequiredByDateTime": null,
-    "Attachments": null,
-    "AttachmentsArchive": null,
-    "Body": {
-      "Content": "<p>Updated October 19, 2026: We have updated the timeline. Thank you for your patience.</p><p><b><b>What and Why</b></b></p><p>Microsoft Purview Data Lifecycle Management is introducing the ability to archive SharePoint files based on retention policies. This feature helps organizations reduce storage costs by moving inactive content to <b>Microsoft 365 Archive</b> while maintaining compliance and discoverability. By excluding archived content from Copilot indexing, organizations can also improve the relevance and quality of Copilot responses, ensuring users focus on current, active data.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=561208\" rel=\"noopener noreferrer\" target=\"_blank\">561208</a></b>.</p><p><b><b>Rollout Schedule</b></b></p><p><b>Public Preview: </b>We will begin rolling out <b>early September 2026</b> (previously mid-August) and expect to complete by <b>early October 2026</b> (previously early September).</p><p><b>General Availability (Worldwide): </b>Rollout will begin in<b> mid-November 2026 </b>(previously early November) and is expected to complete by<b> early December 2026 </b>(previously early November).</p><p><b><b>Impact on Your Organization</b></b></p><p><i>Who is affected</i></p><ul><li>Admins managing Microsoft Purview Data Lifecycle Management</li><li>Organizations using retention policies in SharePoint Online and OneDrive</li></ul><p>Platforms/Services<i>Platforms/Services</i></p><ul><li>Microsoft Purview (Data Lifecycle Management)</li><li>SharePoint Online</li><li>Microsoft 365 Archive</li><li>Microsoft Copilot</li></ul><p><i>What will happen</i></p><ul><li>A new Archive option will be available within retention policy settings in<i> Data Lifecycle Management</i>.</li><li>Admins can configure retention policies to move inactive files to Microsoft 365 Archive storage.</li><li>Archived files remain available for compliance scenarios, including eDiscovery.</li><li>Archived content will be excluded from Copilot indexing, helping improve answer relevance.</li><li>This feature is <b>not enabled by default and requires admin configuration</b>.</li><li>Existing retention policies and compliance configurations remain unchanged unless updated by admins.<img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/eae47258-a343-4a8a-82e0-3272e67210cb/847f4fb4901c57ad9a2a93ee30d153470863406e.png\" alt=\"user settings\"></li></ul><p><b><b>Action Required / Recommendations</b></b></p><p>No immediate action is required.</p><p>To prepare and take advantage of this feature:</p><ul><li>Review your current retention policies in Microsoft Purview Data Lifecycle Management.</li><li>Evaluate opportunities to reduce storage costs by archiving inactive content.</li><li>Update retention policies to include the new Archive option where appropriate.</li><li>Inform compliance and records management stakeholders about this new capability.</li><li>Review internal documentation and processes related to data lifecycle and storage optimization.</li></ul><p><b><b>Compliance Considerations</b></b></p><table style=\"border: 1px solid #000;\"><tbody><tr><td data-row=\"row-mrtrsmyj-129\"><b>Question</b></td><td data-row=\"row-mrtrsmyj-129\"><b>Answer</b></td></tr><tr><td data-row=\"row-mrtrsmyj-130\">Does the change store new customer data?</td><td data-row=\"row-mrtrsmyj-130\">Yes. Archived files are stored in Microsoft 365 Archive (low-cost storage tier).</td></tr><tr><td data-row=\"row-mrtrsmyj-131\">Does the change alter how existing customer data is processed, stored, or accessed?</td><td data-row=\"row-mrtrsmyj-131\">Yes. Files meeting retention criteria can be moved from active storage to archive storage while remaining discoverable.</td></tr><tr><td data-row=\"row-mrtrsmyj-132\">Does the change introduce or modify AI/ML capabilities interacting with data?</td><td data-row=\"row-mrtrsmyj-132\">Yes. Archived content is excluded from Copilot indexing, influencing how Copilot processes and retrieves organizational data.</td></tr><tr><td data-row=\"row-mrtrsmyj-133\">Does the change modify Purview retention policies or workflows?</td><td data-row=\"row-mrtrsmyj-133\">Yes. Adds a new Archive action within retention policy configuration in Data Lifecycle Management.</td></tr><tr><td data-row=\"row-mrtrsmyj-134\">Does the change affect eDiscovery or Content Search?</td><td data-row=\"row-mrtrsmyj-134\">Yes. Archived content remains discoverable for compliance workflows such as eDiscovery.</td></tr><tr><td data-row=\"row-mrtrsmyj-135\">Does the change include an admin control?</td><td data-row=\"row-mrtrsmyj-135\">Yes. Admins configure and enable the feature through retention policy settings in Purview.</td></tr></tbody></table>",
-      "ContentType": "html"
-    },
-    "Category": "stayInformed",
-    "Details": [
-      {
-        "Name": "RoadmapIds",
-        "Value": "561208"
-      },
-      {
-        "Name": "Summary",
-        "Value": "Microsoft Purview Data Lifecycle Management will enable archiving SharePoint files based on retention policies, moving inactive content to Microsoft 365 Archive to reduce storage costs while maintaining compliance and discoverability. Archived content is excluded from Copilot indexing. Rollout begins September 2026; admin configuration is required."
-      },
-      {
-        "Name": "Platforms",
-        "Value": "Web"
-      }
-    ],
-    "EndDateTime": "2027-01-11T07:00:00Z",
-    "HasAttachments": false,
-    "Id": "MC1325441",
-    "IsMajorChange": false,
-    "LastModifiedDateTime": "2026-10-19T17:11:50.05Z",
-    "Services": [
-      "Microsoft Purview"
-    ],
-    "Severity": "normal",
-    "StartDateTime": "2026-05-28T22:04:22Z",
-    "Tags": [
-      "Updated message",
-      "New feature",
-      "User impact",
-      "Admin impact"
-    ],
-    "Title": "Microsoft Purview | Data Lifecycle Management - Archive SharePoint files under retention",
     "ViewPoint": {
       "IsArchived": null,
       "IsFavorited": null,
@@ -12601,7 +12680,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127394Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127394Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127395Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504723Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504723Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1419798\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504724Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14581,7 +14660,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126465Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126466Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126467Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126478Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503971Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503972Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503972Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1484013\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503972Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14719,7 +14798,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127207Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1127208Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504559Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1446797\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150456Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -14771,7 +14850,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125254Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125255Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"IOS\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503011Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1404321\",\"Platform\":\"All\",\"Status\":\"Scheduled\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503012Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15041,7 +15120,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126849Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112685Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126851Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126852Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504285Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504286Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504286Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1485056\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504287Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -15874,7 +15953,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126689Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112669Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150415Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1442614\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504151Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16511,7 +16590,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1124912Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1124916Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1124917Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1502608Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1502609Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1443520\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150261Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16563,7 +16642,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126332Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126333Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126334Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503853Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503854Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1429012\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503854Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16757,7 +16836,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125469Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112547Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125471Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125473Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125474Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503164Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503164Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503165Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503165Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1251206\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503166Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16857,7 +16936,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126765Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126766Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126767Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504217Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504218Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1261595\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504218Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -16908,7 +16987,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125643Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1125654Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503309Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1256307\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150331Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -18798,7 +18877,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126967Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126968Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126969Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.112697Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126971Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126972Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504366Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504367Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504367Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504368Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504368Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1466296\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504369Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -20278,7 +20357,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126614Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126615Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126616Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126618Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126619Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Android\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504093Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504093Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"IOS\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504094Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504094Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1454114\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1504095Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -21670,7 +21749,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126183Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126184Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126185Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126187Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503728Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503729Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150373Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1183611\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150373Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
@@ -22056,7 +22135,7 @@
       },
       {
         "Name": "FeatureStatusJson",
-        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126417Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126418Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126418Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-23T21:07:28.1126419Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
+        "Value": "{\"0\":[{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Desktop\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503919Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Linux\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.150392Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"Mac\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503921Z\",\"LatestRing\":null,\"TenantRolloutRing\":null},{\"RoadmapId\":0,\"McPostId\":\"MC1253752\",\"Platform\":\"All\",\"Status\":\"FeatureRolloutStatusNotSupported\",\"LastUpdateTime\":\"2026-11-24T00:19:55.1503921Z\",\"LatestRing\":null,\"TenantRolloutRing\":null}]}"
       },
       {
         "Name": "Summary",
